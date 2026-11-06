@@ -1,0 +1,13 @@
+epochs: 50
+lr: 0.0002
+weight_decay: 0.00001
+patience: 10
+threads: 4
+selection_metric: macro_auc
+model:
+  hidden: 384
+  clusters: 5
+  layers: 2
+  ptc_weight: 0.1
+  momentum: 0.1
+  moving_prompts: true

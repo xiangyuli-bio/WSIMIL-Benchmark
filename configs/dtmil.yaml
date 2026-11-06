@@ -1,0 +1,25 @@
+# Complete reference trainer. Public DT-MIL release supplies inference only.
+# Numerical/source defaults are retained; optimizer/schedule/VAL choices named.
+epochs: 50
+lr: 0.0002
+weight_decay: 0.0001
+patience: 50
+selection_metric: log_loss
+max_instances: null
+grad_clip: 0.1
+threads: 1
+model:
+  map_size: 60
+  hidden: 256
+  encoder_layers: 6
+  decoder_layers: 6
+  heads: 8
+  feedforward: 1024
+  dropout: 0.1
+  queries: 100
+  points: 4
+  batch_size: 20
+  lr_backbone: 0.00002
+  lr_projection_multiplier: 0.1
+  lr_drop: 40
+  max_dense_bytes: 34359738368

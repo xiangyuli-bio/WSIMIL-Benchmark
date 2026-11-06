@@ -1,0 +1,67 @@
+{
+  "id": "taxomil",
+  "name": "TaxoMIL",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/QuIIL/TaxoMIL",
+  "source_status": "complete_source_adapter_under_verification",
+  "source_commit": "5e095f0c212b3a30c3f6c6c81b3ca1a18e0c676e",
+  "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+  "profiles": [
+    "taxomil_gpt2_all_losses_key_repaired",
+    "taxomil_gpt2_paper_lr_key_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "hierarchical_labels",
+    "taxomil_original_gpt2_assets",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Actual full217M-class graph/source literal model and original data/collator/train/VAL oracles verified; all gradients/moments/RNG/fullstate restored. Source all-loss lookup defect explicitly repaired; projected-vs-raw sibling objective and paper LR differences disclosed. Full native budgets and public CLI validation pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "taxomil_gpt2_all_losses_key_repaired",
+      "family": "taxomil",
+      "recipe": "Full original124M-pretrained GPT2 dualhead generative TaxoMIL,1024D gatedMIL,all four source losses,3-cycle schedule,AdamW1e-05/wd.01,100max/patience20/VAL exactmatch; explicit c_ital/f_ital lookup repair; released CLI learning rate",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "hierarchical_labels",
+        "taxomil_original_gpt2_assets",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "taxomil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "taxomil_gpt2_paper_lr_key_repaired",
+      "family": "taxomil",
+      "recipe": "Full original124M-pretrained GPT2 dualhead generative TaxoMIL,1024D gatedMIL,all four source losses,3-cycle schedule,AdamW0.0001/wd.01,100max/patience20/VAL exactmatch; explicit c_ital/f_ital lookup repair; paperAppendixD learning rate only, source loss discrepancies disclosed",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "hierarchical_labels",
+        "taxomil_original_gpt2_assets",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "taxomil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "observed_utc": "2026-10-26T03:51:26.344261+00:00",
+  "cached_authentication_available": false,
+  "official_access_only_no_terms_accepted_by_agent": true,
+  "models": [
+    {
+      "repository": "MahmoodLab/abmil.base.conch_v15.pc108-24k",
+      "revision": "423c894c738294e8b0ac38938108180a2c21dd43",
+      "gated": "auto",
+      "published_files": [
+        "config.json",
+        "model.safetensors",
+        "pytorch_model.bin"
+      ],
+      "state": "official_access_not_available",
+      "error_type": "GatedRepoError",
+      "http_status": 401
+    },
+    {
+      "repository": "MahmoodLab/abmil.base.uni.pc108-24k",
+      "revision": "9290d7720a2260501cf9cbbbc1f6b7134b251637",
+      "gated": "auto",
+      "published_files": [
+        "config.json",
+        "model.safetensors",
+        "pytorch_model.bin"
+      ],
+      "state": "official_access_not_available",
+      "error_type": "GatedRepoError",
+      "http_status": 401
+    },
+    {
+      "repository": "MahmoodLab/abmil.base.uni_v2.pc108-24k",
+      "revision": "7c0a057001e369ff6b55833188775bdb21f9b8c8",
+      "gated": "auto",
+      "published_files": [
+        "config.json",
+        "model.safetensors",
+        "pytorch_model.bin"
+      ],
+      "state": "official_access_not_available",
+      "error_type": "GatedRepoError",
+      "http_status": 401
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Complete source-default recipe; full native network and actual CONCH queries.
+epochs: 50
+lr: 0.0002
+weight_decay: 0.00001
+grad_clip: null
+selection_metric: conmil_val_accuracy
+threads: 2
+model:
+  kan_grid: 5
+  max_patches: 4096

@@ -1,0 +1,103 @@
+"""Public preparation/demo/training/reload paths, using explicit software budgets."""
+import json
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+import yaml
+
+from milplus.data import Bundle
+from milplus.io import digest_file, read_json
+from milplus.zoommil_demo import create_zoommil_demo
+
+
+def cli(*args):
+    root = Path(__file__).resolve().parents[1]
+    environment = dict(os.environ, PYTHONPATH=str(root/'src'), OMP_NUM_THREADS='1', MKL_NUM_THREADS='1')
+    return subprocess.run([sys.executable, '-m', 'milplus', *map(str, args)], cwd=root,
+                          env=environment, text=True, capture_output=True, check=False)
+
+
+@pytest.fixture(scope='module')
+def data(tmp_path_factory):
+    return create_zoommil_demo(tmp_path_factory.mktemp('zoommil_cli')/'data', dimension=32, roots=4)
+
+
+@pytest.mark.parametrize('method', ['ZoomMIL', 'zoommil_crc_source_repaired'])
+def test_zoommil_cli_train_and_repeated_selected_evaluation(data, tmp_path, method):
+    config = tmp_path/'short.yaml'
+    config.write_text(yaml.safe_dump({'epochs': 1, 'threads': 1, 'model': {'num_workers': 0}}))
+    out = tmp_path/'run'
+    result = cli('run', '--data', data, '--method', method, '--config', config, '--output', out)
+    assert result.returncode == 0, result.stderr+result.stdout
+    request = read_json(out/'request.json')
+    expected = 'zoommil_bright_source_repaired' if method == 'ZoomMIL' else method
+    assert request['method'] == expected and request['config']['patience'] == 1
+    assert request['config']['max_instances'] is None and request['config']['grad_clip'] is None
+    assert read_json(out/'status.json')['completed_epochs'] == 1
+    a = cli('evaluate', '--run', out)
+    assert a.returncode == 0, a.stderr
+    sha = digest_file(out/'test_predictions.csv')
+    b = cli('evaluate', '--run', out)
+    assert b.returncode == 0 and digest_file(out/'test_predictions.csv') == sha
+    assert read_json(out/'method_protocol.json')['source'] == 'da7bb7fa71629d34e9b04859c1db791ac8330f5d'
+
+
+def test_zoommil_cli_prepare_actual_hierarchy_and_refuse_overwrite(data, tmp_path):
+    out = tmp_path/'prepared/manifest.json'
+    arguments = ['prepare-zoommil', '--data', data, '--index', data/'zoommil_index.csv',
+                 '--schema', data/'zoommil_schema.json', '--output', out]
+    result = cli(*arguments)
+    assert result.returncode == 0, result.stderr
+    manifest = read_json(out)
+    assert len(manifest['slides']) == len(Bundle(data).rows)
+    assert manifest['schema']['synthetic'] is True
+    assert cli(*arguments).returncode != 0
+
+
+def test_zoommil_cli_demo_and_mixed_task_rejection(tmp_path):
+    out = tmp_path/'native_demo'
+    result = cli('demo', '--zoommil', '--patients', 18, '--classes', 2, '--output', out)
+    assert result.returncode == 0, result.stderr
+    bundle = Bundle(out)
+    assert bundle.dim == 1024 and bundle.config['synthetic'] is True
+    assert bundle.zoommil.inventory(bundle.records('train')[0])['nodes_per_level'] == [16, 64, 1024]
+    result = cli('demo', '--zoommil', '--augdiff', '--output', tmp_path/'mixed')
+    assert result.returncode != 0 and not (tmp_path/'mixed').exists()
+
+
+def test_zoommil_all_prior_profiles_and_catalog_regeneration_preserved(tmp_path):
+    import shutil
+    import runpy
+
+    root = Path(__file__).resolve().parents[1]
+    reference = root/'tests/fixtures/zoommil_v69_reference_profiles235.json'
+    assert digest_file(reference) == '57a1fe638712ac873fb5c270870ca6e7e03bbe4b342833692dca39653747fe5f'
+    a = {row['id']: row for row in read_json(reference)}
+    b = {row['id']: row for row in read_json(root/'src/milplus/resources/profiles.json')}
+    # Keep the original235-profile scope explicitly, including BOTH ZoomMIL
+    # routes. Require every historical execution contract, without depending
+    # on an optional developer filesystem path or forbidding planned additions.
+    assert len(a) == 235
+    assert {'zoommil_bright_source_repaired','zoommil_crc_source_repaired'} <= set(a)
+    assert set(a) <= set(b)
+    for name,spec in a.items():
+        assert all(spec.get(field) == b[name].get(field) for field in
+                   ['family', 'recipe', 'tasks', 'required_inputs', 'class_count', 'external_source'])
+    catalog = runpy.run_path(str(root/'scripts/build_catalog.py'))
+    scratch = tmp_path/'regenerate'
+    for folder in ['scripts', 'src/milplus/resources']:
+        shutil.copytree(root/folder, scratch/folder)
+    result = subprocess.run([sys.executable, str(scratch/'scripts/build_catalog.py')],
+                            cwd=scratch, text=True, capture_output=True, check=False)
+    assert result.returncode == 0, result.stderr
+    # main() also appends later method families. Derive the complete domain
+    # from its actual output; the two historical module constants omit them.
+    generated = read_json(scratch/'src/milplus/resources/profiles.json')
+    expected = {row['id'] for row in generated}
+    assert len(generated) == len(expected)
+    assert len(b) == len(expected) and set(b) == expected
+    for filename in ['methods.json', 'profiles.json']:
+        assert json.loads((scratch/'src/milplus/resources'/filename).read_text()) == read_json(root/'src/milplus/resources'/filename)

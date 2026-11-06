@@ -1,0 +1,42 @@
+{
+  "id": "campanella_rnn",
+  "name": "Campanella MIL-RNN",
+  "group": "E_encoder_training",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/MSKCC-Computational-Pathology/MIL-nature-medicine-2019",
+  "source_status": "git_commit_locked",
+  "source_commit": "daecb7293b5ea886ba222008f2592e1e29e9dac6",
+  "license": "not_yet_verified",
+  "profiles": [
+    "campanella_rnn"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "raw_regions",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_source_two_phase_raw_roi_recipe_with_best_selector_and_exact_resume",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "campanella_rnn",
+      "family": "campanella_rnn",
+      "recipe": "complete trainable ResNet34 hard-MIL selection, validated best CNN, native recurrent final-step CE and source Adam/SGD two-stage recipe on real streamed ROIs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "raw_regions",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "campanella_rnn",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

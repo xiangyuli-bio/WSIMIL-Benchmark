@@ -1,0 +1,109 @@
+{
+  "id": "ahdmil",
+  "name": "AHDMIL",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/JiuyangDong/AHDMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "2f38354386165167815eb2998424ad63792a65bf",
+  "license": "GPL-3.0; README also states non-commercial academic use; source loaded from local verified Git without redistribution",
+  "profiles": [
+    "ahdmil_camelyon16_source_repaired",
+    "ahdmil_nsclc_source_repaired",
+    "ahdmil_brca_source_repaired",
+    "ahdmil_rcc_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "hdmil_paired_low_rgb",
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete fixed-source asymmetric joint training with true selected DMIN pretraining, two native MobileNetV4 experts, both Adam updates per bag, all-class retention, parameter-only crossEMA, eligibility/reset and full restart state; native verification pending",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "ahdmil_brca_source_repaired",
+      "family": "ahdmil",
+      "recipe": "Full HDMIL DMIN preparation then actual two-expert AHDMIL joint optimization, NumPy attention/hard distillation, alternating Adams and simultaneous crossEMA, source retention-gated VAL selection/reset; explicit RCC lower_ratio and entry-name repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "hdmil_paired_low_rgb",
+        "per_slide_coords"
+      ],
+      "class_count": 2,
+      "external_source": "ahdmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ahdmil_camelyon16_source_repaired",
+      "family": "ahdmil",
+      "recipe": "Full HDMIL DMIN preparation then actual two-expert AHDMIL joint optimization, NumPy attention/hard distillation, alternating Adams and simultaneous crossEMA, source retention-gated VAL selection/reset; explicit RCC lower_ratio and entry-name repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "hdmil_paired_low_rgb",
+        "per_slide_coords"
+      ],
+      "class_count": 2,
+      "external_source": "ahdmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ahdmil_nsclc_source_repaired",
+      "family": "ahdmil",
+      "recipe": "Full HDMIL DMIN preparation then actual two-expert AHDMIL joint optimization, NumPy attention/hard distillation, alternating Adams and simultaneous crossEMA, source retention-gated VAL selection/reset; explicit RCC lower_ratio and entry-name repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "hdmil_paired_low_rgb",
+        "per_slide_coords"
+      ],
+      "class_count": 2,
+      "external_source": "ahdmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ahdmil_rcc_source_repaired",
+      "family": "ahdmil",
+      "recipe": "Full HDMIL DMIN preparation then actual two-expert AHDMIL joint optimization, NumPy attention/hard distillation, alternating Adams and simultaneous crossEMA, source retention-gated VAL selection/reset; explicit RCC lower_ratio and entry-name repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "hdmil_paired_low_rgb",
+        "per_slide_coords"
+      ],
+      "class_count": 3,
+      "external_source": "ahdmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "augdiff",
+  "name": "AugDiff",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/szc19990412/AugDiff",
+  "source_status": "git_commit_locked",
+  "source_commit": "abfdfe25c6373019d71bf3323cf59be799203563",
+  "license": "MIT",
+  "profiles": [
+    "augdiff_amil_released_time_reconstruction",
+    "augdiff_amil_schedule_repaired_reconstruction",
+    "augdiff_lossattn_released_time_reconstruction",
+    "augdiff_lossattn_schedule_repaired_reconstruction",
+    "augdiff_dsmil_released_time_reconstruction",
+    "augdiff_dsmil_schedule_repaired_reconstruction"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "augdiff_trained_dae",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original7view_fullwidth_DAE_EMA_pretraining_and_frozen_RAW_DDIM3heads_7xTRAIN_VAL_CE_LookaheadRAdam_accum2_AMP_cleanTEST_full_state; featureUNet_DataInterface_missing_explicit_singleton1D_reconstruction_and_time_control_vs_schedule_repair; original_historical_weights_scores_not_claimed",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "augdiff_amil_released_time_reconstruction",
+      "family": "augdiff",
+      "recipe": "Complete actual full-width7-view DAE/EMA pretraining then frozen RAW DDIM semantic augmentation plus original amil CE/LookaheadRAdam/gradacc2/7xTRAIN-VAL/cleanTEST; explicit singleton1D feature-layout reconstruction and released_time_reconstruction",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "augdiff_trained_dae"
+      ],
+      "class_count": null,
+      "external_source": "augdiff",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "augdiff_amil_schedule_repaired_reconstruction",
+      "family": "augdiff",
+      "recipe": "Complete actual full-width7-view DAE/EMA pretraining then frozen RAW DDIM semantic augmentation plus original amil CE/LookaheadRAdam/gradacc2/7xTRAIN-VAL/cleanTEST; explicit singleton1D feature-layout reconstruction and schedule_repaired_reconstruction",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "augdiff_trained_dae"
+      ],
+      "class_count": null,
+      "external_source": "augdiff",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "augdiff_dsmil_released_time_reconstruction",
+      "family": "augdiff",
+      "recipe": "Complete actual full-width7-view DAE/EMA pretraining then frozen RAW DDIM semantic augmentation plus original dsmil CE/LookaheadRAdam/gradacc2/7xTRAIN-VAL/cleanTEST; explicit singleton1D feature-layout reconstruction and released_time_reconstruction",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "augdiff_trained_dae"
+      ],
+      "class_count": null,
+      "external_source": "augdiff",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "augdiff_dsmil_schedule_repaired_reconstruction",
+      "family": "augdiff",
+      "recipe": "Complete actual full-width7-view DAE/EMA pretraining then frozen RAW DDIM semantic augmentation plus original dsmil CE/LookaheadRAdam/gradacc2/7xTRAIN-VAL/cleanTEST; explicit singleton1D feature-layout reconstruction and schedule_repaired_reconstruction",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "augdiff_trained_dae"
+      ],
+      "class_count": null,
+      "external_source": "augdiff",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "augdiff_lossattn_released_time_reconstruction",
+      "family": "augdiff",
+      "recipe": "Complete actual full-width7-view DAE/EMA pretraining then frozen RAW DDIM semantic augmentation plus original lossattn CE/LookaheadRAdam/gradacc2/7xTRAIN-VAL/cleanTEST; explicit singleton1D feature-layout reconstruction and released_time_reconstruction",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "augdiff_trained_dae"
+      ],
+      "class_count": null,
+      "external_source": "augdiff",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "augdiff_lossattn_schedule_repaired_reconstruction",
+      "family": "augdiff",
+      "recipe": "Complete actual full-width7-view DAE/EMA pretraining then frozen RAW DDIM semantic augmentation plus original lossattn CE/LookaheadRAdam/gradacc2/7xTRAIN-VAL/cleanTEST; explicit singleton1D feature-layout reconstruction and schedule_repaired_reconstruction",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "augdiff_trained_dae"
+      ],
+      "class_count": null,
+      "external_source": "augdiff",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

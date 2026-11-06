@@ -1,0 +1,67 @@
+{
+  "id": "gatmamba",
+  "name": "GAT-Mamba",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/rina-ding/gat-mamba",
+  "source_status": "git_commit_locked",
+  "source_commit": "18979497990a66ffe6a75880f0336f85914552f0",
+  "license": "GPL-3.0",
+  "profiles": [
+    "gatmamba_source",
+    "gatmamba_edge_conditioned"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "gatmamba_assets",
+    "patch_features",
+    "per_slide_coords",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_GAT_Mamba1.2.0.post1_and_source_Cox_L1_Adam_shuffled_VAL_plateau_last_tie_recipe; actual_six_class_classifier_provenance_physical_patient_graphs_full_FM_input_port_and_named_edge_conditioning_correction; exact_resume",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "gatmamba_edge_conditioned",
+      "family": "gatmamba",
+      "recipe": "complete native GAT-Mamba recipe with explicit edge_dim16 and singleton normalization corrections; actual physical/subtype/FM-space graph provenance, all registered feature channels",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "gatmamba_assets",
+        "per_slide_coords",
+        "spatial_metadata"
+      ],
+      "class_count": null,
+      "external_source": "gatmamba",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "gatmamba_source",
+      "family": "gatmamba",
+      "recipe": "complete original physical GAT/Mamba1.2.0.post1 network, source Cox+all-parameterL1 and full shuffled-patient Adam/plateau/last-tie selection recipe; explicit full-D input port and original inactive edge conditioning",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "gatmamba_assets",
+        "per_slide_coords",
+        "spatial_metadata"
+      ],
+      "class_count": null,
+      "external_source": "gatmamba",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

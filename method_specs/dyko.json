@@ -1,0 +1,236 @@
+{
+  "id": "dyko",
+  "name": "DyKo",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/junjianli106/DyKo",
+  "source_status": "full_original_asset_adapter_code_integrated_under_verification",
+  "source_commit": "a8b43645840cf283c334b07c42cf4ddf230f644a",
+  "license": "no_LICENSE_in_pinned_tree_private_loading_only",
+  "profiles": [
+    "dyko_camelyon16_cpu_faiss_source_reference",
+    "dyko_camelyon16_cuda_faiss_requested_reference",
+    "dyko_nsclc_cpu_faiss_source_reference",
+    "dyko_nsclc_cuda_faiss_requested_reference",
+    "dyko_rcc_cpu_faiss_source_reference",
+    "dyko_rcc_cuda_faiss_requested_reference",
+    "dyko_ubc_cpu_faiss_source_reference",
+    "dyko_ubc_cuda_faiss_requested_reference"
+  ],
+  "status": "adapted_under_verification",
+  "default_execution_profile": "dyko_nsclc_cpu_faiss_source_reference",
+  "required_inputs": [
+    "native_aligned768D_patch_features",
+    "actual_pretrained_TITAN_text_tower",
+    "released_cohort_concept_bank_and_class_prompts",
+    "patient_safe_source_split_and_fewshot_manifest",
+    "native_GPU_FAISS_or_explicit_CPU_reference"
+  ],
+  "formal_admission": false,
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Full model, native inputs, original-asset binding, isolated training, checkpoint recovery and evaluation are integrated into the public engine. Family execution selects the prepared cohort and explicitly uses CPU FAISS; CUDA FAISS requires its separately named profile and real GPU FAISS. No replacement text model or random pretrained weights are used.",
+  "prerequisites": [
+    "Run setup and prepare-dyko-assets with authorized original TITAN files.",
+    "Bind native visual provenance and patients with prepare-dyko.",
+    "Use the separate dyko runtime dependencies; GPU FAISS is not in the CPU extra."
+  ],
+  "validation_blockers": [
+    "Complete original-pretrained source/wheel/native-budget validation remains pending."
+  ],
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "dyko_camelyon16_cpu_faiss_source_reference",
+      "family": "dyko",
+      "recipe": "Full original TITAN DyKo, CAMELYON16, cpu_faiss_reference; 16-shot default, Adam/accumulation4, VAL accuracy, max1000/patience40",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_aligned768D_patch_features",
+        "actual_pretrained_TITAN_text_tower",
+        "released_cohort_concept_bank_and_class_prompts",
+        "patient_safe_source_split_and_fewshot_manifest",
+        "native_GPU_FAISS_or_explicit_CPU_reference"
+      ],
+      "class_count": 2,
+      "external_source": "dyko",
+      "cohort": "CAMELYON16",
+      "faiss_backend": "cpu_faiss_reference",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dyko_camelyon16_cuda_faiss_requested_reference",
+      "family": "dyko",
+      "recipe": "Full original TITAN DyKo, CAMELYON16, cuda_faiss; 16-shot default, Adam/accumulation4, VAL accuracy, max1000/patience40",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_aligned768D_patch_features",
+        "actual_pretrained_TITAN_text_tower",
+        "released_cohort_concept_bank_and_class_prompts",
+        "patient_safe_source_split_and_fewshot_manifest",
+        "native_GPU_FAISS_or_explicit_CPU_reference"
+      ],
+      "class_count": 2,
+      "external_source": "dyko",
+      "cohort": "CAMELYON16",
+      "faiss_backend": "cuda_faiss",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dyko_nsclc_cpu_faiss_source_reference",
+      "family": "dyko",
+      "recipe": "Full original TITAN DyKo, NSCLC, cpu_faiss_reference; 16-shot default, Adam/accumulation4, VAL accuracy, max1000/patience40",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_aligned768D_patch_features",
+        "actual_pretrained_TITAN_text_tower",
+        "released_cohort_concept_bank_and_class_prompts",
+        "patient_safe_source_split_and_fewshot_manifest",
+        "native_GPU_FAISS_or_explicit_CPU_reference"
+      ],
+      "class_count": 2,
+      "external_source": "dyko",
+      "cohort": "NSCLC",
+      "faiss_backend": "cpu_faiss_reference",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dyko_nsclc_cuda_faiss_requested_reference",
+      "family": "dyko",
+      "recipe": "Full original TITAN DyKo, NSCLC, cuda_faiss; 16-shot default, Adam/accumulation4, VAL accuracy, max1000/patience40",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_aligned768D_patch_features",
+        "actual_pretrained_TITAN_text_tower",
+        "released_cohort_concept_bank_and_class_prompts",
+        "patient_safe_source_split_and_fewshot_manifest",
+        "native_GPU_FAISS_or_explicit_CPU_reference"
+      ],
+      "class_count": 2,
+      "external_source": "dyko",
+      "cohort": "NSCLC",
+      "faiss_backend": "cuda_faiss",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dyko_rcc_cpu_faiss_source_reference",
+      "family": "dyko",
+      "recipe": "Full original TITAN DyKo, RCC, cpu_faiss_reference; 16-shot default, Adam/accumulation4, VAL accuracy, max1000/patience40",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_aligned768D_patch_features",
+        "actual_pretrained_TITAN_text_tower",
+        "released_cohort_concept_bank_and_class_prompts",
+        "patient_safe_source_split_and_fewshot_manifest",
+        "native_GPU_FAISS_or_explicit_CPU_reference"
+      ],
+      "class_count": 3,
+      "external_source": "dyko",
+      "cohort": "RCC",
+      "faiss_backend": "cpu_faiss_reference",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dyko_rcc_cuda_faiss_requested_reference",
+      "family": "dyko",
+      "recipe": "Full original TITAN DyKo, RCC, cuda_faiss; 16-shot default, Adam/accumulation4, VAL accuracy, max1000/patience40",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_aligned768D_patch_features",
+        "actual_pretrained_TITAN_text_tower",
+        "released_cohort_concept_bank_and_class_prompts",
+        "patient_safe_source_split_and_fewshot_manifest",
+        "native_GPU_FAISS_or_explicit_CPU_reference"
+      ],
+      "class_count": 3,
+      "external_source": "dyko",
+      "cohort": "RCC",
+      "faiss_backend": "cuda_faiss",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dyko_ubc_cpu_faiss_source_reference",
+      "family": "dyko",
+      "recipe": "Full original TITAN DyKo, UBC, cpu_faiss_reference; 16-shot default, Adam/accumulation4, VAL accuracy, max1000/patience40",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_aligned768D_patch_features",
+        "actual_pretrained_TITAN_text_tower",
+        "released_cohort_concept_bank_and_class_prompts",
+        "patient_safe_source_split_and_fewshot_manifest",
+        "native_GPU_FAISS_or_explicit_CPU_reference"
+      ],
+      "class_count": 5,
+      "external_source": "dyko",
+      "cohort": "UBC",
+      "faiss_backend": "cpu_faiss_reference",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dyko_ubc_cuda_faiss_requested_reference",
+      "family": "dyko",
+      "recipe": "Full original TITAN DyKo, UBC, cuda_faiss; 16-shot default, Adam/accumulation4, VAL accuracy, max1000/patience40",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_aligned768D_patch_features",
+        "actual_pretrained_TITAN_text_tower",
+        "released_cohort_concept_bank_and_class_prompts",
+        "patient_safe_source_split_and_fewshot_manifest",
+        "native_GPU_FAISS_or_explicit_CPU_reference"
+      ],
+      "class_count": 5,
+      "external_source": "dyko",
+      "cohort": "UBC",
+      "faiss_backend": "cuda_faiss",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Original HIPT classification budget and default final-epoch selection.
+# Native ViT256-DINO384 patch features and complete physical regions are required.
+epochs: 20
+lr: 0.0002
+weight_decay: 0.00001
+grad_clip: null
+selection_metric: hipt_val_loss
+threads: 2
+model:
+  early_stopping: false

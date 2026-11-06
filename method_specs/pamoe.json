@@ -1,0 +1,103 @@
+{
+  "id": "pamoe",
+  "name": "PaMoE",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/wjx-error/PAMoE",
+  "source_status": "git_commit_locked",
+  "source_commit": "7a26f4cc842d2875cfdee33e77de1495cae9dabe",
+  "license": "No root license found; not vendored",
+  "profiles": [
+    "pamoe_transmil",
+    "pamoe_transmil_source",
+    "pamoe_transformer",
+    "pamoe_transformer_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "tissue_prototypes"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "pamoe_transformer",
+      "family": "pamoe",
+      "recipe": "author Transformer with explicit batch/expert indexing repair; tissue-prior CE, author batch Cox or classification CE, event sampler, AdamW/cyclic cosine",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "tissue_prototypes"
+      ],
+      "class_count": null,
+      "external_source": "pamoe",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pamoe_transformer_source",
+      "family": "pamoe",
+      "recipe": "literal released Transformer expert slicing; tissue-prior CE, author batch Cox or classification CE, event sampler, AdamW/cyclic cosine",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "tissue_prototypes"
+      ],
+      "class_count": null,
+      "external_source": "pamoe",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pamoe_transmil",
+      "family": "pamoe",
+      "recipe": "author TransMIL with explicit batch/expert indexing repair; tissue-prior CE, author batch Cox or classification CE, event sampler, AdamW/cyclic cosine",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "tissue_prototypes"
+      ],
+      "class_count": null,
+      "external_source": "pamoe",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pamoe_transmil_source",
+      "family": "pamoe",
+      "recipe": "literal released TransMIL expert slicing; tissue-prior CE, author batch Cox or classification CE, event sampler, AdamW/cyclic cosine",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "tissue_prototypes"
+      ],
+      "class_count": null,
+      "external_source": "pamoe",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

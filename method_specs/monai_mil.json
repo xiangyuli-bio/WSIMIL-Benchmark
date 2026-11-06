@@ -1,0 +1,118 @@
+{
+  "id": "monai_mil",
+  "name": "Dependency-aware MIL / MONAI",
+  "group": "E_encoder_training",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Project-MONAI/MONAI",
+  "source_status": "git_commit_locked",
+  "source_commit": "9c6d819f97e37f36c72f3bdfad676b455bd2fa0d",
+  "license": "Apache-2.0",
+  "profiles": [
+    "monai_mean_tutorial",
+    "monai_max_tutorial",
+    "monai_attention_tutorial",
+    "monai_transformer_tutorial",
+    "monai_pyramid_tutorial"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "raw_images",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_published_raw_image_ordinal_tutorial; paper_pseudolabel_extension_not_claimed",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "monai_attention_tutorial",
+      "family": "monai_mil",
+      "recipe": "native trainable ResNet50 attention baseline; cumulative ordinal BCE, complete AdamW/cosine RGB tutorial",
+      "tasks": [
+        "ordinal"
+      ],
+      "required_inputs": [
+        "raw_images",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "monai_mil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "monai_max_tutorial",
+      "family": "monai_mil",
+      "recipe": "native trainable ResNet50 max-logit baseline; cumulative ordinal BCE, complete AdamW/cosine RGB tutorial",
+      "tasks": [
+        "ordinal"
+      ],
+      "required_inputs": [
+        "raw_images",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "monai_mil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "monai_mean_tutorial",
+      "family": "monai_mil",
+      "recipe": "native trainable ResNet50 mean-logit baseline; cumulative ordinal BCE, complete AdamW/cosine RGB tutorial",
+      "tasks": [
+        "ordinal"
+      ],
+      "required_inputs": [
+        "raw_images",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "monai_mil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "monai_pyramid_tutorial",
+      "family": "monai_mil",
+      "recipe": "complete native ResNet50 four-stage feature-map pyramid Transformer, ordinal BCE and full two-group AdamW/cosine RGB tutorial",
+      "tasks": [
+        "ordinal"
+      ],
+      "required_inputs": [
+        "raw_images",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "monai_mil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "monai_transformer_tutorial",
+      "family": "monai_mil",
+      "recipe": "full native trainable ResNet50 plus dependency Transformer; ordinal BCE, two AdamW groups and epoch cosine, raw full-level stochastic tiling",
+      "tasks": [
+        "ordinal"
+      ],
+      "required_inputs": [
+        "raw_images",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "monai_mil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

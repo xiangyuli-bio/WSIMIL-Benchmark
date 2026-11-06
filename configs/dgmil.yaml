@@ -1,0 +1,9 @@
+epochs: 50
+patience: 50
+lr: 0.01
+weight_decay: 0.0
+grad_clip: null
+selection_metric: macro_auc
+model:
+  clusters: 10
+  projection_batch: 65536

@@ -1,0 +1,97 @@
+{
+  "id": "dspamil",
+  "name": "DSPA-MIL / DSPA-U-MIL",
+  "group": "H_extra_supervision",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/AlexNmSED/DSPA-MIL",
+  "source_status": "incomplete_author_source_with_full2025_reference_adapter_integrated",
+  "source_commit": "75d95d410374771a3eba4bd84fdfadc06acf0eed",
+  "license": "MIT",
+  "profiles": [
+    "dspamil_2025_released_mask_reference",
+    "dspamil_2025_paper_mask_reference"
+  ],
+  "status": "adapted_under_verification",
+  "default_execution_profile": "dspamil_2025_released_mask_reference",
+  "required_inputs": [
+    "native_UNI1024_patch_features",
+    "patient_disjoint_splits",
+    "TRAIN_only_measured_Gleason_pattern_targets",
+    "pattern_and_training_grade_expert_concepts",
+    "explicit_text_to_UNI_alignment"
+  ],
+  "supported_variants": [
+    "DSPA-MIL2025_explicit_reference"
+  ],
+  "unsupported_variants": [
+    "DSPA-U-MIL"
+  ],
+  "DSPA_U_implemented": false,
+  "original_expert_assets_verified": false,
+  "formal_admission": false,
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Complete151120896parameter PAT plus full-width dual heads (162690072 total), native input binding, TRAIN-only measured pattern supervision, all published2025 losses,50epoch reference trainer, full-state checkpoints, isolated subprocess and Student-only evaluation are publicly integrated. Unreleased normalization, KL/detach, head and training choices must be explicitly configured. This is not the incomplete literal author trainer or a DSPA-U implementation.",
+  "prerequisites": [
+    "Prepare actual UNI features, six ordered grades, measured TRAIN patterns and justified concept/alignment assets.",
+    "Run prepare-dspamil and supply configs/dspamil_2025_full_reference.yaml with reviewed provenance.",
+    "Use the dspamil Torch2.5.1 runtime; inference uses only the Student path."
+  ],
+  "validation_blockers": [
+    "Original expert assets/alignment and complete full-model source/wheel/native validation remain pending.",
+    "DSPA-U specification and uncertainty implementation remain unavailable."
+  ],
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "dspamil_2025_released_mask_reference",
+      "family": "dspamil",
+      "recipe": "Complete162690072parameter PAT/Teacher/PTG/Student DSPA2025, released_zero_logits; explicit equation/head/selection references, full50epoch AdamW recipe",
+      "tasks": [
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_UNI1024_patch_features",
+        "patient_disjoint_splits",
+        "TRAIN_only_measured_Gleason_pattern_targets",
+        "pattern_and_training_grade_expert_concepts",
+        "explicit_text_to_UNI_alignment"
+      ],
+      "class_count": 6,
+      "external_source": "dspamil",
+      "mask_convention": "released_zero_logits",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "DSPA_U_implemented": false,
+      "original_expert_assets_verified": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dspamil_2025_paper_mask_reference",
+      "family": "dspamil",
+      "recipe": "Complete162690072parameter PAT/Teacher/PTG/Student DSPA2025, paper_post_softmax_no_renormalization_reference; explicit equation/head/selection references, full50epoch AdamW recipe",
+      "tasks": [
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_UNI1024_patch_features",
+        "patient_disjoint_splits",
+        "TRAIN_only_measured_Gleason_pattern_targets",
+        "pattern_and_training_grade_expert_concepts",
+        "explicit_text_to_UNI_alignment"
+      ],
+      "class_count": 6,
+      "external_source": "dspamil",
+      "mask_convention": "paper_post_softmax_no_renormalization_reference",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "DSPA_U_implemented": false,
+      "original_expert_assets_verified": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

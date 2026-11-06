@@ -1,0 +1,20 @@
+epochs: 50
+patience: 50
+lr: 0.0001
+weight_decay: 0.0
+grad_clip: null
+selection_metric: c_index
+model:
+  hidden: 256
+  bins: 4
+  pretrain_epochs: 25
+  accumulation_steps: 32
+  finetune_lr: 0.00005
+  finetune_weight_decay: 0.0
+  alpha: 0.0
+  omic_bag: SNN
+  use_gap: true
+  proj_ratio: 1.0
+  dropout: 0.25
+  freeze_policy: source_zip
+  inference_seed: 2026

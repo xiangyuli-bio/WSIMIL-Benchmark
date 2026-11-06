@@ -1,0 +1,15 @@
+epochs: 60
+lr: 0.0002
+patience: 15
+model:
+  hidden: 512
+  warmup_epochs: 10
+  dropout: 0.25
+  high_mask: 0.1
+  low_mask: 0.1
+  random_mask: 0.0
+  high_random_fraction: 1.0
+  teacher_temperature: 0.1
+  distillation_weight: 0.1
+  momentum: 0.9999
+  high_mask_decay: true

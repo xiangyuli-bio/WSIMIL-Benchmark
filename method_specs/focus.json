@@ -1,0 +1,44 @@
+{
+  "id": "focus",
+  "name": "FOCUS",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/dddavid4real/FOCUS",
+  "source_status": "git_commit_locked",
+  "source_commit": "66c4015d5ba09657f4c8183bc06947faecd5b01f",
+  "license": "Apache-2.0; CONCH dependency/weights have independent non-commercial terms",
+  "profiles": [
+    "focus_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "focus_assets",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "focus_source",
+      "family": "focus",
+      "recipe": "Original FOCUS native full trainable CONCH text/prompt, complete visual selection/compression/8head attention, one-bag CE, VAL-error firstbest",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "focus_assets"
+      ],
+      "class_count": null,
+      "external_source": "focus",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

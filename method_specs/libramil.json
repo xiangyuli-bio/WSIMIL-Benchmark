@@ -1,0 +1,64 @@
+{
+  "id": "libramil",
+  "name": "Libra-MIL",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/zfy07/Libra-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "f29921970bfa22d364e08ea1768b984b47e07a8d",
+  "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+  "profiles": [
+    "libramil_source_p4",
+    "libramil_readme_p6"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "native_CONCH_features",
+    "ordered_language_descriptions",
+    "patient_grouped_split"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Complete full original architecture, actual pretrained46+3RCC language embedding, original20epoch CPU references both4/6prototypes passed; unifiedCLI/recovery/full regression gates underway.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "libramil_readme_p6",
+      "family": "libramil",
+      "recipe": "Complete original512D/8head/46RCCstructural descriptions or explicit full external descriptions, learned structural/bag prompts and6visual prototypes, source20iteration SOT and CE; actual pretrained CONCH frozen language encoding, full source AdamW.01decay/100warmup/cosine/20epochs, literal accuracy-AUC selection branch and complete state",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_CONCH_features",
+        "ordered_language_descriptions",
+        "patient_grouped_split"
+      ],
+      "class_count": null,
+      "external_source": "libramil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "libramil_source_p4",
+      "family": "libramil",
+      "recipe": "Complete original512D/8head/46RCCstructural descriptions or explicit full external descriptions, learned structural/bag prompts and4visual prototypes, source20iteration SOT and CE; actual pretrained CONCH frozen language encoding, full source AdamW.01decay/100warmup/cosine/20epochs, literal accuracy-AUC selection branch and complete state",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_CONCH_features",
+        "ordered_language_descriptions",
+        "patient_grouped_split"
+      ],
+      "class_count": null,
+      "external_source": "libramil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+epochs: 200
+lr: 0.0002
+weight_decay: 0.00001
+grad_clip: null
+selection_metric: log_loss
+patience: 20
+model:
+  hidden: 512
+  layers: 2
+  state_size: 64
+  dropout: 0.0
+  activation: relu
+  backend: torch
+  scan_chunk: 64
+  early_stopping: true
+  weighted_sampling: false

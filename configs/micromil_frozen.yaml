@@ -1,0 +1,13 @@
+epochs: 50
+lr: 0.0001
+weight_decay: 0.000001
+patience: 5
+grad_clip: null
+selection_metric: micromil_f1
+model:
+  hidden: 128
+  clusters: 36
+  layers: 2
+  dropout: 0.5
+  prediction_seed: 2026
+  prediction_samples: 1

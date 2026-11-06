@@ -1,0 +1,31 @@
+{
+  "version": "0.104.0",
+  "snapshot": "candidate_not_published",
+  "planned_methods": 164,
+  "candidate_families": 156,
+  "candidate_profiles": 335,
+  "published_development_families": 151,
+  "stable_families": 117,
+  "LongMIL_focused_checks": 28,
+  "LongMIL_native_component_oracles": "passed_full_original_v1_all_states_and_full_width_paper_equation",
+  "LongMIL_public_lifecycle": "pending",
+  "LongMIL_full_native_source_and_independent_wheel": "pending",
+  "formal_admission": false,
+  "whole_library_passed": false,
+  "real_new_WSI_experiments": "not_run",
+  "paper_score_reproduction": "not_run",
+  "known_whole_library_issue": "Historical PMIL raw-CPU exact-state oracle remains unresolved.",
+  "current_0_108": {
+    "implementation_candidates": 160,
+    "profiles": 350,
+    "prior_software_verified_entries": 159,
+    "mexd_software_admission": false,
+    "related_focused_checks_passed": 54,
+    "cpu_public_preflight": "passed_complete_both_stages_interruptions1_2_3_four_reloads_and_all_states_posterior_exact",
+    "cuda_source_wheel": "not_run",
+    "native_budget": "not_run",
+    "whole_library_final": "not_passed",
+    "real_WSI": "not_run",
+    "paper_score_reproduction": "not_run"
+  }
+}

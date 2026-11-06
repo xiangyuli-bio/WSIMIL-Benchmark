@@ -1,0 +1,84 @@
+{
+  "id": "pathomics",
+  "name": "PathOmics",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Cassie07/PathOmics",
+  "source_status": "git_commit_locked",
+  "source_commit": "9705d6137f2974923c978597c18e7198bf888e23",
+  "license": "No root license found; not vendored",
+  "profiles": [
+    "pathomics_concat_source",
+    "pathomics_image_source",
+    "pathomics_omics_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "omics",
+    "patch_features",
+    "pathways"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "pathomics_concat_source",
+      "family": "pathomics",
+      "recipe": "author concat branch, two-stage MSE alignment and censored NLL, two Adam optimizers, explicit source freeze and checkpoint/tail repairs",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "pathomics",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pathomics_image_source",
+      "family": "pathomics",
+      "recipe": "author image branch, two-stage MSE alignment and censored NLL, two Adam optimizers, explicit source freeze and checkpoint/tail repairs",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "pathomics",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pathomics_omics_source",
+      "family": "pathomics",
+      "recipe": "author omics branch, two-stage MSE alignment and censored NLL, two Adam optimizers, explicit source freeze and checkpoint/tail repairs",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "pathomics",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

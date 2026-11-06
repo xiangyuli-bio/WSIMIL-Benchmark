@@ -1,0 +1,8 @@
+{
+  "source": "https://download.pytorch.org/whl/cpu/torch-1.4.0%2Bcpu-cp38-cp38-linux_x86_64.whl",
+  "original_path": "torch/optim/adam.py",
+  "original_file_sha256": "97067d8382378053cbd13084c84f1da6dac7f584b7fbceff5f61b2070e776091",
+  "original_source_unmodified": true,
+  "compatibility": "Only the relative optimizer base resolves to the host Optimizer; original zero_grad default False retained. Adam body including gradient mutation, p.data update and scalar bias corrections is unchanged.",
+  "license": "PyTorch BSD, complete original LICENSE retained"
+}

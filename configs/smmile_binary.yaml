@@ -1,0 +1,16 @@
+epochs: 60
+lr: 0.00002
+weight_decay: 0.00001
+grad_clip: null
+patience: 50
+selection_metric: smmile_source_loss
+model:
+  warmup_epochs: 40
+  size: small
+  groups: 10
+  drop_times: 1
+  inst_rate: 0.1
+  refs: 3
+  bag_loss: bce
+  mrf: false
+  consistency: false

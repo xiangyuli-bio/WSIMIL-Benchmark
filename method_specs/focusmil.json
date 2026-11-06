@@ -1,0 +1,41 @@
+{
+  "id": "focusmil",
+  "name": "FocusMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Raymvp/FocusMIL-and-other-max-pooling-methods",
+  "source_status": "git_commit_locked",
+  "source_commit": "a0f0c03ea7e6a3533ce1ea9f43a4f86976554d3e",
+  "license": "not_yet_verified",
+  "profiles": [
+    "focusmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "focusmil",
+      "family": "focusmil",
+      "recipe": "binary variational max pooling; reparameterized latent and active KL; deterministic posterior-mean inference",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": 2,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

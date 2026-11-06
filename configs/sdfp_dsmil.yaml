@@ -1,0 +1,10 @@
+epochs: 50
+lr: 0.002
+weight_decay: 1.0e-05
+model:
+  warmup_epochs: 20
+  num_prompts: 1
+  aggregation: multiply
+  initialization: gaussian
+  prompt_lr: 0.002
+  prompt_weight_decay: 1.0e-05

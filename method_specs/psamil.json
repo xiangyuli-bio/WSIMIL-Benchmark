@@ -1,0 +1,47 @@
+{
+  "id": "psamil",
+  "name": "PSA-MIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/SharonPeled/PSA-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "673a7a904b565fb413fbdd1b937d544e87c96562",
+  "license": "Apache-2.0",
+  "profiles": [
+    "psamil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "patch_features",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "psamil",
+      "family": "psamil",
+      "recipe": "2026 author spatial decay attention, active head-diversity objective, class balancing and separate decay learning rate",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "psamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "deepattnmisl",
+  "name": "DeepAttnMISL",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/uta-smile/DeepAttnMISL",
+  "source_status": "git_commit_locked",
+  "source_commit": "d7099ed88c452aec37f16fc8e93cc0c068794c2a",
+  "license": "No root license found; review pending",
+  "profiles": [
+    "deepattnmisl"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "deepattnmisl",
+      "family": "deepattnmisl",
+      "recipe": "author phenotype Conv/pooling/attention; batch patient-mean Cox plus L1; explicit patient KMeans or provided labels",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "deepattnmisl",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

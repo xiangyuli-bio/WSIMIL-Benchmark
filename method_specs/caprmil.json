@@ -1,0 +1,79 @@
+{
+  "id": "caprmil",
+  "name": "CAPRMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mandlos/CAPRMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "b1f21a25e21d889a90bd604d29887abb3c1dbeeb",
+  "license": "Modified MIT; non-commercial",
+  "profiles": [
+    "caprmil_mean",
+    "caprmil_attention",
+    "caprmil_gated"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "caprmil_attention",
+      "family": "caprmil",
+      "recipe": "author CAPRMIL context blocks with learned attention pooling; CE and AdamW/cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "caprmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "caprmil_gated",
+      "family": "caprmil",
+      "recipe": "author CAPRMIL context blocks with gated attention pooling; CE and AdamW/cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "caprmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "caprmil_mean",
+      "family": "caprmil",
+      "recipe": "author soft context tokens, token attention and de-slicing; mean pooling, CE and AdamW/cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "caprmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

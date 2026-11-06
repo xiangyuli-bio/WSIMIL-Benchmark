@@ -1,0 +1,12 @@
+epochs: 100
+lr: 0.0002
+weight_decay: 0.00001
+patience: 20
+grad_clip: null
+max_instances: null
+selection_metric: kmgmamba_val_auc
+model:
+  scan_backend: torch
+  scan_chunk: 64
+  num_workers: null
+  sequence_length_min: 0

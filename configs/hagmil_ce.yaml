@@ -1,0 +1,12 @@
+epochs: 200
+lr: 0.00001
+weight_decay: 0.00001
+patience: 20
+model:
+  hidden_dims: [1024, 1536, 512, 1024]
+  dropout: 0.25
+  k_sample: 8
+  train_parents: 7000
+  eval_parents: 10000
+  bag_weight: 0.5
+  instance_weight: 0.5

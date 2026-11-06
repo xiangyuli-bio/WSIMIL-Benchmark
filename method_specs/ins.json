@@ -1,0 +1,45 @@
+{
+  "id": "ins",
+  "name": "INS",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/miccaiif/INS",
+  "source_status": "git_commit_locked",
+  "source_commit": "cd97ba2fa7df2a951f218e6de405f664129931c8",
+  "license": "No root license found; not vendored",
+  "profiles": [
+    "ins_frozen_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "full_feature_dimension_divisible_by_32",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_native_frozen_feature_ResNet18_route_with_all_IWSCL_prototype_confidence_and_bag_objectives; actual_source_phase_sampler_SGD_schedule_and_full_state_resume; pseudoimage_condition_Cway_bag_head_bag_only_negative_labels_valid_queue_and_paper_scratch_init_explicit",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "ins_frozen_source_repaired",
+      "family": "ins",
+      "recipe": "complete frozen-feature INS route with actual native ResNet18 feature-pseudoimage/query-key/prototype/queue/partial-label/SupCon kernels and full source two-phase SGD+bag-CE recipe; named weak-label, valid-queue, two-class bag-head and scratch-initialization repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "full_feature_dimension_divisible_by_32"
+      ],
+      "class_count": 2,
+      "external_source": "ins",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run",
+      "input_condition": "trainable_native_ResNet18_on_full_frozen_feature_pseudoimages"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "id": "fouriermil",
+  "name": "FourierMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/lingxitong/MIL_BASELINE",
+  "source_status": "original_source_recovered_separate_native_recipe_candidate",
+  "source_commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+  "license": "not_yet_verified",
+  "profiles": [
+    "fouriermil",
+    "fouriermil_author_200_fp16_val_loss_locked_test",
+    "fouriermil_author_200_cpu32_reference_val_loss_locked_test"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Legacy MIL_BASELINE implementation and its source identity remain available. Separately named original-source profiles preserve native1024/512/2blocks, initialization, zero dropout, Lookahead-RAdam, eight workers, accumulation2, maximum200epochs, literal VAL loss and patience10. Native CUDA FP16 and explicit CPU32 reference are separate. Current-framework semantics and named fast/slow/cache optimizer checkpoint repair are disclosed. Complete source/wheel/native and current-release gates remain pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "fouriermil",
+      "family": "fouriermil",
+      "recipe": "adaptive Fourier filtering blocks and CLS pooling, CE",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "fouriermil_author_200_fp16_val_loss_locked_test",
+      "family": "fouriermil",
+      "recipe": "original Fourier1024->512, Lookahead-RAdam, accumulation2, fp16, VAL-loss patience10",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "fouriermil_author",
+      "author_recipe": {
+        "epochs": 200,
+        "patience": 10,
+        "min_delta": 0.0,
+        "batch_size": 1,
+        "workers": 8,
+        "accumulate_grad_batches": 2,
+        "input_dimension": 1024,
+        "hidden_dimension": 512,
+        "blocks": 2,
+        "dropout": 0.0,
+        "opt": "lookahead_radam",
+        "lr": 0.0002,
+        "opt_eps": null,
+        "opt_betas": null,
+        "momentum": null,
+        "weight_decay": 1e-05,
+        "selection": "strict minimum literal author VAL log(softmax) loss",
+        "data_shuffle": false,
+        "train_shuffle": true,
+        "seed_in_author_yaml": 2021,
+        "gradient_clipping": null,
+        "scheduler": null,
+        "original_environment": "torch1.7.1+cu110 / pytorch_lightning1.2.3",
+        "compatibility_changes": [
+          "explicit caller device replaces original CLS-token cuda()",
+          "patient-disjoint Bundle replaces author cohort CSV and absolute feature paths",
+          "unchanged author model, initialization, training_step, validation_step and VAL loss",
+          "explicit current-framework accumulation and native AMP equivalent control flow",
+          "zero_grad(set_to_none=False) retains torch1.7 default",
+          "empty current-Optimizer hook registries repair original Lookahead zero_grad/step interface",
+          "named fast/slow/cache optimizer restoration repairs incompatible original loader",
+          "TEST locked until a separately requested evaluation after complete fitting"
+        ],
+        "precision": 16
+      },
+      "comparison_role": "native_CUDA_FP16_current_framework_compatibility",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "fouriermil_author_200_cpu32_reference_val_loss_locked_test",
+      "family": "fouriermil",
+      "recipe": "original Fourier1024->512, Lookahead-RAdam, accumulation2, cpu32_reference, VAL-loss patience10",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "fouriermil_author",
+      "author_recipe": {
+        "epochs": 200,
+        "patience": 10,
+        "min_delta": 0.0,
+        "batch_size": 1,
+        "workers": 8,
+        "accumulate_grad_batches": 2,
+        "input_dimension": 1024,
+        "hidden_dimension": 512,
+        "blocks": 2,
+        "dropout": 0.0,
+        "opt": "lookahead_radam",
+        "lr": 0.0002,
+        "opt_eps": null,
+        "opt_betas": null,
+        "momentum": null,
+        "weight_decay": 1e-05,
+        "selection": "strict minimum literal author VAL log(softmax) loss",
+        "data_shuffle": false,
+        "train_shuffle": true,
+        "seed_in_author_yaml": 2021,
+        "gradient_clipping": null,
+        "scheduler": null,
+        "original_environment": "torch1.7.1+cu110 / pytorch_lightning1.2.3",
+        "compatibility_changes": [
+          "explicit caller device replaces original CLS-token cuda()",
+          "patient-disjoint Bundle replaces author cohort CSV and absolute feature paths",
+          "unchanged author model, initialization, training_step, validation_step and VAL loss",
+          "explicit current-framework accumulation and native AMP equivalent control flow",
+          "zero_grad(set_to_none=False) retains torch1.7 default",
+          "empty current-Optimizer hook registries repair original Lookahead zero_grad/step interface",
+          "named fast/slow/cache optimizer restoration repairs incompatible original loader",
+          "TEST locked until a separately requested evaluation after complete fitting"
+        ],
+        "precision": 32
+      },
+      "comparison_role": "explicit_CPU_float32_reference",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

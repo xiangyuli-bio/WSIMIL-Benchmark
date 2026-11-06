@@ -1,0 +1,12 @@
+epochs: 50
+lr: 0.0001
+weight_decay: 0.00001
+model:
+  hidden: 512
+  clusters: 64
+  enhancers: 3
+  bins: 4
+  alpha: 0.15
+  cluster_slides: 20
+  cluster_iterations: 20
+  cluster_seed: 1234

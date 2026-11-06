@@ -1,0 +1,175 @@
+{
+  "id": "mammoth",
+  "name": "MAMMOTH",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mahmoodlab/MAMMOTH",
+  "source_status": "git_commit_locked",
+  "source_commit": "aeeaffcd12500ed8dddec67665a33eb129c9ed84",
+  "license": "CC-BY-NC-ND-4.0",
+  "profiles": [
+    "mammoth_mean",
+    "mammoth_max",
+    "mammoth_abmil",
+    "mammoth_clam",
+    "mammoth_dsmil",
+    "mammoth_transmil",
+    "mammoth_transformer",
+    "mammoth_ilra_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "native_experts_eight_classification_heads_complete_paper_based_recipe_explicit_source_differences",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mammoth_abmil",
+      "family": "mammoth",
+      "recipe": "native MAMMOTH and author gated attention/classifier, full weighted AdamW/cosine/CE recipe",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mammoth",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammoth_clam",
+      "family": "mammoth",
+      "recipe": "native MAMMOTH and author CLAM instance constraints, binary SmoothTop1 and complete weighted AdamW/cosine recipe",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mammoth",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammoth_dsmil",
+      "family": "mammoth",
+      "recipe": "native MAMMOTH and author critical-instance dual stream, source averaged-logit CE and full weighted AdamW/cosine",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mammoth",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammoth_ilra_repaired",
+      "family": "mammoth",
+      "recipe": "native MAMMOTH and author ILRA/GAB/NLP; named routing-width128 repair of invalid256/256 YAML, full weighted AdamW/cosine",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mammoth",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammoth_max",
+      "family": "mammoth",
+      "recipe": "native MAMMOTH experts and paper single-winning-slot logits, full weighted AdamW/cosine recipe",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mammoth",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammoth_mean",
+      "family": "mammoth",
+      "recipe": "native multi-head slot routing/shared low-rank experts, feature mean, full weighted AdamW/cosine classification recipe",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mammoth",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammoth_transformer",
+      "family": "mammoth",
+      "recipe": "native MAMMOTH and author CLS global transformer/MLP, complete weighted AdamW/cosine/CE recipe",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mammoth",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammoth_transmil",
+      "family": "mammoth",
+      "recipe": "native MAMMOTH and author Nystrom/PPEG TransMIL, complete weighted AdamW/cosine/CE recipe",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mammoth",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

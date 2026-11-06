@@ -1,0 +1,27 @@
+{
+  "version": "0.107.0",
+  "implementation_written": 159,
+  "profiles": 346,
+  "software_accepted_previous": 158,
+  "LPGMIL_focused_passed": 18,
+  "LPGMIL_public_lifecycle": "pending",
+  "LPGMIL_native50epochs": "pending",
+  "whole_library_passed": false,
+  "final_admission": false,
+  "paper_reproduction": false,
+  "common_interface_passed": 11,
+  "combined_passed": 29,
+  "current_0_108": {
+    "implementation_candidates": 160,
+    "profiles": 350,
+    "prior_software_verified_entries": 159,
+    "mexd_software_admission": false,
+    "related_focused_checks_passed": 54,
+    "cpu_public_preflight": "passed_complete_both_stages_interruptions1_2_3_four_reloads_and_all_states_posterior_exact",
+    "cuda_source_wheel": "not_run",
+    "native_budget": "not_run",
+    "whole_library_final": "not_passed",
+    "real_WSI": "not_run",
+    "paper_score_reproduction": "not_run"
+  }
+}

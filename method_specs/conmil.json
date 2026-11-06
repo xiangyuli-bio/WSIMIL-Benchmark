@@ -1,0 +1,95 @@
+{
+  "id": "conmil",
+  "name": "ConMIL",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/anxuanhan/ConMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "aabb5386d15a6002a3a39437ea46c0d99d29a2f3",
+  "license": "MIT; original source fetched privately",
+  "profiles": [
+    "conmil_pos_source",
+    "conmil_posneg_source",
+    "conmil_posneg_multiclass_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_encoded_negative_queries",
+    "actual_encoded_positive_queries",
+    "native_conch_visual_text_space",
+    "patch_features",
+    "single_slide_bag",
+    "train_only_prompt_review_provenance"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "actual_full_source_KAN_attention_train_and_original_CONCH_prompt_encoding",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "conmil_pos_source",
+      "family": "conmil",
+      "recipe": "Complete native512/256/128 gated semantic attention,learned alpha and original cubic B-spline KAN; actual frozen CONCH positive/negative text; TRAIN-only4096cap,source50epoch Adam/cosine and strict VAL accuracy; original binary target and selection branch",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_conch_visual_text_space",
+        "actual_encoded_positive_queries",
+        "train_only_prompt_review_provenance",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "conmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "conmil_posneg_multiclass_repaired",
+      "family": "conmil",
+      "recipe": "Complete native512/256/128 gated semantic attention,learned alpha and original cubic B-spline KAN; actual frozen CONCH positive/negative text; TRAIN-only4096cap,source50epoch Adam/cosine and strict VAL accuracy; explicit C-way labels/metrics/first-checkpoint repair",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_conch_visual_text_space",
+        "actual_encoded_positive_queries",
+        "train_only_prompt_review_provenance",
+        "single_slide_bag",
+        "actual_encoded_negative_queries"
+      ],
+      "class_count": null,
+      "external_source": "conmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "conmil_posneg_source",
+      "family": "conmil",
+      "recipe": "Complete native512/256/128 gated semantic attention,learned alpha and original cubic B-spline KAN; actual frozen CONCH positive/negative text; TRAIN-only4096cap,source50epoch Adam/cosine and strict VAL accuracy; original binary target and selection branch",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_conch_visual_text_space",
+        "actual_encoded_positive_queries",
+        "train_only_prompt_review_provenance",
+        "single_slide_bag",
+        "actual_encoded_negative_queries"
+      ],
+      "class_count": 2,
+      "external_source": "conmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    }
+  ]
+}

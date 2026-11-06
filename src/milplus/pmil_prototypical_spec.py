@@ -1,0 +1,22 @@
+"""Full raw-pixel Prototypical PMIL; keep its distinct paper identity."""
+COMMIT='f9b241a30ef90235da2c57814408da5eedb368e0'
+REQUIRED=['original_RGB256_patch_bags','original_ImageNet_ResNet34_weights','patient_grouped_split','single_slide_bag']
+PROFILES=[{'id':'pmil_prototypical_raw_patient_reference','family':'pmil_prototypical',
+    'recipe':'Complete original full ResNet34/512D max-MIL top1/Adam1e-4/wd1e-4/30max/128train/256inference, '
+        'milestones10,20/.1,VALevery5/patience3; selected encoder full re-extraction; original TRAIN-only two-level '
+        'AffinityPropagation preference0/damping.5/random24/exp(-Euclidean/max*.25); original binary512->128 top5 '
+        'distance/cmax/mean coding plus bagCE+maxCE,Adam1e-4/wd1e-4/30epochs/VALaccuracylatesttie; '
+        'explicit no-grad VAL, source import/indentation/export and best-overwrite repairs',
+    'tasks':['classification'],'required_inputs':REQUIRED,'class_count':2,'external_source':'pmil_prototypical',
+    'status':'implemented_unvalidated','gpu_validation':'not_run','real_wsi_validation':'not_run','paper_reproduction':'not_run',
+    'backend':'pmil_prototypical_complete_reference'}]
+METHOD={'id':'pmil_prototypical','name':'PMIL Prototypical','group':'E_encoder_training',
+    'scope_origin':'user_164_admission_list','source_url':'https://github.com/zihou98/PMIL','source_commit':COMMIT,
+    'source_status':'git_commit_locked_full_reference_under_verification',
+    'license':'GPLv3; README also specifies noncommercial academic use; author source loaded privately',
+    'profiles':[p['id'] for p in PROFILES],'status':'adapted','required_inputs':REQUIRED,
+    'paper_reproduction':'not_run','real_wsi_validation':'not_run','blocker':None,
+    'requirements_review':'Full task-trained raw max-MIL encoder, actual learned patch features, two-level TRAIN-only AP and '
+        'original dual-instance/bag-loss PMIL. Source distance semantics and eval-mode fitting retained. '
+        'Source VAL optimizer updates, missing import, malformed exporter and inconsistent checkpoint/feature exports '
+        'explicitly repaired. Complete-pipeline, installed-wheel and original full-budget gates required; no historical paper-score claim.'}

@@ -1,0 +1,58 @@
+{
+  "id": "packmil",
+  "name": "PackMIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/FangHeng/PackMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "b261cf0abd9c5ce384927722061e15a93b3489f7",
+  "license": "Apache-2.0",
+  "profiles": [
+    "packmil_abmil",
+    "packmil_survival"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "packmil_abmil",
+      "family": "packmil",
+      "recipe": "author sequence packs, residual hyperslides and ADS; CE plus focal auxiliary objective, Adam/cosine",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "packmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "packmil_survival",
+      "family": "packmil",
+      "recipe": "author ABMIL packs/ADS and hyperslide censor targets; train-only patient event bins, main and mixed censored NLL",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "packmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

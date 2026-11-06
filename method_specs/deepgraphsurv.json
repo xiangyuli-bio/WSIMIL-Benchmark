@@ -1,0 +1,42 @@
+{
+  "id": "deepgraphsurv",
+  "name": "DeepGraphSurv",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/uta-smile/DeepGraphSurv",
+  "source_status": "git_commit_locked",
+  "source_commit": "3149752deba68067f1a39b9f3d212cb16ffaf560",
+  "license": "not_declared_in_pinned_source",
+  "profiles": [
+    "deepgraphsurv_agcn"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "deepgraphsurv_assets",
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "deepgraphsurv_agcn",
+      "family": "deepgraphsurv",
+      "recipe": "literal2018 adaptive feature graph attention32/1 and native256/256/128AGCN with complete original mixed-event window trainer, TF1Adam, update-count LR/BN schedules and full checkpoint; full-dimensional frozen-FM input condition and explicit VAL-only selection/inference stream corrections",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "deepgraphsurv_assets"
+      ],
+      "class_count": null,
+      "external_source": "deepgraphsurv",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "momil",
+  "name": "MoMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/YuqiZhang-Buaa/MoMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "73f0814d56701ff0012054d7c11cbe9637c6cdb3",
+  "license": "No root model license found; bundled Mamba components retain Apache-2.0",
+  "profiles": [
+    "momil",
+    "momil_survival_extension"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "momil",
+      "family": "momil",
+      "recipe": "author three-order Mamba2, literal channel reverse and padded-token fusion; explicit constructor-name repair and complete CE/Adam source last-or-validation checkpoint policy",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "momil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "momil_survival_extension",
+      "family": "momil",
+      "recipe": "explicit author survival-head and generic source NLL trainer composition; train-only intervals and flushed tail accumulation, not a published working MoMIL survival factory",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "momil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

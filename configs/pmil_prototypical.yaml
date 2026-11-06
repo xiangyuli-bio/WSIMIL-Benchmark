@@ -1,0 +1,4 @@
+epochs: 30
+threads: 2
+model:
+  encoder_epochs: 30

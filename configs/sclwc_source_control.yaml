@@ -1,0 +1,14 @@
+# Incomplete original behavior, deliberately separated from the complete method.
+epochs: 100
+lr: 0.0003
+weight_decay: 0.00001
+patience: 20
+selection_metric: macro_auc
+grad_clip: null
+max_instances: null
+threads: 1
+model:
+  k: 5
+  cosine_t_max: 50
+  cosine_eta_min: 0.000001
+  stop_epoch: 30

@@ -1,0 +1,41 @@
+{
+  "id": "linmil",
+  "name": "Lin-MIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/charlotterchtr/Lin-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "82a00672cfebd7a6cedbd5384b47700a4db5da27",
+  "license": "not_yet_verified",
+  "profiles": [
+    "linmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "linmil",
+      "family": "linmil",
+      "recipe": "ReLU-kernel linear attention, CLS pooling, CE",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "triagemil",
+  "name": "TRIAGE-MIL",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/barathi-1993/TRIAGE-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "e97e52a32f1358974b0145532fdec5f5d75c6864",
+  "license": "not_declared_in_source_tree",
+  "profiles": [
+    "triagemil_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag",
+    "spatial_metadata",
+    "triagemil_assets"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_MASS_quality_four_axis_FPS_semantic_hypergraphs_native_model_and_full_source_Cox_AdamW_AMP_accumulation_no_event_skips_first_tie_VAL_minimum_epoch_stop; actual_coordinate_and_FM_bound_assets_exact_resume",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "triagemil_source",
+      "family": "triagemil",
+      "recipe": "complete original MASS quality/four-axis/FPS selection, semantic hierarchical hypergraphs and native full-D six-head/four-layer model; source Cox/AdamW/accumulation/per-epoch AMP/VAL-first-tie/minimum-epoch stopping with exact resume",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "triagemil_assets",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "triagemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

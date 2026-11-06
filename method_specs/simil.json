@@ -1,0 +1,67 @@
+{
+  "id": "simil",
+  "name": "SI-MIL",
+  "group": "H_extra_supervision",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/bmi-imaginelab/SI-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "3ffb218672ffe0e4a183924af50e5920b498483d",
+  "license": "No root LICENSE in pinned tree; external source only",
+  "profiles": [
+    "simil_source",
+    "simil_full_vjp"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "pathexpert_assets",
+    "per_slide_coords",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "full_original_dual_branch_and_coupled_training; row_aligned_raw_PathExpert_inputs_TRAIN_only_quantiles; literal_and_full_Gaussian_VJP_routes",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "simil_full_vjp",
+      "family": "simil",
+      "recipe": "complete original SI-MIL model and optimizer with explicitly corrected full Gaussian TopK VJP, TRAIN-only PathExpert statistics",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "pathexpert_assets",
+        "per_slide_coords",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "simil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "simil_source",
+      "family": "simil",
+      "recipe": "complete original dual-branch SI-MIL and coupled BCE/KD/attention recipe; literal published TopK derivative, TRAIN-only PathExpert statistics",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "pathexpert_assets",
+        "per_slide_coords",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "simil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

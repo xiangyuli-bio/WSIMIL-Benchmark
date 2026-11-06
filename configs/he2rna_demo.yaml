@@ -1,0 +1,11 @@
+epochs: 2
+threads: 1
+lr: 0.0003
+weight_decay: 0.0
+selection_metric: mean_pearson
+model:
+  layers: [32, 32]
+  ks: [1, 2, 4, 8]
+  batch_size: 4
+  input_mode: supertiles
+  supertile_count: 8

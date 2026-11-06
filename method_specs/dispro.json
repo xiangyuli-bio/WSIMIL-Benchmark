@@ -1,0 +1,44 @@
+{
+  "id": "dispro",
+  "name": "DisPro",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Innse/DisPro",
+  "source_status": "git_commit_locked",
+  "source_commit": "98473003de24e5a8f28143442d3dd48bd159aff1",
+  "license": "Apache-2.0 (author README declaration; no standalone LICENSE blob)",
+  "profiles": [
+    "dispro_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_pretrained_BioBERT",
+    "dispro_assets",
+    "patient_bags"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_UniPro_P_UniPro_G_MultiPro_stages; actual_full12layer768_BioBERT_and_pathway_networks; repaired_actualParameter_CLS_cosine_mask_and_presence; outcome_free_VAL_teachers_TRAIN_bins_and_strict_stage_resume; default130epoch_native_budget_and_final_admission_gates_pending",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "dispro_source_repaired",
+      "family": "dispro",
+      "recipe": "Full original native UniPro-P30 + UniPro-G50 + MultiPro50; explicit actual-Parameter/CLS/cosine/mask/presence repairs, outcome-free VAL-selected teachers and full-state continuation",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "dispro_assets",
+        "patient_bags",
+        "actual_pretrained_BioBERT"
+      ],
+      "class_count": null,
+      "external_source": "dispro",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

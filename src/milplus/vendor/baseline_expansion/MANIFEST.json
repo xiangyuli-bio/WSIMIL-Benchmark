@@ -1,0 +1,81 @@
+{
+  "additive_mil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/ADD_MIL/add_mil.py",
+    "sha256": "bf6700504fe9420ce052d3ecf314f438f7729724bbce44327cfbb68a2e7cd26a",
+    "local_modifications": []
+  },
+  "linmil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/LIN_MIL/lin_mil.py",
+    "sha256": "a032e1288c0c8e11c45038e5619df44b7a971b1a6c307854cfab2aac5c939a2d",
+    "local_modifications": [
+      "Replace timm DropPath import with equivalent milplus.layers.DropPath"
+    ]
+  },
+  "fouriermil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/FOURIER_MIL/fourier_mil.py",
+    "sha256": "46c4f65e2da9a115e42f7181449a4e486136856995114089073cdd3e6c701b37",
+    "local_modifications": []
+  },
+  "retmil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/RET_MIL/ret_mil.py",
+    "sha256": "787ed2f6c72282e1096749ca384aa4a0db6374f6f4b0008458d454aa1411094c",
+    "local_modifications": []
+  },
+  "pneamil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/PNEA_MIL/pnea_mil.py",
+    "sha256": "eea400866c07941526fcc2e28294618421b6cc65edf77ad2271cf5b0c134277a",
+    "local_modifications": []
+  },
+  "mrblock": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/MR_AB_MIL/mr_ab_mil.py",
+    "sha256": "6c683b80f50b49452df837169796d65946543fc08ee62bc3bd1a99f2caeaabe4",
+    "local_modifications": []
+  },
+  "carmil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/CAR_MIL/car_mil.py",
+    "sha256": "873739637e0e07c2a50a50cc7bee0c2599bc5b30dcb7dd848b2a0c565bd1b08b",
+    "local_modifications": []
+  },
+  "fcmil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/FC_MIL/fc_mil.py",
+    "sha256": "f7d6e4529609e37e2609d46da50455c81e1c7b93270396ea8b9b9108d3e7db99",
+    "local_modifications": []
+  },
+  "asmil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/AS_MIL/as_mil.py",
+    "sha256": "f2a8e585325eb2d9cd3048708cfea4e29593dca49390ca3cff2940b422e68b86",
+    "local_modifications": []
+  },
+  "attrimil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/ATTRI_MIL/attri_mil.py",
+    "sha256": "f9e950536fdfe65cc50deefffb725cb90df7ab73ab1859f7cccccbf2fdca9a93",
+    "local_modifications": []
+  },
+  "nnmil": {
+    "repository": "https://github.com/lingxitong/MIL_BASELINE",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "path": "modules/NN_MIL/nn_mil.py",
+    "sha256": "04e4e1f11d0d6ef8269eba7cb652a9533702d9672d8e6e34e22caf2d332cb586",
+    "local_modifications": []
+  }
+}

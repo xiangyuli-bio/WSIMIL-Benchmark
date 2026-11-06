@@ -1,0 +1,1145 @@
+{
+  "id": "mrblock",
+  "name": "MR-Block / MR-AB-MIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/BearCleverProud/MR-Block",
+  "source_status": "pinned_original_models_and_complete_trainer_candidate",
+  "source_commit": "a71fb28262fdb9aa61265c86c3978080c07ac966",
+  "license": "MIT_original_fixed_tree_read",
+  "profiles": [
+    "mrblock",
+    "mrblock_author_200_mr_abmil_earlystop_locked_test",
+    "mrblock_author_200_mr_abmil_final_locked_test",
+    "mrblock_author_200_mr_transmil_earlystop_locked_test",
+    "mrblock_author_200_mr_transmil_final_locked_test",
+    "mrblock_author_200_mr_dgrmil_earlystop_locked_test",
+    "mrblock_author_200_mr_dgrmil_final_locked_test",
+    "mrblock_author_200_mr_rrtmil_earlystop_locked_test",
+    "mrblock_author_200_mr_rrtmil_final_locked_test",
+    "mrblock_author_200_mr_cate_earlystop_locked_test",
+    "mrblock_author_200_mr_cate_final_locked_test",
+    "mrblock_author_200_abmil_earlystop_locked_test",
+    "mrblock_author_200_abmil_final_locked_test",
+    "mrblock_author_200_transmil_earlystop_locked_test",
+    "mrblock_author_200_transmil_final_locked_test",
+    "mrblock_author_200_dgrmil_earlystop_locked_test",
+    "mrblock_author_200_dgrmil_final_locked_test",
+    "mrblock_author_200_rrtmil_earlystop_locked_test",
+    "mrblock_author_200_rrtmil_final_locked_test",
+    "mrblock_author_200_cate_earlystop_locked_test",
+    "mrblock_author_200_cate_final_locked_test"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "All five native MR models and five corresponding baseline controls; full200epoch AdamW/LinearLR per-update recipe, optional original VAL-CE early stop or last weights. Native merge flags/modes, nonlinear-training/linear-eval residual behavior, stochastic CATE VAL and predicted-label DGR center updates retained. Exact model/optimizer/scheduler/RNG/minibatch recovery and fixed TEST adaptation written. CATE requires actual aligned512D concept assets. Full source/wheel/native budget and current release gates remain pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mrblock",
+      "family": "mrblock",
+      "recipe": "gated attention with frozen affine maps and nonlinear low-rank residuals",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mrblock_author_200_mr_abmil_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-abmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-abmil",
+        "early_stopping": true
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_abmil_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-abmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-abmil",
+        "early_stopping": false
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_transmil_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-transmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-transmil",
+        "early_stopping": true
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_transmil_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-transmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-transmil",
+        "early_stopping": false
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_dgrmil_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-dgrmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-dgrmil",
+        "early_stopping": true
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_dgrmil_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-dgrmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-dgrmil",
+        "early_stopping": false
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_rrtmil_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-rrtmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-rrtmil",
+        "early_stopping": true
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_rrtmil_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-rrtmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-rrtmil",
+        "early_stopping": false
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_cate_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-cate; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "aligned_original_concept_features"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-cate",
+        "early_stopping": true
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_mr_cate_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native mr-cate; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "aligned_original_concept_features"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "mr-cate",
+        "early_stopping": false
+      },
+      "comparison_role": "MR_module",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_abmil_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native abmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "abmil",
+        "early_stopping": true
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_abmil_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native abmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "abmil",
+        "early_stopping": false
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_transmil_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native transmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "transmil",
+        "early_stopping": true
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_transmil_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native transmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "transmil",
+        "early_stopping": false
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_dgrmil_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native dgrmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "dgrmil",
+        "early_stopping": true
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_dgrmil_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native dgrmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "dgrmil",
+        "early_stopping": false
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_rrtmil_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native rrtmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "rrtmil",
+        "early_stopping": true
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_rrtmil_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native rrtmil; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "rrtmil",
+        "early_stopping": false
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_cate_earlystop_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native cate; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original earlystop selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "aligned_original_concept_features"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "cate",
+        "early_stopping": true
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    },
+    {
+      "id": "mrblock_author_200_cate_final_locked_test",
+      "family": "mrblock",
+      "recipe": "pinned native cate; AdamW5e-4/wd1e-5/LinearLR200updates; full200epoch budget and original final selector; merge-aware exact recovery",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "aligned_original_concept_features"
+      ],
+      "class_count": null,
+      "external_source": "mrblock",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "optimizer": "AdamW",
+        "lr": 0.0005,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "size_arg": "small",
+        "rank": 64,
+        "scheduler": "LinearLR(start_factor=.01,end_factor=1,total_iters=200), after each update",
+        "early_stop_patience": 20,
+        "early_stop_after_epoch_zero_based": 50,
+        "early_stop_selection": "minimum VAL CE, equal loss also updates selected weights",
+        "final_selection": "last weights after final VAL, as original early_stopping=False",
+        "weighted_sample": false,
+        "workers": 0,
+        "patch_cap": null,
+        "amp": false,
+        "model_type": "cate",
+        "early_stopping": false
+      },
+      "comparison_role": "author_baseline_control",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "patient-disjoint task manifest fixes split membership; few-shot eligibility is explicit input",
+        "TEST is locked; original train_fold constructs TEST loader and evaluates it after fitting",
+        "workers0, explicit runtime dependency pins and full numerical identity",
+        "immutable best and full model/AdamW/scheduler/sampler/RNG/minibatch recovery",
+        "native merged flags and module modes restored to avoid fresh-reload double merging"
+      ],
+      "native_behaviors_preserved": [
+        "original MR initialization, trainable bias, frozen base weight and rank64 nonlinear path",
+        "original eval linear merge delta even though training residual contains GELU",
+        "original CATE stochastic reparameterization even during VAL/evaluation",
+        "original MR-CATE trainer uses CE only; discarded IB losses are not silently added",
+        "original DGR variant updates centers from predicted class during TRAIN"
+      ]
+    }
+  ]
+}

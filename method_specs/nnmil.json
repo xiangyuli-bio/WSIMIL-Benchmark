@@ -1,0 +1,245 @@
+{
+  "id": "nnmil",
+  "name": "nnMIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Luoxd1996/nnMIL",
+  "source_status": "pinned_original_classification_trainer_TRAIN_only_planning_repair_candidate",
+  "source_commit": "e92e8a0cf72dc1beb2a5915e27ca128af45fcb40",
+  "license": "not_yet_verified",
+  "profiles": [
+    "nnmil",
+    "nnmil_author_100_auc_train_planned_locked_test",
+    "nnmil_author_100_bacc_train_planned_locked_test",
+    "nnmil_author_100_f1_train_planned_locked_test",
+    "nnmil_author_100_kappa_train_planned_locked_test"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Literal SimpleMIL including full-dimension randperm and ddof1 uncertainty; native adaptive16..48batch/100epoch/10patience/bfloat16/AdamW/two-group/post-update cosine recipe. Four explicit AUC/BACC/F1/Kappa classification selectors, original workers4 and native sampler replay for exact recovery. TRAIN-only feature/label planning is a disclosed repair; TEST remains locked. Source/wheel/full native classification gates, separate survival/regression and current release gates remain pending. No original source redistribution without verified terms.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "nnmil",
+      "family": "nnmil",
+      "recipe": "classification recipe: train-only bag-size planning, balanced batches, feature subspaces, masked padding and probability ensemble",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "nnmil_author_100_auc_train_planned_locked_test",
+      "family": "nnmil",
+      "recipe": "native SimpleMIL/AdamW/bfloat16/100epoch maximum/auc early stop; original adaptive plan restricted to TRAIN; native workers4 and exact iterator replay",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "nnmil",
+      "native_recipe": {
+        "metric": "auc",
+        "epochs": 100,
+        "patience": 10,
+        "planner_scope": "TRAIN features and TRAIN labels only, explicit repair",
+        "hidden": "max(256,D//4)",
+        "batch_size": "original adaptive16..48",
+        "AMP": "CPU/CUDA bfloat16; original CUDA GradScaler",
+        "optimizer": "original AdamW two groups; no decay for gain/bias parameters",
+        "scheduler": "original cosine/warmup AFTER each optimizer update, including step0",
+        "workers": 4,
+        "dataset_sampling_seed": 42,
+        "use_original_length": false
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "TRAIN-only feature statistics and label proportions; TEST cannot change adaptive plan",
+        "standard Bundle replaces CSV/H5 input; identical per-index42 patch selection and padding",
+        "absent coordinates use zeros only for unused native loader field; no spatial claim",
+        "fixed TEST; serialized best weights and full optimizer/scaler/RNG/sampler recovery",
+        "actual original workers4 retained; resume replays deterministic input iteration, never optimizer updates",
+        "ordinal endpoint uses classification trainer and explicit kappa selection",
+        "torch2.5.1 runtime is a benchmark choice; original environment lists torch2.3.0"
+      ],
+      "native_behaviors_preserved": [
+        "randperm consumed during TRAIN even when hidden>=input dimension",
+        "overlapping deterministic chunk ensemble and ddof1 uncertainty, including one-chunk NaN",
+        "fixed per-index42 train crop, full original VAL/TEST bags, native padding mask",
+        "AUC low-variance sampler, balanced sampler or dedicated-generator random sampler",
+        "original strict-improvement early stopping; metric ties increment patience",
+        "original shallow in-memory best-state alias; immutable serialized selection used"
+      ]
+    },
+    {
+      "id": "nnmil_author_100_bacc_train_planned_locked_test",
+      "family": "nnmil",
+      "recipe": "native SimpleMIL/AdamW/bfloat16/100epoch maximum/bacc early stop; original adaptive plan restricted to TRAIN; native workers4 and exact iterator replay",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "nnmil",
+      "native_recipe": {
+        "metric": "bacc",
+        "epochs": 100,
+        "patience": 10,
+        "planner_scope": "TRAIN features and TRAIN labels only, explicit repair",
+        "hidden": "max(256,D//4)",
+        "batch_size": "original adaptive16..48",
+        "AMP": "CPU/CUDA bfloat16; original CUDA GradScaler",
+        "optimizer": "original AdamW two groups; no decay for gain/bias parameters",
+        "scheduler": "original cosine/warmup AFTER each optimizer update, including step0",
+        "workers": 4,
+        "dataset_sampling_seed": 42,
+        "use_original_length": false
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "TRAIN-only feature statistics and label proportions; TEST cannot change adaptive plan",
+        "standard Bundle replaces CSV/H5 input; identical per-index42 patch selection and padding",
+        "absent coordinates use zeros only for unused native loader field; no spatial claim",
+        "fixed TEST; serialized best weights and full optimizer/scaler/RNG/sampler recovery",
+        "actual original workers4 retained; resume replays deterministic input iteration, never optimizer updates",
+        "ordinal endpoint uses classification trainer and explicit kappa selection",
+        "torch2.5.1 runtime is a benchmark choice; original environment lists torch2.3.0"
+      ],
+      "native_behaviors_preserved": [
+        "randperm consumed during TRAIN even when hidden>=input dimension",
+        "overlapping deterministic chunk ensemble and ddof1 uncertainty, including one-chunk NaN",
+        "fixed per-index42 train crop, full original VAL/TEST bags, native padding mask",
+        "AUC low-variance sampler, balanced sampler or dedicated-generator random sampler",
+        "original strict-improvement early stopping; metric ties increment patience",
+        "original shallow in-memory best-state alias; immutable serialized selection used"
+      ]
+    },
+    {
+      "id": "nnmil_author_100_f1_train_planned_locked_test",
+      "family": "nnmil",
+      "recipe": "native SimpleMIL/AdamW/bfloat16/100epoch maximum/f1 early stop; original adaptive plan restricted to TRAIN; native workers4 and exact iterator replay",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "nnmil",
+      "native_recipe": {
+        "metric": "f1",
+        "epochs": 100,
+        "patience": 10,
+        "planner_scope": "TRAIN features and TRAIN labels only, explicit repair",
+        "hidden": "max(256,D//4)",
+        "batch_size": "original adaptive16..48",
+        "AMP": "CPU/CUDA bfloat16; original CUDA GradScaler",
+        "optimizer": "original AdamW two groups; no decay for gain/bias parameters",
+        "scheduler": "original cosine/warmup AFTER each optimizer update, including step0",
+        "workers": 4,
+        "dataset_sampling_seed": 42,
+        "use_original_length": false
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "TRAIN-only feature statistics and label proportions; TEST cannot change adaptive plan",
+        "standard Bundle replaces CSV/H5 input; identical per-index42 patch selection and padding",
+        "absent coordinates use zeros only for unused native loader field; no spatial claim",
+        "fixed TEST; serialized best weights and full optimizer/scaler/RNG/sampler recovery",
+        "actual original workers4 retained; resume replays deterministic input iteration, never optimizer updates",
+        "ordinal endpoint uses classification trainer and explicit kappa selection",
+        "torch2.5.1 runtime is a benchmark choice; original environment lists torch2.3.0"
+      ],
+      "native_behaviors_preserved": [
+        "randperm consumed during TRAIN even when hidden>=input dimension",
+        "overlapping deterministic chunk ensemble and ddof1 uncertainty, including one-chunk NaN",
+        "fixed per-index42 train crop, full original VAL/TEST bags, native padding mask",
+        "AUC low-variance sampler, balanced sampler or dedicated-generator random sampler",
+        "original strict-improvement early stopping; metric ties increment patience",
+        "original shallow in-memory best-state alias; immutable serialized selection used"
+      ]
+    },
+    {
+      "id": "nnmil_author_100_kappa_train_planned_locked_test",
+      "family": "nnmil",
+      "recipe": "native SimpleMIL/AdamW/bfloat16/100epoch maximum/kappa early stop; original adaptive plan restricted to TRAIN; native workers4 and exact iterator replay",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "nnmil",
+      "native_recipe": {
+        "metric": "kappa",
+        "epochs": 100,
+        "patience": 10,
+        "planner_scope": "TRAIN features and TRAIN labels only, explicit repair",
+        "hidden": "max(256,D//4)",
+        "batch_size": "original adaptive16..48",
+        "AMP": "CPU/CUDA bfloat16; original CUDA GradScaler",
+        "optimizer": "original AdamW two groups; no decay for gain/bias parameters",
+        "scheduler": "original cosine/warmup AFTER each optimizer update, including step0",
+        "workers": 4,
+        "dataset_sampling_seed": 42,
+        "use_original_length": false
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "adaptations": [
+        "TRAIN-only feature statistics and label proportions; TEST cannot change adaptive plan",
+        "standard Bundle replaces CSV/H5 input; identical per-index42 patch selection and padding",
+        "absent coordinates use zeros only for unused native loader field; no spatial claim",
+        "fixed TEST; serialized best weights and full optimizer/scaler/RNG/sampler recovery",
+        "actual original workers4 retained; resume replays deterministic input iteration, never optimizer updates",
+        "ordinal endpoint uses classification trainer and explicit kappa selection",
+        "torch2.5.1 runtime is a benchmark choice; original environment lists torch2.3.0"
+      ],
+      "native_behaviors_preserved": [
+        "randperm consumed during TRAIN even when hidden>=input dimension",
+        "overlapping deterministic chunk ensemble and ddof1 uncertainty, including one-chunk NaN",
+        "fixed per-index42 train crop, full original VAL/TEST bags, native padding mask",
+        "AUC low-variance sampler, balanced sampler or dedicated-generator random sampler",
+        "original strict-improvement early stopping; metric ties increment patience",
+        "original shallow in-memory best-state alias; immutable serialized selection used"
+      ]
+    }
+  ]
+}

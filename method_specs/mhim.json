@@ -1,0 +1,41 @@
+{
+  "id": "mhim",
+  "name": "MHIM-MIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/DearCaat/MHIM-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "9d0c91abeb1b39f91c161b47cf14bc44f5a89da3",
+  "license": "not_yet_verified",
+  "profiles": [
+    "mhim_abmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mhim_abmil",
+      "family": "mhim",
+      "recipe": "v1 attention equations; explicit supervised warm-start, teacher EMA, high/low/random masking and feature distillation",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

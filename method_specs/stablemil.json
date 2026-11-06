@@ -1,0 +1,109 @@
+{
+  "id": "stablemil",
+  "name": "StableMIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/theeeqi/stableMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "67b279157680c8c96104823a9e6f2ef20b679d11",
+  "license": "not verified: no root LICENSE; external source only",
+  "profiles": [
+    "stablemil_classification_source",
+    "stablemil_classification_repaired",
+    "stablemil_survival_source",
+    "stablemil_survival_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "stablemil_classification_repaired",
+      "family": "stablemil",
+      "recipe": "complete classifier recipe with explicit degenerate/small-bag and tail accumulation repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "stablemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "stablemil_classification_source",
+      "family": "stablemil",
+      "recipe": "full physical fusion/semantic/local-global/RoPE network and Adam/CE; source cross-epoch accumulation tails, named execution wiring fixes",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "stablemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "stablemil_survival_repaired",
+      "family": "stablemil",
+      "recipe": "complete StableMIL hazard recipe with explicit physical small-bag and tail weighting repairs, patient NLL selection",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "stablemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "stablemil_survival_source",
+      "family": "stablemil",
+      "recipe": "full hazard network and original clamped NLL/gc/Adam loop with explicit missing launcher/model wiring completion and TRAIN-only bins",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "stablemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

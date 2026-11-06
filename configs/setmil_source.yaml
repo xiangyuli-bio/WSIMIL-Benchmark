@@ -1,0 +1,17 @@
+epochs: 100
+lr: 0.0002
+weight_decay: 0.05
+grad_clip: 0.01
+patience: 20
+selection_metric: setmil_bag_auc
+model:
+  map_size: 48
+  reduction: 7
+  token_dim: 128
+  embed_dim: 64
+  depth: 6
+  heads: 16
+  dropout: 0.2
+  attention_dropout: 0.2
+  batch_size: 4
+  lr_drop: 100

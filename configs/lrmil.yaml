@@ -1,0 +1,22 @@
+# Explicit engineering caps: public LRMIL does not specify max epochs/batch size.
+# Full source model/losses; current CONCH native intermediate dimension is768.
+lr: 0.0001
+weight_decay: 0.0
+patience: 20
+max_instances: null
+grad_clip: null
+selection_metric: lrmil_stage_selection
+model:
+  stage_epochs: [200, 200, 200]
+  patch_batch_size: 64
+  num_workers: 0
+  inference_batch_size: 32
+  gated_attention: false
+  lambda_layer: 1.0
+  lambda_attn: 1.0
+  temperature_bag: 1.0
+  temperature_attn: 1.0
+  lambda_bag: 0.5
+  lambda_soft: 0.5
+  lambda_hard: 0.3
+  topk: 4

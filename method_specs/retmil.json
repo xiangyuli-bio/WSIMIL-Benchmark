@@ -1,0 +1,41 @@
+{
+  "id": "retmil",
+  "name": "RetMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Hongbo-Chu/RetMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "e6d42345fa57a8b76f4d7034c4d32e09c47aa094",
+  "license": "not_yet_verified",
+  "profiles": [
+    "retmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "retmil",
+      "family": "retmil",
+      "recipe": "local chunk retention, global retention and gated pooling, CE",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

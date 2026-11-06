@@ -1,0 +1,12 @@
+epochs: 100
+lr: 0.0002
+weight_decay: 0.0
+model:
+  hidden: 512
+  attention_dim: 128
+  alpha: trainable
+  mode: approx
+  steps: 10
+  batch_size: 1
+  feature_weighted: true
+  balance_loss: false

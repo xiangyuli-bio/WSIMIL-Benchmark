@@ -1,0 +1,31 @@
+# Complete author frozen-feature route; actual trainable ResNet18 pseudo-image adapter.
+# Source/paper differences and complete objective/label definitions: docs/INS.md.
+epochs: 150
+lr: 0.01
+weight_decay: 0.001
+patience: 150
+selection_metric: macro_auc
+grad_clip: null
+max_instances: null
+threads: 1
+model:
+  batch_size: 64
+  queue_size: 8192
+  projection: 128
+  warmup_epochs: 20
+  momentum: 0.999
+  prototype_momentum: 0.9
+  confidence_start: 0.95
+  confidence_end: 0.8
+  contrastive_weight: 0.5
+  bag_weight: 1.0
+  instance_weight: 1.0
+  sgd_momentum: 0.9
+  cosine: false
+  lr_decay_epochs: [700, 800, 900]
+  lr_decay_rate: 0.1
+  sampler_seed: 0
+  eval_chunk: 128
+  cache_bytes: 134217728
+  max_open_files: 16
+  max_dense_bytes: 34359738368

@@ -1,0 +1,9 @@
+epochs: 130
+lr: 0.0002
+weight_decay: 0.00001
+grad_clip: null
+max_instances: null
+selection_metric: dispro_c_index
+threads: 2
+model:
+  stage_epochs: [30, 50, 50]

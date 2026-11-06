@@ -1,0 +1,46 @@
+{
+  "id": "muse",
+  "name": "MUSE",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/JiahaoXu-god/CVPR2026_MUSE",
+  "source_status": "git_commit_locked",
+  "source_commit": "0bd0e1abb402e772ed71cf208cfbd4b870175a00",
+  "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+  "profiles": [
+    "muse_released_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "complete_source_feature_bags",
+    "actual_pretrained_CONCH",
+    "original600description_knowledge",
+    "patient_grouped_split"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Complete original architecture and20view recipe integrated; actual88,985,107parameter/full600description/native257patch20update source precheck and exact651diagnosticRNG oracle passed. Full unified/data/source-reference/recovery/native gates still required; released-code/paper differences explicitly documented.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "muse_released_source",
+      "family": "muse",
+      "recipe": "Complete released MUSE full12layer768hidden/512projection text,16prompts,600original knowledge descriptions,8Gaussian noisy experts/top2/8headattention and20separate retrieved-view CE updates per bag; original recursive initialization, source sorted least-cosine retrieval/logits sum, complete diagnostic RNG replay without private I/O; constantAdam1e-4/wd1e-5/source200max/patience20/epoch>80 and strictVALerror",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "complete_source_feature_bags",
+        "actual_pretrained_CONCH",
+        "original600description_knowledge",
+        "patient_grouped_split"
+      ],
+      "class_count": 2,
+      "external_source": "muse",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    }
+  ]
+}

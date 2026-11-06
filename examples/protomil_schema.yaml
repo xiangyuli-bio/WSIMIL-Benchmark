@@ -1,0 +1,26 @@
+schema_version: 1
+provenance: Replace with your actual CONCH extraction and TRAIN-region annotation provenance.
+encoding:
+  model: CONCH
+  checkpoint_sha256: REPLACE_WITH_ACTUAL_64_CHARACTER_LOWERCASE_SHA256
+  proj_contrast: true
+  provenance: Replace with real checkpoint revision, extraction transform and patch protocol.
+sae_sources:
+  - data: /actual/task
+    fm: conch_v1
+    split: fold0
+    cohort_id: actual-main-cohort
+  - data: /actual/additional/task
+    fm: conch_v1
+    split: fold0
+    cohort_id: actual-additional-cohort
+probe_index: actual_train_region_probes.jsonl
+probe_policy:
+  tile_pixels: 256
+  normal_values: [1]
+  tumor_values: [2]
+  normal_min_pixels: 5000
+  tumor_min_pixels: 1000
+  negative_max_tumor_pixels: 0
+  provenance: Replace with the actual region annotation definitions; no weak-slide-label substitution.
+review_file: 'concept_reviews/{sae_state_sha256}.{concept_bank_sha256}.json'

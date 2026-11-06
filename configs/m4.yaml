@@ -1,0 +1,9 @@
+epochs: 32
+lr: 0.0001
+weight_decay: 0.00004
+patience: 32
+grad_clip: null
+max_instances: null
+selection_metric: m4_val_mean_auc
+threads: 2
+model: {}

@@ -1,0 +1,6 @@
+epochs: 100
+lr: 0.0002
+weight_decay: 1.0e-05
+model:
+  hidden: 512
+  warmup_epochs: 10

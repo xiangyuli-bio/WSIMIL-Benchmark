@@ -1,0 +1,165 @@
+id,name,group,status,source_url,source_commit,source_status,profiles,paper_reproduction,real_wsi_validation
+mean_mil,MeanMIL,A_frozen,adapted,,,source_review_pending,mean_linear;mean_mil,not_run,not_run
+max_mil,MaxMIL,A_frozen,adapted,,,source_review_pending,max_mil,not_run,not_run
+abmil,ABMIL,A_frozen,adapted,https://github.com/AMLab-Amsterdam/AttentionDeepMIL,eb0434ba2795711a45d693d60120ae53532b1b93,git_commit_locked,abmil;gated_abmil;abmil_cox;gated_abmil_cox,not_run,not_run
+chowder,CHOWDER,A_frozen,adapted,https://github.com/owkin/HistoSSLscaling,73f1d191b1d04d4b88307a9601c4fcdbf23b72fa,git_commit_locked,chowder,not_run,not_run
+clam,CLAM,A_frozen,adapted,https://github.com/mahmoodlab/CLAM,53e2409d4a8189c682c173382964a85f114f923c,git_commit_locked,clam_sb;clam_mb,not_run,not_run
+dsmil,DSMIL,A_frozen,adapted,https://github.com/binli123/dsmil-wsi,80465ed534ac49b5e550833da56c27936f0b9440,git_commit_locked,dsmil,not_run,not_run
+transmil,TransMIL,A_frozen,adapted,https://github.com/szc19990412/TransMIL,9d6aee57c7c72375fb9132dc58cd8c9b0f0a949c,git_commit_locked,transmil,not_run,not_run
+dtfd,DTFD-MIL,A_frozen,adapted,https://github.com/hrzhang1123/DTFD-MIL,10964f4dcc27c65ce110a0e9a3b9240bff58da8a,git_commit_locked,dtfd,not_run,not_run
+frmil,FRMIL MICCAI 2022,A_frozen,adapted,https://github.com/PhilipChicco/FRMIL,73d99088a703253392350928901b51c8a94205c0,git_commit_locked,frmil,not_run,not_run
+cbmil,CBMIL,A_frozen,adapted,https://github.com/wwu98934/CBMIL,980252ac796e4f68ad97d7b0b0de4aef4bb00157,git_commit_locked,cbmil,not_run,not_run
+additive_mil,Additive MIL,A_frozen,adapted,https://github.com/lingxitong/MIL_BASELINE,e1c5d9fcd771f30f94437e993ecf24c0535df991,git_commit_locked,additive_mil,not_run,not_run
+varmil,VarMIL / DeepSMILE,A_frozen,adapted,https://github.com/NKI-AI/dlup-lightning-mil,f33d6c0eb504d73bd822909f29e548bc186e5306,git_commit_locked,varmil,not_run,not_run
+h2t,H2T,A_frozen,adapted,https://github.com/vqdang/H2T,4218a585c6d1e303dbf57e4fb4212b181c2c4a3d,git_commit_locked,h2t,not_run,not_run
+iibmil,IIB-MIL,A_frozen,pending_adapter,https://github.com/TencentAILabHealthcare/IIB-MIL,a354ec6ea2b9ea2159e6784d54a6afb355c04b50,git_commit_locked,,not_run,not_run
+ilra,ILRA-MIL,A_frozen,adapted,https://github.com/jinxixiang/low_rank_wsi,bb45b9ba9d4a7096d473f9ee171a6252eb736570,git_commit_locked,ilra,not_run,not_run
+ins,INS,A_frozen,adapted,https://github.com/miccaiif/INS,cd97ba2fa7df2a951f218e6de405f664129931c8,git_commit_locked,ins_frozen_source_repaired,not_run,not_run
+mmil,MMIL-Transformer,A_frozen,adapted,https://github.com/hustvl/MMIL-Transformer,d363f43bf0949e3fc172e8d94f99deb335bbe171,git_commit_locked,mmil;mmil_coords,not_run,not_run
+tpmil,TPMIL,A_frozen,adapted,https://github.com/LitaoYang-Jet/TPMIL,0d89a1f98f164803d92c6f6c686451711873eeca,git_commit_locked,tpmil,not_run,not_run
+acmil,ACMIL,A_frozen,adapted,https://github.com/dazhangyu123/ACMIL,e53d19c81f3892256d41962ffc4352cc91a4f834,git_commit_locked,acmil_ga,not_run,not_run
+cdpmil,cDP-MIL,A_frozen,adapted,https://github.com/HKU-MedAI/cDPMIL,83f7ed596618266589745c5b1e977894958c85df,git_commit_locked,cdpmil_source,not_run,not_run
+dgrmil,DGR-MIL,A_frozen,adapted,https://github.com/ChongQingNoSubway/DGR-MIL,ac6257ffa768f154c52ac8b01e2086e5d3a714bf,git_commit_locked,dgrmil,not_run,not_run
+focusmil,FocusMIL,A_frozen,adapted,https://github.com/Raymvp/FocusMIL-and-other-max-pooling-methods,a0f0c03ea7e6a3533ce1ea9f43a4f86976554d3e,git_commit_locked,focusmil,not_run,not_run
+madmil,MAD-MIL,A_frozen,adapted,https://github.com/tueimage/MAD-MIL,936dc382190fb1c92ab753ef8ce7b1c076d46ac4,git_commit_locked,madmil,not_run,not_run
+mambamil,MambaMIL,A_frozen,adapted,https://github.com/isyangshu/MambaMIL,9aea39efc13fdcd3703b5b54c28a64887b4acbd7,git_commit_locked,mambamil_srmamba;mambamil_bimamba;mambamil_unidirectional,not_run,not_run
+pamil_policy,PAMIL dynamic policy,A_frozen,adapted,https://github.com/titizheng/PAMIL,d62960af2c115f87d570a0fbf8852049745b4e94,git_commit_locked,pamil_policy_paper_reference;pamil_policy_released_sampling_reference_training,not_run,not_run
+pamil_prototype,PAMIL prototype attention,A_frozen,adapted,https://github.com/Jiashuai-Liu/PAMIL,7fe90096f64697bd6b68d4d7209e31f437a6b08f,git_commit_locked,pamil_prototype_source;pamil_prototype_repaired;pamil_prototype_multilabel,not_run,not_run
+panther,PANTHER,A_frozen,adapted,https://github.com/mahmoodlab/PANTHER,e7ffae402e146363fe1ca3813ffe68d248ec570f,git_commit_locked,panther,not_run,not_run
+retmil,RetMIL,A_frozen,adapted,https://github.com/Hongbo-Chu/RetMIL,e6d42345fa57a8b76f4d7034c4d32e09c47aa094,git_commit_locked,retmil,not_run,not_run
+camil_channel,CAMIL channel attention,A_frozen,adapted,https://github.com/maojy0914/CAMIL,5481d32a59b0146d9a96f1129bb12ad493acb81a,git_commit_locked,camil_channel,not_run,not_run
+efficientmil,EfficientMIL,A_frozen,adapted,https://github.com/chengyingshe/EfficientMIL,28f71ab2bffa8ff5c159354ad1b59dbba7624490,git_commit_locked,efficientmil_gru;efficientmil_lstm,not_run,not_run
+fouriermil,FourierMIL,A_frozen,adapted,https://github.com/lingxitong/MIL_BASELINE,e1c5d9fcd771f30f94437e993ecf24c0535df991,git_commit_locked,fouriermil,not_run,not_run
+gmmamba,GMMamba,A_frozen,pending_adapter,https://github.com/titizheng/GMMamba,,source_review_pending,,not_run,not_run
+linmil,Lin-MIL,A_frozen,adapted,https://github.com/charlotterchtr/Lin-MIL,82a00672cfebd7a6cedbd5384b47700a4db5da27,git_commit_locked,linmil,not_run,not_run
+mico,MiCo,A_frozen,adapted,https://github.com/junjianli106/MiCo,d679f352567ec9eb15a3bd7ac2026e448f4ced79,git_commit_locked,mico;mico_survival,not_run,not_run
+msmmil,MSMMIL,A_frozen,adapted,https://github.com/cool-breeze-and-rain/MSMMIL,80382115f5e548bc39248fd726bae3db2ead8b7f,git_commit_locked,msmmil,not_run,not_run
+ptcmil,PTCMIL,A_frozen,adapted,https://github.com/ubc-tea/PTCMIL,083734f4c511513d8e6a7cba9c7d65e9afd58f69,git_commit_locked,ptcmil,not_run,not_run
+agdrmil,AGDR-MIL,A_frozen,adapted,https://github.com/shuiguoc/AGDR-MIL,8e830683c0a695e1e1983f01d35dc85471bf327c,git_commit_locked,agdrmil_yaml_source;agdrmil_tcga_source,not_run,not_run
+caprmil,CAPRMIL,A_frozen,adapted,https://github.com/mandlos/CAPRMIL,b1f21a25e21d889a90bd604d29887abb3c1dbeeb,git_commit_locked,caprmil_mean;caprmil_attention;caprmil_gated,not_run,not_run
+litemil,LiteMIL,A_frozen,adapted,https://github.com/hkussaibi/LiteMIL,a8813af8746099735983c776fd9aaac1b91f45f4,git_commit_locked,litemil,not_run,not_run
+momil,MoMIL,A_frozen,adapted,https://github.com/YuqiZhang-Buaa/MoMIL,73f0814d56701ff0012054d7c11cbe9637c6cdb3,git_commit_locked,momil;momil_survival_extension,not_run,not_run
+pneamil,PNEA-MIL,A_frozen,adapted,https://github.com/Chen-Jxiang/PNEA-MIL,ef204ff5179ce7ea4bb7d04744f1553bee2f039c,git_commit_locked,pneamil,not_run,not_run
+recomil,ReCo-MIL,A_frozen,adapted,https://github.com/zsszc/ReCo-MIL,27cefbc8d4a9a897b61ceb78b77626bc21d16685,git_commit_locked,recomil_single;recomil_graph;recomil_dual;recomil_dual_graph,not_run,not_run
+sgpmil,SGPMIL,A_frozen,adapted,https://github.com/mandlos/SGPMIL,c9dee272e3fec897dba8136f386ddd2d685da4ed,git_commit_locked,sgpmil,not_run,not_run
+bayesmil,Bayes-MIL,B_spatial_graph,adapted,https://github.com/ralphc1212/bayes-mil,43bf913e8f6ddda53e3c21de07cb46bce7564d62,git_commit_locked,bayesmil_vis;bayesmil_sdpr;bayesmil_apcrf,not_run,not_run
+smmil,SmMIL / Smooth Operator,B_spatial_graph,adapted,https://github.com/Franblueee/SmMIL,4e2d1e0e08ad6085afa1469e6180c61516b1991e,git_commit_locked,smmil_early;smmil_mid;smmil_late;smmil_transformer,not_run,not_run
+wikg,WiKG,B_spatial_graph,adapted,https://github.com/WonderLandxD/WiKG,eb3144fb8267f525c57e71ced5c5b2b6a1c42a93,git_commit_locked,wikg,not_run,not_run
+psamil,PSA-MIL,B_spatial_graph,adapted,https://github.com/SharonPeled/PSA-MIL,673a7a904b565fb413fbdd1b937d544e87c96562,git_commit_locked,psamil,not_run,not_run
+dtmil,DT-MIL,B_spatial_graph,adapted,https://github.com/yfzon/DT-MIL,f52530811d0b1b591e10eab2fad9fd2ac1573b98,git_commit_locked,dtmil_source_crop_reference_train;dtmil_repaired_reference_train,not_run,not_run
+gtp,GTP,B_spatial_graph,adapted,https://github.com/vkola-lab/tmi2022,0d395a160a969578fa5ce66a8a7f0fd0817712b4,git_commit_locked,gtp_source;gtp_repaired,not_run,not_run
+setmil,SETMIL,B_spatial_graph,adapted,https://github.com/Louis-YuZhao/SETMIL,4243f633adb9e8a84cea11f92abf3d3b0ede126e,git_commit_locked,setmil_source;setmil_repaired,not_run,not_run
+slidegraph,SlideGraph+,B_spatial_graph,adapted,https://github.com/wenqi006/SlideGraph,23fbf58371a86525ea2daf0eb0232b379b1b8831,git_commit_locked,slidegraph,not_run,not_run
+camil_context,CAMIL context aware,B_spatial_graph,adapted,https://github.com/olgarithmics/ICLR_CAMIL,5f8ef577e040293794d0f695ceb810f890c5e9f7,git_commit_locked,camil_context,not_run,not_run
+longmil,LongMIL,B_spatial_graph,pending_adapter,https://github.com/invoker-LL/Long-MIL,457b1cf6e33a05b3c8359e1fe98114cd8241f772,git_commit_locked,,not_run,not_run
+mammil,MamMIL,B_spatial_graph,adapted,https://github.com/Vison307/MamMIL,64736e1a06a23e6814dfee664ff02b27c72dfedb,git_commit_locked,mammil;mammil_source;mammil_patient_union,not_run,not_run
+mamba2dmil,2DMambaMIL,B_spatial_graph,adapted,https://github.com/AtlasAnalyticsLab/2DMamba,9fe12aaa866ddbb83b66acc4ef400abf8613ce6a,git_commit_locked,mamba2dmil_source;mamba2dmil_autograd;mamba2dmil_paper,not_run,not_run
+attrimil,AttriMIL,B_spatial_graph,adapted,https://github.com/MedCAI/AttriMIL,e5736b9b4b5d3d4a64340b6ff5fa7fd470a338a9,git_commit_locked,attrimil,not_run,not_run
+dyhg,DyHG,B_spatial_graph,adapted,https://github.com/Yuxuan-Chen7/DyHG,dd41a86d76d41c69ae010f97c653877058b0619c,git_commit_locked,dyhg,not_run,not_run
+probsamil,ProbSA-MIL,B_spatial_graph,adapted,https://github.com/Franblueee/torchmil,2472b8bee84b906eac9351f1ec49d430c577bbcd,git_commit_locked,probsa_abmil_source;probsa_abmil_probmean;probsa_transformer_source;probsa_transformer_probmean,not_run,not_run
+smmile,SMMILe,B_spatial_graph,adapted,https://github.com/ZeyuGaoAi/SMMILe,4c4c79e364e77c16207f211775ef04dda40ff20a,git_commit_locked,smmile;smmile_binary;smmile_multilabel,not_run,not_run
+pathrwkv,PathRWKV,B_spatial_graph,adapted,https://github.com/Puzzle-Logic/PathRWKV,8818fa5711666bd8d30672f02bdcd98634389b70,git_commit_locked,pathrwkv_source;pathrwkv_repaired,not_run,not_run
+stablemil,StableMIL,B_spatial_graph,adapted,https://github.com/theeeqi/stableMIL,67b279157680c8c96104823a9e6f2ef20b679d11,git_commit_locked,stablemil_classification_source;stablemil_classification_repaired;stablemil_survival_source;stablemil_survival_repaired,not_run,not_run
+remix,ReMix,C_recipe_plugin,adapted,https://github.com/TencentAILabHealthcare/ReMix,1e16f53ac13391ae8bae45c845b6aabf94245ec1,git_commit_locked,remix_abmil,not_run,not_run
+sclwc,SCL-WC,C_recipe_plugin,adapted,https://github.com/Xiyue-Wang/SCL-WC,d8d0ff44e887cadeeaff199cd771af9ee23e5855,git_commit_locked,sclwc_paper_reference;sclwc_literal_source_control,not_run,not_run
+ibmil,IBMIL,C_recipe_plugin,adapted,https://github.com/HHHedo/IBMIL,fc43dacfb2fb474c160fadc553fecda9526e546c,git_commit_locked,ibmil,not_run,not_run
+mhim,MHIM-MIL,C_recipe_plugin,adapted,https://github.com/DearCaat/MHIM-MIL,9d0c91abeb1b39f91c161b47cf14bc44f5a89da3,git_commit_locked,mhim_abmil,not_run,not_run
+rankmix,RankMix,C_recipe_plugin,adapted,https://github.com/willpower057/RankMix,a6d51301ec878540f4dd185544c265fad5ef1dd2,git_commit_locked,rankmix_dsmil;rankmix_dsmil_source;rankmix_frmil;rankmix_frmil_source,not_run,not_run
+augdiff,AugDiff,C_recipe_plugin,adapted,https://github.com/szc19990412/AugDiff,abfdfe25c6373019d71bf3323cf59be799203563,git_commit_locked,augdiff_amil_released_time_reconstruction;augdiff_amil_schedule_repaired_reconstruction;augdiff_lossattn_released_time_reconstruction;augdiff_lossattn_schedule_repaired_reconstruction;augdiff_dsmil_released_time_reconstruction;augdiff_dsmil_schedule_repaired_reconstruction,not_run,not_run
+pmil_shapley,PMIL Shapley pseudo-bag,C_recipe_plugin,adapted,https://github.com/RenaoYan/PMIL,a5df40276fa5848056a89c0cde221500fad4099d,git_commit_locked,pmil_shapley_abmil_source;pmil_shapley_abmil_repaired;pmil_shapley_clam_sb_source;pmil_shapley_clam_sb_repaired;pmil_shapley_clam_mb_source;pmil_shapley_clam_mb_repaired,not_run,not_run
+prodiv,ProDiv,C_recipe_plugin,adapted,https://github.com/liupei101/PseMix,91d376581c139acd673fbe3ddb069827f0cf3bee,git_commit_locked,prodiv_abmil,not_run,not_run
+psemix,PseMix,C_recipe_plugin,adapted,https://github.com/liupei101/PseMix,91d376581c139acd673fbe3ddb069827f0cf3bee,git_commit_locked,psemix_abmil,not_run,not_run
+aem,AEM,C_recipe_plugin,adapted,https://github.com/dazhangyu123/AEM,b0027cfccd07a1c9b5e3c79b43008a8b8a3b2b80,git_commit_locked,aem_abmil,not_run,not_run
+mfcmil,MFC-MIL,C_recipe_plugin,adapted,https://github.com/WissingChen/MFC-MIL,145494ec0f221c8b1cc32843efeafb28426634c0,git_commit_locked,mfcmil_abmil;mfcmil_transmil,not_run,not_run
+mil_dropout,MIL-Dropout,C_recipe_plugin,adapted,https://github.com/ChongQingNoSubway/MILDropout,61af86f56a24685a916d0e3e4b416cb4751323bb,git_commit_locked,mil_dropout_abmil;mil_dropout_gated;mil_dropout_dsmil;mil_dropout_transmil,not_run,not_run
+packmil,PackMIL,C_recipe_plugin,adapted,https://github.com/FangHeng/PackMIL,b261cf0abd9c5ce384927722061e15a93b3489f7,git_commit_locked,packmil_abmil;packmil_survival,not_run,not_run
+carmil,CAR-MIL,C_recipe_plugin,adapted,https://github.com/ImaneCR/CAR-MIL,26fdee4dc05e6b358395e28fb2073da3b29b6cc3,git_commit_locked,carmil,not_run,not_run
+mfemil,MFE-MIL,C_recipe_plugin,adapted,https://github.com/AtlasAnalyticsLab/MFE-MIL,813c8e8abf46c05afc2402c06a6c7ac77284fff2,git_commit_locked,mfemil_mean;mfemil_max;mfemil_abmil;mfemil_clam_sb;mfemil_clam_mb;mfemil_transmil,not_run,not_run
+mrblock,MR-Block / MR-AB-MIL,C_recipe_plugin,adapted,https://github.com/BearCleverProud/MR-Block,a71fb28262fdb9aa61265c86c3978080c07ac966,git_commit_locked,mrblock,not_run,not_run
+nnmil,nnMIL,C_recipe_plugin,adapted,https://github.com/Luoxd1996/nnMIL,e92e8a0cf72dc1beb2a5915e27ca128af45fcb40,git_commit_locked,nnmil,not_run,not_run
+sdfp,S-DFP,C_recipe_plugin,adapted,https://github.com/thomascong121/S-DFP,22ef367ee3c99ca2dbd1ed70d13130c1c354623e,git_commit_locked,sdfp_abmil;sdfp_gated;sdfp_dsmil;sdfp_transmil,not_run,not_run
+dgmil,DGMIL,C_recipe_plugin,adapted,https://github.com/miccaiif/DGMIL,a80e5fe51c7e5a3879d4a9b060e49c6b431f70e1,git_commit_locked,dgmil;dgmil_source_extremes,not_run,not_run
+rrt,R2T-MIL / RRT-MIL,C_recipe_plugin,adapted,https://github.com/DearCaat/RRT-MIL,3320b6616b2c3d96ddc5bcd1aecea865a064987f,git_commit_locked,rrt,not_run,not_run
+asmil,ASMIL,C_recipe_plugin,adapted,https://github.com/Linfeng-Ye/ASMIL,5d062271e1626b27a955c309d10add902311865c,git_commit_locked,asmil,not_run,not_run
+c2aug,C2Aug,C_recipe_plugin,adapted,https://github.com/weiaicunzai/mixup,14cb53bc71f5161105b0dbef45351243d7330561,git_commit_locked,c2aug_transmil_paper_reference,not_run,not_run
+fcmil,FC-MIL,C_recipe_plugin,adapted,https://github.com/7FFDW/FCMIL,315ac88808d7517429ca0b55073e75dce03ddfd9,git_commit_locked,fcmil,not_run,not_run
+mammoth,MAMMOTH,C_recipe_plugin,adapted,https://github.com/mahmoodlab/MAMMOTH,aeeaffcd12500ed8dddec67665a33eb129c9ed84,git_commit_locked,mammoth_mean;mammoth_max;mammoth_abmil;mammoth_clam;mammoth_dsmil;mammoth_transmil;mammoth_transformer;mammoth_ilra_repaired,not_run,not_run
+ttis,TTIS,C_recipe_plugin,adapted,https://github.com/QuIIL/TTIS,ceb08d3bd8bc795845358850e314132b6231a921,git_commit_locked,ttis_abmil_source;ttis_clam_source;ttis_rrt_source;ttis_s4_source;ttis_transmil_source;ttis_wikg_source;ttis_clam_full_loss,not_run,not_run
+csmil,CS-MIL,D_multiscale,adapted,https://github.com/hrlblab/CS-MIL,d51b97f411caeff092e397427003021d1b23f00f,git_commit_locked,csmil,not_run,not_run
+h2mil,H2-MIL,D_multiscale,adapted,https://github.com/lin-lcx/H2-MIL,ea472fefd5eab553c58041a5acc203ac7d467d06,git_commit_locked,h2mil_source_compat;h2mil_repaired,not_run,not_run
+msattention,Multi-scale Attention MIL Wibawa,D_multiscale,adapted,https://github.com/mdsatria/MultiAttentionMIL,fae5840f801c0485eb22f2e7119d392f2fa975f3,git_commit_locked,msattention_source;msattention_repaired,not_run,not_run
+zoommil,ZoomMIL,D_multiscale,adapted,https://github.com/histocartography/zoommil,da7bb7fa71629d34e9b04859c1db791ac8330f5d,git_commit_locked,zoommil_bright_source_repaired;zoommil_crc_source_repaired,not_run,not_run
+hagmil,HAG-MIL,D_multiscale,adapted,https://github.com/BearCleverProud/HAG-MIL,9fec1ca4390346b958212801d2d5a14c7ce36d6f,git_commit_locked,hagmil_ce,not_run,not_run
+mgtrans,MG-Trans,D_multiscale,adapted,https://github.com/Jiangbo-Shi/MG-Trans,a18d886b89ff0eddf5ae0b4ae16058623fe34dbc,git_commit_locked,mgtrans_source_repaired,not_run,not_run
+hdmil,HDMIL,D_multiscale,adapted,https://github.com/JiuyangDong/HDMIL,ef3d4681054970208e94f8205bd96b3180c00926,git_commit_locked,hdmil_camelyon16_source;hdmil_nsclc_source;hdmil_brca_source;hdmil_rcc_source,not_run,not_run
+ahdmil,AHDMIL,D_multiscale,adapted,https://github.com/JiuyangDong/AHDMIL,2f38354386165167815eb2998424ad63792a65bf,git_commit_locked,ahdmil_camelyon16_source_repaired;ahdmil_nsclc_source_repaired;ahdmil_brca_source_repaired;ahdmil_rcc_source_repaired,not_run,not_run
+kmgmamba,KMG-Mamba,D_multiscale,adapted,https://github.com/dmhdmhdmh/KMG-Mamba,4b5075bb2d3eddf46f9bc4f46175d250b134e27c,git_commit_locked,kmgmamba_source;kmgmamba_multiclass_repaired,not_run,not_run
+lrmil,LRMIL,D_multiscale,adapted,https://github.com/hvcl/LRMIL,66ea1c5a447ed2a830bb1af6739ab9261e61000d,git_commit_locked,lrmil_source_repaired,not_run,not_run
+campanella_rnn,Campanella MIL-RNN,E_encoder_training,adapted,https://github.com/MSKCC-Computational-Pathology/MIL-nature-medicine-2019,daecb7293b5ea886ba222008f2592e1e29e9dac6,git_commit_locked,campanella_rnn,not_run,not_run
+rmdl,RMDL,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+center_embeddings,MIL with Center Embeddings,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+c2c,Cluster-to-Conquer,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+monai_mil,Dependency-aware MIL / MONAI,E_encoder_training,adapted,https://github.com/Project-MONAI/MONAI,9c6d819f97e37f36c72f3bdfad676b455bd2fa0d,git_commit_locked,monai_mean_tutorial;monai_max_tutorial;monai_attention_tutorial;monai_transformer_tutorial;monai_pyramid_tutorial,not_run,not_run
+sparseconvmil,SparseConvMIL,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+attention2majority,Attention2majority,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+pmil_prototypical,PMIL Prototypical,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+promptmil,Prompt-MIL,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+icmil_coupled,ICMIL Iteratively Coupled,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+macnet,MacNet,E_encoder_training,pending_adapter,,,source_review_pending,,not_run,not_run
+patchgcn,Patch-GCN,F_survival_omics,adapted,https://github.com/mahmoodlab/Patch-GCN,823addaee5b8f4cc2bec3ea8e5e0077b2a5115a4,git_commit_locked,patchgcn,not_run,not_run
+varpool,VarPool,F_survival_omics,adapted,https://github.com/mahmoodlab/varpool,2e40ab4d9a129e430fdb7dcf3304f55388f2ad88,git_commit_locked,varpool;varpool_cox,not_run,not_run
+advmil,AdvMIL,F_survival_omics,adapted,https://github.com/liupei101/AdvMIL,6853786624bbab36c2a08b35dcf20c7bdff1a105,git_commit_locked,advmil_esat;advmil_abmil;advmil_esat_source;advmil_abmil_source,not_run,not_run
+scmil,SCMIL Sparse Context,F_survival_omics,adapted,https://github.com/yang-ze-kang/SCMIL,ec6759a11ab19e68d5ee4d45df22ab31e470b7dc,git_commit_locked,scmil,not_run,not_run
+deepgraphsurv,DeepGraphSurv,F_survival_omics,adapted,https://github.com/uta-smile/DeepGraphSurv,3149752deba68067f1a39b9f3d212cb16ffaf560,git_commit_locked,deepgraphsurv_agcn,not_run,not_run
+deepattnmisl,DeepAttnMISL,F_survival_omics,adapted,https://github.com/uta-smile/DeepAttnMISL,d7099ed88c452aec37f16fc8e93cc0c068794c2a,git_commit_locked,deepattnmisl,not_run,not_run
+protosurv,ProtoSurv heterogeneous graph,F_survival_omics,adapted,https://github.com/wjx-error/ProtoSurv,551eaa3c0a2844e2c3557ef412d8a1fd2fec6e20,git_commit_locked,protosurv_source;protosurv_repaired,not_run,not_run
+c2mil,C2MIL,F_survival_omics,adapted,https://github.com/mimic0127/C2MIL,fd4d54fc115466e43019c77015cdef01d90c85c3,git_commit_locked,c2mil_source,not_run,not_run
+gatmamba,GAT-Mamba,F_survival_omics,adapted,https://github.com/rina-ding/gat-mamba,18979497990a66ffe6a75880f0336f85914552f0,git_commit_locked,gatmamba_source;gatmamba_edge_conditioned,not_run,not_run
+triagemil,TRIAGE-MIL,F_survival_omics,adapted,https://github.com/barathi-1993/TRIAGE-MIL,e97e52a32f1358974b0145532fdec5f5d75c6864,git_commit_locked,triagemil_source,not_run,not_run
+he2rna,HE2RNA,F_survival_omics,adapted,https://github.com/owkin/HE2RNA_code,d47f481fbcaab41a49635e4a35e810bf30eae0e0,git_commit_locked,he2rna,not_run,not_run
+amiml,AMIML,F_survival_omics,adapted,https://github.com/Boomwwe/AMIML,7c038261d1a52a4eb20d4b4f444e730c36bf5cd2,git_commit_locked,amiml_paper_reference;amiml_source_repaired,not_run,not_run
+mcat,MCAT,F_survival_omics,adapted,https://github.com/mahmoodlab/MCAT,b9cca63be83c67de7f95308d54a58f80b78b0da1,git_commit_locked,mcat,not_run,not_run
+porpoise,PORPOISE,F_survival_omics,adapted,https://github.com/mahmoodlab/PORPOISE,3390dc40e15995ba852d7a561faf0e996cf20501,git_commit_locked,porpoise,not_run,not_run
+cmta,CMTA,F_survival_omics,adapted,https://github.com/FT-ZHOU-ZZZ/CMTA,31340f6c74575668de35ee6c5d761467f11089e2,git_commit_locked,cmta,not_run,not_run
+motcat,MOTCat,F_survival_omics,adapted,https://github.com/Innse/MOTCat,0da379f73d92c096122df139a9410d08b096e6c1,git_commit_locked,motcat;motcat_micro,not_run,not_run
+pathomics,PathOmics,F_survival_omics,adapted,https://github.com/Cassie07/PathOmics,9705d6137f2974923c978597c18e7198bf888e23,git_commit_locked,pathomics_concat_source;pathomics_image_source;pathomics_omics_source,not_run,not_run
+healnet,HEALNet,F_survival_omics,adapted,https://github.com/konst-int-i/healnet,90459b65a3d4a4ef9fd405671c457b5a1163cc7d,git_commit_locked,healnet,not_run,not_run
+mmp,MMP,F_survival_omics,adapted,https://github.com/mahmoodlab/MMP,1fd75e37592f7ab47b787f737733ba3c5a7e714c,git_commit_locked,mmp_panther_source;mmp_panther_uot_source;mmp_ot_source;mmp_ot_uot_source,not_run,not_run
+pibd,PIBD,F_survival_omics,adapted,https://github.com/zylbuaa/PIBD,bd5bd94e6f8d48e7679c6e68209a3a65c9e56a78,git_commit_locked,pibd_source,not_run,not_run
+survpath,SurvPath,F_survival_omics,adapted,https://github.com/mahmoodlab/SurvPath,3f73ddd6705ec67d643020c5bb04fb13f9f382cc,git_commit_locked,survpath,not_run,not_run
+dispro,DisPro,F_survival_omics,adapted,https://github.com/Innse/DisPro,98473003de24e5a8f28143442d3dd48bd159aff1,git_commit_locked,dispro_source_repaired,not_run,not_run
+pamoe,PaMoE,F_survival_omics,adapted,https://github.com/wjx-error/PAMoE,7a26f4cc842d2875cfdee33e77de1495cae9dabe,git_commit_locked,pamoe_transmil;pamoe_transmil_source;pamoe_transformer;pamoe_transformer_source,not_run,not_run
+cate,CATE,G_vision_language,adapted,https://github.com/HKU-MedAI/CATE,a10fd45146849239ac0c052c45d76c02c81bba6b,git_commit_locked,cate,not_run,not_run
+vilamil,ViLa-MIL,G_vision_language,adapted,https://github.com/Jiangbo-Shi/ViLa-MIL,68a11cf0d5cf092dd980f0da1cb38ccac8747a82,git_commit_locked,vilamil;vilamil_source,not_run,not_run
+codmil,CoD-MIL,G_vision_language,adapted,https://github.com/Jiangbo-Shi/CoD-MIL,0fd748dc91ffd889bf13dbffd4db633b158809d6,git_commit_locked,codmil_source_repaired,not_run,not_run
+focus,FOCUS,G_vision_language,adapted,https://github.com/dddavid4real/FOCUS,66c4015d5ba09657f4c8183bc06947faecd5b01f,git_commit_locked,focus_source,not_run,not_run
+slip,SLIP,G_vision_language,adapted,https://github.com/LTS5/SLIP,9351c4480ec8d7a8216316a1861025b4f086ac78,git_commit_locked,slip_clip_vit_b16_source_repaired;slip_clip_rn50_source_repaired,not_run,not_run
+vlsa,VLSA,G_vision_language,adapted,https://github.com/liupei101/VLSA,915f37afcbd86cd6c33ebb30ab0caa5def0f9ab9,git_commit_locked,vlsa_conch_source_repaired,not_run,not_run
+conmil,ConMIL,G_vision_language,pending_adapter,,,source_review_pending,,not_run,not_run
+convl,ConVL,G_vision_language,pending_adapter,,,source_review_pending,,not_run,not_run
+dyko,DyKo,G_vision_language,pending_adapter,,,source_review_pending,,not_run,not_run
+libramil,Libra-MIL,G_vision_language,pending_adapter,,,source_review_pending,,not_run,not_run
+miladapter,MIL-Adapter,G_vision_language,pending_adapter,,,source_review_pending,,not_run,not_run
+muse,MUSE,G_vision_language,pending_adapter,,,source_review_pending,,not_run,not_run
+taxomil,TaxoMIL,G_vision_language,pending_adapter,,,source_review_pending,,not_run,not_run
+hybrid_supervision,Hybrid Supervision Learning,H_extra_supervision,pending_adapter,,,source_review_pending,,not_run,not_run
+sammil,SAM-MIL,H_extra_supervision,pending_adapter,,,source_review_pending,,not_run,not_run
+simil,SI-MIL,H_extra_supervision,adapted,https://github.com/bmi-imaginelab/SI-MIL,3ffb218672ffe0e4a183924af50e5920b498483d,git_commit_locked,simil_source;simil_full_vjp,not_run,not_run
+dspamil,DSPA-MIL / DSPA-U-MIL,H_extra_supervision,pending_adapter,,,source_review_pending,,not_run,not_run
+hmil,HMIL,H_extra_supervision,adapted,https://github.com/ChengJin-git/HMIL,d4f5ad18d0258a8e1bebe2c5a37e909cc349a946,git_commit_locked,hmil_source_repaired,not_run,not_run
+lpgmil,LPGMIL,H_extra_supervision,pending_adapter,,,source_review_pending,,not_run,not_run
+m4,M4,H_extra_supervision,pending_adapter,,,source_review_pending,,not_run,not_run
+protomil,ProtoMIL,H_extra_supervision,pending_adapter,,,source_review_pending,,not_run,not_run
+akdpmp,AKD-PMP,I_continual,pending_adapter,,,source_review_pending,,not_run,not_run
+comel,CoMEL,I_continual,pending_adapter,,,source_review_pending,,not_run,not_run
+qpmilvl,QPMIL-VL,I_continual,pending_adapter,,,source_review_pending,,not_run,not_run
+kmpmil,KMP-MIL,I_continual,pending_adapter,,,source_review_pending,,not_run,not_run
+hipt,HIPT,J_pretrained_slide,adapted,https://github.com/mahmoodlab/HIPT,780fafaed2e5b112bc1ed6e78852af1fe6714342,git_commit_locked,hipt_lgp_frozen_source;hipt_lgp_finetune_source,not_run,not_run
+feather,FEATHER / MIL-Lab models,J_pretrained_slide,pending_adapter,,,source_review_pending,,not_run,not_run
+icmil_context,ICMIL In-context,J_pretrained_slide,pending_adapter,,,source_review_pending,,not_run,not_run
+loss_attention,Loss-based Attention,K_other_modalities,adapted,https://github.com/xsshi2015/Loss-Attention,71926177d84fc1859b70d135090b163ea6bd58bf,git_commit_locked,loss_attention_classical;loss_attention_mil_source;loss_attention_temporal,not_run,not_run
+micromil,MicroMIL,K_other_modalities,adapted,https://github.com/kimjongwoo-cell/MicroMIL,66e637a891b7358198896c338b0e37828f3fc1f1,git_commit_locked,micromil_frozen,not_run,not_run
+mggmmil,MGGMMIL autofluorescence,K_other_modalities,pending_adapter,,,source_review_pending,,not_run,not_run
+lnplmil,LNPL-MIL,L_composite,pending_adapter,,,source_review_pending,,not_run,not_run
+nciemil,NcIEMIL,L_composite,pending_adapter,,,source_review_pending,,not_run,not_run
+mexd,MExD,L_composite,pending_adapter,https://github.com/JWZhao-uestc/MExD,1d4d438e2b19d0fee9cb55328faa84b6ca37fe0b,git_commit_locked,,not_run,not_run

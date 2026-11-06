@@ -1,0 +1,13 @@
+# Wibawa supplementary MIL recipe, adapted explicitly to prepared frozen WSI bags.
+# Use --method msattention_repaired (or msattention_source for native eval dropout).
+epochs: 10
+lr: 0.0001
+weight_decay: 0.0
+grad_clip: null
+selection_metric: log_loss
+patience: 10
+max_instances: null
+model:
+  dropout: 0.5
+  prediction_seed: 2026
+  prediction_samples: 1

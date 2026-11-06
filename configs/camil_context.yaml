@@ -1,0 +1,14 @@
+epochs: 30
+lr: 0.0002
+weight_decay: 0.0
+patience: 20
+selection_metric: log_loss
+model:
+  hidden: 512
+  heads: 8
+  dim_head: 64
+  landmarks: 256
+  attention_dim: 256
+  pool_dim: 128
+  kernel: 33
+  graph_cache: true

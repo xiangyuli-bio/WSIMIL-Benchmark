@@ -1,0 +1,10 @@
+epochs: 50
+lr: 0.0002
+weight_decay: 0.00001
+patience: 10
+selection_metric: macro_auc
+threads: 4
+max_instances: null
+model:
+  hidden: 512
+  dropout: 0.25

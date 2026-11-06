@@ -1,0 +1,22 @@
+# Complete-budget internal reference; original expert assets and admission pending.
+threads: 2
+model:
+  equations:
+    concept_softmax_axis: instances_reference
+    gating_kl_direction: student_to_teacher_eq8
+    detach_teacher_distillation: true
+    text_alignment: l2_norm
+  heads:
+    ptg_hidden: 1024
+    teacher_hidden: 1024
+    student_hidden: 1024
+    activation: gelu
+    dropout: 0.1
+    provenance: Explicit full-width reconstruction; original head specification unavailable
+  training:
+    patience: 50
+    min_epochs: 50
+    ordinal_decision: half_up_expected_grade_reference
+    evaluation_unit: slide
+    provenance: Complete50epoch reference control; not recovered author early-stopping settings
+  audit_checkpoint_updates: [7]

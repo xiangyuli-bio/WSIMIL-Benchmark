@@ -1,0 +1,15 @@
+# Complete released task-specific recipe. Both stages are mandatory.
+epochs: 400
+lr: 0.0003
+weight_decay: 0.00001
+patience: 20
+grad_clip: null
+max_instances: null
+selection_metric: hdmil_source_ce
+model:
+  dmin_epochs: 200
+  lipn_epochs: 200
+  dmin_selection_start: 50
+  dmin_patience: 20
+  lipn_patience: 5
+  lipn_lr: 0.0001

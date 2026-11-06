@@ -1,0 +1,857 @@
+[
+  {
+    "id": "iibmil_luad_gm_complete_reference",
+    "family": "iibmil",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "iibmil",
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "condition": "luad_gm",
+    "native_recipe": {
+      "input_dim": 1280,
+      "hidden": 32,
+      "depth": 8,
+      "batch_size": 16,
+      "lr": 0.0002,
+      "classes": 2,
+      "tokens": 500,
+      "epochs": 300,
+      "confidence_warmup": 10,
+      "confidence_ema_denominator": 200,
+      "prototype_ema": 0.99,
+      "optimizer": "AdamW",
+      "weight_decay": 1e-05,
+      "clip_norm": 0.01,
+      "lr_drop": 100,
+      "lr_gamma": 0.1,
+      "bag_loss_weight": 1.0,
+      "instance_loss_weight": 1.0
+    },
+    "class_count": 2,
+    "recipe": "Complete iibmil reference [iibmil_luad_gm_complete_reference]; native_recipe={\"bag_loss_weight\":1.0,\"batch_size\":16,\"classes\":2,\"clip_norm\":0.01,\"confidence_ema_denominator\":200,\"confidence_warmup\":10,\"depth\":8,\"epochs\":300,\"hidden\":32,\"input_dim\":1280,\"instance_loss_weight\":1.0,\"lr\":0.0002,\"lr_drop\":100,\"lr_gamma\":0.1,\"optimizer\":\"AdamW\",\"prototype_ema\":0.99,\"tokens\":500,\"weight_decay\":1e-05}"
+  },
+  {
+    "id": "iibmil_tcga_nsclc_complete_reference",
+    "family": "iibmil",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "iibmil",
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "condition": "tcga_nsclc",
+    "native_recipe": {
+      "input_dim": 1280,
+      "hidden": 256,
+      "depth": 3,
+      "batch_size": 16,
+      "lr": 1e-05,
+      "classes": 2,
+      "tokens": 500,
+      "epochs": 300,
+      "confidence_warmup": 10,
+      "confidence_ema_denominator": 200,
+      "prototype_ema": 0.99,
+      "optimizer": "AdamW",
+      "weight_decay": 1e-05,
+      "clip_norm": 0.01,
+      "lr_drop": 100,
+      "lr_gamma": 0.1,
+      "bag_loss_weight": 1.0,
+      "instance_loss_weight": 1.0
+    },
+    "class_count": 2,
+    "recipe": "Complete iibmil reference [iibmil_tcga_nsclc_complete_reference]; native_recipe={\"bag_loss_weight\":1.0,\"batch_size\":16,\"classes\":2,\"clip_norm\":0.01,\"confidence_ema_denominator\":200,\"confidence_warmup\":10,\"depth\":3,\"epochs\":300,\"hidden\":256,\"input_dim\":1280,\"instance_loss_weight\":1.0,\"lr\":1e-05,\"lr_drop\":100,\"lr_gamma\":0.1,\"optimizer\":\"AdamW\",\"prototype_ema\":0.99,\"tokens\":500,\"weight_decay\":1e-05}"
+  },
+  {
+    "id": "iibmil_tcga_rcc_complete_reference",
+    "family": "iibmil",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "iibmil",
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "condition": "tcga_rcc",
+    "native_recipe": {
+      "input_dim": 1280,
+      "hidden": 256,
+      "depth": 4,
+      "batch_size": 4,
+      "lr": 1e-05,
+      "classes": 3,
+      "tokens": 500,
+      "epochs": 300,
+      "confidence_warmup": 10,
+      "confidence_ema_denominator": 200,
+      "prototype_ema": 0.99,
+      "optimizer": "AdamW",
+      "weight_decay": 1e-05,
+      "clip_norm": 0.01,
+      "lr_drop": 100,
+      "lr_gamma": 0.1,
+      "bag_loss_weight": 1.0,
+      "instance_loss_weight": 1.0
+    },
+    "class_count": 3,
+    "recipe": "Complete iibmil reference [iibmil_tcga_rcc_complete_reference]; native_recipe={\"bag_loss_weight\":1.0,\"batch_size\":4,\"classes\":3,\"clip_norm\":0.01,\"confidence_ema_denominator\":200,\"confidence_warmup\":10,\"depth\":4,\"epochs\":300,\"hidden\":256,\"input_dim\":1280,\"instance_loss_weight\":1.0,\"lr\":1e-05,\"lr_drop\":100,\"lr_gamma\":0.1,\"optimizer\":\"AdamW\",\"prototype_ema\":0.99,\"tokens\":500,\"weight_decay\":1e-05}"
+  },
+  {
+    "id": "longmil_v1_eval_repaired_classification_reference",
+    "family": "longmil",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "longmil_physical_xy",
+      "patient_disjoint_splits",
+      "full_original_ALiBi_asset"
+    ],
+    "external_source": "longmil",
+    "status": "adapted_under_verification",
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "formal_admission": false,
+    "reference_reconstruction": true,
+    "version_condition": "v1",
+    "native_recipe": {
+      "hidden": 384,
+      "local_blocks": 2,
+      "global_blocks": 1,
+      "heads": 4,
+      "FFN": 1536,
+      "max_epochs": 200,
+      "patience": 20,
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "optimizer": "Adam_reference",
+      "complete_bags": true,
+      "local_radius": "source_global_minimum_mask"
+    },
+    "class_count": null,
+    "recipe": "Complete longmil reference [longmil_v1_eval_repaired_classification_reference]; native_recipe={\"FFN\":1536,\"complete_bags\":true,\"global_blocks\":1,\"heads\":4,\"hidden\":384,\"local_blocks\":2,\"local_radius\":\"source_global_minimum_mask\",\"lr\":0.0001,\"max_epochs\":200,\"optimizer\":\"Adam_reference\",\"patience\":20,\"weight_decay\":0.01}"
+  },
+  {
+    "id": "longmil_v1_source_classification_reference",
+    "family": "longmil",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "longmil_physical_xy",
+      "patient_disjoint_splits",
+      "full_original_ALiBi_asset"
+    ],
+    "external_source": "longmil",
+    "status": "adapted_under_verification",
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "formal_admission": false,
+    "reference_reconstruction": true,
+    "version_condition": "v1",
+    "native_recipe": {
+      "hidden": 384,
+      "local_blocks": 2,
+      "global_blocks": 1,
+      "heads": 4,
+      "FFN": 1536,
+      "max_epochs": 200,
+      "patience": 20,
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "optimizer": "Adam_reference",
+      "complete_bags": true,
+      "local_radius": "source_global_minimum_mask"
+    },
+    "class_count": null,
+    "recipe": "Complete longmil reference [longmil_v1_source_classification_reference]; native_recipe={\"FFN\":1536,\"complete_bags\":true,\"global_blocks\":1,\"heads\":4,\"hidden\":384,\"local_blocks\":2,\"local_radius\":\"source_global_minimum_mask\",\"lr\":0.0001,\"max_epochs\":200,\"optimizer\":\"Adam_reference\",\"patience\":20,\"weight_decay\":0.01}"
+  },
+  {
+    "id": "longmil_v2_paper_classification_reference",
+    "family": "longmil",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "longmil_physical_xy",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "longmil",
+    "status": "adapted_under_verification",
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "formal_admission": false,
+    "reference_reconstruction": true,
+    "version_condition": "paper_v2",
+    "native_recipe": {
+      "hidden": 384,
+      "local_blocks": 2,
+      "global_blocks": 1,
+      "heads": 1,
+      "FFN": 1536,
+      "max_epochs": 200,
+      "patience": 20,
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "optimizer": "Adam_reference",
+      "complete_bags": true,
+      "local_radius": 10
+    },
+    "class_count": null,
+    "recipe": "Complete longmil reference [longmil_v2_paper_classification_reference]; native_recipe={\"FFN\":1536,\"complete_bags\":true,\"global_blocks\":1,\"heads\":1,\"hidden\":384,\"local_blocks\":2,\"local_radius\":10,\"lr\":0.0001,\"max_epochs\":200,\"optimizer\":\"Adam_reference\",\"patience\":20,\"weight_decay\":0.01}"
+  },
+  {
+    "id": "longmil_v2_paper_survival_reference",
+    "family": "longmil",
+    "tasks": [
+      "survival"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "longmil_physical_xy",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "longmil",
+    "status": "adapted_under_verification",
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "formal_admission": false,
+    "reference_reconstruction": true,
+    "version_condition": "paper_v2",
+    "native_recipe": {
+      "hidden": 384,
+      "local_blocks": 2,
+      "global_blocks": 1,
+      "heads": 1,
+      "FFN": 1536,
+      "max_epochs": 200,
+      "patience": 20,
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "optimizer": "Adam_reference",
+      "complete_bags": true,
+      "local_radius": 10
+    },
+    "class_count": null,
+    "recipe": "Complete longmil reference [longmil_v2_paper_survival_reference]; native_recipe={\"FFN\":1536,\"complete_bags\":true,\"global_blocks\":1,\"heads\":1,\"hidden\":384,\"local_blocks\":2,\"local_radius\":10,\"lr\":0.0001,\"max_epochs\":200,\"optimizer\":\"Adam_reference\",\"patience\":20,\"weight_decay\":0.01}"
+  },
+  {
+    "id": "lpgmil_fm_width_reference",
+    "family": "lpgmil",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits",
+      "lpgmil_train_prototypes"
+    ],
+    "external_source": "lpgmil",
+    "class_count": null,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "native_recipe": {
+      "hidden": 512,
+      "layers": 2,
+      "state": 16,
+      "conv": 4,
+      "expand": 2,
+      "heads": 8,
+      "prototypes": 6,
+      "topk": 1000,
+      "masked_top": 10,
+      "mask_fraction": 0.6,
+      "epochs": 50,
+      "optimizer": "Adam",
+      "lr": 0.0001,
+      "weight_decay": 1e-05,
+      "all_parameter_l1": 1e-05,
+      "input_dim": 1024,
+      "batch_size": 1,
+      "grad_clip": null,
+      "scheduler": null,
+      "selection": "last_epoch"
+    },
+    "recipe": "Complete lpgmil reference [lpgmil_fm_width_reference]; native_recipe={\"all_parameter_l1\":1e-05,\"batch_size\":1,\"conv\":4,\"epochs\":50,\"expand\":2,\"grad_clip\":null,\"heads\":8,\"hidden\":512,\"input_dim\":1024,\"layers\":2,\"lr\":0.0001,\"mask_fraction\":0.6,\"masked_top\":10,\"optimizer\":\"Adam\",\"prototypes\":6,\"scheduler\":null,\"selection\":\"last_epoch\",\"state\":16,\"topk\":1000,\"weight_decay\":1e-05}"
+  },
+  {
+    "id": "lpgmil_tls1024_reference",
+    "family": "lpgmil",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits",
+      "lpgmil_train_prototypes"
+    ],
+    "external_source": "lpgmil",
+    "class_count": 2,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "native_recipe": {
+      "hidden": 512,
+      "layers": 2,
+      "state": 16,
+      "conv": 4,
+      "expand": 2,
+      "heads": 8,
+      "prototypes": 6,
+      "topk": 1000,
+      "masked_top": 10,
+      "mask_fraction": 0.6,
+      "epochs": 50,
+      "optimizer": "Adam",
+      "lr": 0.0001,
+      "weight_decay": 1e-05,
+      "all_parameter_l1": 1e-05,
+      "input_dim": 1024,
+      "batch_size": 1,
+      "grad_clip": null,
+      "scheduler": null,
+      "selection": "last_epoch"
+    },
+    "recipe": "Complete lpgmil reference [lpgmil_tls1024_reference]; native_recipe={\"all_parameter_l1\":1e-05,\"batch_size\":1,\"conv\":4,\"epochs\":50,\"expand\":2,\"grad_clip\":null,\"heads\":8,\"hidden\":512,\"input_dim\":1024,\"layers\":2,\"lr\":0.0001,\"mask_fraction\":0.6,\"masked_top\":10,\"optimizer\":\"Adam\",\"prototypes\":6,\"scheduler\":null,\"selection\":\"last_epoch\",\"state\":16,\"topk\":1000,\"weight_decay\":1e-05}"
+  },
+  {
+    "id": "mexd_bracs_paper_reference",
+    "family": "mexd",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "mexd",
+    "class_count": 3,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "native_recipe": {
+      "feature_dimensions": [
+        384,
+        768
+      ],
+      "adapter_width": 512,
+      "adapters": 2,
+      "layers_each": 2,
+      "heads": 8,
+      "landmarks": 256,
+      "experts": 4,
+      "observed_background_class": null,
+      "moe_epochs": 100,
+      "diffusion_epochs": 200,
+      "diffusion_steps": 500,
+      "posterior_samples": 100,
+      "moe_lr": 0.0002,
+      "diffusion_lr": 0.001,
+      "moe_weight_decay": 1e-05,
+      "diffusion_weight_decay": 0.0,
+      "diffusion_clip_norm": 1.0,
+      "batch_size": 1,
+      "selection": "fixed_final_epoch"
+    },
+    "recipe": "Complete mexd reference [mexd_bracs_paper_reference]; native_recipe={\"adapter_width\":512,\"adapters\":2,\"batch_size\":1,\"diffusion_clip_norm\":1.0,\"diffusion_epochs\":200,\"diffusion_lr\":0.001,\"diffusion_steps\":500,\"diffusion_weight_decay\":0.0,\"experts\":4,\"feature_dimensions\":[384,768],\"heads\":8,\"landmarks\":256,\"layers_each\":2,\"moe_epochs\":100,\"moe_lr\":0.0002,\"moe_weight_decay\":1e-05,\"observed_background_class\":null,\"posterior_samples\":100,\"selection\":\"fixed_final_epoch\"}"
+  },
+  {
+    "id": "mexd_camelyon16_paper_reference",
+    "family": "mexd",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "mexd",
+    "class_count": 2,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "native_recipe": {
+      "feature_dimensions": [
+        384,
+        768
+      ],
+      "adapter_width": 512,
+      "adapters": 2,
+      "layers_each": 2,
+      "heads": 8,
+      "landmarks": 256,
+      "experts": 2,
+      "observed_background_class": 0,
+      "moe_epochs": 100,
+      "diffusion_epochs": 200,
+      "diffusion_steps": 500,
+      "posterior_samples": 100,
+      "moe_lr": 0.0002,
+      "diffusion_lr": 0.001,
+      "moe_weight_decay": 1e-05,
+      "diffusion_weight_decay": 0.0,
+      "diffusion_clip_norm": 1.0,
+      "batch_size": 1,
+      "selection": "fixed_final_epoch"
+    },
+    "recipe": "Complete mexd reference [mexd_camelyon16_paper_reference]; native_recipe={\"adapter_width\":512,\"adapters\":2,\"batch_size\":1,\"diffusion_clip_norm\":1.0,\"diffusion_epochs\":200,\"diffusion_lr\":0.001,\"diffusion_steps\":500,\"diffusion_weight_decay\":0.0,\"experts\":2,\"feature_dimensions\":[384,768],\"heads\":8,\"landmarks\":256,\"layers_each\":2,\"moe_epochs\":100,\"moe_lr\":0.0002,\"moe_weight_decay\":1e-05,\"observed_background_class\":0,\"posterior_samples\":100,\"selection\":\"fixed_final_epoch\"}"
+  },
+  {
+    "id": "mexd_class_port_reference",
+    "family": "mexd",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "mexd",
+    "class_count": null,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "native_recipe": {
+      "feature_dimensions": [
+        384,
+        768
+      ],
+      "adapter_width": 512,
+      "adapters": 2,
+      "layers_each": 2,
+      "heads": 8,
+      "landmarks": 256,
+      "experts": "C_if_observed_class0background_else_Cplus1",
+      "observed_background_class": "explicit_optional_task.class_roles.background",
+      "moe_epochs": 100,
+      "diffusion_epochs": 200,
+      "diffusion_steps": 500,
+      "posterior_samples": 100,
+      "moe_lr": 0.0002,
+      "diffusion_lr": 0.001,
+      "moe_weight_decay": 1e-05,
+      "diffusion_weight_decay": 0.0,
+      "diffusion_clip_norm": 1.0,
+      "batch_size": 1,
+      "selection": "fixed_final_epoch",
+      "output_class_port": true
+    },
+    "recipe": "Complete mexd reference [mexd_class_port_reference]; native_recipe={\"adapter_width\":512,\"adapters\":2,\"batch_size\":1,\"diffusion_clip_norm\":1.0,\"diffusion_epochs\":200,\"diffusion_lr\":0.001,\"diffusion_steps\":500,\"diffusion_weight_decay\":0.0,\"experts\":\"C_if_observed_class0background_else_Cplus1\",\"feature_dimensions\":[384,768],\"heads\":8,\"landmarks\":256,\"layers_each\":2,\"moe_epochs\":100,\"moe_lr\":0.0002,\"moe_weight_decay\":1e-05,\"observed_background_class\":\"explicit_optional_task.class_roles.background\",\"output_class_port\":true,\"posterior_samples\":100,\"selection\":\"fixed_final_epoch\"}"
+  },
+  {
+    "id": "mexd_tcga_nsclc_paper_reference",
+    "family": "mexd",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "mexd",
+    "class_count": 2,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "reference_reconstruction": true,
+    "native_recipe": {
+      "feature_dimensions": [
+        384,
+        768
+      ],
+      "adapter_width": 512,
+      "adapters": 2,
+      "layers_each": 2,
+      "heads": 8,
+      "landmarks": 256,
+      "experts": 3,
+      "observed_background_class": null,
+      "moe_epochs": 100,
+      "diffusion_epochs": 200,
+      "diffusion_steps": 500,
+      "posterior_samples": 100,
+      "moe_lr": 0.0002,
+      "diffusion_lr": 0.001,
+      "moe_weight_decay": 1e-05,
+      "diffusion_weight_decay": 0.0,
+      "diffusion_clip_norm": 1.0,
+      "batch_size": 1,
+      "selection": "fixed_final_epoch"
+    },
+    "recipe": "Complete mexd reference [mexd_tcga_nsclc_paper_reference]; native_recipe={\"adapter_width\":512,\"adapters\":2,\"batch_size\":1,\"diffusion_clip_norm\":1.0,\"diffusion_epochs\":200,\"diffusion_lr\":0.001,\"diffusion_steps\":500,\"diffusion_weight_decay\":0.0,\"experts\":3,\"feature_dimensions\":[384,768],\"heads\":8,\"landmarks\":256,\"layers_each\":2,\"moe_epochs\":100,\"moe_lr\":0.0002,\"moe_weight_decay\":1e-05,\"observed_background_class\":null,\"posterior_samples\":100,\"selection\":\"fixed_final_epoch\"}"
+  },
+  {
+    "id": "promptmil_brca_dino_dsmil_paper_reference",
+    "family": "promptmil",
+    "recipe": "Original complete RGB/DINO prompt-gradient replay with paper_reference cohort recipe",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "promptmil_actual_RGB224",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "promptmil",
+    "class_count": null,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "native_recipe": {
+      "condition": "brca",
+      "edition": "paper_reference",
+      "epochs": 40,
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "adam": false,
+      "loss": "onehot_BCE",
+      "native_classes": 2,
+      "train_chunk": 512,
+      "eval_augmentation_chunk": 1024,
+      "accumulation": 8,
+      "flush_tail": true,
+      "selection": "promptmil_source_AUROC"
+    }
+  },
+  {
+    "id": "promptmil_brca_dino_dsmil_source",
+    "family": "promptmil",
+    "recipe": "Original complete RGB/DINO prompt-gradient replay with source cohort recipe",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "promptmil_actual_RGB224",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "promptmil",
+    "class_count": null,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "native_recipe": {
+      "condition": "brca",
+      "edition": "source",
+      "epochs": 50,
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "adam": false,
+      "loss": "onehot_BCE",
+      "native_classes": 2,
+      "train_chunk": 512,
+      "eval_augmentation_chunk": 1024,
+      "accumulation": 8,
+      "flush_tail": false,
+      "selection": "promptmil_source_completed_epoch"
+    }
+  },
+  {
+    "id": "promptmil_bright_dino_dsmil_paper_reference",
+    "family": "promptmil",
+    "recipe": "Original complete RGB/DINO prompt-gradient replay with paper_reference cohort recipe",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "promptmil_actual_RGB224",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "promptmil",
+    "class_count": null,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "native_recipe": {
+      "condition": "bright",
+      "edition": "paper_reference",
+      "epochs": 40,
+      "lr": 0.0001,
+      "weight_decay": 0.05,
+      "adam": true,
+      "loss": "CE",
+      "native_classes": 3,
+      "train_chunk": 512,
+      "eval_augmentation_chunk": 1024,
+      "accumulation": 8,
+      "flush_tail": true,
+      "selection": "promptmil_source_AUROC"
+    }
+  },
+  {
+    "id": "promptmil_bright_dino_dsmil_source",
+    "family": "promptmil",
+    "recipe": "Original complete RGB/DINO prompt-gradient replay with source cohort recipe",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "promptmil_actual_RGB224",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "promptmil",
+    "class_count": null,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "native_recipe": {
+      "condition": "bright",
+      "edition": "source",
+      "epochs": 50,
+      "lr": 0.0001,
+      "weight_decay": 0.05,
+      "adam": true,
+      "loss": "CE",
+      "native_classes": 3,
+      "train_chunk": 512,
+      "eval_augmentation_chunk": 1024,
+      "accumulation": 8,
+      "flush_tail": false,
+      "selection": "promptmil_source_completed_epoch"
+    }
+  },
+  {
+    "id": "promptmil_crc_dino_dsmil_paper_reference",
+    "family": "promptmil",
+    "recipe": "Original complete RGB/DINO prompt-gradient replay with paper_reference cohort recipe",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "promptmil_actual_RGB224",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "promptmil",
+    "class_count": null,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "native_recipe": {
+      "condition": "crc",
+      "edition": "paper_reference",
+      "epochs": 40,
+      "lr": 0.0005,
+      "weight_decay": 0.01,
+      "adam": false,
+      "loss": "onehot_BCE",
+      "native_classes": 2,
+      "train_chunk": 256,
+      "eval_augmentation_chunk": 512,
+      "accumulation": 8,
+      "flush_tail": true,
+      "selection": "promptmil_source_AUROC"
+    }
+  },
+  {
+    "id": "promptmil_crc_dino_dsmil_source",
+    "family": "promptmil",
+    "recipe": "Original complete RGB/DINO prompt-gradient replay with source cohort recipe",
+    "tasks": [
+      "classification"
+    ],
+    "required_inputs": [
+      "promptmil_actual_RGB224",
+      "single_slide_bag",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "promptmil",
+    "class_count": null,
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "gpu_validation": "not_run",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "native_recipe": {
+      "condition": "crc",
+      "edition": "source",
+      "epochs": 40,
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "adam": false,
+      "loss": "onehot_BCE",
+      "native_classes": 2,
+      "train_chunk": 256,
+      "eval_augmentation_chunk": 512,
+      "accumulation": 8,
+      "flush_tail": false,
+      "selection": "promptmil_source_completed_epoch"
+    }
+  },
+  {
+    "id": "rmdl_source_sum_full_reference",
+    "family": "rmdl",
+    "tasks": [
+      "classification"
+    ],
+    "class_count": 3,
+    "required_inputs": [
+      "actual_original_scale_WSI",
+      "TRAIN_only_pixel_annotations",
+      "full_Keras_ImageNet_InceptionResNetV2_initialization",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "rmdl",
+    "backend": "rmdl_complete_native_tensorflow",
+    "status": "adapted_under_verification",
+    "reference_reconstruction": true,
+    "formal_admission": false,
+    "gpu_validation": "components_passed_full_pipeline_gates_pending",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "native_recipe": {
+      "localizer_parameters": 55913699,
+      "FConv_dimension": 1024,
+      "working_mpp": 0.5034,
+      "train_rgb_before_augmentation": 470,
+      "patch_rgb": 299,
+      "FCN_block": 1899,
+      "FCN_output": [
+        51,
+        51,
+        3
+      ],
+      "block_stride": 1632,
+      "NMS_area_overlap": 0.68,
+      "actual_selected_instances": 300,
+      "localizer_batch": 80,
+      "MIL_batch": 256,
+      "MIL_iterations": 7000,
+      "localizer_iterations_reference": 10000,
+      "localizer_total_not_published": true,
+      "hard_negative_after_reference": 5000,
+      "pooling": "sum",
+      "legacy_Adam": "literal_non_fused_Keras2.2.1",
+      "MIL_lr": 0.001,
+      "MIL_lr_multiplier": 0.8,
+      "MIL_lr_period": 140,
+      "selection": "fixed_final_iteration",
+      "single_device_reference_not_claimed_original_4GPU_BN_semantics": true
+    },
+    "recipe": "Complete rmdl reference [rmdl_source_sum_full_reference]; native_recipe={\"FCN_block\":1899,\"FCN_output\":[51,51,3],\"FConv_dimension\":1024,\"MIL_batch\":256,\"MIL_iterations\":7000,\"MIL_lr\":0.001,\"MIL_lr_multiplier\":0.8,\"MIL_lr_period\":140,\"NMS_area_overlap\":0.68,\"actual_selected_instances\":300,\"block_stride\":1632,\"hard_negative_after_reference\":5000,\"legacy_Adam\":\"literal_non_fused_Keras2.2.1\",\"localizer_batch\":80,\"localizer_iterations_reference\":10000,\"localizer_parameters\":55913699,\"localizer_total_not_published\":true,\"patch_rgb\":299,\"pooling\":\"sum\",\"selection\":\"fixed_final_iteration\",\"single_device_reference_not_claimed_original_4GPU_BN_semantics\":true,\"train_rgb_before_augmentation\":470,\"working_mpp\":0.5034}"
+  },
+  {
+    "id": "rmdl_paper_mean_full_reference",
+    "family": "rmdl",
+    "tasks": [
+      "classification"
+    ],
+    "class_count": 3,
+    "required_inputs": [
+      "actual_original_scale_WSI",
+      "TRAIN_only_pixel_annotations",
+      "full_Keras_ImageNet_InceptionResNetV2_initialization",
+      "patient_disjoint_splits"
+    ],
+    "external_source": "rmdl",
+    "backend": "rmdl_complete_native_tensorflow",
+    "status": "adapted_under_verification",
+    "reference_reconstruction": true,
+    "formal_admission": false,
+    "gpu_validation": "components_passed_full_pipeline_gates_pending",
+    "real_wsi_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "native_recipe": {
+      "localizer_parameters": 55913699,
+      "FConv_dimension": 1024,
+      "working_mpp": 0.5034,
+      "train_rgb_before_augmentation": 470,
+      "patch_rgb": 299,
+      "FCN_block": 1899,
+      "FCN_output": [
+        51,
+        51,
+        3
+      ],
+      "block_stride": 1632,
+      "NMS_area_overlap": 0.68,
+      "actual_selected_instances": 300,
+      "localizer_batch": 80,
+      "MIL_batch": 256,
+      "MIL_iterations": 7000,
+      "localizer_iterations_reference": 10000,
+      "localizer_total_not_published": true,
+      "hard_negative_after_reference": 5000,
+      "pooling": "mean",
+      "legacy_Adam": "literal_non_fused_Keras2.2.1",
+      "MIL_lr": 0.001,
+      "MIL_lr_multiplier": 0.8,
+      "MIL_lr_period": 140,
+      "selection": "fixed_final_iteration",
+      "single_device_reference_not_claimed_original_4GPU_BN_semantics": true
+    },
+    "recipe": "Complete rmdl reference [rmdl_paper_mean_full_reference]; native_recipe={\"FCN_block\":1899,\"FCN_output\":[51,51,3],\"FConv_dimension\":1024,\"MIL_batch\":256,\"MIL_iterations\":7000,\"MIL_lr\":0.001,\"MIL_lr_multiplier\":0.8,\"MIL_lr_period\":140,\"NMS_area_overlap\":0.68,\"actual_selected_instances\":300,\"block_stride\":1632,\"hard_negative_after_reference\":5000,\"legacy_Adam\":\"literal_non_fused_Keras2.2.1\",\"localizer_batch\":80,\"localizer_iterations_reference\":10000,\"localizer_parameters\":55913699,\"localizer_total_not_published\":true,\"patch_rgb\":299,\"pooling\":\"mean\",\"selection\":\"fixed_final_iteration\",\"single_device_reference_not_claimed_original_4GPU_BN_semantics\":true,\"train_rgb_before_augmentation\":470,\"working_mpp\":0.5034}"
+  }
+]

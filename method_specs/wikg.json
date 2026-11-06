@@ -1,0 +1,41 @@
+{
+  "id": "wikg",
+  "name": "WiKG",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/WonderLandxD/WiKG",
+  "source_status": "git_commit_locked",
+  "source_commit": "eb3144fb8267f525c57e71ced5c5b2b6a1c42a93",
+  "license": "not_yet_verified",
+  "profiles": [
+    "wikg"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "wikg",
+      "family": "wikg",
+      "recipe": "chunked feature-derived top-k graph, knowledge attention and bi-interaction",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

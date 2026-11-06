@@ -1,0 +1,64 @@
+{
+  "id": "motcat",
+  "name": "MOTCat",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Innse/MOTCat",
+  "source_status": "git_commit_locked",
+  "source_commit": "0da379f73d92c096122df139a9410d08b096e6c1",
+  "license": "README: non-commercial academic purposes",
+  "profiles": [
+    "motcat",
+    "motcat_micro"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "omics",
+    "patch_features",
+    "pathways"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "motcat",
+      "family": "motcat",
+      "recipe": "pinned author OT co-attention, dual Transformers and fusion; full-bag discrete NLL; explicit entropy UOT regularizer",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "motcat",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "motcat_micro",
+      "family": "motcat",
+      "recipe": "author shuffled micro-bag partition, mean per-micro NLL and mean risk; streamed backward; fixed-seed isolated inference",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "motcat",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

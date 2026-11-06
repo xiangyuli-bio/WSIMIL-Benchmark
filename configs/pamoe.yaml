@@ -1,0 +1,13 @@
+epochs: 100
+patience: 5
+lr: 0.0002
+weight_decay: 0.01
+grad_clip: null
+model:
+  hidden: 512
+  batch_size: 8
+  extra_experts: 2
+  capacity: 2.0
+  prior_weight: 0.01
+  alpha_surv: 0.0
+  max_train_patches: 20000

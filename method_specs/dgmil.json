@@ -1,0 +1,58 @@
+{
+  "id": "dgmil",
+  "name": "DGMIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/miccaiif/DGMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "a80e5fe51c7e5a3879d4a9b060e49c6b431f70e1",
+  "license": "No root license found; not vendored",
+  "profiles": [
+    "dgmil",
+    "dgmil_source_extremes"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "dgmil",
+      "family": "dgmil",
+      "recipe": "author dynamic extreme-instance projection and negative-cluster Mahalanobis; stable unique ties, train-only inference density, raw-score AUROC",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": 2,
+      "external_source": "dgmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dgmil_source_extremes",
+      "family": "dgmil",
+      "recipe": "released heapq first-match extreme selection and full-batch Adam; train-only inference density repair, raw-score AUROC",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": 2,
+      "external_source": "dgmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

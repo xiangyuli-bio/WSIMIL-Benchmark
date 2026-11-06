@@ -1,0 +1,44 @@
+{
+  "id": "codmil",
+  "name": "CoD-MIL",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Jiangbo-Shi/CoD-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "0fd748dc91ffd889bf13dbffd4db633b158809d6",
+  "license": "No root license found; not vendored",
+  "profiles": [
+    "codmil_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "codmil_assets",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_physical_two_scale_text_masking_recipe_C_D_T_source_ports_explicit_full_VAL_objective_and_state_resume",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "codmil_source_repaired",
+      "family": "codmil",
+      "recipe": "complete author two-scale chain-of-diagnosis and masked-normal-text objective, physical row-map/text binding, explicit C-way/full-D/T input ports and complete original one-bag Adam/VAL-loss/stopping recipe with exact state resume",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "codmil_assets"
+      ],
+      "class_count": null,
+      "external_source": "codmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

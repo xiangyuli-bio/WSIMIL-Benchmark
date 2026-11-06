@@ -1,0 +1,4033 @@
+[
+  {
+    "id": "mean_mil",
+    "name": "MeanMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": null,
+    "source_status": "source_review_pending",
+    "source_commit": null,
+    "license": "not_yet_verified",
+    "profiles": [
+      "mean_linear",
+      "mean_mil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "max_mil",
+    "name": "MaxMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": null,
+    "source_status": "source_review_pending",
+    "source_commit": null,
+    "license": "not_yet_verified",
+    "profiles": [
+      "max_mil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "abmil",
+    "name": "ABMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/AMLab-Amsterdam/AttentionDeepMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "eb0434ba2795711a45d693d60120ae53532b1b93",
+    "license": "not_yet_verified",
+    "profiles": [
+      "abmil",
+      "gated_abmil",
+      "abmil_cox",
+      "gated_abmil_cox"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "chowder",
+    "name": "CHOWDER",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/owkin/HistoSSLscaling",
+    "source_status": "git_commit_locked",
+    "source_commit": "73f1d191b1d04d4b88307a9601c4fcdbf23b72fa",
+    "license": "not_yet_verified",
+    "profiles": [
+      "chowder"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "clam",
+    "name": "CLAM",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/CLAM",
+    "source_status": "git_commit_locked",
+    "source_commit": "53e2409d4a8189c682c173382964a85f114f923c",
+    "license": "not_yet_verified",
+    "profiles": [
+      "clam_sb",
+      "clam_mb"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "dsmil",
+    "name": "DSMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/binli123/dsmil-wsi",
+    "source_status": "git_commit_locked",
+    "source_commit": "80465ed534ac49b5e550833da56c27936f0b9440",
+    "license": "not_yet_verified",
+    "profiles": [
+      "dsmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "transmil",
+    "name": "TransMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/szc19990412/TransMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "9d6aee57c7c72375fb9132dc58cd8c9b0f0a949c",
+    "license": "not_yet_verified",
+    "profiles": [
+      "transmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "dtfd",
+    "name": "DTFD-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/hrzhang1123/DTFD-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "10964f4dcc27c65ce110a0e9a3b9240bff58da8a",
+    "license": "not_yet_verified",
+    "profiles": [
+      "dtfd"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "frmil",
+    "name": "FRMIL MICCAI 2022",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/PhilipChicco/FRMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "73d99088a703253392350928901b51c8a94205c0",
+    "license": "not_yet_verified",
+    "profiles": [
+      "frmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "cbmil",
+    "name": "CBMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/wwu98934/CBMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "980252ac796e4f68ad97d7b0b0de4aef4bb00157",
+    "license": "not_yet_verified",
+    "profiles": [
+      "cbmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "additive_mil",
+    "name": "Additive MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/lingxitong/MIL_BASELINE",
+    "source_status": "git_commit_locked",
+    "source_commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "license": "not_yet_verified",
+    "profiles": [
+      "additive_mil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "varmil",
+    "name": "VarMIL / DeepSMILE",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/NKI-AI/dlup-lightning-mil",
+    "source_status": "git_commit_locked",
+    "source_commit": "f33d6c0eb504d73bd822909f29e548bc186e5306",
+    "license": "Apache-2.0",
+    "profiles": [
+      "varmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "h2t",
+    "name": "H2T",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/vqdang/H2T",
+    "source_status": "git_commit_locked",
+    "source_commit": "4218a585c6d1e303dbf57e4fb4212b181c2c4a3d",
+    "license": "not_yet_verified",
+    "profiles": [
+      "h2t"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "iibmil",
+    "name": "IIB-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/TencentAILabHealthcare/IIB-MIL",
+    "source_commit": "a354ec6ea2b9ea2159e6784d54a6afb355c04b50",
+    "source_status": "complete_original_network_data_confidence_and_prototype_with_reference_training_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+    "profiles": [
+      "iibmil_luad_gm_complete_reference",
+      "iibmil_tcga_nsclc_complete_reference",
+      "iibmil_tcga_rcc_complete_reference"
+    ],
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "required_inputs": [
+      "patch_features",
+      "patient_disjoint_splits",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Complete original residual-transformer/five-query decoder, original TRAIN confidence initialization, PartialLoss/linear200EMA and class-adjusted top10percent prototype update. Original500-row sampling/padding and ignored attention mask retained. Full author trainer is absent: equal dual-loss coefficients,10epoch confidence warmup, per-batch lagged update order, valid-instance supervision mask and validation selection are declared reconstruction choices. All3full native configurations, FM-width and output-class ports retain source widths/depths/FFNs. Checkpoint includes complete confidence/prototypes/scheduler/actual sampled rows and RNG. Native300epoch/source/wheel/global/final gates remain separate; no paper-score reproduction claim."
+  },
+  {
+    "id": "ilra",
+    "name": "ILRA-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/jinxixiang/low_rank_wsi",
+    "source_status": "git_commit_locked",
+    "source_commit": "bb45b9ba9d4a7096d473f9ee171a6252eb736570",
+    "license": "not_yet_verified",
+    "profiles": [
+      "ilra"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "ins",
+    "name": "INS",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/miccaiif/INS",
+    "source_status": "git_commit_locked",
+    "source_commit": "cd97ba2fa7df2a951f218e6de405f664129931c8",
+    "license": "No root license found; not vendored",
+    "profiles": [
+      "ins_frozen_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "full_feature_dimension_divisible_by_32",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_native_frozen_feature_ResNet18_route_with_all_IWSCL_prototype_confidence_and_bag_objectives; actual_source_phase_sampler_SGD_schedule_and_full_state_resume; pseudoimage_condition_Cway_bag_head_bag_only_negative_labels_valid_queue_and_paper_scratch_init_explicit",
+    "blocker": null
+  },
+  {
+    "id": "mmil",
+    "name": "MMIL-Transformer",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/hustvl/MMIL-Transformer",
+    "source_status": "git_commit_locked",
+    "source_commit": "d363f43bf0949e3fc172e8d94f99deb335bbe171",
+    "license": "MIT",
+    "profiles": [
+      "mmil",
+      "mmil_coords"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "tpmil",
+    "name": "TPMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/LitaoYang-Jet/TPMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "0d89a1f98f164803d92c6f6c686451711873eeca",
+    "license": "No root license found; not vendored",
+    "profiles": [
+      "tpmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "acmil",
+    "name": "ACMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/dazhangyu123/ACMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "e53d19c81f3892256d41962ffc4352cc91a4f834",
+    "license": "not_yet_verified",
+    "profiles": [
+      "acmil_ga"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "cdpmil",
+    "name": "cDP-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/HKU-MedAI/cDPMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "83f7ed596618266589745c5b1e977894958c85df",
+    "license": "No root license found; not vendored",
+    "profiles": [
+      "cdpmil_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "dgrmil",
+    "name": "DGR-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/ChongQingNoSubway/DGR-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "ac6257ffa768f154c52ac8b01e2086e5d3a714bf",
+    "license": "not_yet_verified",
+    "profiles": [
+      "dgrmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "focusmil",
+    "name": "FocusMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Raymvp/FocusMIL-and-other-max-pooling-methods",
+    "source_status": "git_commit_locked",
+    "source_commit": "a0f0c03ea7e6a3533ce1ea9f43a4f86976554d3e",
+    "license": "not_yet_verified",
+    "profiles": [
+      "focusmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "madmil",
+    "name": "MAD-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/tueimage/MAD-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "936dc382190fb1c92ab753ef8ce7b1c076d46ac4",
+    "license": "not_yet_verified",
+    "profiles": [
+      "madmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mambamil",
+    "name": "MambaMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/isyangshu/MambaMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "9aea39efc13fdcd3703b5b54c28a64887b4acbd7",
+    "license": "README non-commercial academic purposes; bundled mamba Apache-2.0",
+    "profiles": [
+      "mambamil_srmamba",
+      "mambamil_bimamba",
+      "mambamil_unidirectional"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "pamil_policy",
+    "name": "PAMIL dynamic policy",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/titizheng/PAMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "d62960af2c115f87d570a0fbf8852049745b4e94",
+    "license": "No root license in pinned tree, private source loading, not vendored",
+    "profiles": [
+      "pamil_policy_paper_reference",
+      "pamil_policy_released_sampling_reference_training"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "explicit_feature_row_order",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "pamil_prototype",
+    "name": "PAMIL prototype attention",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Jiashuai-Liu/PAMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "7fe90096f64697bd6b68d4d7209e31f437a6b08f",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "pamil_prototype_source",
+      "pamil_prototype_repaired",
+      "pamil_prototype_multilabel"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "training_instance_labels"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "full_staged_recipe_extra_instance_supervision_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "panther",
+    "name": "PANTHER",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/PANTHER",
+    "source_status": "git_commit_locked",
+    "source_commit": "e7ffae402e146363fe1ca3813ffe68d248ec570f",
+    "license": "not_yet_verified",
+    "profiles": [
+      "panther"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "retmil",
+    "name": "RetMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Hongbo-Chu/RetMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "e6d42345fa57a8b76f4d7034c4d32e09c47aa094",
+    "license": "not_yet_verified",
+    "profiles": [
+      "retmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "camil_channel",
+    "name": "CAMIL channel attention",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/maojy0914/CAMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "5481d32a59b0146d9a96f1129bb12ad493acb81a",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "camil_channel"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "efficientmil",
+    "name": "EfficientMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/chengyingshe/EfficientMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "28f71ab2bffa8ff5c159354ad1b59dbba7624490",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "efficientmil_gru",
+      "efficientmil_lstm"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "fouriermil",
+    "name": "FourierMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/lingxitong/MIL_BASELINE",
+    "source_status": "original_source_recovered_separate_native_recipe_candidate",
+    "source_commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "license": "not_yet_verified",
+    "profiles": [
+      "fouriermil",
+      "fouriermil_author_200_fp16_val_loss_locked_test",
+      "fouriermil_author_200_cpu32_reference_val_loss_locked_test"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Legacy MIL_BASELINE implementation and its source identity remain available. Separately named original-source profiles preserve native1024/512/2blocks, initialization, zero dropout, Lookahead-RAdam, eight workers, accumulation2, maximum200epochs, literal VAL loss and patience10. Native CUDA FP16 and explicit CPU32 reference are separate. Current-framework semantics and named fast/slow/cache optimizer checkpoint repair are disclosed. Complete source/wheel/native and current-release gates remain pending.",
+    "blocker": null
+  },
+  {
+    "id": "gmmamba",
+    "name": "GMMamba",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/titizheng/GMMamba",
+    "source_status": "complete_source_adapter_under_verification",
+    "source_commit": "70576f1aaeef0d7041d6860799ade1ac905b85aa",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "profiles": [
+      "gmmamba_mambamil_bimamba_source",
+      "gmmamba_fm_projection_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "spatial_metadata",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Ten full native512D/257patch/10group original component checks passed. Complete original training/selection/recovery adapter written, execution validation in progress. Missing original BiMamba dependency explicitly bound to pinned MambaMIL implementation; source hard-mask non-gradient, unused FC1, native512 and optional FM-projection repair disclosed.",
+    "blocker": null
+  },
+  {
+    "id": "linmil",
+    "name": "Lin-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/charlotterchtr/Lin-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "82a00672cfebd7a6cedbd5384b47700a4db5da27",
+    "license": "not_yet_verified",
+    "profiles": [
+      "linmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mico",
+    "name": "MiCo",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/junjianli106/MiCo",
+    "source_status": "git_commit_locked",
+    "source_commit": "d679f352567ec9eb15a3bd7ac2026e448f4ced79",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "mico",
+      "mico_survival"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "msmmil",
+    "name": "MSMMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/cool-breeze-and-rain/MSMMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "80382115f5e548bc39248fd726bae3db2ead8b7f",
+    "license": "No root license found; bundled mamba Apache-2.0 and optimizer attribution retained in external source",
+    "profiles": [
+      "msmmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "ptcmil",
+    "name": "PTCMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/ubc-tea/PTCMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "083734f4c511513d8e6a7cba9c7d65e9afd58f69",
+    "license": "not_yet_verified",
+    "profiles": [
+      "ptcmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "agdrmil",
+    "name": "AGDR-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/shuiguoc/AGDR-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "8e830683c0a695e1e1983f01d35dc85471bf327c",
+    "license": "not_found_in_pinned_tree; external_source_only",
+    "profiles": [
+      "agdrmil_yaml_source",
+      "agdrmil_tcga_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_native512_dual_branch_model_and_source_recipe; explicit_yaml_vs_TCGA_presets; original_hard_grader_gradient_boundary_and_Sigmoid_CE_retained; source_validation_RNG_and_degenerate_input_contract",
+    "blocker": null
+  },
+  {
+    "id": "caprmil",
+    "name": "CAPRMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mandlos/CAPRMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "b1f21a25e21d889a90bd604d29887abb3c1dbeeb",
+    "license": "Modified MIT; non-commercial",
+    "profiles": [
+      "caprmil_mean",
+      "caprmil_attention",
+      "caprmil_gated"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "litemil",
+    "name": "LiteMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/hkussaibi/LiteMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "a8813af8746099735983c776fd9aaac1b91f45f4",
+    "license": "not_yet_verified",
+    "profiles": [
+      "litemil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "momil",
+    "name": "MoMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/YuqiZhang-Buaa/MoMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "73f0814d56701ff0012054d7c11cbe9637c6cdb3",
+    "license": "No root model license found; bundled Mamba components retain Apache-2.0",
+    "profiles": [
+      "momil",
+      "momil_survival_extension"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "pneamil",
+    "name": "PNEA-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Chen-Jxiang/PNEA-MIL",
+    "source_status": "complete_original_author_recipe_candidate_under_verification",
+    "source_commit": "ef204ff5179ce7ea4bb7d04744f1553bee2f039c",
+    "license": "GPL-3.0 root license at the fixed author commit",
+    "profiles": [
+      "pneamil",
+      "pneamil_author_train_selector_snapshot_repaired",
+      "pneamil_author_val_selector_repaired"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Existing controlled MIL_BASELINE port retained. Two complete author-definition recipes now preserve64axes/batch8/1024replacement patches/Adam1e-4/max1000epochs/relative0.0005/patience10. Literal TRAIN-selector and full-VAL repair are separately named; selected-checkpoint snapshot isolation is repaired. Complete source/wheel/native-budget and release validation remain pending.",
+    "blocker": null
+  },
+  {
+    "id": "recomil",
+    "name": "ReCo-MIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/zsszc/ReCo-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "27cefbc8d4a9a897b61ceb78b77626bc21d16685",
+    "license": "No root license found; external source only",
+    "profiles": [
+      "recomil_single",
+      "recomil_graph",
+      "recomil_dual",
+      "recomil_dual_graph"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "dual_scale",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "sgpmil",
+    "name": "SGPMIL",
+    "group": "A_frozen",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mandlos/SGPMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "c9dee272e3fec897dba8136f386ddd2d685da4ed",
+    "license": "not_yet_verified",
+    "profiles": [
+      "sgpmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "bayesmil",
+    "name": "Bayes-MIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/ralphc1212/bayes-mil",
+    "source_status": "git_commit_locked",
+    "source_commit": "43bf913e8f6ddda53e3c21de07cb46bce7564d62",
+    "license": "GPL-3.0; README also specifies non-commercial academic use",
+    "profiles": [
+      "bayesmil_vis",
+      "bayesmil_sdpr",
+      "bayesmil_apcrf"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "patch_features",
+      "single_slide_bag",
+      "slide_canvas",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "smmil",
+    "name": "SmMIL / Smooth Operator",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Franblueee/SmMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "4e2d1e0e08ad6085afa1469e6180c61516b1991e",
+    "license": "Apache-2.0",
+    "profiles": [
+      "smmil_early",
+      "smmil_mid",
+      "smmil_late",
+      "smmil_transformer"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "patch_features",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "wikg",
+    "name": "WiKG",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/WonderLandxD/WiKG",
+    "source_status": "git_commit_locked",
+    "source_commit": "eb3144fb8267f525c57e71ced5c5b2b6a1c42a93",
+    "license": "not_yet_verified",
+    "profiles": [
+      "wikg"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "psamil",
+    "name": "PSA-MIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/SharonPeled/PSA-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "673a7a904b565fb413fbdd1b937d544e87c96562",
+    "license": "Apache-2.0",
+    "profiles": [
+      "psamil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "patch_features",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "dtmil",
+    "name": "DT-MIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/yfzon/DT-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "f52530811d0b1b591e10eab2fad9fd2ac1573b98",
+    "license": "Apache-2.0",
+    "profiles": [
+      "dtmil_source_crop_reference_train",
+      "dtmil_repaired_reference_train"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "patch_features",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "gtp",
+    "name": "GTP",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/vkola-lab/tmi2022",
+    "source_status": "git_commit_locked",
+    "source_commit": "0d395a160a969578fa5ce66a8a7f0fd0817712b4",
+    "license": "not_yet_verified",
+    "profiles": [
+      "gtp_source",
+      "gtp_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "setmil",
+    "name": "SETMIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Louis-YuZhao/SETMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "4243f633adb9e8a84cea11f92abf3d3b0ede126e",
+    "license": "unverified: no root LICENSE at pinned commit; external source only",
+    "profiles": [
+      "setmil_source",
+      "setmil_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "patch_features",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "slidegraph",
+    "name": "SlideGraph+",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/wenqi006/SlideGraph",
+    "source_status": "git_commit_locked",
+    "source_commit": "23fbf58371a86525ea2daf0eb0232b379b1b8831",
+    "license": "GPL-3.0; source headers GPL-2.0-or-later",
+    "profiles": [
+      "slidegraph"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "patch_features",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "camil_context",
+    "name": "CAMIL context aware",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/olgarithmics/ICLR_CAMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "5f8ef577e040293794d0f695ceb810f890c5e9f7",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "camil_context"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "longmil",
+    "name": "LongMIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/invoker-LL/Long-MIL",
+    "source_commit": "457b1cf6e33a05b3c8359e1fe98114cd8241f772",
+    "source_status": "original_v1_and_complete_paper_v2_reference_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+    "profiles": [
+      "longmil_v1_source_classification_reference",
+      "longmil_v1_eval_repaired_classification_reference",
+      "longmil_v2_paper_classification_reference",
+      "longmil_v2_paper_survival_reference"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "patch_features",
+      "longmil_physical_xy",
+      "patient_disjoint_splits"
+    ],
+    "formal_admission": false,
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Public v1 full90000x90000int8 asset/4heads/384width/source joint-minimum mask and source eval-dropout retained; separate eval repair. NeurIPS-v2 original trainer/kernels remain unpublished. Explicit full paper reference implements two exact2D radius10 sparse/chunked local blocks, actual2x2 observed-tissue pooling, global ALiBi2D block, native1head/384width/FF1536/dropout0 and classification/full-cohort patient-survival trainers. All unspecified pooling/optimizer/training choices disclosed. Actual CUDA xFormers is mandatory; no silent dense/identity fallback. Full native budgets, source/wheel and global acceptance remain separate gates."
+  },
+  {
+    "id": "mammil",
+    "name": "MamMIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Vison307/MamMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "64736e1a06a23e6814dfee664ff02b27c72dfedb",
+    "license": "GPL-3.0; bundled Mamba components Apache-2.0 and original attributions",
+    "profiles": [
+      "mammil",
+      "mammil_source",
+      "mammil_patient_union"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mamba2dmil",
+    "name": "2DMambaMIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/AtlasAnalyticsLab/2DMamba",
+    "source_status": "git_commit_locked",
+    "source_commit": "9fe12aaa866ddbb83b66acc4ef400abf8613ce6a",
+    "license": "root_license_not_found; external_author_source_not_redistributed",
+    "profiles": [
+      "mamba2dmil_source",
+      "mamba2dmil_autograd",
+      "mamba2dmil_paper"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "physical_mamba2d_grid",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_physical_grid_model_and_classification_survival_recipes; literal_CPU_and_named_forward_derivative_repairs; single_WSI_patient_and_TRAIN_bin_contract",
+    "blocker": null
+  },
+  {
+    "id": "attrimil",
+    "name": "AttriMIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/MedCAI/AttriMIL",
+    "source_status": "complete_original_author_recipe_repaired_candidate_under_verification",
+    "source_commit": "e5736b9b4b5d3d4a64340b6ff5fa7fd470a338a9",
+    "license": "Apache-2.0 at fixed original author commit",
+    "profiles": [
+      "attrimil",
+      "attrimil_author_200_main_repaired",
+      "attrimil_author_200_function_earlystop_repaired"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "coords",
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Existing controlled port retained. Complete original AttriMIL architecture, SGD2e-4/momentum.9/wd1e-5, spatial1/rank5, real9-neighbor geometry, class-balanced replacement sampling and epoch-local4-entry queues. Two max200epoch original main/function early-stop conditions; strict VAL CE selection, complete SGD/queue/RNG/sampler recovery. Spatial-axis, undefined logging, device allocation and broken original summary repairs disclosed. Full source/wheel/native/release gates remain pending.",
+    "blocker": null
+  },
+  {
+    "id": "dyhg",
+    "name": "DyHG",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Yuxuan-Chen7/DyHG",
+    "source_status": "git_commit_locked",
+    "source_commit": "dd41a86d76d41c69ae010f97c653877058b0619c",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "dyhg"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "probsamil",
+    "name": "ProbSA-MIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Franblueee/torchmil",
+    "source_status": "git_commit_locked",
+    "source_commit": "2472b8bee84b906eac9351f1ec49d430c577bbcd",
+    "license": "not_yet_verified",
+    "profiles": [
+      "probsa_abmil_source",
+      "probsa_abmil_probmean",
+      "probsa_transformer_source",
+      "probsa_transformer_probmean"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "smmile",
+    "name": "SMMILe",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/ZeyuGaoAi/SMMILe",
+    "source_status": "git_commit_locked",
+    "source_commit": "4c4c79e364e77c16207f211775ef04dda40ff20a",
+    "license": "GPL-3.0 root LICENSE; README adds academic/noncommercial wording; external code only",
+    "profiles": [
+      "smmile",
+      "smmile_binary",
+      "smmile_multilabel"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag",
+      "smmile_assets"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "full_recipe_adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "pathrwkv",
+    "name": "PathRWKV",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Puzzle-Logic/PathRWKV",
+    "source_status": "git_commit_locked",
+    "source_commit": "8818fa5711666bd8d30672f02bdcd98634389b70",
+    "license": "Apache-2.0",
+    "profiles": [
+      "pathrwkv_source",
+      "pathrwkv_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_TimeMix_ChannelMix_task_projection_heads_and_heterogeneous_recipe; explicit_real_yx_geometry_native_CUDA_or_named_tensor_backend; source_and_named_Cox_missingness_streaming_repairs",
+    "blocker": null
+  },
+  {
+    "id": "stablemil",
+    "name": "StableMIL",
+    "group": "B_spatial_graph",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/theeeqi/stableMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "67b279157680c8c96104823a9e6f2ef20b679d11",
+    "license": "not verified: no root LICENSE; external source only",
+    "profiles": [
+      "stablemil_classification_source",
+      "stablemil_classification_repaired",
+      "stablemil_survival_source",
+      "stablemil_survival_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "remix",
+    "name": "ReMix",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/TencentAILabHealthcare/ReMix",
+    "source_status": "git_commit_locked",
+    "source_commit": "1e16f53ac13391ae8bae45c845b6aabf94245ec1",
+    "license": "not_yet_verified",
+    "profiles": [
+      "remix_abmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "sclwc",
+    "name": "SCL-WC",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Xiyue-Wang/SCL-WC",
+    "source_status": "git_commit_locked",
+    "source_commit": "d8d0ff44e887cadeeaff199cd771af9ee23e5855",
+    "license": "README states GPLv3 and academic use; no root LICENSE found",
+    "profiles": [
+      "sclwc_paper_reference",
+      "sclwc_literal_source_control"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "explicit_pnm_reference_class_and_role",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_named_paper_CDA_PNM_live_anchor_WSCL_reconstruction_and_separate_literal_incomplete_source_control; explicit_PNM_reference_class_and_role_TRAIN_only_typed_banks_full_balanced_Adam_cosine_selection_exact_resume; all_undisclosed_choices_recorded",
+    "blocker": null
+  },
+  {
+    "id": "ibmil",
+    "name": "IBMIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/HHHedo/IBMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "fc43dacfb2fb474c160fadc553fecda9526e546c",
+    "license": "not_yet_verified",
+    "profiles": [
+      "ibmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mhim",
+    "name": "MHIM-MIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/DearCaat/MHIM-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "9d0c91abeb1b39f91c161b47cf14bc44f5a89da3",
+    "license": "not_yet_verified",
+    "profiles": [
+      "mhim_abmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "rankmix",
+    "name": "RankMix",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/willpower057/RankMix",
+    "source_status": "git_commit_locked",
+    "source_commit": "a6d51301ec878540f4dd185544c265fad5ef1dd2",
+    "license": "MIT",
+    "profiles": [
+      "rankmix_dsmil",
+      "rankmix_dsmil_source",
+      "rankmix_frmil",
+      "rankmix_frmil_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "augdiff",
+    "name": "AugDiff",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/szc19990412/AugDiff",
+    "source_status": "git_commit_locked",
+    "source_commit": "abfdfe25c6373019d71bf3323cf59be799203563",
+    "license": "MIT",
+    "profiles": [
+      "augdiff_amil_released_time_reconstruction",
+      "augdiff_amil_schedule_repaired_reconstruction",
+      "augdiff_lossattn_released_time_reconstruction",
+      "augdiff_lossattn_schedule_repaired_reconstruction",
+      "augdiff_dsmil_released_time_reconstruction",
+      "augdiff_dsmil_schedule_repaired_reconstruction"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "augdiff_trained_dae",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original7view_fullwidth_DAE_EMA_pretraining_and_frozen_RAW_DDIM3heads_7xTRAIN_VAL_CE_LookaheadRAdam_accum2_AMP_cleanTEST_full_state; featureUNet_DataInterface_missing_explicit_singleton1D_reconstruction_and_time_control_vs_schedule_repair; original_historical_weights_scores_not_claimed",
+    "blocker": null
+  },
+  {
+    "id": "pmil_shapley",
+    "name": "PMIL Shapley pseudo-bag",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/RenaoYan/PMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "a5df40276fa5848056a89c0cde221500fad4099d",
+    "license": "MIT",
+    "profiles": [
+      "pmil_shapley_abmil_source",
+      "pmil_shapley_abmil_repaired",
+      "pmil_shapley_clam_sb_source",
+      "pmil_shapley_clam_sb_repaired",
+      "pmil_shapley_clam_mb_source",
+      "pmil_shapley_clam_mb_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_native_shapley_progressive_multi_round_recipe_with_source_and_named_repairs",
+    "blocker": null
+  },
+  {
+    "id": "prodiv",
+    "name": "ProDiv",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/liupei101/PseMix",
+    "source_status": "git_commit_locked",
+    "source_commit": "91d376581c139acd673fbe3ddb069827f0cf3bee",
+    "license": "not_yet_verified",
+    "profiles": [
+      "prodiv_abmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "psemix",
+    "name": "PseMix",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/liupei101/PseMix",
+    "source_status": "git_commit_locked",
+    "source_commit": "91d376581c139acd673fbe3ddb069827f0cf3bee",
+    "license": "not_yet_verified",
+    "profiles": [
+      "psemix_abmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "aem",
+    "name": "AEM",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/dazhangyu123/AEM",
+    "source_status": "git_commit_locked",
+    "source_commit": "b0027cfccd07a1c9b5e3c79b43008a8b8a3b2b80",
+    "license": "not_yet_verified",
+    "profiles": [
+      "aem_abmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mfcmil",
+    "name": "MFC-MIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/WissingChen/MFC-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "145494ec0f221c8b1cc32843efeafb28426634c0",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "mfcmil_abmil",
+      "mfcmil_transmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mil_dropout",
+    "name": "MIL-Dropout",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/ChongQingNoSubway/MILDropout",
+    "source_status": "git_commit_locked",
+    "source_commit": "61af86f56a24685a916d0e3e4b416cb4751323bb",
+    "license": "MIT",
+    "profiles": [
+      "mil_dropout_abmil",
+      "mil_dropout_gated",
+      "mil_dropout_dsmil",
+      "mil_dropout_transmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "packmil",
+    "name": "PackMIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/FangHeng/PackMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "b261cf0abd9c5ce384927722061e15a93b3489f7",
+    "license": "Apache-2.0",
+    "profiles": [
+      "packmil_abmil",
+      "packmil_survival"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "carmil",
+    "name": "CAR-MIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/ImaneCR/CAR-MIL",
+    "source_status": "complete_original_author_recipe_repaired_candidate_under_verification",
+    "source_commit": "26fdee4dc05e6b358395e28fb2073da3b29b6cc3",
+    "license": "not_yet_verified",
+    "profiles": [
+      "carmil",
+      "carmil_author_100_attmil_l1_locked_test_repaired",
+      "carmil_author_100_attmil_cos_locked_test_repaired",
+      "carmil_author_100_gattmil_l1_locked_test_repaired",
+      "carmil_author_100_gattmil_cos_locked_test_repaired",
+      "carmil_author_100_transmil_l1_locked_test_repaired",
+      "carmil_author_100_transmil_cos_locked_test_repaired",
+      "carmil_author_100_dsmil_l1_locked_test_repaired",
+      "carmil_author_100_dsmil_cos_locked_test_repaired"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Controlled MIL_BASELINE port retained. All four original CAR backbones and L1/COS loss definitions; original100epoch Adam/cosine recipe and pre-TRAIN VAL AUC selector, including untrained epoch0 and no post-final selector. Native DSMIL instance loss and original TransMIL flattened attention retained explicitly. Private shuffle-generator/RNG/Adam/scheduler/minibatch recovery, optional original checkpoint binding; NumPy2/CPU timing/patient/locked-TEST adaptations disclosed. Full reference/source/wheel/release gates remain pending.",
+    "blocker": null
+  },
+  {
+    "id": "mfemil",
+    "name": "MFE-MIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/AtlasAnalyticsLab/MFE-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "813c8e8abf46c05afc2402c06a6c7ac77284fff2",
+    "license": "CC BY-NC-SA 4.0",
+    "profiles": [
+      "mfemil_mean",
+      "mfemil_max",
+      "mfemil_abmil",
+      "mfemil_clam_sb",
+      "mfemil_clam_mb",
+      "mfemil_transmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "survival_coords"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mrblock",
+    "name": "MR-Block / MR-AB-MIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/BearCleverProud/MR-Block",
+    "source_status": "pinned_original_models_and_complete_trainer_candidate",
+    "source_commit": "a71fb28262fdb9aa61265c86c3978080c07ac966",
+    "license": "MIT_original_fixed_tree_read",
+    "profiles": [
+      "mrblock",
+      "mrblock_author_200_mr_abmil_earlystop_locked_test",
+      "mrblock_author_200_mr_abmil_final_locked_test",
+      "mrblock_author_200_mr_transmil_earlystop_locked_test",
+      "mrblock_author_200_mr_transmil_final_locked_test",
+      "mrblock_author_200_mr_dgrmil_earlystop_locked_test",
+      "mrblock_author_200_mr_dgrmil_final_locked_test",
+      "mrblock_author_200_mr_rrtmil_earlystop_locked_test",
+      "mrblock_author_200_mr_rrtmil_final_locked_test",
+      "mrblock_author_200_mr_cate_earlystop_locked_test",
+      "mrblock_author_200_mr_cate_final_locked_test",
+      "mrblock_author_200_abmil_earlystop_locked_test",
+      "mrblock_author_200_abmil_final_locked_test",
+      "mrblock_author_200_transmil_earlystop_locked_test",
+      "mrblock_author_200_transmil_final_locked_test",
+      "mrblock_author_200_dgrmil_earlystop_locked_test",
+      "mrblock_author_200_dgrmil_final_locked_test",
+      "mrblock_author_200_rrtmil_earlystop_locked_test",
+      "mrblock_author_200_rrtmil_final_locked_test",
+      "mrblock_author_200_cate_earlystop_locked_test",
+      "mrblock_author_200_cate_final_locked_test"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "All five native MR models and five corresponding baseline controls; full200epoch AdamW/LinearLR per-update recipe, optional original VAL-CE early stop or last weights. Native merge flags/modes, nonlinear-training/linear-eval residual behavior, stochastic CATE VAL and predicted-label DGR center updates retained. Exact model/optimizer/scheduler/RNG/minibatch recovery and fixed TEST adaptation written. CATE requires actual aligned512D concept assets. Full source/wheel/native budget and current release gates remain pending.",
+    "blocker": null
+  },
+  {
+    "id": "nnmil",
+    "name": "nnMIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Luoxd1996/nnMIL",
+    "source_status": "pinned_original_classification_trainer_TRAIN_only_planning_repair_candidate",
+    "source_commit": "e92e8a0cf72dc1beb2a5915e27ca128af45fcb40",
+    "license": "not_yet_verified",
+    "profiles": [
+      "nnmil",
+      "nnmil_author_100_auc_train_planned_locked_test",
+      "nnmil_author_100_bacc_train_planned_locked_test",
+      "nnmil_author_100_f1_train_planned_locked_test",
+      "nnmil_author_100_kappa_train_planned_locked_test"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Literal SimpleMIL including full-dimension randperm and ddof1 uncertainty; native adaptive16..48batch/100epoch/10patience/bfloat16/AdamW/two-group/post-update cosine recipe. Four explicit AUC/BACC/F1/Kappa classification selectors, original workers4 and native sampler replay for exact recovery. TRAIN-only feature/label planning is a disclosed repair; TEST remains locked. Source/wheel/full native classification gates, separate survival/regression and current release gates remain pending. No original source redistribution without verified terms.",
+    "blocker": null
+  },
+  {
+    "id": "sdfp",
+    "name": "S-DFP",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/thomascong121/S-DFP",
+    "source_status": "git_commit_locked",
+    "source_commit": "22ef367ee3c99ca2dbd1ed70d13130c1c354623e",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "sdfp_abmil",
+      "sdfp_gated",
+      "sdfp_dsmil",
+      "sdfp_transmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "dgmil",
+    "name": "DGMIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/miccaiif/DGMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "a80e5fe51c7e5a3879d4a9b060e49c6b431f70e1",
+    "license": "No root license found; not vendored",
+    "profiles": [
+      "dgmil",
+      "dgmil_source_extremes"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "rrt",
+    "name": "R2T-MIL / RRT-MIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/DearCaat/RRT-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "3320b6616b2c3d96ddc5bcd1aecea865a064987f",
+    "license": "not_yet_verified",
+    "profiles": [
+      "rrt"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "asmil",
+    "name": "ASMIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Linfeng-Ye/ASMIL",
+    "source_status": "complete_original_author_recipe_candidate_under_verification",
+    "source_commit": "5d062271e1626b27a955c309d10add902311865c",
+    "license": "not_yet_verified",
+    "profiles": [
+      "asmil",
+      "asmil_author_50_literal_nan_teacher_locked_test",
+      "asmil_author_50_finite_ema_repaired_locked_test",
+      "asmil_author_100_literal_nan_teacher_locked_test",
+      "asmil_author_100_finite_ema_repaired_locked_test"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Existing controlled port retained. Original ACMIL_MYMHA and independently initialized train-mode teacher loaded from pinned definitions. Full50/100epoch AdamW/cosine/clip5/full-bag recipes, literal NaN-only teacher and separately named finite-EMA repair. Actual micro-F1+macro-AUROC VAL selector, fixed-patient/seed/locked-TEST repairs, teacher/optimizer/RNG/sampler recovery are explicit. Complete source/wheel/native and release validation remain pending.",
+    "blocker": null
+  },
+  {
+    "id": "c2aug",
+    "name": "C2Aug",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/weiaicunzai/mixup",
+    "source_status": "git_commit_locked",
+    "source_commit": "14cb53bc71f5161105b0dbef45351243d7330561",
+    "license": "not_found_in_pinned_tree; external_source_only",
+    "profiles": [
+      "c2aug_transmil_paper_reference"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_named_paper_reference; native_source_TransMIL_and_paper_Eq2_to9; official_supplement_defaults; all_augmentations_active_bag_FIFO_all_group_forward_KL_learnable_prototypes_EMA_and_exact_resume; source_deficits_and_undisclosed_choices_explicit",
+    "blocker": null
+  },
+  {
+    "id": "fcmil",
+    "name": "FC-MIL",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/7FFDW/FCMIL",
+    "source_status": "pinned_original_model_loss_with_explicit_benchmark_recipe_and_repairs",
+    "source_commit": "315ac88808d7517429ca0b55073e75dce03ddfd9",
+    "license": "Apache-2.0_original_fixed_tree_read",
+    "profiles": [
+      "fcmil",
+      "fcmil_original_benchmark100_cr_auc_repaired",
+      "fcmil_original_benchmark100_ce_control_auc_repaired"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Original1024->512 FCMIL/FAA/DAB, quadratic spatial and frequency attention, unaltered FFT patch order, literal frequency-attention top/bottom interventions and detached soft-target causal loss. Native Adam wd1e-5, plateau scheduler and strict VAL AUC selector retained. Missing author configuration is not invented:100epochs/lr2e-4/batch1/workers0 are explicit benchmark choices. Writer interface and missing real VAL AUC repaired. Full source/reference/wheel/recovery/current-release gates remain pending.",
+    "blocker": null
+  },
+  {
+    "id": "mammoth",
+    "name": "MAMMOTH",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/MAMMOTH",
+    "source_status": "git_commit_locked",
+    "source_commit": "aeeaffcd12500ed8dddec67665a33eb129c9ed84",
+    "license": "CC-BY-NC-ND-4.0",
+    "profiles": [
+      "mammoth_mean",
+      "mammoth_max",
+      "mammoth_abmil",
+      "mammoth_clam",
+      "mammoth_dsmil",
+      "mammoth_transmil",
+      "mammoth_transformer",
+      "mammoth_ilra_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "native_experts_eight_classification_heads_complete_paper_based_recipe_explicit_source_differences",
+    "blocker": null
+  },
+  {
+    "id": "ttis",
+    "name": "TTIS",
+    "group": "C_recipe_plugin",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/QuIIL/TTIS",
+    "source_status": "git_commit_locked",
+    "source_commit": "ceb08d3bd8bc795845358850e314132b6231a921",
+    "license": "root_license_not_found; embedded_MUSK_CC-BY-NC-ND-4.0; source_not_redistributed",
+    "profiles": [
+      "ttis_abmil_source",
+      "ttis_clam_source",
+      "ttis_rrt_source",
+      "ttis_s4_source",
+      "ttis_transmil_source",
+      "ttis_wikg_source",
+      "ttis_clam_full_loss"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "frozen_semantic_vectors",
+      "patch_features",
+      "single_slide_bag",
+      "test_physical_coords",
+      "ttis_assets"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "all_six_native_heads_complete_optimizer_and_test_only_selection; explicit_spatial_semantic_assets_source_space_policy_and_CLAM_full_loss_variant",
+    "blocker": null
+  },
+  {
+    "id": "csmil",
+    "name": "CS-MIL",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/hrlblab/CS-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "d51b97f411caeff092e397427003021d1b23f00f",
+    "license": "MIT",
+    "profiles": [
+      "csmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "aligned_centers",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "h2mil",
+    "name": "H2-MIL",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/lin-lcx/H2-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "ea472fefd5eab553c58041a5acc203ac7d467d06",
+    "license": "not_found_in_pinned_tree; external_source_only",
+    "profiles": [
+      "h2mil_source_compat",
+      "h2mil_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_coarse_features",
+      "actual_thumbnail_features",
+      "h2mil_hierarchy",
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_RAConv_IHPool_and_summed_batch_recipe; actual_three_level_feature_geometry; named_shape_head_CE_repairs; released_hard_fitness_gradient_and_paper_source_boundaries_explicit",
+    "blocker": null
+  },
+  {
+    "id": "msattention",
+    "name": "Multi-scale Attention MIL Wibawa",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mdsatria/MultiAttentionMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "fae5840f801c0485eb22f2e7119d392f2fa975f3",
+    "license": "not_yet_verified_no_license_in_pinned_tree",
+    "profiles": [
+      "msattention_source",
+      "msattention_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "full_supplementary_training_and_original_three_depth_attention_explicit_frozen_wsi_transfer; private_tumour_pipeline_not_claimed",
+    "blocker": null
+  },
+  {
+    "id": "zoommil",
+    "name": "ZoomMIL",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/histocartography/zoommil",
+    "source_status": "git_commit_locked",
+    "source_commit": "da7bb7fa71629d34e9b04859c1db791ac8330f5d",
+    "license": "MIT",
+    "profiles": [
+      "zoommil_bright_source_repaired",
+      "zoommil_crc_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "zoommil_three_scale_hierarchy"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_released_three_scale_dual_gated_100sample_differentiableTopK_Kronecker_and_sum_graph; actual_full_weighted_sampler_Adam_plateau_meanVALCE_100fixed_epochs_and_fullstate_resume; explicit_saver_device_ports_native8readers; paper2level_and_onlineFM_not_claimed",
+    "blocker": null
+  },
+  {
+    "id": "hagmil",
+    "name": "HAG-MIL",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/BearCleverProud/HAG-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "9fec1ca4390346b958212801d2d5a14c7ce36d6f",
+    "license": "not_yet_verified",
+    "profiles": [
+      "hagmil_ce"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "quadtree",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mgtrans",
+    "name": "MG-Trans",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Jiangbo-Shi/MG-Trans",
+    "source_status": "git_commit_locked",
+    "source_commit": "a18d886b89ff0eddf5ae0b4ae16058623fe34dbc",
+    "license": "not_declared_in_pinned_repository",
+    "profiles": [
+      "mgtrans_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "mgtrans_dual_scale_alignment",
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_released_two_scale_PAM_shared_Transformer_three_layer_GCN_semantic_negativeCE_and_32slide_Renyi_MI_window; explicit_physical_alignment_fullstate_resume_native200max_Adam_latest_VALerror_tie; source_graph_detach_and_unused12layer_config_disclosed",
+    "blocker": null
+  },
+  {
+    "id": "hdmil",
+    "name": "HDMIL",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/JiuyangDong/HDMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "ef3d4681054970208e94f8205bd96b3180c00926",
+    "license": "README: GPLv3 plus non-commercial academic declaration; no vendoring",
+    "profiles": [
+      "hdmil_camelyon16_source",
+      "hdmil_nsclc_source",
+      "hdmil_brca_source",
+      "hdmil_rcc_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "hdmil_paired_low_rgb",
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete released DMIN and LIPN, original512/256 ChebyKAN instance/bag heads and RGB16 MobileNetV4; all loss terms, two Adams and source selection/stage transfer; source first2class/global-normalization quirks explicitly preserved; native and real WSI validation pending",
+    "blocker": null
+  },
+  {
+    "id": "ahdmil",
+    "name": "AHDMIL",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/JiuyangDong/AHDMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "2f38354386165167815eb2998424ad63792a65bf",
+    "license": "GPL-3.0; README also states non-commercial academic use; source loaded from local verified Git without redistribution",
+    "profiles": [
+      "ahdmil_camelyon16_source_repaired",
+      "ahdmil_nsclc_source_repaired",
+      "ahdmil_brca_source_repaired",
+      "ahdmil_rcc_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "hdmil_paired_low_rgb",
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete fixed-source asymmetric joint training with true selected DMIN pretraining, two native MobileNetV4 experts, both Adam updates per bag, all-class retention, parameter-only crossEMA, eligibility/reset and full restart state; native verification pending",
+    "blocker": null
+  },
+  {
+    "id": "kmgmamba",
+    "name": "KMG-Mamba",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/dmhdmhdmh/KMG-Mamba",
+    "source_status": "git_commit_locked",
+    "source_commit": "4b5075bb2d3eddf46f9bc4f46175d250b134e27c",
+    "license": "not_declared_in_pinned_repository; private verified-source loading without redistribution",
+    "profiles": [
+      "kmgmamba_source",
+      "kmgmamba_multiclass_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "kmgmamba_measured_dual_scale",
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete source architecture,three losses,original100max/AUC tie stopping and full optimizer/RNG recovery implemented; numerical and training validation pending",
+    "blocker": null
+  },
+  {
+    "id": "lrmil",
+    "name": "LRMIL",
+    "group": "D_multiscale",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/hvcl/LRMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "66ea1c5a447ed2a830bb1af6739ab9261e61000d",
+    "license": "Apache-2.0; native CONCH dependency retains its own terms",
+    "profiles": [
+      "lrmil_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_pretrained_CONCH_weights",
+      "measured_RGB256_5x",
+      "native_CONCH768_hr_intermediates",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete3phase source trainer and actual native pretrained encoder/input/CLI written; training validation in progress, no formal admission.",
+    "blocker": null
+  },
+  {
+    "id": "campanella_rnn",
+    "name": "Campanella MIL-RNN",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/MSKCC-Computational-Pathology/MIL-nature-medicine-2019",
+    "source_status": "git_commit_locked",
+    "source_commit": "daecb7293b5ea886ba222008f2592e1e29e9dac6",
+    "license": "not_yet_verified",
+    "profiles": [
+      "campanella_rnn"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "raw_regions",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_source_two_phase_raw_roi_recipe_with_best_selector_and_exact_resume",
+    "blocker": null
+  },
+  {
+    "id": "rmdl",
+    "name": "RMDL",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/emma-sjwang/RMDL",
+    "source_status": "pinned_original_full_graphs_with_explicit_missing_trainer_reconstruction",
+    "source_commit": "8f13238285b92e772e04d2abe25cc24bb8099829",
+    "license": "no_LICENSE_in_pinned_tree_private_loading_only",
+    "profiles": [
+      "rmdl_source_sum_full_reference",
+      "rmdl_paper_mean_full_reference"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "original_scale_WSI",
+      "TRAIN_only_actual_pixel_masks",
+      "original_ImageNet_initialization",
+      "native_three_grade_task"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete original55.9M localizer and147464parameter aggregation graphs; all4 full-shape source/wheel software conditions passed, with strict state/graph recovery. Full native budgets and release gates remain pending; no real-WSI or paper-score claim.",
+    "blocker": "Full native-budget and overall-release gates remain; no real-WSI or paper-score claim"
+  },
+  {
+    "id": "center_embeddings",
+    "name": "MIL with Center Embeddings",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/PhilipChicco/MICCAI2020mil",
+    "source_status": "git_commit_locked",
+    "source_commit": "871b1ecad3f0480c526536b11fafe4d759273a25",
+    "license": "GPL-3.0; privately fetched original source, not vendored",
+    "profiles": [
+      "center_embeddings_bag_classifier_repaired",
+      "center_embeddings_soft_assignment_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_level0_tile_centers",
+      "historical_imagenet_resnet34",
+      "original_raw256_rgb_patch_bags",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_end_to_end_raw_R34_FPN_bagCNN_three_loss_dual_Adam_source_exhaustive_positive_top32_and_original0.7augmentations; source_undefined_bag_feat_repair; fullstate_and_original_default_vs_center_soft_assignment_inference; exact_frozen_tile_extraction_provenance_and_worker0_recovery_port",
+    "blocker": null
+  },
+  {
+    "id": "c2c",
+    "name": "Cluster-to-Conquer",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/YashSharma/C2C",
+    "source_status": "git_commit_locked",
+    "source_commit": "d53b6350372117bf3e5251044a856e0251d810b2",
+    "license": "MIT",
+    "profiles": [
+      "c2c_cluster_source",
+      "c2c_cluster_default_bn_source",
+      "c2c_cluster_multiclass_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_original_resnet18_weights",
+      "c2c_historical_assets",
+      "original_rgb_patch_bags",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_source_reclustering_sampling_and_three_losses_with_historical_BN_compatibility",
+    "blocker": null
+  },
+  {
+    "id": "monai_mil",
+    "name": "Dependency-aware MIL / MONAI",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Project-MONAI/MONAI",
+    "source_status": "git_commit_locked",
+    "source_commit": "9c6d819f97e37f36c72f3bdfad676b455bd2fa0d",
+    "license": "Apache-2.0",
+    "profiles": [
+      "monai_mean_tutorial",
+      "monai_max_tutorial",
+      "monai_attention_tutorial",
+      "monai_transformer_tutorial",
+      "monai_pyramid_tutorial"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "raw_images",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_published_raw_image_ordinal_tutorial; paper_pseudolabel_extension_not_claimed",
+    "blocker": null
+  },
+  {
+    "id": "sparseconvmil",
+    "name": "SparseConvMIL",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/MarvinLer/SparseConvMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "d7dd705bc3dd4ebfb6a36f0589698400c9fa4c15",
+    "license": "AGPL-3.0; external code fetched separately, not vendored",
+    "profiles": [
+      "sparseconvmil_raw_source_c32",
+      "sparseconvmil_raw_source_c128"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_raw_tile_coordinates",
+      "compiled_sparseconvnet",
+      "original_rgb_patch_bags",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_public_source_recipe_and_paper_differences_recorded",
+    "blocker": null
+  },
+  {
+    "id": "attention2majority",
+    "name": "Attention2majority",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/JoeSu666/Attention2majority",
+    "source_status": "git_commit_locked_explicit_orchestration_reconstruction",
+    "source_commit": "17c9614e2192ddf899a7a449081256bc9542b5d0",
+    "license": "AGPL-3.0_private_pinned_author_source_loading",
+    "profiles": [
+      "attention2majority_camelyon_source_repaired",
+      "attention2majority_camelyon_paper_reference",
+      "attention2majority_kidney_paper_reference"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "TRAIN_only_discriminator_pool",
+      "aligned_original_patch_ids",
+      "native_RGB_patch_bags",
+      "original_Keras_ImageNet_ResNet50_weights",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete original TensorFlow CNN/filter/MIL stages, original source graph/selector/pixel and every gradient/Adam oracles; Appendix-I actual initial ImageNet/ICA TRAIN selection, complete checkpoint/input/runtime contracts. Source syntax, signed-pixel/extra-scale/learning-rate/zero-tail and missing orchestration choices explicitly disclosed. Native-budget, independent-wheel and whole-release acceptance remain separate; real WSI/paper scores not run.",
+    "blocker": null
+  },
+  {
+    "id": "pmil_prototypical",
+    "name": "PMIL Prototypical",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/zihou98/PMIL",
+    "source_commit": "f9b241a30ef90235da2c57814408da5eedb368e0",
+    "source_status": "git_commit_locked_full_reference_under_verification",
+    "license": "GPLv3; README also specifies noncommercial academic use; author source loaded privately",
+    "profiles": [
+      "pmil_prototypical_raw_patient_reference"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "original_ImageNet_ResNet34_weights",
+      "original_RGB256_patch_bags",
+      "patient_grouped_split",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Full task-trained raw max-MIL encoder, actual learned patch features, two-level TRAIN-only AP and original dual-instance/bag-loss PMIL. Source distance semantics and eval-mode fitting retained. Source VAL optimizer updates, missing import, malformed exporter and inconsistent checkpoint/feature exports explicitly repaired. Complete-pipeline, installed-wheel and original full-budget gates required; no historical paper-score claim."
+  },
+  {
+    "id": "promptmil",
+    "name": "Prompt-MIL",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/cvlab-stonybrook/PromptMIL",
+    "source_commit": "b7c088e983eb4e369b9fe346873e941da01ed2e6",
+    "source_status": "full_original_RGB_DINO_DSMIL_and_three_pass_trainer_with_source_and_declared_paper_reference_adapters",
+    "license": "No repository-wide LICENSE; private pinned author loading only; DINO upstream Apache2.0 headers retained",
+    "profiles": [
+      "promptmil_brca_dino_dsmil_source",
+      "promptmil_brca_dino_dsmil_paper_reference",
+      "promptmil_bright_dino_dsmil_source",
+      "promptmil_bright_dino_dsmil_paper_reference",
+      "promptmil_crc_dino_dsmil_source",
+      "promptmil_crc_dino_dsmil_paper_reference"
+    ],
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "blocker": null,
+    "required_inputs": [
+      "actual_RGB224_uint8_and_ordered_ids",
+      "original_author_cohort_DINO_teacher_weights",
+      "patient_disjoint_splits"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Full192D/depth12/3head pretrained DINO, one shallow prompt or explicit full deep-prompt option, dual DSMIL bag/max loss and retained-feature-gradient RGB recomputation. Complete original three cohort teachers bound by SHA and every native backbone key. Source8-slide unnormalized accumulation with cross-epoch tail gradient carry and final-epoch evaluation is preserved. Paper-budget reference explicitly flushes tail and uses validation source Sigmoid macroOVR AUC; normalized shared probabilities exported separately. No per-epoch test monitoring. All pending prompt/classifier gradients, optimizer/scheduler and RNG retained on resume. Source/paper40or50epoch/native chunk512or256 and all full-process gates remain separately verified."
+  },
+  {
+    "id": "icmil_coupled",
+    "name": "ICMIL Iteratively Coupled",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Dootmaan/ICMIL",
+    "source_commit": "c2fd2faa4e85cf85527e228573b434a8cc461cba",
+    "source_status": "git_commit_locked_main_MICCAI2023",
+    "license": "MIT_private_author_definitions_and_BSD_PyTorch14_Adam",
+    "profiles": [
+      "icmil_coupled_abmil_patient_reference",
+      "icmil_coupled_maxpool_patient_reference",
+      "icmil_coupled_dtfd_legacy14_patient_reference"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "original_ImageNet_ResNet50_weights",
+      "original_RGB256_patch_bags",
+      "patient_grouped_split",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Full raw encoder/MIL/threeKL distillation/feedback/retraining pipeline for all3author base branches. Actual independent Torch1.4 original DTFD loop validates gradients/weights/Adam states; original Adam body retained with BSD notice. Source patient split/test usage/initialization and selection differences are explicit reference protocol choices. Complete native200epoch phase budgets, installed-package and whole-library release acceptance remain separate."
+  },
+  {
+    "id": "macnet",
+    "name": "MacNet",
+    "group": "E_encoder_training",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Prince-Lee-PathAI/MacNet",
+    "source_commit": "7610d7a534cd833ba0b139136ed9af9b41f59f48",
+    "source_status": "complete_raw_protocol_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+    "status": "adapted_under_verification",
+    "profiles": [
+      "macnet_cscc64_refresh_repaired_patient_reference",
+      "macnet_cscc64_source_cached_patient_reference",
+      "macnet_lscc81_refresh_repaired_patient_reference",
+      "macnet_lscc81_source_cached_patient_reference",
+      "macnet_public_refresh_repaired_patient_reference",
+      "macnet_public_source_cached_patient_reference"
+    ],
+    "required_inputs": [
+      "raw_RGB",
+      "single_slide_bag",
+      "ordered_patch_ids",
+      "patient_disjoint_splits",
+      "actual_annotated_tumor_guides",
+      "actual_Swin_Tiny_ImageNet22K_initialization"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Complete actual pretrained22K Swin-Tiny,768D GFK/GSVD/kernel sqrt, adaptive three-cluster proxy weighting and CE+min-max loss; original reset-RMSprop epochs and source validation selection. Public5/LSCC81/CSCC64 guide layouts; separate source-cached and explicit refresh-diagonal repair conditions. Actual cached matrix checkpointed, no raw encoder/guide substitution. All CLI/wheel/native100epoch/global gates still required; no real WSI/paper-score reproduction claim."
+  },
+  {
+    "id": "patchgcn",
+    "name": "Patch-GCN",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/Patch-GCN",
+    "source_status": "git_commit_locked",
+    "source_commit": "823addaee5b8f4cc2bec3ea8e5e0077b2a5115a4",
+    "license": "not_yet_verified",
+    "profiles": [
+      "patchgcn"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "spatial_graph"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "varpool",
+    "name": "VarPool",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/varpool",
+    "source_status": "git_commit_locked",
+    "source_commit": "2e40ab4d9a129e430fdb7dcf3304f55388f2ad88",
+    "license": "not_yet_verified",
+    "profiles": [
+      "varpool",
+      "varpool_cox"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "advmil",
+    "name": "AdvMIL",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/liupei101/AdvMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "6853786624bbab36c2a08b35dcf20c7bdff1a105",
+    "license": "MIT",
+    "profiles": [
+      "advmil_esat",
+      "advmil_abmil",
+      "advmil_esat_source",
+      "advmil_abmil_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "regions4x4"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "scmil",
+    "name": "SCMIL Sparse Context",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/yang-ze-kang/SCMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "ec6759a11ab19e68d5ee4d45df22ab31e470b7dc",
+    "license": "MIT",
+    "profiles": [
+      "scmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "deepgraphsurv",
+    "name": "DeepGraphSurv",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/uta-smile/DeepGraphSurv",
+    "source_status": "git_commit_locked",
+    "source_commit": "3149752deba68067f1a39b9f3d212cb16ffaf560",
+    "license": "not_declared_in_pinned_source",
+    "profiles": [
+      "deepgraphsurv_agcn"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "deepgraphsurv_assets",
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "deepattnmisl",
+    "name": "DeepAttnMISL",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/uta-smile/DeepAttnMISL",
+    "source_status": "git_commit_locked",
+    "source_commit": "d7099ed88c452aec37f16fc8e93cc0c068794c2a",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "deepattnmisl"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "protosurv",
+    "name": "ProtoSurv heterogeneous graph",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/wjx-error/ProtoSurv",
+    "source_status": "git_commit_locked",
+    "source_commit": "551eaa3c0a2844e2c3557ef412d8a1fd2fec6e20",
+    "license": "not_found",
+    "profiles": [
+      "protosurv_source",
+      "protosurv_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "protosurv_assets",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_graph_tissue_prototype_fusion_and_three_objectives; actual_FM_and_physical_graph_assets; full_source_sampling_augmentation_gc_Adam_cosine_selection_and_exact_resume; source_and_named_repairs_explicit",
+    "blocker": null
+  },
+  {
+    "id": "c2mil",
+    "name": "C2MIL",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mimic0127/C2MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "fd4d54fc115466e43019c77015cdef01d90c85c3",
+    "license": "MIT",
+    "profiles": [
+      "c2mil_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "c2mil_assets",
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_adaptive_bias_removal_causal_graph_five_losses_and_source_batch_merge_Adam_schedule_VAL_last_tie_recipe; actual_whole_slide_thumbnails_TRAIN_only1500patch_reference_physical_graphs_full_FM_channels_and_dynamic_cache_resume",
+    "blocker": null
+  },
+  {
+    "id": "gatmamba",
+    "name": "GAT-Mamba",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/rina-ding/gat-mamba",
+    "source_status": "git_commit_locked",
+    "source_commit": "18979497990a66ffe6a75880f0336f85914552f0",
+    "license": "GPL-3.0",
+    "profiles": [
+      "gatmamba_source",
+      "gatmamba_edge_conditioned"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "gatmamba_assets",
+      "patch_features",
+      "per_slide_coords",
+      "spatial_metadata"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_GAT_Mamba1.2.0.post1_and_source_Cox_L1_Adam_shuffled_VAL_plateau_last_tie_recipe; actual_six_class_classifier_provenance_physical_patient_graphs_full_FM_input_port_and_named_edge_conditioning_correction; exact_resume",
+    "blocker": null
+  },
+  {
+    "id": "triagemil",
+    "name": "TRIAGE-MIL",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/barathi-1993/TRIAGE-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "e97e52a32f1358974b0145532fdec5f5d75c6864",
+    "license": "not_declared_in_source_tree",
+    "profiles": [
+      "triagemil_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "per_slide_coords",
+      "single_slide_bag",
+      "spatial_metadata",
+      "triagemil_assets"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_MASS_quality_four_axis_FPS_semantic_hypergraphs_native_model_and_full_source_Cox_AdamW_AMP_accumulation_no_event_skips_first_tie_VAL_minimum_epoch_stop; actual_coordinate_and_FM_bound_assets_exact_resume",
+    "blocker": null
+  },
+  {
+    "id": "he2rna",
+    "name": "HE2RNA",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/owkin/HE2RNA_code",
+    "source_status": "git_commit_locked",
+    "source_commit": "d47f481fbcaab41a49635e4a35e810bf30eae0e0",
+    "license": "GPL-3.0-or-later",
+    "profiles": [
+      "he2rna"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "coords_for_supertiles",
+      "patch_features",
+      "regression_targets"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "amiml",
+    "name": "AMIML",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Boomwwe/AMIML",
+    "source_status": "git_commit_locked",
+    "source_commit": "7c038261d1a52a4eb20d4b4f444e730c36bf5cd2",
+    "license": "GPL-3.0",
+    "profiles": [
+      "amiml_paper_reference",
+      "amiml_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "four_morphology_clusters",
+      "patch_features",
+      "patient_bags"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_four_TRAIN_only_morphology_clusters_full_native8_encoder_minmax_decoder_residual_selfattention; explicit_missing_V8toC_output_and_loader_reconstruction; source_probability_CE_vs_paper_logit_reference; four_independent_Adam_plateau_stopping_seedstreams_patient_bags_and_VAL_only_two_level_selection_exact_resume",
+    "blocker": null
+  },
+  {
+    "id": "mcat",
+    "name": "MCAT",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/MCAT",
+    "source_status": "git_commit_locked",
+    "source_commit": "b9cca63be83c67de7f95308d54a58f80b78b0da1",
+    "license": "not_yet_verified",
+    "profiles": [
+      "mcat"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features",
+      "pathways"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "porpoise",
+    "name": "PORPOISE",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/PORPOISE",
+    "source_status": "git_commit_locked",
+    "source_commit": "3390dc40e15995ba852d7a561faf0e996cf20501",
+    "license": "not_yet_verified",
+    "profiles": [
+      "porpoise"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "cmta",
+    "name": "CMTA",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/FT-ZHOU-ZZZ/CMTA",
+    "source_status": "git_commit_locked",
+    "source_commit": "31340f6c74575668de35ee6c5d761467f11089e2",
+    "license": "README: non-commercial academic purposes",
+    "profiles": [
+      "cmta"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features",
+      "pathways"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "motcat",
+    "name": "MOTCat",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Innse/MOTCat",
+    "source_status": "git_commit_locked",
+    "source_commit": "0da379f73d92c096122df139a9410d08b096e6c1",
+    "license": "README: non-commercial academic purposes",
+    "profiles": [
+      "motcat",
+      "motcat_micro"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features",
+      "pathways"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "pathomics",
+    "name": "PathOmics",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Cassie07/PathOmics",
+    "source_status": "git_commit_locked",
+    "source_commit": "9705d6137f2974923c978597c18e7198bf888e23",
+    "license": "No root license found; not vendored",
+    "profiles": [
+      "pathomics_concat_source",
+      "pathomics_image_source",
+      "pathomics_omics_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features",
+      "pathways"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "healnet",
+    "name": "HEALNet",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/konst-int-i/healnet",
+    "source_status": "git_commit_locked",
+    "source_commit": "90459b65a3d4a4ef9fd405671c457b5a1163cc7d",
+    "license": "Apache-2.0",
+    "profiles": [
+      "healnet"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "mmp",
+    "name": "MMP",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/MMP",
+    "source_status": "git_commit_locked",
+    "source_commit": "1fd75e37592f7ab47b787f737733ba3c5a7e714c",
+    "license": "CC-BY-NC-SA-4.0",
+    "profiles": [
+      "mmp_panther_source",
+      "mmp_panther_uot_source",
+      "mmp_ot_source",
+      "mmp_ot_uot_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features",
+      "pathways"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "pibd",
+    "name": "PIBD",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/zylbuaa/PIBD",
+    "source_status": "git_commit_locked",
+    "source_commit": "bd5bd94e6f8d48e7679c6e68209a3a65c9e56a78",
+    "license": "Apache-2.0 declared in README; no standalone LICENSE in pinned tree",
+    "profiles": [
+      "pibd_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features",
+      "pathways"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "survpath",
+    "name": "SurvPath",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/SurvPath",
+    "source_status": "git_commit_locked",
+    "source_commit": "3f73ddd6705ec67d643020c5bb04fb13f9f382cc",
+    "license": "not_yet_verified",
+    "profiles": [
+      "survpath"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "omics",
+      "patch_features",
+      "pathways"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "dispro",
+    "name": "DisPro",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Innse/DisPro",
+    "source_status": "git_commit_locked",
+    "source_commit": "98473003de24e5a8f28143442d3dd48bd159aff1",
+    "license": "Apache-2.0 (author README declaration; no standalone LICENSE blob)",
+    "profiles": [
+      "dispro_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_pretrained_BioBERT",
+      "dispro_assets",
+      "patient_bags"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_UniPro_P_UniPro_G_MultiPro_stages; actual_full12layer768_BioBERT_and_pathway_networks; repaired_actualParameter_CLS_cosine_mask_and_presence; outcome_free_VAL_teachers_TRAIN_bins_and_strict_stage_resume; default130epoch_native_budget_and_final_admission_gates_pending",
+    "blocker": null
+  },
+  {
+    "id": "pamoe",
+    "name": "PaMoE",
+    "group": "F_survival_omics",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/wjx-error/PAMoE",
+    "source_status": "git_commit_locked",
+    "source_commit": "7a26f4cc842d2875cfdee33e77de1495cae9dabe",
+    "license": "No root license found; not vendored",
+    "profiles": [
+      "pamoe_transmil",
+      "pamoe_transmil_source",
+      "pamoe_transformer",
+      "pamoe_transformer_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "tissue_prototypes"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "cate",
+    "name": "CATE",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/HKU-MedAI/CATE",
+    "source_status": "git_commit_locked",
+    "source_commit": "a10fd45146849239ac0c052c45d76c02c81bba6b",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "cate"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "concept_anchors",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "vilamil",
+    "name": "ViLa-MIL",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Jiangbo-Shi/ViLa-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "68a11cf0d5cf092dd980f0da1cb38ccac8747a82",
+    "license": "No root license found; review pending",
+    "profiles": [
+      "vilamil",
+      "vilamil_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "learned_dual_scale_prompts",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "codmil",
+    "name": "CoD-MIL",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Jiangbo-Shi/CoD-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "0fd748dc91ffd889bf13dbffd4db633b158809d6",
+    "license": "No root license found; not vendored",
+    "profiles": [
+      "codmil_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "codmil_assets",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_physical_two_scale_text_masking_recipe_C_D_T_source_ports_explicit_full_VAL_objective_and_state_resume",
+    "blocker": null
+  },
+  {
+    "id": "focus",
+    "name": "FOCUS",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/dddavid4real/FOCUS",
+    "source_status": "git_commit_locked",
+    "source_commit": "66c4015d5ba09657f4c8183bc06947faecd5b01f",
+    "license": "Apache-2.0; CONCH dependency/weights have independent non-commercial terms",
+    "profiles": [
+      "focus_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "focus_assets",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "slip",
+    "name": "SLIP",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/LTS5/SLIP",
+    "source_status": "git_commit_locked",
+    "source_commit": "9351c4480ec8d7a8216316a1861025b4f086ac78",
+    "license": "No standalone repository license at fixed commit; author source is imported privately, not redistributed",
+    "profiles": [
+      "slip_clip_vit_b16_source_repaired",
+      "slip_clip_rn50_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "slip_native_clip_prompts"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "vlsa",
+    "name": "VLSA",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/liupei101/VLSA",
+    "source_status": "git_commit_locked",
+    "source_commit": "915f37afcbd86cd6c33ebb30ab0caa5def0f9ab9",
+    "license": "Author repository CC-BY-NC-ND-4.0; source imported privately, not republished",
+    "profiles": [
+      "vlsa_conch_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "patient_bags",
+      "vlsa_native_conch_survival"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "conmil",
+    "name": "ConMIL",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/anxuanhan/ConMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "aabb5386d15a6002a3a39437ea46c0d99d29a2f3",
+    "license": "MIT; original source fetched privately",
+    "profiles": [
+      "conmil_pos_source",
+      "conmil_posneg_source",
+      "conmil_posneg_multiclass_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_encoded_negative_queries",
+      "actual_encoded_positive_queries",
+      "native_conch_visual_text_space",
+      "patch_features",
+      "single_slide_bag",
+      "train_only_prompt_review_provenance"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "actual_full_source_KAN_attention_train_and_original_CONCH_prompt_encoding",
+    "blocker": null
+  },
+  {
+    "id": "convl",
+    "name": "ConVL",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/junjianli106/ConVL",
+    "source_status": "git_commit_locked",
+    "source_commit": "f1017a7ea0f51ff8d436b1334f937b85aa86c46b",
+    "license": "not_declared_at_fixed_commit; privately fetched original source, not vendored",
+    "profiles": [
+      "convl_yaml_fp16_source_repaired",
+      "convl_yaml_fp32_reference"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_pretrained_conch_text",
+      "complete_patient_bags",
+      "native_conch512_space",
+      "original_convl_concepts",
+      "patch_features",
+      "patient_survival_bins"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete actual pretrained full text/dynamicprompt/CGA/source objectives and original patient200epoch/AMP16/gradacc2/LookaheadRAdam/NLL-only VAL selection, separate explicit FP32 reference; actual original external bin labels supported; named patient-index, modern optimizer state/import/device ports, TRAIN-only quartile extension separately declared",
+    "blocker": null
+  },
+  {
+    "id": "dyko",
+    "name": "DyKo",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/junjianli106/DyKo",
+    "source_status": "full_original_asset_adapter_code_integrated_under_verification",
+    "source_commit": "a8b43645840cf283c334b07c42cf4ddf230f644a",
+    "license": "no_LICENSE_in_pinned_tree_private_loading_only",
+    "profiles": [
+      "dyko_camelyon16_cpu_faiss_source_reference",
+      "dyko_camelyon16_cuda_faiss_requested_reference",
+      "dyko_nsclc_cpu_faiss_source_reference",
+      "dyko_nsclc_cuda_faiss_requested_reference",
+      "dyko_rcc_cpu_faiss_source_reference",
+      "dyko_rcc_cuda_faiss_requested_reference",
+      "dyko_ubc_cpu_faiss_source_reference",
+      "dyko_ubc_cuda_faiss_requested_reference"
+    ],
+    "status": "adapted_under_verification",
+    "default_execution_profile": "dyko_nsclc_cpu_faiss_source_reference",
+    "required_inputs": [
+      "native_aligned768D_patch_features",
+      "actual_pretrained_TITAN_text_tower",
+      "released_cohort_concept_bank_and_class_prompts",
+      "patient_safe_source_split_and_fewshot_manifest",
+      "native_GPU_FAISS_or_explicit_CPU_reference"
+    ],
+    "formal_admission": false,
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Full model, native inputs, original-asset binding, isolated training, checkpoint recovery and evaluation are integrated into the public engine. Family execution selects the prepared cohort and explicitly uses CPU FAISS; CUDA FAISS requires its separately named profile and real GPU FAISS. No replacement text model or random pretrained weights are used.",
+    "prerequisites": [
+      "Run setup and prepare-dyko-assets with authorized original TITAN files.",
+      "Bind native visual provenance and patients with prepare-dyko.",
+      "Use the separate dyko runtime dependencies; GPU FAISS is not in the CPU extra."
+    ],
+    "validation_blockers": [
+      "Complete original-pretrained source/wheel/native-budget validation remains pending."
+    ],
+    "blocker": null
+  },
+  {
+    "id": "libramil",
+    "name": "Libra-MIL",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/zfy07/Libra-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "f29921970bfa22d364e08ea1768b984b47e07a8d",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "profiles": [
+      "libramil_source_p4",
+      "libramil_readme_p6"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "native_CONCH_features",
+      "ordered_language_descriptions",
+      "patient_grouped_split"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete full original architecture, actual pretrained46+3RCC language embedding, original20epoch CPU references both4/6prototypes passed; unifiedCLI/recovery/full regression gates underway.",
+    "blocker": null
+  },
+  {
+    "id": "miladapter",
+    "name": "MIL-Adapter",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/cvblab/MIL-Adapter",
+    "source_status": "git_commit_locked",
+    "source_commit": "ade11bb19c3f09a35da9e8255a87a079217aef48",
+    "license": "No LICENSE file at fixed commit; privately fetched, no vendoring",
+    "profiles": [
+      "miladapter_zsmil_bgap_zs",
+      "miladapter_zsmil_bgap_random",
+      "miladapter_zsmil_bgmp_zs",
+      "miladapter_zsmil_bgmp_random",
+      "miladapter_zsmil_abmil_zs",
+      "miladapter_zsmil_abmil_random",
+      "miladapter_zsmil_transmil_zs",
+      "miladapter_zsmil_transmil_random",
+      "miladapter_zsmil_wikgmil_zs",
+      "miladapter_zsmil_wikgmil_random",
+      "miladapter_zsmil_ilramil_zs",
+      "miladapter_zsmil_ilramil_random",
+      "miladapter_zsmil_rrtmil_zs",
+      "miladapter_zsmil_rrtmil_random",
+      "miladapter_taskres_bgap",
+      "miladapter_taskres_bgmp",
+      "miladapter_taskres_abmil",
+      "miladapter_taskres_transmil",
+      "miladapter_clipadapter_bgap",
+      "miladapter_clipadapter_bgmp",
+      "miladapter_clipadapter_abmil",
+      "miladapter_clipadapter_transmil",
+      "miladapter_tipadapter_bgap",
+      "miladapter_tipadapter_bgmp",
+      "miladapter_tipadapter_abmil",
+      "miladapter_tipadapter_transmil"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "native_author_conch_or_keep_text_prototypes",
+      "patch_features",
+      "patient_disjoint_train_support_pool",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "full_author_26_actual_routes_and_all_native_aggregators_source20epoch_AdamW_cosine_CEsum_persistent_python_order_source_seed42_boundary_TIP_trainable_support_cache_and_final_only; actual_imported_prototype_generation_details_unknown; explicit_source_bug_and_patient_disjoint_protocol_ports",
+    "blocker": null
+  },
+  {
+    "id": "muse",
+    "name": "MUSE",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/JiahaoXu-god/CVPR2026_MUSE",
+    "source_status": "git_commit_locked",
+    "source_commit": "0bd0e1abb402e772ed71cf208cfbd4b870175a00",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "profiles": [
+      "muse_released_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "complete_source_feature_bags",
+      "actual_pretrained_CONCH",
+      "original600description_knowledge",
+      "patient_grouped_split"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete original architecture and20view recipe integrated; actual88,985,107parameter/full600description/native257patch20update source precheck and exact651diagnosticRNG oracle passed. Full unified/data/source-reference/recovery/native gates still required; released-code/paper differences explicitly documented.",
+    "blocker": null
+  },
+  {
+    "id": "taxomil",
+    "name": "TaxoMIL",
+    "group": "G_vision_language",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/QuIIL/TaxoMIL",
+    "source_status": "complete_source_adapter_under_verification",
+    "source_commit": "5e095f0c212b3a30c3f6c6c81b3ca1a18e0c676e",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "profiles": [
+      "taxomil_gpt2_all_losses_key_repaired",
+      "taxomil_gpt2_paper_lr_key_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "hierarchical_labels",
+      "taxomil_original_gpt2_assets",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Actual full217M-class graph/source literal model and original data/collator/train/VAL oracles verified; all gradients/moments/RNG/fullstate restored. Source all-loss lookup defect explicitly repaired; projected-vs-raw sibling objective and paper LR differences disclosed. Full native budgets and public CLI validation pending.",
+    "blocker": null
+  },
+  {
+    "id": "hybrid_supervision",
+    "name": "Hybrid Supervision Learning",
+    "group": "H_extra_supervision",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/JarveeLee/HybridSupervisionLearning_Pathology",
+    "source_commit": "1f54478812cd057ad3ddc70543bed503ba39f800",
+    "source_status": "full_paper_reference_reconstruction_under_verification",
+    "license": "GPL-3.0_private_pinned_source_loading_no_redistribution",
+    "profiles": [
+      "hybrid_supervision_paper_full_reference"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "actual_RGB512",
+      "TRAIN_pixel_annotations",
+      "original_pretrained_DLA34",
+      "ordered_patch_ids",
+      "measured_coordinates",
+      "patient_disjoint_splits",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Original full DLA34Up/DLA34 and pretrained ImageNet initialization, real512RGB/TRAINfine masks, paperV4/T0.4/R2:1:7 and Top16mean-probability image BCE,30/15epoch rounds and training-loss round selection. Original private gastric training code is not published; optimizer, epoch unit, augmentation and classifier reset are explicit reference choices. Released1024RGB3epochCAMELYON17RandomForest route is a distinct condition and is not called the paper pipeline. Complete software/native/global acceptance still pending."
+  },
+  {
+    "id": "sammil",
+    "name": "SAM-MIL",
+    "group": "H_extra_supervision",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/FangHeng/SAM-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "ccff640825321a12658daa0a85c03390bc9d367b",
+    "license": "Apache-2.0",
+    "profiles": [
+      "sammil_attn_source_control",
+      "sammil_attn_objective_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "sammil_measured_regions",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "full_released_recipe_and_named_objective_repairs",
+    "blocker": null
+  },
+  {
+    "id": "simil",
+    "name": "SI-MIL",
+    "group": "H_extra_supervision",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/bmi-imaginelab/SI-MIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "3ffb218672ffe0e4a183924af50e5920b498483d",
+    "license": "No root LICENSE in pinned tree; external source only",
+    "profiles": [
+      "simil_source",
+      "simil_full_vjp"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "pathexpert_assets",
+      "per_slide_coords",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "full_original_dual_branch_and_coupled_training; row_aligned_raw_PathExpert_inputs_TRAIN_only_quantiles; literal_and_full_Gaussian_VJP_routes",
+    "blocker": null
+  },
+  {
+    "id": "dspamil",
+    "name": "DSPA-MIL / DSPA-U-MIL",
+    "group": "H_extra_supervision",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/AlexNmSED/DSPA-MIL",
+    "source_status": "incomplete_author_source_with_full2025_reference_adapter_integrated",
+    "source_commit": "75d95d410374771a3eba4bd84fdfadc06acf0eed",
+    "license": "MIT",
+    "profiles": [
+      "dspamil_2025_released_mask_reference",
+      "dspamil_2025_paper_mask_reference"
+    ],
+    "status": "adapted_under_verification",
+    "default_execution_profile": "dspamil_2025_released_mask_reference",
+    "required_inputs": [
+      "native_UNI1024_patch_features",
+      "patient_disjoint_splits",
+      "TRAIN_only_measured_Gleason_pattern_targets",
+      "pattern_and_training_grade_expert_concepts",
+      "explicit_text_to_UNI_alignment"
+    ],
+    "supported_variants": [
+      "DSPA-MIL2025_explicit_reference"
+    ],
+    "unsupported_variants": [
+      "DSPA-U-MIL"
+    ],
+    "DSPA_U_implemented": false,
+    "original_expert_assets_verified": false,
+    "formal_admission": false,
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete151120896parameter PAT plus full-width dual heads (162690072 total), native input binding, TRAIN-only measured pattern supervision, all published2025 losses,50epoch reference trainer, full-state checkpoints, isolated subprocess and Student-only evaluation are publicly integrated. Unreleased normalization, KL/detach, head and training choices must be explicitly configured. This is not the incomplete literal author trainer or a DSPA-U implementation.",
+    "prerequisites": [
+      "Prepare actual UNI features, six ordered grades, measured TRAIN patterns and justified concept/alignment assets.",
+      "Run prepare-dspamil and supply configs/dspamil_2025_full_reference.yaml with reviewed provenance.",
+      "Use the dspamil Torch2.5.1 runtime; inference uses only the Student path."
+    ],
+    "validation_blockers": [
+      "Original expert assets/alignment and complete full-model source/wheel/native validation remain pending.",
+      "DSPA-U specification and uncertainty implementation remain unavailable."
+    ],
+    "blocker": null
+  },
+  {
+    "id": "hmil",
+    "name": "HMIL",
+    "group": "H_extra_supervision",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/ChengJin-git/HMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "d4f5ad18d0258a8e1bebe2c5a37e909cc349a946",
+    "license": "GPL-3.0",
+    "profiles": [
+      "hmil_source_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "hierarchical_labels",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "adapter_contract_recorded",
+    "blocker": null
+  },
+  {
+    "id": "lpgmil",
+    "name": "LPGMIL",
+    "group": "H_extra_supervision",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/FPXMU/LPGMIL",
+    "source_commit": "6b14bb01dff042a09bd34ebe956d696e665a7cd0",
+    "source_status": "complete_pinned_native_graph_and_dual_loss_with_explicit_TRAIN_prototype_reconstruction",
+    "license": "no_LICENSE_in_pinned_tree_private_loading_only; Mamba1.1.1 Apache2.0",
+    "profiles": [
+      "lpgmil_tls1024_reference",
+      "lpgmil_fm_width_reference"
+    ],
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "required_inputs": [
+      "original_ordered_features_and_patch_ids",
+      "TRAIN_only_actual_nucleus_counts",
+      "nucleus_detector_provenance",
+      "patient_disjoint_splits"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Full512D/two_original_Mamba1.1.1layers/state16/conv4/expand2, six_masked8head_prototype_branches/top1000/reaggregated_slide_head and all losses retained. Released query width, constructor and output contracts repaired explicitly. Missing original proto_vector.pt/preparer replaced by named TRAIN-only actual lymphocyte-candidate Ward reference with explicit thresholds, detector provenance and complete candidate/patch/feature/split hashes. Original first-head hardtopk, source all-parameterL1 and actual one-bag optimizer updates preserved. All native/source/wheel/full-budget and whole-library gates remain independently required."
+  },
+  {
+    "id": "m4",
+    "name": "M4",
+    "group": "H_extra_supervision",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Bigyehahaha/M4",
+    "source_status": "git_commit_locked",
+    "source_commit": "2b0f92ef872fcd9997f1ae6b4ba6565fc53eb332",
+    "license": "MIT copyright2024yezhang",
+    "profiles": [
+      "m4_multilabel_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "complete_binary_endpoint_labels",
+      "patch_features",
+      "patient_grouped_split"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete original model/multi-task32epoch training/main cosine/source sampler/strict VALmeanAUROC, explicit complete measured binary labels and FM input-dimension ports; actual twoepoch source weight/Adam/scheduler/RNG equality and actual disk restore prechecks passed. Native/whole/final-wheel gates pending.",
+    "blocker": null
+  },
+  {
+    "id": "protomil",
+    "name": "ProtoMIL",
+    "group": "H_extra_supervision",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/ss-sun/ProtoMIL",
+    "source_commit": "3e3745d7e4fecccb24aa486bd2af8b0dc6493711",
+    "source_status": "full_protocol_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+    "status": "adapted_under_verification",
+    "profiles": [
+      "protomil_concept_paper_patient_reference",
+      "protomil_concept_released_defaults_patient_reference",
+      "protomil_intervened_paper_patient_reference",
+      "protomil_intervened_released_defaults_patient_reference"
+    ],
+    "required_inputs": [
+      "TRAIN_only_joint_SAE_populations",
+      "TRAIN_region_annotated_RGB256_probes",
+      "actual_CONCH512_projection_features",
+      "actual_SAE_bound_concept_review",
+      "ordered_patch_ids",
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Full original512D CONCH /2048D SAE with actual projection hooks and AdamWithReset/resampler/metrics; joint TRAIN-only source piece split; independently annotated normal/tumor RGB256 probes; original concept activation inspection; actual SAE/probe-bank-bound user review for intervention; full gated concept MIL with CE and mean classifier L1. Separate paper60/200 and released-default200/1 epoch profiles. All software/wheel/native/global gates remain required; synthetic checks do not reproduce clinical scores."
+  },
+  {
+    "id": "akdpmp",
+    "name": "AKD-PMP",
+    "group": "I_continual",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/lxr2/akd-pmp",
+    "source_commit": "a1c83d2efe31bd713b0f7999715297700bfdbb80",
+    "source_status": "full_protocol_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "status": "adapted_under_verification",
+    "profiles": [
+      "akdpmp_clam_skin_patient_reference",
+      "akdpmp_clam_tcga_patient_reference",
+      "akdpmp_transmil_skin_patient_reference",
+      "akdpmp_transmil_tcga_patient_reference"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "ordered_patch_ids",
+      "patient_disjoint_ordered_tasks"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Both complete CLAM-SB and TransMIL source models, original smooth SVM, literal source AKD/PMP training/refill AST; TCGA balanced compressed memory and skin unbalanced full-bag recipes; selected teachers, full replay/state/RNG recovery. All software/wheel/native/global gates required."
+  },
+  {
+    "id": "comel",
+    "name": "CoMEL",
+    "group": "I_continual",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Hyun1A/CoMEL",
+    "source_commit": "9fd667994eb57e3960e36970a9509a8217d84a22",
+    "source_status": "complete_continual_reference_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "status": "adapted_under_verification",
+    "profiles": [
+      "comel_owlora_source_patient_reference",
+      "comel_owlora_svd_basis_repaired"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "ordered_patch_ids",
+      "patient_disjoint_continual_binary_tasks"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Actual pinned GDAT/BPPL/OWLoRA training methods; complete ordered task sequence and dynamic heads; exact active/inactive gradients, optimizer/scheduler/tau2/RNG recovery; original vs explicit SVD-basis repair separated. Software, source oracle, installed-wheel and native gates required.",
+    "blocker": null
+  },
+  {
+    "id": "qpmilvl",
+    "name": "QPMIL-VL",
+    "group": "I_continual",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/can-can-ya/QPMIL-VL",
+    "source_commit": "3a7a7698582dec866d43eb748f8c3599f7be4391",
+    "source_status": "full_protocol_under_verification",
+    "license": "CC-BY-NC-ND-4.0_private_source_loading_no_weights_redistribution",
+    "status": "adapted_under_verification",
+    "profiles": [
+      "qpmilvl_conch_max_query_patient_reference",
+      "qpmilvl_conch_mean_query_patient_reference"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "ordered_patch_ids",
+      "patient_disjoint_ordered_tasks",
+      "actual_CONCH512_projection_features",
+      "original_full_CONCH_weights",
+      "clinical_class_descriptions_and_templates"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Full original CoCa construction and RNG ordering, real110M12layer/768hidden/12head CONCH text tower,20/24/5 prototype pool, native16bag losses/update, class ensembles, full continual frequency/optimizer/scheduler/gradient/RNG recovery. Explicit source max/mean query variants; all software/wheel/native/global gates required."
+  },
+  {
+    "id": "kmpmil",
+    "name": "KMP-MIL",
+    "group": "I_continual",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/Lingling-Yuan/KMP-MIL",
+    "source_commit": "77137ac84a9a27b16a2c07aca414c534f7cf5226",
+    "source_status": "full_protocol_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+    "status": "adapted_under_verification",
+    "profiles": [
+      "kmpmil_conch_max_query_patient_reference",
+      "kmpmil_conch_mean_query_patient_reference"
+    ],
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag",
+      "ordered_patch_ids",
+      "patient_disjoint_ordered_tasks",
+      "actual_CONCH512_projection_features",
+      "original_full_CONCH_weights",
+      "clinical_class_descriptions_and_templates",
+      "task_semantic_descriptors"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Full original CoCa and actual110M CONCH text tower; task semantic key initialization; original24token/5matches,16bag source epochs including incomplete tails; PFC visual and current-task TC text calibration; routing losses; original Adam/plateau/early stop, best-VAL reload and rehearsal-free immutable banks. Exact fullstate interruption/recovery; separate class-CL and per-task bank inference. All software/wheel/native/global gates required."
+  },
+  {
+    "id": "hipt",
+    "name": "HIPT",
+    "group": "J_pretrained_slide",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/HIPT",
+    "source_status": "git_commit_locked",
+    "source_commit": "780fafaed2e5b112bc1ed6e78852af1fe6714342",
+    "license": "Apache-2.0 with Commons Clause; external author source and weights, not redistributed",
+    "profiles": [
+      "hipt_lgp_frozen_source",
+      "hipt_lgp_finetune_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "hipt_pyramid",
+      "native_patch_embedding_space",
+      "patch_features",
+      "per_slide_coords",
+      "pretrained_region_teacher",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "complete_original_pretrained_classification_model_and_source_recipe; actual_teacher_and_native_patch_space_bound_to_physical_pyramids; original_survival_Python_unreleased_not_substituted",
+    "blocker": null
+  },
+  {
+    "id": "feather",
+    "name": "FEATHER / MIL-Lab models",
+    "group": "J_pretrained_slide",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/mahmoodlab/MIL-Lab",
+    "source_status": "full_original_pretrained_adapter_code_integrated_under_verification",
+    "source_commit": "dfc3c17ca6876a8f9bd33a9162c40f2c22631d9d",
+    "license": "CC-BY-NC-ND-4.0_private_source_loading_no_redistribution",
+    "profiles": [
+      "feather_conch_v15_finetune_val20_reference",
+      "feather_conch_v15_finetune_no_val10_reference",
+      "feather_conch_v15_frozen_knn20_reference",
+      "feather_uni_finetune_val20_reference",
+      "feather_uni_finetune_no_val10_reference",
+      "feather_uni_frozen_knn20_reference",
+      "feather_uni_v2_finetune_val20_reference",
+      "feather_uni_v2_finetune_no_val10_reference",
+      "feather_uni_v2_frozen_knn20_reference"
+    ],
+    "status": "adapted_under_verification",
+    "default_execution_profile": "feather_uni_finetune_val20_reference",
+    "required_inputs": [
+      "native_CONCHv15_UNI_or_UNIv2_features",
+      "authorized_original_FEATHER24K_weights",
+      "patient_disjoint_splits"
+    ],
+    "formal_admission": false,
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Full original512/384 model, checked local pretrained loading, native feature/patient binding, isolated20epoch-with-VAL and10epoch-without-VAL finetuning, frozen512D KNN20, recovery and evaluation are publicly integrated. Family execution uses the prepared encoder with finetune_val20. Unpublished trainer/selection/AMP/sampling/KNN details remain explicit references. No random architecture is presented as pretrained FEATHER.",
+    "prerequisites": [
+      "Run setup and prepare-feather-assets with the authorized original24K checkpoint.",
+      "Bind its matching native visual features and patients using prepare-feather.",
+      "Use the separate feather runtime dependencies; frozen KNN requires at least20 TRAIN slides."
+    ],
+    "validation_blockers": [
+      "Actual original-pretrained loading and complete source/wheel/native-budget validation remain pending."
+    ],
+    "blocker": null
+  },
+  {
+    "id": "icmil_context",
+    "name": "ICMIL In-context",
+    "group": "J_pretrained_slide",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/injurise/ICMIL",
+    "source_commit": "23bb7203777891987ec3c18a1233ffe238b032b3",
+    "source_status": "git_commit_locked",
+    "license": "MIT_with_third_party_notices",
+    "profiles": [
+      "icmil_context_c5trd795_source",
+      "icmil_context_ggwsqibd_source",
+      "icmil_context_k337zhz1_source"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "actual_released_ICMIL_8000epoch_checkpoint",
+      "binary_slide_labels",
+      "fixed_length_patch_features_at_most25D",
+      "patient_grouped_split"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Actual original three released checkpoints, full pretrained source graph and author TCGA50split reference inference; new complete unified fixed-context fit/evaluation, exact input binding and explicit projection preparation. Software/native/independent-wheel/full-library acceptance remains separate. No new WSI cohort or paper-score reproduction claimed."
+  },
+  {
+    "id": "loss_attention",
+    "name": "Loss-based Attention",
+    "group": "K_other_modalities",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/xsshi2015/Loss-Attention",
+    "source_status": "git_commit_locked",
+    "source_commit": "71926177d84fc1859b70d135090b163ea6bd58bf",
+    "license": "No root license found; external verified Git definitions only",
+    "profiles": [
+      "loss_attention_classical",
+      "loss_attention_mil_source",
+      "loss_attention_temporal"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "source_and_paper_full_recipes_explicit_wsi_feature_adaptation",
+    "blocker": null
+  },
+  {
+    "id": "micromil",
+    "name": "MicroMIL",
+    "group": "K_other_modalities",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/kimjongwoo-cell/MicroMIL",
+    "source_status": "git_commit_locked",
+    "source_commit": "66e637a891b7358198896c338b0e37828f3fc1f1",
+    "license": "not_yet_verified",
+    "profiles": [
+      "micromil_frozen"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "full_recipe_explicit_frozen_fm_transfer_with_source_repairs",
+    "blocker": null
+  },
+  {
+    "id": "mggmmil",
+    "name": "MGGMMIL autofluorescence",
+    "group": "K_other_modalities",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/JiuyangDong/MGGMMIL",
+    "source_commit": "dfbe91120e0c7c822abdbbba758c307ddabd2826",
+    "source_status": "complete_original_protocol_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+    "profiles": [
+      "mggmmil_uaf_original_graph_patient_reference"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "actual512D_ResNet18_or_PLIP_features",
+      "true_spatial_coordinates",
+      "versioned_original_K4_K8_K12_edge_lists",
+      "patient_disjoint_splits",
+      "imaging_modality_UAF_or_HE"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Full native four384D graph/SRMamba blocks,16state/conv4/expand1 and source rate10 sequence reordering; original Adam/CE/firstVALselection50/patience20/maximum200 trainer adapted. Source edge builder absent; require exact supplied original edge lists bound to feature/coordinate bytes, never guess graph semantics. Complete pipeline/native/publicCLI/wheel/global gates remain.",
+    "blocker": null
+  },
+  {
+    "id": "lnplmil",
+    "name": "LNPL-MIL",
+    "group": "L_composite",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/szc19990412/LNPL-MIL",
+    "source_commit": "1dc4e703a2b86dd0950e0b75aa7d45337d2127cb",
+    "source_status": "complete_raw_LPA_source_and_paper_reference_pipeline_under_verification",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+    "profiles": [
+      "lnplmil_released_with_reference_weak",
+      "lnplmil_paper_with_reference_weak"
+    ],
+    "status": "adapted_under_verification",
+    "required_inputs": [
+      "actual_RGB224",
+      "observed_TRAIN_patch_labels",
+      "original_ImageNet_ResNet18",
+      "ordered_patch_ids",
+      "measured_level0_coordinates",
+      "patient_disjoint_splits",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "formal_admission": false,
+    "blocker": null,
+    "requirements_review": "Full observed-LPA ResNet18, separate frozen ImageNet512D features, actual SP/Top200 and full four-layer TOD/Lookahead-RAdam/gradacc2. Original weak-training config is unpublished; explicit50epoch SGD reference choices are disclosed. Released one-shot/convolution replacement/CE overwrite and paper disjoint/residual/auxiliary conditions are distinct. Public runs explicitly use canonical single-thread HNSW index construction; original default-thread operators remain available as separate components. Binary slide diagnosis only; COAD survival is not claimed. Native, installed-wheel, whole-library and formal release gates remain."
+  },
+  {
+    "id": "nciemil",
+    "name": "NcIEMIL",
+    "group": "L_composite",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/polyethylene16/NcIEMIL",
+    "source_status": "complete_reference_reconstruction_under_verification",
+    "source_commit": "780d8b4c04ef6266e552bfd4c47b76470f7510fd",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "profiles": [
+      "nciemil_full_reference_released_kv",
+      "nciemil_full_reference_independent_kv_repaired"
+    ],
+    "status": "adapted",
+    "required_inputs": [
+      "patch_features",
+      "nciemil_tasktrained_selected_cache",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "requirements_review": "Complete task-trained Swin-Tiny max-instance stage, all-patch score/identity/feature cache, source native aggregation and full-state recovery implemented. Missing author filtering trainer/checkpoint/optimizer/budget are explicit reference choices, never paper-score reproduction. Full native budgets and public CLI acceptance remain required.",
+    "blocker": null
+  },
+  {
+    "id": "mexd",
+    "name": "MExD",
+    "group": "L_composite",
+    "scope_origin": "user_164_admission_list",
+    "source_url": "https://github.com/JWZhao-uestc/MExD",
+    "source_commit": "1d4d438e2b19d0fee9cb55328faa84b6ca37fe0b",
+    "source_status": "complete_original_adapters_denoiser_and_diffusion_with_declared_full_paper_reference_MoE_trainer",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_only",
+    "profiles": [
+      "mexd_camelyon16_paper_reference",
+      "mexd_tcga_nsclc_paper_reference",
+      "mexd_bracs_paper_reference",
+      "mexd_class_port_reference"
+    ],
+    "status": "adapted_under_verification",
+    "formal_admission": false,
+    "required_inputs": [
+      "actual_ordered_frozen_features",
+      "patient_disjoint_splits",
+      "single_slide_bag"
+    ],
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run",
+    "blocker": null,
+    "requirements_review": "Both complete512D/two-layer8head256landmark TransMIL/PPEG adapters, 2/3/4expert routes, negative and bag-matched expert supervision, confidence-weighted condition, full original conditional denoiser and shifted500step diffusion preserved. Complete two-stage 100epoch RAdam plus200epoch Adam/cosine training, frozen stage2 auxiliary,100posterior paths and paired uncertainty are implemented. Incompatible released pretrain/inference graphs and missing hardcoded checkpoints are not silently substituted: unified paperEq2/3/9, initialization, empty-expert and selection choices are declared reference reconstructions. Full software/native/ source/wheel and final gates remain independent; model-only checks are insufficient."
+  }
+]

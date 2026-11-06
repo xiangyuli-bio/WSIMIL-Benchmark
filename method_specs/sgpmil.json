@@ -1,0 +1,41 @@
+{
+  "id": "sgpmil",
+  "name": "SGPMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mandlos/SGPMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "c9dee272e3fec897dba8136f386ddd2d685da4ed",
+  "license": "not_yet_verified",
+  "profiles": [
+    "sgpmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "sgpmil",
+      "family": "sgpmil",
+      "recipe": "author sparse variational GP attention; Monte Carlo mean logits CE + inducing KL / training bags; mean probability prediction; AdamW",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "sgpmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

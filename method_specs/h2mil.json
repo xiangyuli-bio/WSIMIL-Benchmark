@@ -1,0 +1,73 @@
+{
+  "id": "h2mil",
+  "name": "H2-MIL",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/lin-lcx/H2-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "ea472fefd5eab553c58041a5acc203ac7d467d06",
+  "license": "not_found_in_pinned_tree; external_source_only",
+  "profiles": [
+    "h2mil_source_compat",
+    "h2mil_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_coarse_features",
+    "actual_thumbnail_features",
+    "h2mil_hierarchy",
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_RAConv_IHPool_and_summed_batch_recipe; actual_three_level_feature_geometry; named_shape_head_CE_repairs; released_hard_fitness_gradient_and_paper_source_boundaries_explicit",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "h2mil_repaired",
+      "family": "h2mil",
+      "recipe": "complete original hierarchy/model/optimizer recipe with explicit shape, C-way head and logits-CE repair; hard pooling gradient boundary retained",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "h2mil_hierarchy",
+        "per_slide_coords",
+        "single_slide_bag",
+        "actual_thumbnail_features",
+        "actual_coarse_features"
+      ],
+      "class_count": null,
+      "external_source": "h2mil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "h2mil_source_compat",
+      "family": "h2mil",
+      "recipe": "complete original two-stage RAConv/IHPool and summed-batch Adam recipe; explicit shape repair, literal four-probability CE and binary metric path",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "h2mil_hierarchy",
+        "per_slide_coords",
+        "single_slide_bag",
+        "actual_thumbnail_features",
+        "actual_coarse_features"
+      ],
+      "class_count": 2,
+      "external_source": "h2mil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

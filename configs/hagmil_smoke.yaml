@@ -1,0 +1,8 @@
+# Software fixture only; smaller widths and budgets than the author configuration.
+epochs: 2
+threads: 1
+model:
+  hidden_dims: [32, 48, 32, 32]
+  k_sample: 2
+  train_parents: 4
+  eval_parents: 4

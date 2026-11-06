@@ -1,0 +1,10 @@
+epochs: 20
+lr: 0.0001
+weight_decay: 0.0001
+patience: 20
+grad_clip: null
+max_instances: null
+selection_metric: center_embeddings_val_balanced_accuracy
+model:
+  train_batch_size: 4
+  center_lr: 0.0001

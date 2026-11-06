@@ -1,0 +1,6 @@
+# Software smoke test only; not sufficient scientific training.
+epochs: 2
+patience: 2
+threads: 1
+model:
+  warmup_epochs: 1

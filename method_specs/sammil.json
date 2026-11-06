@@ -1,0 +1,64 @@
+{
+  "id": "sammil",
+  "name": "SAM-MIL",
+  "group": "H_extra_supervision",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/FangHeng/SAM-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "ccff640825321a12658daa0a85c03390bc9d367b",
+  "license": "Apache-2.0",
+  "profiles": [
+    "sammil_attn_source_control",
+    "sammil_attn_objective_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "sammil_measured_regions",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "full_released_recipe_and_named_objective_repairs",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "sammil_attn_objective_repaired",
+      "family": "sammil",
+      "recipe": "Complete released512/128 attention SAM-MIL, all five pseudo-bag CE and area consistency objectives, fixed deepcopy teacher, Adam/cosine200 source recipe; explicit global CE/student-consistency/compact region-index repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "sammil_measured_regions"
+      ],
+      "class_count": null,
+      "external_source": "sammil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "sammil_attn_source_control",
+      "family": "sammil",
+      "recipe": "Complete released512/128 attention SAM-MIL, all five pseudo-bag CE and area consistency objectives, fixed deepcopy teacher, Adam/cosine200 source recipe; explicit source loss-overwrite/teacher-gradient/mask-index control",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "sammil_measured_regions"
+      ],
+      "class_count": 2,
+      "external_source": "sammil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "m4",
+  "name": "M4",
+  "group": "H_extra_supervision",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Bigyehahaha/M4",
+  "source_status": "git_commit_locked",
+  "source_commit": "2b0f92ef872fcd9997f1ae6b4ba6565fc53eb332",
+  "license": "MIT copyright2024yezhang",
+  "profiles": [
+    "m4_multilabel_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "complete_binary_endpoint_labels",
+    "patch_features",
+    "patient_grouped_split"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Complete original model/multi-task32epoch training/main cosine/source sampler/strict VALmeanAUROC, explicit complete measured binary labels and FM input-dimension ports; actual twoepoch source weight/Adam/scheduler/RNG equality and actual disk restore prechecks passed. Native/whole/final-wheel gates pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "m4_multilabel_source",
+      "family": "m4",
+      "recipe": "Full original5MP-AMIL experts/512D/four distinct128D gate slices per endpoint/32hidden sigmoid towers, CPE and3/5/7hierarchical convolutions, all full slide bags; source summed task probability BCE, Adam1e-4/wd4e-5/32epoch cosine0.1, original shuffled TRAIN+VAL loaders and strict VALmeanAUROC selection, complete Adam/scheduler/RNG restore",
+      "tasks": [
+        "multilabel"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "complete_binary_endpoint_labels",
+        "patient_grouped_split"
+      ],
+      "class_count": null,
+      "external_source": "m4",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    }
+  ]
+}

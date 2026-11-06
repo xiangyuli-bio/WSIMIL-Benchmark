@@ -1,0 +1,5 @@
+epochs: 3
+threads: 1
+model:
+  warmup_epochs: 1
+  groups: 2

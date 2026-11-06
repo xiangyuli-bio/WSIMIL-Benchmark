@@ -1,0 +1,75 @@
+{
+  "id": "pathrwkv",
+  "name": "PathRWKV",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Puzzle-Logic/PathRWKV",
+  "source_status": "git_commit_locked",
+  "source_commit": "8818fa5711666bd8d30672f02bdcd98634389b70",
+  "license": "Apache-2.0",
+  "profiles": [
+    "pathrwkv_source",
+    "pathrwkv_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_TimeMix_ChannelMix_task_projection_heads_and_heterogeneous_recipe; explicit_real_yx_geometry_native_CUDA_or_named_tensor_backend; source_and_named_Cox_missingness_streaming_repairs",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "pathrwkv_repaired",
+      "family": "pathrwkv",
+      "recipe": "complete native PathRWKV heterogeneous recipe with explicit observed masks, Breslow-Cox repair and bounded GPU streaming carrying both token shifts and WKV state; actual author CUDA backend or explicitly selected CPU tensor reference",
+      "tasks": [
+        "classification",
+        "ordinal",
+        "regression",
+        "survival",
+        "multitask"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pathrwkv",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pathrwkv_source",
+      "family": "pathrwkv",
+      "recipe": "complete pinned TimeMix/ChannelMix/2D position/MTL model and heterogeneous CE/Huber/source-Cox, source sampling/AdamW/cosine/early stop; original chunk shift resets and Cox broadcasting retained explicitly",
+      "tasks": [
+        "classification",
+        "ordinal",
+        "regression",
+        "survival",
+        "multitask"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pathrwkv",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

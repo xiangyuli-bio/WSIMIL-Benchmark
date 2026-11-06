@@ -1,0 +1,104 @@
+{
+  "id": "mmp",
+  "name": "MMP",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mahmoodlab/MMP",
+  "source_status": "git_commit_locked",
+  "source_commit": "1fd75e37592f7ab47b787f737733ba3c5a7e714c",
+  "license": "CC-BY-NC-SA-4.0",
+  "profiles": [
+    "mmp_panther_source",
+    "mmp_panther_uot_source",
+    "mmp_ot_source",
+    "mmp_ot_uot_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "omics",
+    "patch_features",
+    "pathways"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mmp_ot_source",
+      "family": "mmp",
+      "recipe": "author OT prototypes with full-attention fusion, train-only KMeans, pathway SNN, batch Cox/NLL, AdamW warmup cosine and explicit source repairs",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "mmp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mmp_ot_uot_source",
+      "family": "mmp",
+      "recipe": "author OT prototypes with differentiable UOT fusion, train-only KMeans, pathway SNN, batch Cox/NLL, AdamW warmup cosine and explicit source repairs",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "mmp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mmp_panther_source",
+      "family": "mmp",
+      "recipe": "author PANTHER prototypes with full-attention fusion, train-only KMeans, pathway SNN, batch Cox/NLL, AdamW warmup cosine and explicit source repairs",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "mmp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mmp_panther_uot_source",
+      "family": "mmp",
+      "recipe": "author PANTHER prototypes with differentiable UOT fusion, train-only KMeans, pathway SNN, batch Cox/NLL, AdamW warmup cosine and explicit source repairs",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "mmp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

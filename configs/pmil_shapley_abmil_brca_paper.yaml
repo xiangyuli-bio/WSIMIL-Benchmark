@@ -1,0 +1,17 @@
+lr: 0.0003
+weight_decay: 0.00001
+grad_clip: null
+max_instances: null
+selection_metric: pmil_selection
+model:
+  rounds: 10
+  round_epochs: 200
+  max_pseudo: 6
+  pseudo_step: 4
+  search_rate: 10
+  sample_rate: 3
+  min_lr: 0.0001
+  lr_patience: 7
+  patience: 20
+  warmup_epoch: 20
+  metric: f1_auc

@@ -1,0 +1,154 @@
+{
+  "id": "iibmil",
+  "name": "IIB-MIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/TencentAILabHealthcare/IIB-MIL",
+  "source_commit": "a354ec6ea2b9ea2159e6784d54a6afb355c04b50",
+  "source_status": "complete_original_network_data_confidence_and_prototype_with_reference_training_under_verification",
+  "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+  "profiles": [
+    "iibmil_luad_gm_complete_reference",
+    "iibmil_tcga_nsclc_complete_reference",
+    "iibmil_tcga_rcc_complete_reference"
+  ],
+  "status": "adapted_under_verification",
+  "formal_admission": false,
+  "required_inputs": [
+    "patch_features",
+    "patient_disjoint_splits",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "blocker": null,
+  "requirements_review": "Complete original residual-transformer/five-query decoder, original TRAIN confidence initialization, PartialLoss/linear200EMA and class-adjusted top10percent prototype update. Original500-row sampling/padding and ignored attention mask retained. Full author trainer is absent: equal dual-loss coefficients,10epoch confidence warmup, per-batch lagged update order, valid-instance supervision mask and validation selection are declared reconstruction choices. All3full native configurations, FM-width and output-class ports retain source widths/depths/FFNs. Checkpoint includes complete confidence/prototypes/scheduler/actual sampled rows and RNG. Native300epoch/source/wheel/global/final gates remain separate; no paper-score reproduction claim.",
+  "execution_profiles": [
+    {
+      "id": "iibmil_luad_gm_complete_reference",
+      "family": "iibmil",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "iibmil",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "reference_reconstruction": true,
+      "condition": "luad_gm",
+      "native_recipe": {
+        "input_dim": 1280,
+        "hidden": 32,
+        "depth": 8,
+        "batch_size": 16,
+        "lr": 0.0002,
+        "classes": 2,
+        "tokens": 500,
+        "epochs": 300,
+        "confidence_warmup": 10,
+        "confidence_ema_denominator": 200,
+        "prototype_ema": 0.99,
+        "optimizer": "AdamW",
+        "weight_decay": 1e-05,
+        "clip_norm": 0.01,
+        "lr_drop": 100,
+        "lr_gamma": 0.1,
+        "bag_loss_weight": 1.0,
+        "instance_loss_weight": 1.0
+      },
+      "class_count": 2,
+      "recipe": "Complete iibmil reference [iibmil_luad_gm_complete_reference]; native_recipe={\"bag_loss_weight\":1.0,\"batch_size\":16,\"classes\":2,\"clip_norm\":0.01,\"confidence_ema_denominator\":200,\"confidence_warmup\":10,\"depth\":8,\"epochs\":300,\"hidden\":32,\"input_dim\":1280,\"instance_loss_weight\":1.0,\"lr\":0.0002,\"lr_drop\":100,\"lr_gamma\":0.1,\"optimizer\":\"AdamW\",\"prototype_ema\":0.99,\"tokens\":500,\"weight_decay\":1e-05}"
+    },
+    {
+      "id": "iibmil_tcga_nsclc_complete_reference",
+      "family": "iibmil",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "iibmil",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "reference_reconstruction": true,
+      "condition": "tcga_nsclc",
+      "native_recipe": {
+        "input_dim": 1280,
+        "hidden": 256,
+        "depth": 3,
+        "batch_size": 16,
+        "lr": 1e-05,
+        "classes": 2,
+        "tokens": 500,
+        "epochs": 300,
+        "confidence_warmup": 10,
+        "confidence_ema_denominator": 200,
+        "prototype_ema": 0.99,
+        "optimizer": "AdamW",
+        "weight_decay": 1e-05,
+        "clip_norm": 0.01,
+        "lr_drop": 100,
+        "lr_gamma": 0.1,
+        "bag_loss_weight": 1.0,
+        "instance_loss_weight": 1.0
+      },
+      "class_count": 2,
+      "recipe": "Complete iibmil reference [iibmil_tcga_nsclc_complete_reference]; native_recipe={\"bag_loss_weight\":1.0,\"batch_size\":16,\"classes\":2,\"clip_norm\":0.01,\"confidence_ema_denominator\":200,\"confidence_warmup\":10,\"depth\":3,\"epochs\":300,\"hidden\":256,\"input_dim\":1280,\"instance_loss_weight\":1.0,\"lr\":1e-05,\"lr_drop\":100,\"lr_gamma\":0.1,\"optimizer\":\"AdamW\",\"prototype_ema\":0.99,\"tokens\":500,\"weight_decay\":1e-05}"
+    },
+    {
+      "id": "iibmil_tcga_rcc_complete_reference",
+      "family": "iibmil",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "iibmil",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "reference_reconstruction": true,
+      "condition": "tcga_rcc",
+      "native_recipe": {
+        "input_dim": 1280,
+        "hidden": 256,
+        "depth": 4,
+        "batch_size": 4,
+        "lr": 1e-05,
+        "classes": 3,
+        "tokens": 500,
+        "epochs": 300,
+        "confidence_warmup": 10,
+        "confidence_ema_denominator": 200,
+        "prototype_ema": 0.99,
+        "optimizer": "AdamW",
+        "weight_decay": 1e-05,
+        "clip_norm": 0.01,
+        "lr_drop": 100,
+        "lr_gamma": 0.1,
+        "bag_loss_weight": 1.0,
+        "instance_loss_weight": 1.0
+      },
+      "class_count": 3,
+      "recipe": "Complete iibmil reference [iibmil_tcga_rcc_complete_reference]; native_recipe={\"bag_loss_weight\":1.0,\"batch_size\":4,\"classes\":3,\"clip_norm\":0.01,\"confidence_ema_denominator\":200,\"confidence_warmup\":10,\"depth\":4,\"epochs\":300,\"hidden\":256,\"input_dim\":1280,\"instance_loss_weight\":1.0,\"lr\":1e-05,\"lr_drop\":100,\"lr_gamma\":0.1,\"optimizer\":\"AdamW\",\"prototype_ema\":0.99,\"tokens\":500,\"weight_decay\":1e-05}"
+    }
+  ]
+}

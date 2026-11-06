@@ -1,0 +1,113 @@
+{
+  "id": "smmil",
+  "name": "SmMIL / Smooth Operator",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Franblueee/SmMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "4e2d1e0e08ad6085afa1469e6180c61516b1991e",
+  "license": "Apache-2.0",
+  "profiles": [
+    "smmil_early",
+    "smmil_mid",
+    "smmil_late",
+    "smmil_transformer"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "patch_features",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "smmil_early",
+      "family": "smmil",
+      "recipe": "author early feature smoothing on spatial adjacency, BCE and epoch warmup",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "smmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "smmil_late",
+      "family": "smmil",
+      "recipe": "author late attention-logit smoothing on spatial adjacency, BCE and epoch warmup",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "smmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "smmil_mid",
+      "family": "smmil",
+      "recipe": "author mid attention-projection smoothing on spatial adjacency, BCE and epoch warmup",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "smmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "smmil_transformer",
+      "family": "smmil",
+      "recipe": "author SmTransformer plus early Sm attention pool, BCE and epoch warmup",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "smmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

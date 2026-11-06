@@ -1,0 +1,63 @@
+{
+  "id": "mfcmil",
+  "name": "MFC-MIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/WissingChen/MFC-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "145494ec0f221c8b1cc32843efeafb28426634c0",
+  "license": "No root license found; review pending",
+  "profiles": [
+    "mfcmil_abmil",
+    "mfcmil_transmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mfcmil_abmil",
+      "family": "mfcmil",
+      "recipe": "author ABMIL, multiresolution filters, frequency projections and high/low memory interventions; CE and step warmup/cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mfcmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mfcmil_transmil",
+      "family": "mfcmil",
+      "recipe": "author Nystrom TransMIL with frequency, multiresolution and memory intervention; CE and step warmup/cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mfcmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

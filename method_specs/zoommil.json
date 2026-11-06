@@ -1,0 +1,64 @@
+{
+  "id": "zoommil",
+  "name": "ZoomMIL",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/histocartography/zoommil",
+  "source_status": "git_commit_locked",
+  "source_commit": "da7bb7fa71629d34e9b04859c1db791ac8330f5d",
+  "license": "MIT",
+  "profiles": [
+    "zoommil_bright_source_repaired",
+    "zoommil_crc_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag",
+    "zoommil_three_scale_hierarchy"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_released_three_scale_dual_gated_100sample_differentiableTopK_Kronecker_and_sum_graph; actual_full_weighted_sampler_Adam_plateau_meanVALCE_100fixed_epochs_and_fullstate_resume; explicit_saver_device_ports_native8readers; paper2level_and_onlineFM_not_claimed",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "zoommil_bright_source_repaired",
+      "family": "zoommil",
+      "recipe": "Complete original three-scale dual-gated/100sample differentiableTopK/Kronecker/sum ZoomMIL; source weighted TRAIN replacement sampler, Adam/plateau meanVALCE/100fixed epochs and weightedF1 selection; explicit saver/device ports, native8readers, cached features only",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "zoommil_three_scale_hierarchy"
+      ],
+      "class_count": null,
+      "external_source": "zoommil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "zoommil_crc_source_repaired",
+      "family": "zoommil",
+      "recipe": "Complete original three-scale ZoomMIL with CRC K16, actual weighted sampler/Adam/plateau and100fixed epochs; missing source VALloss-saver input explicitly repaired; no two-level or onlineFM substitution",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "zoommil_three_scale_hierarchy"
+      ],
+      "class_count": null,
+      "external_source": "zoommil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "recomil",
+  "name": "ReCo-MIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/zsszc/ReCo-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "27cefbc8d4a9a897b61ceb78b77626bc21d16685",
+  "license": "No root license found; external source only",
+  "profiles": [
+    "recomil_single",
+    "recomil_graph",
+    "recomil_dual",
+    "recomil_dual_graph"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "dual_scale",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "recomil_dual",
+      "family": "recomil",
+      "recipe": "author dual-scale MLP prototype branches and learned sigmoid fusion, full separate branch schedules and objectives",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "dual_scale"
+      ],
+      "class_count": 2,
+      "external_source": "recomil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "recomil_dual_graph",
+      "family": "recomil",
+      "recipe": "author dual-scale graph prototype reduction and learned fusion with complete source recipe",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "dual_scale"
+      ],
+      "class_count": 2,
+      "external_source": "recomil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "recomil_graph",
+      "family": "recomil",
+      "recipe": "author single-scale contextual prototypes and graph prototype reduction with complete source recipe",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "recomil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "recomil_single",
+      "family": "recomil",
+      "recipe": "author single-scale contextual prototypes, MLP reduction, rare gate, orthogonal loss and full warmup/tau/freeze Adam recipe; train-only clustering",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "recomil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

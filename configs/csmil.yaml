@@ -1,0 +1,12 @@
+epochs: 100
+lr: 0.0005
+weight_decay: 0.0001
+patience: 20
+model:
+  clusters: 8
+  bag_mean: 3
+  bag_std: 1
+  accumulation_steps: 4
+  clustering: kmeans
+  clustering_seed: 0
+  inference_seed: 2026

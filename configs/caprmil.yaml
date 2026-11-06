@@ -1,0 +1,13 @@
+epochs: 30
+lr: 0.0002
+weight_decay: 0.00001
+model:
+  hidden: 128
+  heads: 8
+  clusters: 4
+  depth: 1
+  mlp_ratio: 4
+  dropout: 0.1
+  use_temperature: true
+  scheduler: cosine
+  min_lr: 0.0000001

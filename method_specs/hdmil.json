@@ -1,0 +1,109 @@
+{
+  "id": "hdmil",
+  "name": "HDMIL",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/JiuyangDong/HDMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "ef3d4681054970208e94f8205bd96b3180c00926",
+  "license": "README: GPLv3 plus non-commercial academic declaration; no vendoring",
+  "profiles": [
+    "hdmil_camelyon16_source",
+    "hdmil_nsclc_source",
+    "hdmil_brca_source",
+    "hdmil_rcc_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "hdmil_paired_low_rgb",
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete released DMIN and LIPN, original512/256 ChebyKAN instance/bag heads and RGB16 MobileNetV4; all loss terms, two Adams and source selection/stage transfer; source first2class/global-normalization quirks explicitly preserved; native and real WSI validation pending",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "hdmil_brca_source",
+      "family": "hdmil",
+      "recipe": "Complete released two-stage DMIN512/256/ChebyKAN/SmoothTop1/Gumbel self-distillation then native RGB16 MobileNetV4 LIPN; TRAIN weighted replacement, two Adams200+200max, source VALmeanCE stages and full-state teacher transfer",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "hdmil_paired_low_rgb",
+        "per_slide_coords"
+      ],
+      "class_count": 2,
+      "external_source": "hdmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "hdmil_camelyon16_source",
+      "family": "hdmil",
+      "recipe": "Complete released two-stage DMIN512/256/ChebyKAN/SmoothTop1/Gumbel self-distillation then native RGB16 MobileNetV4 LIPN; TRAIN weighted replacement, two Adams200+200max, source VALmeanCE stages and full-state teacher transfer",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "hdmil_paired_low_rgb",
+        "per_slide_coords"
+      ],
+      "class_count": 2,
+      "external_source": "hdmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "hdmil_nsclc_source",
+      "family": "hdmil",
+      "recipe": "Complete released two-stage DMIN512/256/ChebyKAN/SmoothTop1/Gumbel self-distillation then native RGB16 MobileNetV4 LIPN; TRAIN weighted replacement, two Adams200+200max, source VALmeanCE stages and full-state teacher transfer",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "hdmil_paired_low_rgb",
+        "per_slide_coords"
+      ],
+      "class_count": 2,
+      "external_source": "hdmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "hdmil_rcc_source",
+      "family": "hdmil",
+      "recipe": "Complete released two-stage DMIN512/256/ChebyKAN/SmoothTop1/Gumbel self-distillation then native RGB16 MobileNetV4 LIPN; TRAIN weighted replacement, two Adams200+200max, source VALmeanCE stages and full-state teacher transfer",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "hdmil_paired_low_rgb",
+        "per_slide_coords"
+      ],
+      "class_count": 3,
+      "external_source": "hdmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

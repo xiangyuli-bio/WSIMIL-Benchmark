@@ -1,0 +1,67 @@
+{
+  "id": "dtmil",
+  "name": "DT-MIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/yfzon/DT-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "f52530811d0b1b591e10eab2fad9fd2ac1573b98",
+  "license": "Apache-2.0",
+  "profiles": [
+    "dtmil_source_crop_reference_train",
+    "dtmil_repaired_reference_train"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "patch_features",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "dtmil_repaired_reference_train",
+      "family": "dtmil",
+      "recipe": "complete pinned DT-MIL and physical cached-view/data augmentation recipe; explicit current-height crop/C-way labels/finite-padding ports, full reference AdamW/LR-groups/StepLR/clipping/firstVAL and exact resume",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "dtmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "dtmil_source_crop_reference_train",
+      "family": "dtmil",
+      "recipe": "complete pinned DT-MIL full spatial/deformable-encoder/ordinary-decoder/query-head, released crop/binary contract with explicit finite-padding port; complete named50epoch AdamW/LR-group/StepLR reference training because public trainer is absent",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "dtmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

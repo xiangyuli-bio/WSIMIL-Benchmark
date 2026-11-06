@@ -1,0 +1,14 @@
+# Released source default budget; differs from the paper's 50 epochs.
+epochs: 60
+lr: 0.00005
+weight_decay: 0.0005
+grad_clip: null
+patience: 60
+selection_metric: h2_val_auc
+threads: 2
+model:
+  hidden: 256
+  dropout: 0.3
+  batch_size: 32
+  ratio1: 0.1
+  ratio2: 4

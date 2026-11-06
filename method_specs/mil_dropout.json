@@ -1,0 +1,98 @@
+{
+  "id": "mil_dropout",
+  "name": "MIL-Dropout",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/ChongQingNoSubway/MILDropout",
+  "source_status": "git_commit_locked",
+  "source_commit": "61af86f56a24685a916d0e3e4b416cb4751323bb",
+  "license": "MIT",
+  "profiles": [
+    "mil_dropout_abmil",
+    "mil_dropout_gated",
+    "mil_dropout_dsmil",
+    "mil_dropout_transmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mil_dropout_abmil",
+      "family": "mil_dropout",
+      "recipe": "author non-gated ABMIL with three MIL-Dropout layers; bag CE, AdamW and checkpointed Lookahead",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mil_dropout",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mil_dropout_dsmil",
+      "family": "mil_dropout",
+      "recipe": "author MIL-Dropout DSMIL bag output; CE, AdamW and epoch cosine; critical selection remains discrete",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mil_dropout",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mil_dropout_gated",
+      "family": "mil_dropout",
+      "recipe": "author gated ABMIL with three MIL-Dropout layers; bag CE, AdamW and checkpointed Lookahead",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mil_dropout",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mil_dropout_transmil",
+      "family": "mil_dropout",
+      "recipe": "author MIL-Dropout TransMIL/Nystrom/PPEG; CE, RAdam and checkpointed Lookahead",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mil_dropout",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

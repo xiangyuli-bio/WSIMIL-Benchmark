@@ -1,0 +1,44 @@
+{
+  "id": "cmta",
+  "name": "CMTA",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/FT-ZHOU-ZZZ/CMTA",
+  "source_status": "git_commit_locked",
+  "source_commit": "31340f6c74575668de35ee6c5d761467f11089e2",
+  "license": "README: non-commercial academic purposes",
+  "profiles": [
+    "cmta"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "omics",
+    "patch_features",
+    "pathways"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "cmta",
+      "family": "cmta",
+      "recipe": "pinned author cross-modal encoders, translators and decoders; discrete NLL + detached-target path/omics L1 alignment",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics",
+        "pathways"
+      ],
+      "class_count": null,
+      "external_source": "cmta",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

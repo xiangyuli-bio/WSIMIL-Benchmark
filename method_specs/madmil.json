@@ -1,0 +1,41 @@
+{
+  "id": "madmil",
+  "name": "MAD-MIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/tueimage/MAD-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "936dc382190fb1c92ab753ef8ce7b1c076d46ac4",
+  "license": "not_yet_verified",
+  "profiles": [
+    "madmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "madmil",
+      "family": "madmil",
+      "recipe": "split-feature independent gated multihead attention with concatenated pooled heads",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "id": "asmil",
+  "name": "ASMIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Linfeng-Ye/ASMIL",
+  "source_status": "complete_original_author_recipe_candidate_under_verification",
+  "source_commit": "5d062271e1626b27a955c309d10add902311865c",
+  "license": "not_yet_verified",
+  "profiles": [
+    "asmil",
+    "asmil_author_50_literal_nan_teacher_locked_test",
+    "asmil_author_50_finite_ema_repaired_locked_test",
+    "asmil_author_100_literal_nan_teacher_locked_test",
+    "asmil_author_100_finite_ema_repaired_locked_test"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Existing controlled port retained. Original ACMIL_MYMHA and independently initialized train-mode teacher loaded from pinned definitions. Full50/100epoch AdamW/cosine/clip5/full-bag recipes, literal NaN-only teacher and separately named finite-EMA repair. Actual micro-F1+macro-AUROC VAL selector, fixed-patient/seed/locked-TEST repairs, teacher/optimizer/RNG/sampler recovery are explicit. Complete source/wheel/native and release validation remain pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "asmil",
+      "family": "asmil",
+      "recipe": "bag CE + normalized-sigmoid EMA anchor consistency; repaired EMA updates",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "asmil_author_50_literal_nan_teacher_locked_test",
+      "family": "asmil",
+      "recipe": "original ACMIL_MYMHA / independently initialized train-mode teacher; full 50 epochs, batch1/full bags, AdamW/cosine/clip5, literal_nan_teacher teacher update before optimizer, micro-F1+macro-AUROC VAL selection; explicit fixed-patient, seed and locked-test repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "asmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "adapted_under_verification",
+      "paper_reproduction": "not_run",
+      "native_recipe": {
+        "epochs": 50,
+        "batch_size": 1,
+        "patch_cap": null,
+        "lr": 0.0001,
+        "initial_optimizer_lr": 0.001,
+        "weight_decay": 1e-05,
+        "warmup_epoch": 0,
+        "min_lr": 0,
+        "clip_grad_norm": 5.0,
+        "ema_decay": 0.999,
+        "n_token": 1,
+        "n_drop": 0,
+        "temp": 1.0,
+        "early_stopping": null
+      },
+      "author_config": "config/camelyon_config.yml",
+      "teacher_update": "literal_nan_teacher",
+      "repairs": [
+        "patient-disjoint fixed task manifest instead of source slide split",
+        "explicit unified seed; source main comments out set_seed",
+        "locked TEST; source evaluates TEST each epoch",
+        "immutable best snapshot; complete online/teacher/optimizer/RNG/sampler recovery"
+      ],
+      "metric_runtime": "torchmetrics==1.3.0.post0 explicit reference, source does not pin version"
+    },
+    {
+      "id": "asmil_author_50_finite_ema_repaired_locked_test",
+      "family": "asmil",
+      "recipe": "original ACMIL_MYMHA / independently initialized train-mode teacher; full 50 epochs, batch1/full bags, AdamW/cosine/clip5, finite_ema_repaired teacher update before optimizer, micro-F1+macro-AUROC VAL selection; explicit fixed-patient, seed and locked-test repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "asmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "adapted_under_verification",
+      "paper_reproduction": "not_run",
+      "native_recipe": {
+        "epochs": 50,
+        "batch_size": 1,
+        "patch_cap": null,
+        "lr": 0.0001,
+        "initial_optimizer_lr": 0.001,
+        "weight_decay": 1e-05,
+        "warmup_epoch": 0,
+        "min_lr": 0,
+        "clip_grad_norm": 5.0,
+        "ema_decay": 0.999,
+        "n_token": 1,
+        "n_drop": 0,
+        "temp": 1.0,
+        "early_stopping": null
+      },
+      "author_config": "config/camelyon_config.yml",
+      "teacher_update": "finite_ema_repaired",
+      "repairs": [
+        "patient-disjoint fixed task manifest instead of source slide split",
+        "explicit unified seed; source main comments out set_seed",
+        "locked TEST; source evaluates TEST each epoch",
+        "immutable best snapshot; complete online/teacher/optimizer/RNG/sampler recovery",
+        "update finite states instead of source NaN-only condition"
+      ],
+      "metric_runtime": "torchmetrics==1.3.0.post0 explicit reference, source does not pin version"
+    },
+    {
+      "id": "asmil_author_100_literal_nan_teacher_locked_test",
+      "family": "asmil",
+      "recipe": "original ACMIL_MYMHA / independently initialized train-mode teacher; full 100 epochs, batch1/full bags, AdamW/cosine/clip5, literal_nan_teacher teacher update before optimizer, micro-F1+macro-AUROC VAL selection; explicit fixed-patient, seed and locked-test repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "asmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "adapted_under_verification",
+      "paper_reproduction": "not_run",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "patch_cap": null,
+        "lr": 0.0001,
+        "initial_optimizer_lr": 0.001,
+        "weight_decay": 1e-05,
+        "warmup_epoch": 0,
+        "min_lr": 0,
+        "clip_grad_norm": 5.0,
+        "ema_decay": 0.999,
+        "n_token": 1,
+        "n_drop": 0,
+        "temp": 1.0,
+        "early_stopping": null
+      },
+      "author_config": "config/camelyon_medical_ssl_config.yml",
+      "teacher_update": "literal_nan_teacher",
+      "repairs": [
+        "patient-disjoint fixed task manifest instead of source slide split",
+        "explicit unified seed; source main comments out set_seed",
+        "locked TEST; source evaluates TEST each epoch",
+        "immutable best snapshot; complete online/teacher/optimizer/RNG/sampler recovery"
+      ],
+      "metric_runtime": "torchmetrics==1.3.0.post0 explicit reference, source does not pin version"
+    },
+    {
+      "id": "asmil_author_100_finite_ema_repaired_locked_test",
+      "family": "asmil",
+      "recipe": "original ACMIL_MYMHA / independently initialized train-mode teacher; full 100 epochs, batch1/full bags, AdamW/cosine/clip5, finite_ema_repaired teacher update before optimizer, micro-F1+macro-AUROC VAL selection; explicit fixed-patient, seed and locked-test repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "asmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "adapted_under_verification",
+      "paper_reproduction": "not_run",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "patch_cap": null,
+        "lr": 0.0001,
+        "initial_optimizer_lr": 0.001,
+        "weight_decay": 1e-05,
+        "warmup_epoch": 0,
+        "min_lr": 0,
+        "clip_grad_norm": 5.0,
+        "ema_decay": 0.999,
+        "n_token": 1,
+        "n_drop": 0,
+        "temp": 1.0,
+        "early_stopping": null
+      },
+      "author_config": "config/camelyon_medical_ssl_config.yml",
+      "teacher_update": "finite_ema_repaired",
+      "repairs": [
+        "patient-disjoint fixed task manifest instead of source slide split",
+        "explicit unified seed; source main comments out set_seed",
+        "locked TEST; source evaluates TEST each epoch",
+        "immutable best snapshot; complete online/teacher/optimizer/RNG/sampler recovery",
+        "update finite states instead of source NaN-only condition"
+      ],
+      "metric_runtime": "torchmetrics==1.3.0.post0 explicit reference, source does not pin version"
+    }
+  ]
+}

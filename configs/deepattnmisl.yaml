@@ -1,0 +1,13 @@
+epochs: 100
+lr: 0.0001
+weight_decay: 0.0005
+patience: 15
+selection_metric: survival_loss
+model:
+  clusters: 10
+  clustering: kmeans
+  batch_size: 16
+  l1_weight: 0.00001
+  plateau_patience: 20
+  clustering_seed: 2026
+  clustering_iterations: 100

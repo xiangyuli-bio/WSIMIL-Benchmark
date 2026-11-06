@@ -1,0 +1,47 @@
+{
+  "id": "slidegraph",
+  "name": "SlideGraph+",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/wenqi006/SlideGraph",
+  "source_status": "git_commit_locked",
+  "source_commit": "23fbf58371a86525ea2daf0eb0232b379b1b8831",
+  "license": "GPL-3.0; source headers GPL-2.0-or-later",
+  "profiles": [
+    "slidegraph"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "patch_features",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "slidegraph",
+      "family": "slidegraph",
+      "recipe": "author hierarchical feature-spatial clustering, EdgeConv, binary pair ranking and train-only Platt scaling; single validation checkpoint",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "slidegraph",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

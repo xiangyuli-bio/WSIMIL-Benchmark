@@ -1,0 +1,163 @@
+{
+  "id": "fcmil",
+  "name": "FC-MIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/7FFDW/FCMIL",
+  "source_status": "pinned_original_model_loss_with_explicit_benchmark_recipe_and_repairs",
+  "source_commit": "315ac88808d7517429ca0b55073e75dce03ddfd9",
+  "license": "Apache-2.0_original_fixed_tree_read",
+  "profiles": [
+    "fcmil",
+    "fcmil_original_benchmark100_cr_auc_repaired",
+    "fcmil_original_benchmark100_ce_control_auc_repaired"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Original1024->512 FCMIL/FAA/DAB, quadratic spatial and frequency attention, unaltered FFT patch order, literal frequency-attention top/bottom interventions and detached soft-target causal loss. Native Adam wd1e-5, plateau scheduler and strict VAL AUC selector retained. Missing author configuration is not invented:100epochs/lr2e-4/batch1/workers0 are explicit benchmark choices. Writer interface and missing real VAL AUC repaired. Full source/reference/wheel/recovery/current-release gates remain pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "fcmil",
+      "family": "fcmil",
+      "recipe": "spatial/frequency attention + drop/replace causal regularization",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "fcmil_original_benchmark100_cr_auc_repaired",
+      "family": "fcmil",
+      "recipe": "original FC-MIL1024->512 spatial/FFT attention; explicit benchmark100epoch Adam2e-4 batch1; alpha_cr=0.1; real VAL AUC and writer-interface repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "fcmil",
+      "benchmark_recipe": {
+        "epochs": 100,
+        "lr": 0.0002,
+        "batch_size": 1,
+        "workers": 0,
+        "input_dimension": 1024,
+        "hidden_dimension": 512,
+        "topk_ratio": 0.03,
+        "lam": 0.5,
+        "weight_decay": 1e-05,
+        "scheduler_factor": 0.1,
+        "scheduler_patience": 5,
+        "selection": "strict real VAL macro AUROC improvement, starting at0 as native manager",
+        "scheduler_order": "after validation and selection, native ReduceLROnPlateau on VAL CE",
+        "provenance": {
+          "author_code": [
+            "original FCMIL/FAA/DAB bodies and exact frequency-attention intervention",
+            "native CE+alpha_cr*(-lam*KL_drop+(1-lam)*KL_replace) with detached original probabilities",
+            "native Adam wd1e-5 and ReduceLROnPlateau factor.1/patience5",
+            "native strict AUC improvement selector with initial best_auc0",
+            "source fallback topk_ratio.03, lam.5, alpha_cr.1"
+          ],
+          "benchmark_choices_missing_from_fixed_author_tree": [
+            "100 complete epochs",
+            "Adam lr2e-4",
+            "single-bag batch1",
+            "workers0",
+            "seed2026 default; explicit full RNG seed binding",
+            "fixed deterministic-algorithm/highest-float32 policy across library and fresh CLI"
+          ],
+          "repairs": [
+            "original dataset logs before logger initialization; reference initializes logger first",
+            "manager passes writer to a function without that keyword; logging argument ignored",
+            "VAL macro AUROC computed from actual labels and predictions; original return lacks auc",
+            "owned output paths replace destructive shared ./checkpoints and ./logs paths",
+            "caller device, patient-disjoint Bundle, locked TEST and immutable resumable state"
+          ]
+        },
+        "alpha_cr": 0.1
+      },
+      "comparison_role": "full_original_mechanism",
+      "author_training_configuration_recovered": false,
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "fcmil_original_benchmark100_ce_control_auc_repaired",
+      "family": "fcmil",
+      "recipe": "original FC-MIL1024->512 spatial/FFT attention; explicit benchmark100epoch Adam2e-4 batch1; alpha_cr=0.0; real VAL AUC and writer-interface repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "fcmil",
+      "benchmark_recipe": {
+        "epochs": 100,
+        "lr": 0.0002,
+        "batch_size": 1,
+        "workers": 0,
+        "input_dimension": 1024,
+        "hidden_dimension": 512,
+        "topk_ratio": 0.03,
+        "lam": 0.5,
+        "weight_decay": 1e-05,
+        "scheduler_factor": 0.1,
+        "scheduler_patience": 5,
+        "selection": "strict real VAL macro AUROC improvement, starting at0 as native manager",
+        "scheduler_order": "after validation and selection, native ReduceLROnPlateau on VAL CE",
+        "provenance": {
+          "author_code": [
+            "original FCMIL/FAA/DAB bodies and exact frequency-attention intervention",
+            "native CE+alpha_cr*(-lam*KL_drop+(1-lam)*KL_replace) with detached original probabilities",
+            "native Adam wd1e-5 and ReduceLROnPlateau factor.1/patience5",
+            "native strict AUC improvement selector with initial best_auc0",
+            "source fallback topk_ratio.03, lam.5, alpha_cr.1"
+          ],
+          "benchmark_choices_missing_from_fixed_author_tree": [
+            "100 complete epochs",
+            "Adam lr2e-4",
+            "single-bag batch1",
+            "workers0",
+            "seed2026 default; explicit full RNG seed binding",
+            "fixed deterministic-algorithm/highest-float32 policy across library and fresh CLI"
+          ],
+          "repairs": [
+            "original dataset logs before logger initialization; reference initializes logger first",
+            "manager passes writer to a function without that keyword; logging argument ignored",
+            "VAL macro AUROC computed from actual labels and predictions; original return lacks auc",
+            "owned output paths replace destructive shared ./checkpoints and ./logs paths",
+            "caller device, patient-disjoint Bundle, locked TEST and immutable resumable state"
+          ]
+        },
+        "alpha_cr": 0.0
+      },
+      "comparison_role": "explicit_no_CR_ablation",
+      "author_training_configuration_recovered": false,
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

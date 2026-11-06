@@ -1,0 +1,16 @@
+# Native source topology: 384-wide DINO features and 246 PathExpert descriptors
+# are dataset inputs; this recipe does not fabricate the handcrafted branch.
+epochs: 39
+lr: 0.0002
+weight_decay: 0.005  # explicit sample shell choice; source parser default is 0.05
+grad_clip: null
+patience: 39
+selection_metric: simil_joint
+threads: 2
+model:
+  top_k: 20
+  stop_gradient: false
+  temperature: 3.0
+  percentile: 0.75
+  dropout_patch: 0.2
+  normalization_workspace_bytes: 2147483648

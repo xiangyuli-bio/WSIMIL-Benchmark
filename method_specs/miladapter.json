@@ -1,0 +1,571 @@
+{
+  "id": "miladapter",
+  "name": "MIL-Adapter",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/cvblab/MIL-Adapter",
+  "source_status": "git_commit_locked",
+  "source_commit": "ade11bb19c3f09a35da9e8255a87a079217aef48",
+  "license": "No LICENSE file at fixed commit; privately fetched, no vendoring",
+  "profiles": [
+    "miladapter_zsmil_bgap_zs",
+    "miladapter_zsmil_bgap_random",
+    "miladapter_zsmil_bgmp_zs",
+    "miladapter_zsmil_bgmp_random",
+    "miladapter_zsmil_abmil_zs",
+    "miladapter_zsmil_abmil_random",
+    "miladapter_zsmil_transmil_zs",
+    "miladapter_zsmil_transmil_random",
+    "miladapter_zsmil_wikgmil_zs",
+    "miladapter_zsmil_wikgmil_random",
+    "miladapter_zsmil_ilramil_zs",
+    "miladapter_zsmil_ilramil_random",
+    "miladapter_zsmil_rrtmil_zs",
+    "miladapter_zsmil_rrtmil_random",
+    "miladapter_taskres_bgap",
+    "miladapter_taskres_bgmp",
+    "miladapter_taskres_abmil",
+    "miladapter_taskres_transmil",
+    "miladapter_clipadapter_bgap",
+    "miladapter_clipadapter_bgmp",
+    "miladapter_clipadapter_abmil",
+    "miladapter_clipadapter_transmil",
+    "miladapter_tipadapter_bgap",
+    "miladapter_tipadapter_bgmp",
+    "miladapter_tipadapter_abmil",
+    "miladapter_tipadapter_transmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "native_author_conch_or_keep_text_prototypes",
+    "patch_features",
+    "patient_disjoint_train_support_pool",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "full_author_26_actual_routes_and_all_native_aggregators_source20epoch_AdamW_cosine_CEsum_persistent_python_order_source_seed42_boundary_TIP_trainable_support_cache_and_final_only; actual_imported_prototype_generation_details_unknown; explicit_source_bug_and_patient_disjoint_protocol_ports",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "miladapter_clipadapter_abmil",
+      "family": "miladapter",
+      "recipe": "Actual complete author CLIPAdapter/ABMIL/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_clipadapter_bgap",
+      "family": "miladapter",
+      "recipe": "Actual complete author CLIPAdapter/BGAP/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_clipadapter_bgmp",
+      "family": "miladapter",
+      "recipe": "Actual complete author CLIPAdapter/BGMP/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_clipadapter_transmil",
+      "family": "miladapter",
+      "recipe": "Actual complete author CLIPAdapter/TransMIL/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_taskres_abmil",
+      "family": "miladapter",
+      "recipe": "Actual complete author TaskRes/ABMIL/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_taskres_bgap",
+      "family": "miladapter",
+      "recipe": "Actual complete author TaskRes/BGAP/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_taskres_bgmp",
+      "family": "miladapter",
+      "recipe": "Actual complete author TaskRes/BGMP/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_taskres_transmil",
+      "family": "miladapter",
+      "recipe": "Actual complete author TaskRes/TransMIL/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_tipadapter_abmil",
+      "family": "miladapter",
+      "recipe": "Actual complete author TIPAdapter/ABMIL/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_tipadapter_bgap",
+      "family": "miladapter",
+      "recipe": "Actual complete author TIPAdapter/BGAP/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_tipadapter_bgmp",
+      "family": "miladapter",
+      "recipe": "Actual complete author TIPAdapter/BGMP/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_tipadapter_transmil",
+      "family": "miladapter",
+      "recipe": "Actual complete author TIPAdapter/TransMIL/None; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_abmil_random",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/ABMIL/random; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_abmil_zs",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/ABMIL/ZS; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_bgap_random",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/BGAP/random; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_bgap_zs",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/BGAP/ZS; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_bgmp_random",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/BGMP/random; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_bgmp_zs",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/BGMP/ZS; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_ilramil_random",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/ILRAMIL/random; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_ilramil_zs",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/ILRAMIL/ZS; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_rrtmil_random",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/RRTMIL/random; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_rrtmil_zs",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/RRTMIL/ZS; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_transmil_random",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/TransMIL/random; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_transmil_zs",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/TransMIL/ZS; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_wikgmil_random",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/WIKGMIL/random; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "miladapter_zsmil_wikgmil_zs",
+      "family": "miladapter",
+      "recipe": "Actual complete author ZSMIL/WIKGMIL/ZS; full512CONCH/768KEEP native aggregators, exact actual author public text prototypes, classwise k-shot TRAIN support, full source20epoch AdamW/cosine/CEsum/final weights. Undefined ZS temperature and CLIP/TIP ABMIL tuple/KEEP native input-width repairs explicitly declared; original no-independent-test sampling extended to patient-disjoint TRAIN pool.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_author_conch_or_keep_text_prototypes",
+        "patient_disjoint_train_support_pool",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "miladapter",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    }
+  ]
+}

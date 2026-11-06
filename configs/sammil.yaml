@@ -1,0 +1,11 @@
+epochs: 200
+lr: 0.0002
+weight_decay: 0.00001
+patience: 20
+grad_clip: null
+max_instances: null
+selection_metric: sammil_val_auc
+threads: 2
+model:
+  recipe: tcga
+  num_workers: 0

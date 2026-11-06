@@ -1,0 +1,137 @@
+{
+  "id": "pmil_shapley",
+  "name": "PMIL Shapley pseudo-bag",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/RenaoYan/PMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "a5df40276fa5848056a89c0cde221500fad4099d",
+  "license": "MIT",
+  "profiles": [
+    "pmil_shapley_abmil_source",
+    "pmil_shapley_abmil_repaired",
+    "pmil_shapley_clam_sb_source",
+    "pmil_shapley_clam_sb_repaired",
+    "pmil_shapley_clam_mb_source",
+    "pmil_shapley_clam_mb_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_native_shapley_progressive_multi_round_recipe_with_source_and_named_repairs",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "pmil_shapley_abmil_repaired",
+      "family": "pmil_shapley",
+      "recipe": "complete PMIL Shapley/plateau/progressive/multi-round recipe with named per-pseudo-gradient reset and constant-score repair",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pmil_shapley",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pmil_shapley_abmil_source",
+      "family": "pmil_shapley",
+      "recipe": "native Shapley marginal logits, progressive pseudo bags and fresh multi-round ABMIL, original gradient carry and dual validation selection",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pmil_shapley",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pmil_shapley_clam_mb_repaired",
+      "family": "pmil_shapley",
+      "recipe": "full PMIL CLAM-MB with explicit target-branch ranking, per-pseudo-gradient reset and constant-score repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pmil_shapley",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pmil_shapley_clam_mb_source",
+      "family": "pmil_shapley",
+      "recipe": "complete author CLAM-MB/Shapley recipe with source branch0 candidate search, gradient carry and full multi-round training",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pmil_shapley",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pmil_shapley_clam_sb_repaired",
+      "family": "pmil_shapley",
+      "recipe": "full PMIL CLAM-SB recipe including instance CE, named gradient and constant-score repairs, native round/plateau policy",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pmil_shapley",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pmil_shapley_clam_sb_source",
+      "family": "pmil_shapley",
+      "recipe": "complete Shapley/progressive/EM-round recipe with actual author CLAM-SB instance constraints and original pseudo-gradient carry",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pmil_shapley",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

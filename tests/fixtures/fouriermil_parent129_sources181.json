@@ -1,0 +1,1985 @@
+{
+  "clam": {
+    "url": "https://github.com/mahmoodlab/CLAM.git",
+    "commit": "53e2409d4a8189c682c173382964a85f114f923c",
+    "files": [
+      "models/model_clam.py",
+      "LICENSE.md"
+    ],
+    "official_source": {
+      "url": "https://github.com/mahmoodlab/CLAM.git",
+      "commit": "53e2409d4a8189c682c173382964a85f114f923c",
+      "verification": "git_remote_resolved_only",
+      "checked_on": "2026-10-15"
+    }
+  },
+  "transmil": {
+    "url": "https://github.com/lingxitong/MIL_BASELINE.git",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "files": [
+      "modules/TRANS_MIL/trans_mil.py",
+      "modules/TRANS_MIL/nystrom_attention.py",
+      "LICENSE"
+    ],
+    "official_source": {
+      "url": "https://github.com/szc19990412/TransMIL.git",
+      "commit": "9d6aee57c7c72375fb9132dc58cd8c9b0f0a949c",
+      "verification": "git_remote_resolved_only",
+      "checked_on": "2026-10-15"
+    }
+  },
+  "abmil": {
+    "url": "https://github.com/AMLab-Amsterdam/AttentionDeepMIL.git",
+    "commit": "eb0434ba2795711a45d693d60120ae53532b1b93",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "dsmil": {
+    "url": "https://github.com/binli123/dsmil-wsi.git",
+    "commit": "80465ed534ac49b5e550833da56c27936f0b9440",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "dtfd": {
+    "url": "https://github.com/hrzhang1123/DTFD-MIL.git",
+    "commit": "10964f4dcc27c65ce110a0e9a3b9240bff58da8a",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "frmil": {
+    "url": "https://github.com/PhilipChicco/FRMIL.git",
+    "commit": "73d99088a703253392350928901b51c8a94205c0",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "remix": {
+    "url": "https://github.com/TencentAILabHealthcare/ReMix.git",
+    "commit": "1e16f53ac13391ae8bae45c845b6aabf94245ec1"
+  },
+  "ibmil": {
+    "url": "https://github.com/HHHedo/IBMIL.git",
+    "commit": "fc43dacfb2fb474c160fadc553fecda9526e546c",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "mhim": {
+    "url": "https://github.com/DearCaat/MHIM-MIL.git",
+    "commit": "9d0c91abeb1b39f91c161b47cf14bc44f5a89da3",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "rrt": {
+    "url": "https://github.com/DearCaat/RRT-MIL.git",
+    "commit": "3320b6616b2c3d96ddc5bcd1aecea865a064987f",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "mambamil": {
+    "url": "https://github.com/isyangshu/MambaMIL.git",
+    "commit": "9aea39efc13fdcd3703b5b54c28a64887b4acbd7",
+    "verification": "author_model_and_training_source_reviewed",
+    "checked_on": "2026-10-16",
+    "license": "README non-commercial academic purposes; bundled mamba Apache-2.0",
+    "audited_files": [
+      "README.md",
+      "models/MambaMIL.py",
+      "mamba/mamba_ssm/modules/srmamba.py",
+      "mamba/mamba_ssm/modules/bimamba.py",
+      "mamba/mamba_ssm/modules/mamba_simple.py",
+      "mamba/mamba_ssm/ops/selective_scan_interface.py",
+      "utils/core_utils.py",
+      "utils/survival_core_utils.py",
+      "utils/survival_utils.py",
+      "dataset/dataset_survival.py"
+    ],
+    "adaptation": "External pinned author model with explicit torch selective-scan recurrence or pinned CUDA kernels; source initializer, sequence branches, CE/NLL, Adam and sampling retained; training-only survival bins and flushed tail accumulation disclosed",
+    "paper": "https://arxiv.org/abs/2403.06800"
+  },
+  "mamba2dmil": {
+    "url": "https://github.com/AtlasAnalyticsLab/2DMamba.git",
+    "commit": "9fe12aaa866ddbb83b66acc4ef400abf8613ce6a",
+    "license": "root_license_not_found; external_author_source_not_redistributed",
+    "checked_on": "2026-10-22",
+    "files": [
+      "README.md",
+      "2DMambaMIL/README.md",
+      "2DMambaMIL/models/MambaMIL_2D.py",
+      "2DMambaMIL/models/mamba_simple.py",
+      "2DMambaMIL/models/pscan.py",
+      "2DMambaMIL/models/pscan_2d.py",
+      "2DMambaMIL/utils/core_utils.py",
+      "2DMambaMIL/utils/utils.py",
+      "2DMambaMIL/utils/survival_utils.py",
+      "2DMambaMIL/dataset/dataset_generic.py",
+      "2DMambaMIL/dataset/dataset_survival.py"
+    ],
+    "verification": "full original physical 2D model and classification/survival recipes; explicit CPU backward and vertical-scan repairs; native CUDA optional binary separately fingerprinted, not silently substituted"
+  },
+  "wikg": {
+    "url": "https://github.com/WonderLandxD/WiKG.git",
+    "commit": "eb3144fb8267f525c57e71ced5c5b2b6a1c42a93",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "patchgcn": {
+    "url": "https://github.com/mahmoodlab/Patch-GCN.git",
+    "commit": "823addaee5b8f4cc2bec3ea8e5e0077b2a5115a4",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "survpath": {
+    "url": "https://github.com/mahmoodlab/SurvPath.git",
+    "commit": "3f73ddd6705ec67d643020c5bb04fb13f9f382cc",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "pibd": {
+    "url": "https://github.com/zylbuaa/PIBD.git",
+    "commit": "bd5bd94e6f8d48e7679c6e68209a3a65c9e56a78",
+    "license": "Apache-2.0 declared in README; no standalone LICENSE in pinned tree",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "distribution": "external_source_not_vendored"
+  },
+  "mexd": {
+    "url": "https://github.com/JWZhao-uestc/MExD.git",
+    "commit": "1d4d438e2b19d0fee9cb55328faa84b6ca37fe0b",
+    "verification": "Complete original MoE/TransMIL/denoiser/500step posterior and full main+supp paper audit; explicit full paper-reference adapter being implemented",
+    "checked_on": "2026-10-15",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading_only"
+  },
+  "he2rna": {
+    "url": "https://github.com/owkin/HE2RNA_code.git",
+    "commit": "d47f481fbcaab41a49635e4a35e810bf30eae0e0",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "GPL-3.0-or-later"
+  },
+  "linmil": {
+    "url": "https://github.com/charlotterchtr/Lin-MIL.git",
+    "commit": "82a00672cfebd7a6cedbd5384b47700a4db5da27",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "attrimil": {
+    "url": "https://github.com/MedCAI/AttriMIL.git",
+    "commit": "e5736b9b4b5d3d4a64340b6ff5fa7fd470a338a9",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "nnmil": {
+    "url": "https://github.com/Luoxd1996/nnMIL.git",
+    "commit": "e92e8a0cf72dc1beb2a5915e27ca128af45fcb40",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "hipt": {
+    "url": "https://github.com/mahmoodlab/HIPT.git",
+    "commit": "780fafaed2e5b112bc1ed6e78852af1fe6714342",
+    "verification": "original_hierarchy_classifier_balanced_trainer_and_actual_pretrained_teacher_reviewed",
+    "checked_on": "2026-10-22",
+    "license": "Apache-2.0 with Commons Clause; external author source and weights, not redistributed",
+    "sparse_files": [
+      "/README.md",
+      "/LICENSE",
+      "/HIPT_4K/*.py",
+      "/2-Weakly-Supervised-Subtyping/models/model_hierarchical_mil.py",
+      "/2-Weakly-Supervised-Subtyping/models/model_utils.py",
+      "/2-Weakly-Supervised-Subtyping/utils/core_utils.py",
+      "/2-Weakly-Supervised-Subtyping/utils/utils.py",
+      "/2-Weakly-Supervised-Subtyping/main.py"
+    ]
+  },
+  "porpoise": {
+    "url": "https://github.com/mahmoodlab/PORPOISE.git",
+    "commit": "3390dc40e15995ba852d7a561faf0e996cf20501",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "mcat": {
+    "url": "https://github.com/mahmoodlab/MCAT.git",
+    "commit": "b9cca63be83c67de7f95308d54a58f80b78b0da1",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "ilra": {
+    "url": "https://github.com/jinxixiang/low_rank_wsi.git",
+    "commit": "bb45b9ba9d4a7096d473f9ee171a6252eb736570",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "acmil": {
+    "url": "https://github.com/dazhangyu123/ACMIL.git",
+    "commit": "e53d19c81f3892256d41962ffc4352cc91a4f834",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "aem": {
+    "url": "https://github.com/dazhangyu123/AEM.git",
+    "commit": "b0027cfccd07a1c9b5e3c79b43008a8b8a3b2b80",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "trident": {
+    "url": "https://github.com/mahmoodlab/TRIDENT.git",
+    "commit": "bdeeb74b7eaad8d48bda232bde7de66cae980918",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "mil_baseline": {
+    "url": "https://github.com/lingxitong/MIL_BASELINE.git",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "verification": "git_remote_resolved_only",
+    "checked_on": "2026-10-15"
+  },
+  "mhim_v1": {
+    "url": "https://github.com/DearCaat/MHIM-MIL.git",
+    "commit": "5377eb6014bbd24eda1185628b864e8ef3622a08",
+    "branch": "v1",
+    "verification": "source_read"
+  },
+  "madmil": {
+    "url": "https://github.com/tueimage/MAD-MIL",
+    "commit": "936dc382190fb1c92ab753ef8ce7b1c076d46ac4",
+    "status": "commit_locked_not_reproduced"
+  },
+  "ptcmil": {
+    "url": "https://github.com/ubc-tea/PTCMIL",
+    "commit": "083734f4c511513d8e6a7cba9c7d65e9afd58f69",
+    "status": "commit_locked_not_reproduced"
+  },
+  "litemil": {
+    "url": "https://github.com/hkussaibi/LiteMIL",
+    "commit": "a8813af8746099735983c776fd9aaac1b91f45f4",
+    "status": "commit_locked_not_reproduced"
+  },
+  "sgpmil": {
+    "url": "https://github.com/mandlos/SGPMIL",
+    "commit": "c9dee272e3fec897dba8136f386ddd2d685da4ed",
+    "status": "commit_locked_not_reproduced"
+  },
+  "pneamil": {
+    "url": "https://github.com/Chen-Jxiang/PNEA-MIL",
+    "commit": "ef204ff5179ce7ea4bb7d04744f1553bee2f039c",
+    "status": "commit_locked_not_reproduced"
+  },
+  "carmil": {
+    "url": "https://github.com/ImaneCR/CAR-MIL",
+    "commit": "26fdee4dc05e6b358395e28fb2073da3b29b6cc3",
+    "status": "commit_locked_not_reproduced"
+  },
+  "asmil": {
+    "url": "https://github.com/Linfeng-Ye/ASMIL",
+    "commit": "5d062271e1626b27a955c309d10add902311865c",
+    "status": "commit_locked_not_reproduced"
+  },
+  "fcmil": {
+    "url": "https://github.com/7FFDW/FCMIL",
+    "commit": "315ac88808d7517429ca0b55073e75dce03ddfd9",
+    "status": "commit_locked_not_reproduced"
+  },
+  "mrblock": {
+    "url": "https://github.com/BearCleverProud/MR-Block",
+    "commit": "a71fb28262fdb9aa61265c86c3978080c07ac966",
+    "status": "commit_locked_not_reproduced"
+  },
+  "retmil": {
+    "url": "https://github.com/Hongbo-Chu/RetMIL",
+    "commit": "e6d42345fa57a8b76f4d7034c4d32e09c47aa094",
+    "status": "commit_locked_not_reproduced"
+  },
+  "momil": {
+    "url": "https://github.com/YuqiZhang-Buaa/MoMIL.git",
+    "commit": "73f0814d56701ff0012054d7c11cbe9637c6cdb3",
+    "license": "No root model license found; bundled Mamba components retain Apache-2.0",
+    "distribution": "external_source_not_vendored",
+    "checked_on": "2026-10-21",
+    "paper": "https://doi.org/10.1016/j.imavis.2026.105918",
+    "verification": "publisher links author code; fixed model/Mamba2/classification and generic survival trainers read",
+    "audited_files": [
+      "models/MoMIL.py",
+      "mamba_latest/mamba_ssm/modules/mamba2.py",
+      "mamba_latest/mamba_ssm/ops/triton/ssd_combined.py",
+      "mamba_latest/mamba_ssm/ops/triton/layernorm_gated.py",
+      "utils/core_utils.py",
+      "utils/survival_core_utils.py",
+      "utils/survival_utils.py",
+      "main.py",
+      "main_survival.py",
+      "train_scripts/BRACS.sh",
+      "train_scripts/ALL_512_survival_k_fold.sh"
+    ],
+    "adaptation": "External fixed Git ASTs; mandatory constructor-name repair; literal feature-channel reverse and retained square padding; explicit SSD backend and named source-head/generic-trainer survival extension. See docs/MOMIL.md.",
+    "gpu_validation": "not_run",
+    "paper_reproduction": "not_run"
+  },
+  "iibmil": {
+    "url": "https://github.com/TencentAILabHealthcare/IIB-MIL",
+    "commit": "a354ec6ea2b9ea2159e6784d54a6afb355c04b50",
+    "status": "commit_locked_not_reproduced"
+  },
+  "panther": {
+    "url": "https://github.com/mahmoodlab/PANTHER",
+    "commit": "e7ffae402e146363fe1ca3813ffe68d248ec570f",
+    "status": "commit_locked_not_reproduced"
+  },
+  "chowder": {
+    "url": "https://github.com/owkin/HistoSSLscaling",
+    "commit": "73f1d191b1d04d4b88307a9601c4fcdbf23b72fa",
+    "status": "commit_locked_not_reproduced"
+  },
+  "varpool": {
+    "url": "https://github.com/mahmoodlab/varpool",
+    "commit": "2e40ab4d9a129e430fdb7dcf3304f55388f2ad88",
+    "status": "commit_locked_not_reproduced"
+  },
+  "focusmil": {
+    "url": "https://github.com/Raymvp/FocusMIL-and-other-max-pooling-methods",
+    "commit": "a0f0c03ea7e6a3533ce1ea9f43a4f86976554d3e",
+    "verification": "source_tree_inspected",
+    "checked_on": "2026-10-15"
+  },
+  "h2t": {
+    "url": "https://github.com/vqdang/H2T",
+    "commit": "4218a585c6d1e303dbf57e4fb4212b181c2c4a3d",
+    "verification": "source_tree_inspected",
+    "checked_on": "2026-10-15"
+  },
+  "cbmil": {
+    "url": "https://github.com/wwu98934/CBMIL",
+    "commit": "980252ac796e4f68ad97d7b0b0de4aef4bb00157",
+    "verification": "source_tree_inspected",
+    "checked_on": "2026-10-15"
+  },
+  "dgrmil": {
+    "url": "https://github.com/ChongQingNoSubway/DGR-MIL",
+    "commit": "ac6257ffa768f154c52ac8b01e2086e5d3a714bf",
+    "verification": "source_tree_inspected",
+    "checked_on": "2026-10-15"
+  },
+  "psemix": {
+    "url": "https://github.com/liupei101/PseMix.git",
+    "commit": "91d376581c139acd673fbe3ddb069827f0cf3bee"
+  },
+  "prodiv": {
+    "url": "https://github.com/liupei101/PseMix.git",
+    "commit": "91d376581c139acd673fbe3ddb069827f0cf3bee",
+    "implementation_origin": "PseMix authors comparator; not independently locked original ProtoDiv source"
+  },
+  "additive_mil": {
+    "url": "https://github.com/lingxitong/MIL_BASELINE.git",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "implementation_origin": "third_party_adaptation",
+    "files": [
+      "modules/ADD_MIL/add_mil.py"
+    ]
+  },
+  "fouriermil": {
+    "url": "https://github.com/lingxitong/MIL_BASELINE.git",
+    "commit": "e1c5d9fcd771f30f94437e993ecf24c0535df991",
+    "implementation_origin": "third_party_adaptation",
+    "files": [
+      "modules/FOURIER_MIL/fourier_mil.py"
+    ]
+  },
+  "mmil": {
+    "url": "https://github.com/hustvl/MMIL-Transformer.git",
+    "commit": "d363f43bf0949e3fc172e8d94f99deb335bbe171",
+    "checked_on": "2026-10-16",
+    "verification": "author_architecture_and_inference_source_reviewed",
+    "license": "MIT"
+  },
+  "cmta": {
+    "url": "https://github.com/FT-ZHOU-ZZZ/CMTA.git",
+    "commit": "31340f6c74575668de35ee6c5d761467f11089e2",
+    "checked_on": "2026-10-16",
+    "verification": "author_model_and_training_recipe_reviewed",
+    "license": "README: non-commercial academic purposes"
+  },
+  "motcat": {
+    "url": "https://github.com/Innse/MOTCat.git",
+    "commit": "0da379f73d92c096122df139a9410d08b096e6c1",
+    "checked_on": "2026-10-16",
+    "verification": "author_model_and_training_recipe_reviewed",
+    "license": "README: non-commercial academic purposes"
+  },
+  "csmil": {
+    "url": "https://github.com/hrlblab/CS-MIL.git",
+    "commit": "d51b97f411caeff092e397427003021d1b23f00f",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "MIT"
+  },
+  "hagmil": {
+    "url": "https://github.com/BearCleverProud/HAG-MIL.git",
+    "commit": "9fec1ca4390346b958212801d2d5a14c7ce36d6f",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "not_yet_verified"
+  },
+  "h2mil": {
+    "url": "https://github.com/lin-lcx/H2-MIL.git",
+    "commit": "ea472fefd5eab553c58041a5acc203ac7d467d06",
+    "verification": "complete_RAConv_IHPool_and_summed_batch_recipe_reviewed_with_independent_geometry_pool_and_training_oracles",
+    "checked_on": "2026-10-22",
+    "license": "not_found_in_pinned_tree; external_source_only",
+    "sparse_files": [
+      "/README.md",
+      "/code/*.py",
+      "/code/*.ipynb"
+    ]
+  },
+  "smmil": {
+    "url": "https://github.com/Franblueee/SmMIL.git",
+    "commit": "4e2d1e0e08ad6085afa1469e6180c61516b1991e",
+    "checked_on": "2026-10-16",
+    "verification": "source_read",
+    "license": "Apache-2.0"
+  },
+  "psamil": {
+    "url": "https://github.com/SharonPeled/PSA-MIL.git",
+    "commit": "673a7a904b565fb413fbdd1b937d544e87c96562",
+    "checked_on": "2026-10-16",
+    "verification": "source_read",
+    "license": "Apache-2.0"
+  },
+  "bayesmil": {
+    "url": "https://github.com/ralphc1212/bayes-mil.git",
+    "commit": "43bf913e8f6ddda53e3c21de07cb46bce7564d62",
+    "checked_on": "2026-10-16",
+    "verification": "source_read",
+    "license": "GPL-3.0; README also specifies non-commercial academic use"
+  },
+  "slidegraph": {
+    "url": "https://github.com/wenqi006/SlideGraph.git",
+    "commit": "23fbf58371a86525ea2daf0eb0232b379b1b8831",
+    "checked_on": "2026-10-16",
+    "verification": "source_read",
+    "license": "GPL-3.0; source headers GPL-2.0-or-later"
+  },
+  "caprmil": {
+    "url": "https://github.com/mandlos/CAPRMIL.git",
+    "commit": "b1f21a25e21d889a90bd604d29887abb3c1dbeeb",
+    "checked_on": "2026-10-16",
+    "verification": "source_read",
+    "license": "Modified MIT; non-commercial"
+  },
+  "varmil": {
+    "url": "https://github.com/NKI-AI/dlup-lightning-mil.git",
+    "commit": "f33d6c0eb504d73bd822909f29e548bc186e5306",
+    "checked_on": "2026-10-16",
+    "verification": "source_read",
+    "license": "Apache-2.0"
+  },
+  "mico": {
+    "url": "https://github.com/junjianli106/MiCo.git",
+    "commit": "d679f352567ec9eb15a3bd7ac2026e448f4ced79",
+    "checked_on": "2026-10-16",
+    "verification": "source_read",
+    "license": "No root license found; review pending"
+  },
+  "efficientmil": {
+    "url": "https://github.com/chengyingshe/EfficientMIL.git",
+    "commit": "28f71ab2bffa8ff5c159354ad1b59dbba7624490",
+    "checked_on": "2026-10-16",
+    "verification": "source_read",
+    "license": "No root license found; review pending"
+  },
+  "pamil_prototype": {
+    "url": "https://github.com/Jiashuai-Liu/PAMIL.git",
+    "commit": "7fe90096f64697bd6b68d4d7209e31f437a6b08f",
+    "checked_on": "2026-10-22",
+    "verification": "full_staged_recipe_source_audited",
+    "license": "No root license found; review pending",
+    "adaptation": "Complete two-level clustering, warm/joint/annotation-filtered push/last, source and repaired CE, multilabel BCE; explicit collate/device/finite/optimizer repairs. External source only; no paper-score claim."
+  },
+  "agdrmil": {
+    "url": "https://github.com/shuiguoc/AGDR-MIL.git",
+    "commit": "8e830683c0a695e1e1983f01d35dc85471bf327c",
+    "checked_on": "2026-10-22",
+    "verification": "source_read; actual full trainer and val_loader output/optimizer/RNG oracles; native end-to-end draft executed",
+    "license": "not_found_in_pinned_tree; external_source_only",
+    "adaptation": "Complete hard grader, cosine-guided middle branch, random low mask, original dual Sigmoid CE, private train sampler and sequential val/test loader RNG; explicit YAML/TCGA presets, unchanged blocked grading gradients, constant-score inputs rejected",
+    "sparse_files": [
+      "/README.md",
+      "/config.yaml",
+      "/model.py",
+      "/train.py",
+      "/WSI_dataset.py",
+      "/utils/*.py"
+    ]
+  },
+  "scmil": {
+    "url": "https://github.com/yang-ze-kang/SCMIL.git",
+    "commit": "ec6759a11ab19e68d5ee4d45df22ab31e470b7dc",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "MIT"
+  },
+  "deepattnmisl": {
+    "url": "https://github.com/uta-smile/DeepAttnMISL.git",
+    "commit": "d7099ed88c452aec37f16fc8e93cc0c068794c2a",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; review pending"
+  },
+  "advmil": {
+    "url": "https://github.com/liupei101/AdvMIL.git",
+    "commit": "6853786624bbab36c2a08b35dcf20c7bdff1a105",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "MIT"
+  },
+  "mil_dropout": {
+    "url": "https://github.com/ChongQingNoSubway/MILDropout.git",
+    "commit": "61af86f56a24685a916d0e3e4b416cb4751323bb",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "MIT"
+  },
+  "packmil": {
+    "url": "https://github.com/FangHeng/PackMIL.git",
+    "commit": "b261cf0abd9c5ce384927722061e15a93b3489f7",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "Apache-2.0"
+  },
+  "sdfp": {
+    "url": "https://github.com/thomascong121/S-DFP.git",
+    "commit": "22ef367ee3c99ca2dbd1ed70d13130c1c354623e",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; review pending"
+  },
+  "mfcmil": {
+    "url": "https://github.com/WissingChen/MFC-MIL.git",
+    "commit": "145494ec0f221c8b1cc32843efeafb28426634c0",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; review pending"
+  },
+  "dyhg": {
+    "url": "https://github.com/Yuxuan-Chen7/DyHG.git",
+    "commit": "dd41a86d76d41c69ae010f97c653877058b0619c",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; review pending"
+  },
+  "camil_channel": {
+    "url": "https://github.com/maojy0914/CAMIL.git",
+    "commit": "5481d32a59b0146d9a96f1129bb12ad493acb81a",
+    "license": "No root license found; review pending",
+    "distribution": "external_source_not_vendored",
+    "status": "pinned_author_source",
+    "verification": "source_read",
+    "checked_on": "2026-10-16"
+  },
+  "camil_context": {
+    "url": "https://github.com/olgarithmics/ICLR_CAMIL.git",
+    "commit": "5f8ef577e040293794d0f695ceb810f890c5e9f7",
+    "license": "No root license found; review pending",
+    "distribution": "external_source_not_vendored",
+    "status": "pinned_author_source",
+    "verification": "source_read",
+    "checked_on": "2026-10-16"
+  },
+  "healnet": {
+    "url": "https://github.com/konst-int-i/healnet.git",
+    "commit": "90459b65a3d4a4ef9fd405671c457b5a1163cc7d",
+    "license": "Apache-2.0",
+    "distribution": "external_source_not_vendored",
+    "verification": "source_read",
+    "checked_on": "2026-10-16"
+  },
+  "cate": {
+    "url": "https://github.com/HKU-MedAI/CATE.git",
+    "commit": "a10fd45146849239ac0c052c45d76c02c81bba6b",
+    "license": "No root license found; review pending",
+    "distribution": "external_source_not_vendored",
+    "verification": "source_read",
+    "checked_on": "2026-10-16"
+  },
+  "vilamil": {
+    "url": "https://github.com/Jiangbo-Shi/ViLa-MIL.git",
+    "commit": "68a11cf0d5cf092dd980f0da1cb38ccac8747a82",
+    "license": "No root license found; review pending",
+    "distribution": "external_source_not_vendored",
+    "verification": "source_read",
+    "checked_on": "2026-10-16"
+  },
+  "openai_clip": {
+    "url": "https://github.com/openai/CLIP.git",
+    "commit": "d05afc436d78f1c48dc0dbf8e5980a9d471f35f6",
+    "license": "MIT",
+    "distribution": "external_source_not_vendored",
+    "verification": "source_read",
+    "checked_on": "2026-10-16"
+  },
+  "rankmix": {
+    "url": "https://github.com/willpower057/RankMix",
+    "commit": "a6d51301ec878540f4dd185544c265fad5ef1dd2",
+    "license": "MIT",
+    "scope": "CVPR2023 binary DSMIL/FRMIL training and feature RankMix; literal and repaired selection profiles"
+  },
+  "tpmil": {
+    "url": "https://github.com/LitaoYang-Jet/TPMIL.git",
+    "commit": "0d89a1f98f164803d92c6f6c686451711873eeca",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; not vendored"
+  },
+  "ins": {
+    "url": "https://github.com/miccaiif/INS.git",
+    "commit": "cd97ba2fa7df2a951f218e6de405f664129931c8",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; not vendored"
+  },
+  "cdpmil": {
+    "url": "https://github.com/HKU-MedAI/cDPMIL.git",
+    "commit": "83f7ed596618266589745c5b1e977894958c85df",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; not vendored"
+  },
+  "hmil": {
+    "url": "https://github.com/ChengJin-git/HMIL.git",
+    "commit": "d4f5ad18d0258a8e1bebe2c5a37e909cc349a946",
+    "license": "GPL-3.0",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "distribution": "external_source_not_vendored"
+  },
+  "sclwc": {
+    "url": "https://github.com/Xiyue-Wang/SCL-WC.git",
+    "commit": "d8d0ff44e887cadeeaff199cd771af9ee23e5855",
+    "license": "README states GPLv3 and academic use; no root LICENSE found",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "distribution": "external_source_not_vendored"
+  },
+  "hmil_prior": {
+    "url": "https://github.com/ChengJin-git/HMIL.git",
+    "commit": "af6f85ae38303fa0afb14ea479c47355fb3eebbe",
+    "license": "GPL-3.0",
+    "verification": "source_read",
+    "checked_on": "2026-10-16",
+    "distribution": "external_source_not_vendored",
+    "scope": "historical scalar-head evidence and independent architecture regression test; not another admitted method"
+  },
+  "mmp": {
+    "url": "https://github.com/mahmoodlab/MMP.git",
+    "commit": "1fd75e37592f7ab47b787f737733ba3c5a7e714c",
+    "files": [
+      "LICENSE.md",
+      "src/mil_models/model_multimodal.py",
+      "src/mil_models/components.py",
+      "src/mil_models/PANTHER/layers.py",
+      "src/mil_models/PANTHER/networks.py",
+      "src/mil_models/tokenizer.py",
+      "src/mil_models/OT/otk/layers.py",
+      "src/mil_models/OT/otk/sinkhorn.py",
+      "src/utils/losses.py",
+      "src/utils/proto_utils.py",
+      "src/utils/utils.py",
+      "src/training/trainer.py",
+      "src/scripts/survival/mmp.sh"
+    ],
+    "verification": "author_paper_link_and_source_review",
+    "checked_on": "2026-10-16",
+    "license": "CC-BY-NC-SA-4.0",
+    "distribution": "external checkout only"
+  },
+  "pathomics": {
+    "url": "https://github.com/Cassie07/PathOmics.git",
+    "commit": "9705d6137f2974923c978597c18e7198bf888e23",
+    "files": [
+      "README.md",
+      "PathOmics/bash_main.py",
+      "PathOmics/model_and_training_utils/PathOmics_Survival_model.py",
+      "PathOmics/model_and_training_utils/PathOmics_model_utils.py",
+      "PathOmics/model_and_training_utils/Customized_Loss.py",
+      "PathOmics/model_and_training_utils/train_and_eval_utils_core.py"
+    ],
+    "verification": "author_paper_link_and_source_review",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; not vendored",
+    "distribution": "external checkout only"
+  },
+  "pamoe": {
+    "url": "https://github.com/wjx-error/PAMoE.git",
+    "commit": "7a26f4cc842d2875cfdee33e77de1495cae9dabe",
+    "files": [
+      "README.md",
+      "models/pamoe_layers/pamoe.py",
+      "models/pamoe_layers/pamoe_utils.py",
+      "models/models_demo/model_transmil_pamoe.py",
+      "models/models_demo/model_transformer_pamoe.py",
+      "utils/core_utils.py",
+      "utils/core_funcs.py",
+      "utils/utils.py",
+      "utils/utils_loss.py",
+      "utils/utils_earlystop.py",
+      "data_preparation/make_prototypes_classifier.py",
+      "configs/survival/transmil_pamoe.yml",
+      "configs/survival/transformer_pamoe.yml"
+    ],
+    "verification": "author_cvpr_paper_link_and_source_review",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; not vendored",
+    "distribution": "external checkout only"
+  },
+  "dgmil": {
+    "url": "https://github.com/miccaiif/DGMIL.git",
+    "commit": "a80e5fe51c7e5a3879d4a9b060e49c6b431f70e1",
+    "files": [
+      "README.md",
+      "model.py",
+      "preprocessor.py",
+      "pos_score_calculator.py",
+      "dynamic_MAE_fintuning_addslidelevel.py",
+      "utils.py"
+    ],
+    "verification": "author_arxiv_paper_link_and_source_review",
+    "checked_on": "2026-10-16",
+    "license": "No root license found; not vendored",
+    "distribution": "external checkout only"
+  },
+  "msmmil": {
+    "url": "https://github.com/cool-breeze-and-rain/MSMMIL.git",
+    "commit": "80382115f5e548bc39248fd726bae3db2ead8b7f",
+    "verification": "author_model_and_training_source_reviewed",
+    "checked_on": "2026-10-21",
+    "license": "No root license found; bundled mamba Apache-2.0 and optimizer attribution retained in external source",
+    "distribution": "external_source_not_vendored",
+    "paper": "https://www.sciencedirect.com/science/article/abs/pii/S0950705125009177",
+    "audited_files": [
+      "models/MKMIL.py",
+      "models/model_interface.py",
+      "mamba/mamba_ssm/modules/atrousfourway_mamba.py",
+      "mamba/mamba_ssm/ops/selective_scan_interface.py",
+      "MyOptimizer/radam.py",
+      "MyOptimizer/lookahead.py",
+      "MyOptimizer/optim_factory.py",
+      "config/Camelyon/MKMIL.yaml",
+      "config/TCGA-Lung/MKMIL_TCGA-Lung.yaml",
+      "train.py",
+      "utils/utils.py",
+      "datasets/camel_data.py",
+      "datasets/data_interface.py"
+    ],
+    "adaptation": "Verified Git ASTs, exact three-branch fast-path graph, explicit torch/CUDA inner kernels, source initializer, CE, RAdam and Lookahead; stable slow-state names repair checkpoint restoration; no physical-coordinate grid claim"
+  },
+  "mfemil": {
+    "url": "https://github.com/AtlasAnalyticsLab/MFE-MIL.git",
+    "commit": "813c8e8abf46c05afc2402c06a6c7ac77284fff2",
+    "verification": "author_model_and_training_source_reviewed",
+    "checked_on": "2026-10-21",
+    "license": "CC BY-NC-SA 4.0",
+    "distribution": "external_source_not_vendored",
+    "paper": "https://arxiv.org/abs/2610.10225",
+    "audited_files": [
+      "mfe_mil.py",
+      "models/ABMIL.py",
+      "models/CLAM.py",
+      "models/Mean_Max_MIL.py",
+      "models/TransMIL.py",
+      "train_mfe.py",
+      "train_survival.py",
+      "utils/survival_utils.py",
+      "dataset_modules/dataset_survival.py",
+      "requirements.txt",
+      "README.md"
+    ],
+    "adaptation": "Pinned original heads, shared adapter, window masking and MAE decoder; timm0.9.8 ASTs. Source joint objective, Adam, original task defaults and optional AMP; singleton/NaN/device/time-bin/physical-frame/tail repairs documented."
+  },
+  "timm_mfemil": {
+    "url": "https://github.com/huggingface/pytorch-image-models.git",
+    "commit": "9afe0bb78e91ea4183cd1bf076f160ec50e9078b",
+    "verification": "pinned_MFE_requirement_timm_0.9.8",
+    "checked_on": "2026-10-21",
+    "license": "Apache-2.0",
+    "distribution": "external_source_not_vendored",
+    "audited_files": [
+      "timm/models/vision_transformer.py",
+      "timm/layers/mlp.py"
+    ],
+    "adaptation": "Only original Mlp, Attention, LayerScale and Block definitions used by the MFE decoder; explicit SDPA/math path; unused torchvision/vision utility imports not loaded."
+  },
+  "mammil": {
+    "url": "https://github.com/Vison307/MamMIL.git",
+    "commit": "64736e1a06a23e6814dfee664ff02b27c72dfedb",
+    "license": "GPL-3.0; bundled Mamba components Apache-2.0 and original attributions",
+    "distribution": "external_source_not_vendored",
+    "verification": "pinned model, SSD references, graph notebook, author trainers and optimizer independently tested on synthetic CPU",
+    "checked_on": "2026-10-21",
+    "paper": "https://arxiv.org/abs/2403.05160v3",
+    "audited_files": [
+      "models/MamMIL2.py",
+      "models/model_interface.py",
+      "models/model_interface_survival.py",
+      "mamba/mamba_ssm/modules/direct_mamba.py",
+      "mamba/mamba_ssm/ops/selective_scan_interface.py",
+      "mamba/mamba_ssm/ops/triton/ssd_combined.py",
+      "mamba/mamba_ssm/ops/triton/layernorm_gated.py",
+      "MyOptimizer/radam.py",
+      "MyOptimizer/optim_factory.py",
+      "h5toPyG.ipynb",
+      "datasets/Survival_Graph_dataset.py",
+      "configs/BRCAS/MamMIL2.yaml",
+      "configs/TCGA-LUAD_survival/MamMIL2.yaml",
+      "utils/survival_utils.py"
+    ],
+    "adaptation": "External author ASTs; explicit torch SSD numerical backend, frozen serial HNSW topology; source and corrected layer loop plus named patient-union extension. See docs/MAMMIL.md.",
+    "gpu_validation": "not_run",
+    "paper_reproduction": "not_run"
+  },
+  "recomil": {
+    "url": "https://github.com/zsszc/ReCo-MIL.git",
+    "commit": "27cefbc8d4a9a897b61ceb78b77626bc21d16685",
+    "license": "No root license found; external source only",
+    "distribution": "external_source_not_vendored",
+    "checked_on": "2026-10-21",
+    "verification": "source model/training graph and pinned original-epoch update checks on synthetic CPU; see current validation",
+    "audited_files": [
+      "README.md",
+      "recomil_model.py",
+      "dual_recomil.py",
+      "rarity_gate.py",
+      "rare_weight.py",
+      "orth_regularizer.py",
+      "minibatch_kmeans_recomil.py",
+      "train_recomil_v3.py",
+      "reco_dataset.py"
+    ],
+    "paper_identity": "README self-describes a submission; no verifiable paper link supplied by the pinned source",
+    "adaptation": "Deferred strict train-only MiniBatchKMeans initialization; original single/dual networks, source training/inference asymmetry and inert scale parameter. See docs/RECOMIL.md.",
+    "gpu_amp_validation": "not_run",
+    "paper_reproduction": "not_run"
+  },
+  "smmile": {
+    "url": "https://github.com/ZeyuGaoAi/SMMILe.git",
+    "commit": "4c4c79e364e77c16207f211775ef04dda40ff20a",
+    "license": "GPL-3.0 root LICENSE; README adds academic/noncommercial wording; external code only",
+    "distribution": "external_source_not_vendored",
+    "checked_on": "2026-10-21",
+    "verification": "Pinned original model, loader, optimizer, complete numerical train/validation loops; full two-stage adaptation. Versioned CPU verification is recorded separately in docs/validation.",
+    "audited_files": [
+      "README.md",
+      "LICENSE",
+      "superpixel_generation.py",
+      "single/models/model_smmile.py",
+      "single/datasets/dataset_nic.py",
+      "single/utils/utils.py",
+      "single/utils/core_utils.py",
+      "multi/models/model_smmile.py",
+      "multi/utils/core_utils.py",
+      "single/utils/bi_tempered_loss_pytorch.py",
+      "multi/utils/bi_tempered_loss_pytorch.py",
+      "single/configs_camel/config_camel_smmile_r1_conch.yaml",
+      "multi/configs/config_gleason_conch_r1.yaml"
+    ],
+    "adaptation": "Three task routes; original SP/dropout/refinement/MRF objectives, source BCE/bibce reductions and combination sampler, reset-Adam two-stage training, strict continuation and label-free instance outputs. Explicit numerical and first-refinement-checkpoint repairs; see docs/SMMILE.md.",
+    "gpu_validation": "not_run",
+    "paper_reproduction": "not_run",
+    "real_wsi_validation": "not_run"
+  },
+  "loss_attention": {
+    "url": "https://github.com/xsshi2015/Loss-Attention.git",
+    "commit": "71926177d84fc1859b70d135090b163ea6bd58bf",
+    "checked_on": "2026-10-22",
+    "verification": "source_and_paper_read",
+    "license": "No root license found; external verified Git definitions only",
+    "adaptation": "Classical A2/A4 full feature recipe, original MNIST MIL head and explicit image-temporal WSI adaptation; no original WSI/paper-score claim"
+  },
+  "micromil": {
+    "url": "https://github.com/kimjongwoo-cell/MicroMIL.git",
+    "commit": "66e637a891b7358198896c338b0e37828f3fc1f1",
+    "files": [
+      "model.py",
+      "main.py",
+      "dataset.py",
+      "README.md",
+      "requirements.txt"
+    ],
+    "license": "No root LICENSE in pinned source; external Git AST only; not redistributed",
+    "official_source": {
+      "url": "https://github.com/kimjongwoo-cell/MicroMIL.git",
+      "commit": "66e637a891b7358198896c338b0e37828f3fc1f1",
+      "verification": "MICCAI 2025 publisher links repository; model and complete training entry inspected",
+      "checked_on": "2026-10-22"
+    },
+    "paper": "https://papers.miccai.org/miccai-2025/paper/0707_paper.pdf",
+    "adaptation": "Frozen-FM WSI transfer with explicit device, mode and validation repairs; original microscopy scores not reproduced"
+  },
+  "dgl081": {
+    "url": "https://github.com/dmlc/dgl.git",
+    "commit": "1453bf2ceb23f413c23e3304dd94b40bf96b4cd7",
+    "files": [
+      "python/dgl/nn/pytorch/conv/gatconv.py",
+      "LICENSE"
+    ],
+    "license": "Apache-2.0",
+    "purpose": "Independent original DGL 0.8.1 GAT class comparison for MicroMIL; source stays external; runtime DGL 1.1.3",
+    "sparse_files": [
+      "/python/dgl/nn/pytorch/conv/gatconv.py",
+      "/LICENSE"
+    ]
+  },
+  "probsamil": {
+    "url": "https://github.com/Franblueee/torchmil.git",
+    "commit": "2472b8bee84b906eac9351f1ec49d430c577bbcd",
+    "license": "Apache-2.0; author-maintained library explicitly linked by original ProbSA-MIL repository",
+    "files": [
+      "torchmil/models/prob_smooth_abmil.py",
+      "torchmil/models/transformer_prob_smooth_abmil.py",
+      "torchmil/nn/attention/prob_smooth_attention_pool.py",
+      "torchmil/nn/utils.py",
+      "torchmil/utils/graph_utils.py",
+      "torchmil/utils/annealing_scheduler.py",
+      "torchmil/utils/trainer.py",
+      "LICENSE"
+    ],
+    "sparse_files": [
+      "/torchmil/",
+      "/LICENSE",
+      "/README.md"
+    ],
+    "official_source": {
+      "url": "https://github.com/Franblueee/torchmil.git",
+      "commit": "2472b8bee84b906eac9351f1ec49d430c577bbcd",
+      "verification": "Original https://github.com/Franblueee/ProbSA-MIL README explicitly refers to these two author-library implementations; library and paper training protocol inspected",
+      "checked_on": "2026-10-22"
+    },
+    "paper": "https://ccia.ugr.es/vip/files/journals/PR_Sm_Attention.pdf",
+    "adaptation": "Explicit author-library routes, constant or original cyclical KL and warmup; padding/sparse KL repair, native mean-logit versus paper mean-probability prediction distinguished"
+  },
+  "gtp": {
+    "url": "https://github.com/vkola-lab/tmi2022.git",
+    "commit": "0d395a160a969578fa5ce66a8a7f0fd0817712b4",
+    "license": "MIT (c)2021 Kolachalama laboratory; source remains external",
+    "files": [
+      "models/GraphTransformer.py",
+      "models/ViT.py",
+      "models/layers.py",
+      "models/gcn.py",
+      "helper.py",
+      "main.py",
+      "option.py",
+      "feature_extractor/build_graphs.py",
+      "src/vis_graphcam.py",
+      "LICENSE"
+    ],
+    "sparse_files": [
+      "/models/",
+      "/utils/",
+      "/feature_extractor/build_graphs.py",
+      "/helper.py",
+      "/main.py",
+      "/option.py",
+      "/scripts/",
+      "/src/vis_graphcam.py",
+      "/README.md",
+      "/LICENSE"
+    ],
+    "official_source": {
+      "url": "https://github.com/vkola-lab/tmi2022.git",
+      "commit": "0d395a160a969578fa5ce66a8a7f0fd0817712b4",
+      "verification": "Author repository identifies TMI2022 DOI10.1109/TMI.2022.3176598; full graph/classifier/training/GraphCAM inspected",
+      "checked_on": "2026-10-22"
+    },
+    "adaptation": "Explicit frozen-FM boundary; original and named zero-edge/singleton repair routes. Complete CE/mincut/orthogonality and Adam/MultiStepLR, author LRP GraphCAM"
+  },
+  "setmil": {
+    "url": "https://github.com/Louis-YuZhao/SETMIL.git",
+    "commit": "4243f633adb9e8a84cea11f92abf3d3b0ede126e",
+    "license": "unverified: upstream transformer block has Clear BSD header but no root LICENSE; code stays external",
+    "files": [
+      "readme.md",
+      "trans/models/irpe_t2t.py",
+      "trans/models/t2t_module/irpe.py",
+      "trans/models/t2t_module/transformer_block.py",
+      "trans/models/t2t_module/token_transformer.py",
+      "trans/datasets/wsi_feat_dataset.py",
+      "trans/util/numpy_img_aug.py",
+      "trans/engine.py",
+      "trans/main.py",
+      "trans/configs/default.yaml"
+    ],
+    "sparse_files": [
+      "/readme.md",
+      "/trans/models/irpe_t2t.py",
+      "/trans/models/t2t_module/",
+      "/trans/datasets/wsi_feat_dataset.py",
+      "/trans/datasets/data_prefetcher.py",
+      "/trans/datasets/__init__.py",
+      "/trans/util/numpy_img_aug.py",
+      "/trans/util/misc.py",
+      "/trans/util/gpu_gather.py",
+      "/trans/util/custom_metrics.py",
+      "/trans/engine.py",
+      "/trans/main.py",
+      "/trans/configs/default.yaml",
+      "/trans/configs/defaults.py"
+    ],
+    "official_source": {
+      "url": "https://github.com/Louis-YuZhao/SETMIL.git",
+      "commit": "4243f633adb9e8a84cea11f92abf3d3b0ede126e",
+      "verification": "Author README identifies SETMIL MICCAI2022; actual WSIFeatDataset, model, iRPE and complete training inspected",
+      "checked_on": "2026-10-22",
+      "license": "unverified: no root LICENSE at pinned commit; external source only"
+    },
+    "adaptation": "Full physical PPE/TPMF/iRPE/CE/AdamW recipe, source vs corrected crop and cached view evaluation explicitly separate; frozen FM encoder boundary; pureTorch official iRPE backend"
+  },
+  "stablemil": {
+    "url": "https://github.com/theeeqi/stableMIL.git",
+    "commit": "67b279157680c8c96104823a9e6f2ef20b679d11",
+    "license": "not verified: no root LICENSE; external source only",
+    "files": [
+      "models/model.py",
+      "models/attn_module.py",
+      "models/d2d_rope.py",
+      "models/find_Region.py",
+      "models/token_fuse.py",
+      "classification/preprocess/preprocess.py",
+      "classification/utils/core_utils.py",
+      "survival/utils/pro_core_utils.py",
+      "survival/utils/pro_utils.py"
+    ],
+    "sparse_files": [
+      "/README.md",
+      "/environment.yml",
+      "/models/model.py",
+      "/models/attn_module.py",
+      "/models/d2d_rope.py",
+      "/models/find_Region.py",
+      "/models/token_fuse.py",
+      "/classification/",
+      "/survival/"
+    ],
+    "official_source": {
+      "url": "https://github.com/theeeqi/stableMIL.git",
+      "commit": "67b279157680c8c96104823a9e6f2ef20b679d11",
+      "license": "not verified: no root LICENSE; external source only",
+      "verification": "Author README and paper DOI10.1109/TMI.2026.3682009; full model/preprocessing and both task trainers audited",
+      "checked_on": "2026-10-22"
+    },
+    "adaptation": "Full fusion/local-global/RoPE classifier and hazard network; common execution wiring and TRAIN-only intervals; source vs repaired small geometries and accumulation explicitly named. Survival missing parser defaults completed as NLL alpha.15/4bins/zero decay."
+  },
+  "timm_stablemil": {
+    "url": "https://github.com/huggingface/pytorch-image-models.git",
+    "commit": "625386b96151ec49dede06190b0deaa3909cd4de",
+    "license": "Apache-2.0",
+    "verification": "Exact v1.0.21 required by StableMIL environment.yml",
+    "files": [
+      "timm/layers/mlp.py",
+      "timm/layers/helpers.py",
+      "timm/layers/layer_scale.py",
+      "LICENSE",
+      "timm/layers/drop.py"
+    ],
+    "sparse_files": [
+      "/timm/layers/mlp.py",
+      "/timm/layers/helpers.py",
+      "/timm/layers/layer_scale.py",
+      "/LICENSE",
+      "/timm/layers/drop.py"
+    ],
+    "adaptation": "Only pinned Mlp, LayerScale and tuple helper definitions; torchvision and unrelated module initialization not imported"
+  },
+  "monai_mil": {
+    "url": "https://github.com/Project-MONAI/MONAI.git",
+    "commit": "9c6d819f97e37f36c72f3bdfad676b455bd2fa0d",
+    "files": [
+      "monai/networks/nets/milmodel.py",
+      "LICENSE"
+    ],
+    "license": "Apache-2.0",
+    "verification": "complete_model_and_ordinal_training_source_reviewed",
+    "checked_on": "2026-10-22",
+    "sparse_files": [
+      "/monai/networks/nets/milmodel.py",
+      "/LICENSE"
+    ]
+  },
+  "monai_tutorials": {
+    "url": "https://github.com/Project-MONAI/tutorials.git",
+    "commit": "d7c326e2b5b72423a082c9cee3e41035c4c6a42a",
+    "files": [
+      "pathology/multiple_instance_learning/README.md",
+      "pathology/multiple_instance_learning/panda_mil_train_evaluate_pytorch_gpu.py",
+      "LICENSE"
+    ],
+    "license": "Apache-2.0",
+    "verification": "complete_model_and_ordinal_training_source_reviewed",
+    "checked_on": "2026-10-22",
+    "sparse_files": [
+      "/pathology/multiple_instance_learning/README.md",
+      "/pathology/multiple_instance_learning/panda_mil_train_evaluate_pytorch_gpu.py",
+      "/LICENSE"
+    ]
+  },
+  "campanella_rnn": {
+    "url": "https://github.com/MSKCC-Computational-Pathology/MIL-nature-medicine-2019.git",
+    "commit": "daecb7293b5ea886ba222008f2592e1e29e9dac6",
+    "license": "not_yet_verified",
+    "files": [
+      "README.md",
+      "MIL_train.py",
+      "MIL_test.py",
+      "RNN_train.py",
+      "RNN_test.py"
+    ],
+    "verification": "complete native CNN and recurrent trainers and actual CPU/OpenSlide/ImageNet viability probe; no LICENSE in fixed tree",
+    "checked_on": "2026-10-22"
+  },
+  "mammoth": {
+    "url": "https://github.com/mahmoodlab/MAMMOTH.git",
+    "commit": "aeeaffcd12500ed8dddec67665a33eb129c9ed84",
+    "license": "CC-BY-NC-ND-4.0",
+    "files": [
+      "src/mammoth/mammoth.py",
+      "src/mammoth/components.py",
+      "millab/src/models/mil_template.py",
+      "millab/src/models/layers.py",
+      "millab/src/models/abmil.py",
+      "millab/src/models/clam.py",
+      "millab/src/models/dsmil.py",
+      "millab/src/models/ilra.py",
+      "millab/src/models/transformer.py",
+      "millab/src/models/transmil.py",
+      "millab/src/model_configs/abmil/base_mammoth.yaml",
+      "millab/src/model_configs/clam/base_mammoth.yaml",
+      "millab/src/model_configs/dsmil/base_mammoth.yaml",
+      "millab/src/model_configs/ilra/base_mammoth.yaml",
+      "millab/src/model_configs/transformer/base_mammoth.yaml",
+      "millab/src/model_configs/transmil/base_mammoth.yaml",
+      "millab/LICENSE",
+      "README.md"
+    ],
+    "checked_on": "2026-10-22",
+    "verification": "full expert and author-head implementation; paper training recipe; external research-only source, no code vendoring"
+  },
+  "smooth_topk": {
+    "url": "https://github.com/oval-group/smooth-topk",
+    "commit": "12c1645f187e2fa0c05f47bf1fe48864d4bd2707",
+    "license": "GPL_original_code_fetched_privately_not_redistributed",
+    "status": "actual_SmoothTop1SVM_dependency"
+  },
+  "longmil": {
+    "url": "https://github.com/invoker-LL/Long-MIL.git",
+    "commit": "457b1cf6e33a05b3c8359e1fe98114cd8241f772",
+    "license": "not_yet_verified",
+    "files": [
+      "README.md",
+      "LongMIL.py",
+      "rotary.py",
+      "alibi.py"
+    ],
+    "verification": "pinned_original_public_v1_private_source_loading; paper_v2_full_reference_reconstruction_separately_named",
+    "checked_on": "2026-10-22",
+    "paper_reference": {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/b7eecb72574b043ad0c69ea296212450-Paper-Conference.pdf",
+      "sha256": "bfb90fa957edaaa3e6f614b329ad9ddf378be3a5bb35c0e160d0b342bb6568fb",
+      "original_v2_code_available": false
+    }
+  },
+  "pmil_shapley": {
+    "url": "https://github.com/RenaoYan/PMIL.git",
+    "commit": "a5df40276fa5848056a89c0cde221500fad4099d",
+    "license": "MIT",
+    "files": [
+      "README.md",
+      "LICENSE",
+      "main.py",
+      "utils.py",
+      "models/MIL_models.py"
+    ],
+    "verification": "full author progressive Shapley multi-round training and three supported heads reviewed",
+    "checked_on": "2026-10-22"
+  },
+  "msattention": {
+    "url": "https://github.com/mdsatria/MultiAttentionMIL.git",
+    "commit": "fae5840f801c0485eb22f2e7119d392f2fa975f3",
+    "license": "not_yet_verified_no_license_in_pinned_tree",
+    "files": [
+      "README.md",
+      "model.py",
+      "main.ipynb",
+      "dataset.py"
+    ],
+    "verification": "original three-depth attention and complete supplementary CE/Adam loop; explicit frozen-WSI aggregator transfer, private tumour filtering not reproduced",
+    "checked_on": "2026-10-22"
+  },
+  "ttis": {
+    "url": "https://github.com/QuIIL/TTIS.git",
+    "commit": "ceb08d3bd8bc795845358850e314132b6231a921",
+    "license": "root_license_not_found; embedded_MUSK_CC-BY-NC-ND-4.0; source_not_redistributed",
+    "files": [
+      "README.md",
+      "src/ttis/sampling.py",
+      "src/ttis/clustering.py",
+      "src/ttis/aggregation.py",
+      "src/ttis/zeroshot_classifier.py",
+      "src/models/ABMIL.py",
+      "src/models/CLAMSB.py",
+      "src/models/RRTMIL.py",
+      "src/models/S4MIL.py",
+      "src/models/TransMIL.py",
+      "src/models/WIKG.py",
+      "src/models/model_interface.py",
+      "src/optimizers/lookahead.py",
+      "src/optimizers/optim_factory.py"
+    ],
+    "checked_on": "2026-10-22",
+    "verification": "complete six original heads, native hierarchical clustering/sampling/feature fusion and native LookaheadAdamW/cosine source reviewed; source CLAM objective boundary and semantic-space policy explicit"
+  },
+  "simil": {
+    "url": "https://github.com/bmi-imaginelab/SI-MIL.git",
+    "commit": "3ffb218672ffe0e4a183924af50e5920b498483d",
+    "license": "No root LICENSE in pinned tree; external source only",
+    "verification": "original_full_model_recipe_and_primary_Gaussian_gradient_reviewed",
+    "audited_files": [
+      "si_mil.py",
+      "perturbedtopk.py",
+      "train.py",
+      "data_curation/data_filtering.py",
+      "sample_train_mil.sh",
+      "README.md"
+    ],
+    "checked_on": "2026-10-22"
+  },
+  "c2aug": {
+    "url": "https://github.com/weiaicunzai/mixup.git",
+    "commit": "14cb53bc71f5161105b0dbef45351243d7330561",
+    "checked_on": "2026-10-22",
+    "license": "not_found_in_pinned_tree; external_source_only",
+    "verification": "official primary paper10pages and supplement6pages read; native source outputs/gradients, full independent trainer90updates, all-group equations, exact resumption and indexed TRAIN bank passed39focused checks; complete reference profile, not published-score reproduction",
+    "adaptation": "Complete explicitly named paper reference with source nativeTransMIL; restores all missing bag/group/prototype mechanisms; separate TRAIN-only reservoirs and VAL selection; see docs/C2AUG.md",
+    "sparse_files": [
+      "/README.md",
+      "/models/transmil.py",
+      "/models/attn_fuse.py",
+      "/models/model_interface.py",
+      "/models/dino_loss.py",
+      "/models/moco.py",
+      "/dataset/wsi_dataset.py",
+      "/utils/utils.py"
+    ]
+  },
+  "pathrwkv": {
+    "url": "https://github.com/Puzzle-Logic/PathRWKV.git",
+    "commit": "8818fa5711666bd8d30672f02bdcd98634389b70",
+    "checked_on": "2026-10-22",
+    "license": "Apache-2.0",
+    "verification": "Primary author repository and arXiv2503.03199v5; pinned Git objects include full downstream model, CUDA kernels, dataset, multitask losses and optimizer recipe",
+    "adaptation": "Native TimeMix/ChannelMix, MTL projection/heads, randperm and unmasked padding, AdamW/cosine; explicit source and repaired Cox/missingness/streaming variants; exact factorized CPU positional table. See docs/PATHRWKV.md for runtime evidence and scope.",
+    "sparse_files": [
+      "/README.md",
+      "/LICENSE",
+      "/pyproject.toml",
+      "/DownStream/main.py",
+      "/DownStream/model",
+      "/DownStream/utils/dataset.py",
+      "/DownStream/utils/pipeline.py",
+      "/DownStream/utils/utils.py"
+    ]
+  },
+  "protosurv": {
+    "url": "https://github.com/wjx-error/ProtoSurv",
+    "commit": "551eaa3c0a2844e2c3557ef412d8a1fd2fec6e20",
+    "license": "not_found"
+  },
+  "lifelines_metric": {
+    "url": "https://github.com/CamDavidsonPilon/lifelines",
+    "commit": "47afb1c1a272b0f03e0c8ca00e63df27eb2a0560",
+    "license": "MIT",
+    "purpose": "Independent reference for author-used1-minus-lifelines C-index semantics including tied censor/event times"
+  },
+  "gatmamba": {
+    "url": "https://github.com/rina-ding/gat-mamba.git",
+    "commit": "18979497990a66ffe6a75880f0336f85914552f0",
+    "license": "GPL-3.0",
+    "paths": [
+      "modeling/model.py",
+      "modeling/main_gat_mamba.py",
+      "modeling/create_dataset_uni.py"
+    ],
+    "sparse_files": [
+      "/modeling/*.py",
+      "/README.md",
+      "/LICENSE",
+      "/requirements/pip_commands.sh"
+    ]
+  },
+  "gatmamba_ssm": {
+    "url": "https://github.com/state-spaces/mamba.git",
+    "commit": "34076d664838588a3c97727b263478ab9f621a07",
+    "license": "Apache-2.0",
+    "version": "1.2.0.post1",
+    "paths": [
+      "mamba_ssm/modules/mamba_simple.py",
+      "mamba_ssm/ops/selective_scan_interface.py"
+    ],
+    "sparse_files": [
+      "/mamba_ssm/modules/mamba_simple.py",
+      "/mamba_ssm/ops/selective_scan_interface.py",
+      "/LICENSE",
+      "/README.md"
+    ]
+  },
+  "c2mil": {
+    "url": "https://github.com/mimic0127/C2MIL.git",
+    "commit": "fd4d54fc115466e43019c77015cdef01d90c85c3",
+    "license": "MIT",
+    "paths": [
+      "model_causal_double.py",
+      "bias_removal.py",
+      "softKmeans.py",
+      "Graphtransformer.py",
+      "graph_transformer_pytorch_v.py",
+      "VGAE.py",
+      "utils.py",
+      "train.py",
+      "data_preprocess/to_Graph.py",
+      "data_preprocess/patch_fea_sample.py",
+      "data_preprocess/thumbnail_fea_pocess.py",
+      "data_preprocess/thumbnail_svs.py"
+    ],
+    "sparse_files": [
+      "/*.py",
+      "/data_preprocess/*.py",
+      "/README.md",
+      "/LICENSE"
+    ]
+  },
+  "triagemil": {
+    "url": "https://github.com/barathi-1993/TRIAGE-MIL.git",
+    "commit": "e97e52a32f1358974b0145532fdec5f5d75c6864",
+    "license": "not_declared_in_source_tree",
+    "paths": [
+      "src/mass_core.py",
+      "src/mass_selector.py",
+      "src/precompute_hypergraphs.py",
+      "src/train_triage_mil.py",
+      "src/mass_io_utils.py"
+    ],
+    "sparse_files": [
+      "/README.md",
+      "/requirements.txt",
+      "/LICENSE*",
+      "/src/*.py",
+      "/scripts/*.sh"
+    ]
+  },
+  "deepgraphsurv": {
+    "url": "https://github.com/uta-smile/DeepGraphSurv.git",
+    "commit": "3149752deba68067f1a39b9f3d212cb16ffaf560",
+    "license": "not_declared_in_pinned_source",
+    "notes": "Original AGCN TensorFlow equations; primary graph/epoch source loaded privately. Python2 preprocessing and original script defects recorded; no weight blobs vendored.",
+    "paths": [
+      "utils/layers.py",
+      "utils/graph_laplacian.py",
+      "models/networks/AGCN.py",
+      "models/agcn_survival.py",
+      "utils/WSI_TCGA_loader.py",
+      "utils/Clustering_PCA.py",
+      "utils/prepare_data.py"
+    ],
+    "sparse_files": [
+      "/*.md",
+      "/LICENSE*",
+      "/models/*.py",
+      "/models/networks/*.py",
+      "/utils/*.py"
+    ]
+  },
+  "codmil": {
+    "url": "https://github.com/Jiangbo-Shi/CoD-MIL.git",
+    "commit": "0fd748dc91ffd889bf13dbffd4db633b158809d6",
+    "files": [
+      "models/model_CoT.py",
+      "models/model_utils.py",
+      "utils/core_utils.py",
+      "utils/utils.py",
+      "main.py",
+      "datasets/dataset_generic.py",
+      "README.md",
+      "scripts/TCGA_RCC/train_CoT_TCGA_RCC.sh",
+      "prompt/text_prompt_kidney_v2.csv"
+    ],
+    "license": "No root license found; not vendored",
+    "verification": "Actual primary author source, full numerical kernel and original complete trainer inspected; source C-way/D/T/physical-I/O repairs explicit"
+  },
+  "focus": {
+    "url": "https://github.com/dddavid4real/FOCUS.git",
+    "commit": "66c4015d5ba09657f4c8183bc06947faecd5b01f",
+    "license": "Apache-2.0; CONCH dependency/weights have independent non-commercial terms",
+    "files": [
+      "models/model_FOCUS.py",
+      "utils/core_utils.py",
+      "utils/utils.py",
+      "main.py",
+      "README.md",
+      "LICENSE",
+      "text_prompt/TCGA_Lung_two_scale_text_prompt.csv",
+      "LUAD_LUSC.sh",
+      "UBC-OCEAN.sh",
+      "camelyon.sh"
+    ],
+    "verification": "actual author complete prompt/text/selection/compression/attention kernel and source train/VAL-error selection inspected"
+  },
+  "conch_focus": {
+    "url": "https://github.com/mahmoodlab/CONCH.git",
+    "commit": "141cc09c7d4ff33d8eda562bd75169b457f71a62",
+    "license": "CC-BY-NC-4.0; private user-provided weights; no redistribution",
+    "files": [
+      "conch/open_clip_custom/transformer.py",
+      "conch/open_clip_custom/coca_model.py",
+      "conch/open_clip_custom/custom_tokenizer.py",
+      "conch/open_clip_custom/model_configs/conch_ViT-B-16.json",
+      "conch/open_clip_custom/tokenizers/conch_byte_level_bpe_uncased.json",
+      "LICENSE",
+      "pyproject.toml"
+    ],
+    "verification": "reviewed pinned CONCH actual full text tower/local BPE; dependency version explicit, not a claim of historical FOCUS dependency pin"
+  },
+  "pamil_policy": {
+    "url": "https://github.com/titizheng/PAMIL.git",
+    "commit": "d62960af2c115f87d570a0fbf8852049745b4e94",
+    "license": "No root license in pinned tree, private source loading, not vendored",
+    "files": [
+      "models/DPSF.py",
+      "models/SFFR.py",
+      "models/basemodel.py",
+      "models/classmodel.py",
+      "utilmodule/core.py",
+      "utilmodule/environment.py",
+      "utilmodule/utils.py",
+      "README.md"
+    ],
+    "verification": "Actual native author SFFR/history/TCM/PPO and complete public CVPR2024 main+supplement reviewed. Complete training is explicitly reconstructed, released inference and paper routing differences named."
+  },
+  "dtmil": {
+    "url": "https://github.com/yfzon/DT-MIL.git",
+    "commit": "f52530811d0b1b591e10eab2fad9fd2ac1573b98",
+    "license": "Apache-2.0",
+    "files": [
+      "models/backbone.py",
+      "models/deformable_transformer.py",
+      "models/deformable_detr_wsi_feat.py",
+      "models/position_encoding.py",
+      "models/ops/functions/ms_deform_attn_func.py",
+      "models/ops/modules/ms_deform_attn.py",
+      "datasets/wsi_feat_dataset.py",
+      "util/misc.py",
+      "util/numpy_img_aug.py",
+      "main.py",
+      "engine.py",
+      "LICENSE"
+    ],
+    "verification": "Actual complete source60map/6encoder6decoder/256hidden model in1280/1024/1536 and independent bilinear allgradient comparison. Public main/engine inference-only; complete trainer explicitly reference reconstruction. Actual crop/padding/C-way boundary audits, no unrelated DT-MIL namesake."
+  },
+  "amiml": {
+    "url": "https://github.com/Boomwwe/AMIML",
+    "commit": "7c038261d1a52a4eb20d4b4f444e730c36bf5cd2",
+    "license": "GPL-3.0",
+    "scope": "Private verified original definitions; explicit named repairs only"
+  },
+  "dispro": {
+    "url": "https://github.com/Innse/DisPro",
+    "commit": "98473003de24e5a8f28143442d3dd48bd159aff1",
+    "license": "Apache-2.0 (author README declaration; no standalone LICENSE blob)",
+    "verification": "pinned original source, admission incomplete"
+  },
+  "slip": {
+    "url": "https://github.com/LTS5/SLIP.git",
+    "commit": "9351c4480ec8d7a8216316a1861025b4f086ac78",
+    "license": "No standalone repository license at fixed commit; author source is imported privately, not redistributed",
+    "files": [
+      "main.py",
+      "methods/slidecoop.py",
+      "methods/baselines.py",
+      "networks/coop.py",
+      "clip/model.py",
+      "clip/clip.py",
+      "clip/simple_tokenizer.py",
+      "clip/bpe_simple_vocab_16e6.txt.gz",
+      "datasets/prompt.py"
+    ],
+    "verification": "pinned_official_source_in_development; no runnable/admission claim"
+  },
+  "vlsa": {
+    "url": "https://github.com/liupei101/VLSA.git",
+    "commit": "915f37afcbd86cd6c33ebb30ab0caa5def0f9ab9",
+    "license": "Author repository CC-BY-NC-ND-4.0; source imported privately, not republished",
+    "files": [
+      "model/vlsa.py",
+      "model/deepmil.py",
+      "model/prompt_encoder.py",
+      "model/prompt_learners/rank_prompt_learner.py",
+      "model/prompt_learners/plain_prompt_learner.py",
+      "model/prompt_learners/prompt_adapter.py",
+      "runner/vlsa_handler.py",
+      "loss/loss_surv.py",
+      "loss/loss_surv_ext.py",
+      "tools/survival_prompts.json",
+      "tools/survival_text_prototypes.json",
+      "config/IFMLE/tcga_brca/cfg_vlsa_conch.yaml",
+      "model/conch/transformer.py",
+      "model/conch/coca_model.py",
+      "model/conch/custom_tokenizer.py",
+      "model/conch/tokenizers/conch_byte_level_bpe_uncased.json",
+      "model/prompt_learners/__init__.py",
+      "model/utils_vl.py",
+      "utils/io.py",
+      "optim/optim_factory.py",
+      "dataset/label_converter.py",
+      "eval/SurvivalEVAL/Evaluations/util.py",
+      "eval/SurvivalEVAL/Evaluations/Concordance.py"
+    ],
+    "verification": "Pinned official full native CONCH/rank/VLFAN/IFMLE+EMD source; complete adapter and first25 software checks passed. Full-library/native-wheel admission pending; author cached-notebook numeric mismatch unresolved."
+  },
+  "augdiff": {
+    "url": "https://github.com/szc19990412/AugDiff.git",
+    "commit": "abfdfe25c6373019d71bf3323cf59be799203563",
+    "license": "MIT",
+    "verification": "original_code_and_arxiv_2303.06371_read",
+    "audited_files": [
+      "LatentDiffusion/ddim.py",
+      "LatentDiffusion/feature.py",
+      "LatentDiffusion/unitopatho_uncondition.yaml",
+      "MIL/models/AMIL.py",
+      "MIL/models/LossAttn.py",
+      "MIL/models/DSMIL.py"
+    ]
+  },
+  "augdiff_ldm": {
+    "url": "https://github.com/CompVis/latent-diffusion.git",
+    "commit": "a506df5756472e2ebaf9078affdde2c4f1502cd4",
+    "license": "MIT",
+    "verification": "explicit_current_dependency_pin_original_author_did_not_pin_ldm"
+  },
+  "zoommil": {
+    "url": "https://github.com/histocartography/zoommil.git",
+    "commit": "da7bb7fa71629d34e9b04859c1db791ac8330f5d",
+    "license": "MIT",
+    "verification": "full original model/topK/trainer/loader/preprocess/config/saver read; paper18pages reviewed; pending complete adapter",
+    "audited_files": [
+      "zoommil/models/zoommil.py",
+      "zoommil/utils/perturbedtopk.py",
+      "zoommil/trainer.py",
+      "zoommil/dataset/dataset.py",
+      "zoommil/utils/saver.py",
+      "zoommil/config/config.py",
+      "zoommil/config/sample_config.json",
+      "bin/preprocess.py"
+    ]
+  },
+  "mgtrans": {
+    "url": "https://github.com/Jiangbo-Shi/MG-Trans",
+    "commit": "a18d886b89ff0eddf5ae0b4ae16058623fe34dbc",
+    "license": "not_declared_in_pinned_repository",
+    "license_path": null
+  },
+  "hdmil": {
+    "url": "https://github.com/JiuyangDong/HDMIL",
+    "commit": "ef3d4681054970208e94f8205bd96b3180c00926",
+    "license": "README: GPLv3 plus non-commercial academic declaration; no vendoring",
+    "verified": true
+  },
+  "ahdmil": {
+    "url": "https://github.com/JiuyangDong/AHDMIL.git",
+    "commit": "2f38354386165167815eb2998424ad63792a65bf",
+    "files": [
+      "models/hdmil.py",
+      "models/mobilenetv4.py",
+      "Joint.py",
+      "baseline.py",
+      "README.md"
+    ],
+    "verification": "fixed_source_reviewed_full_training_recipe",
+    "checked_on": "2026-10-23",
+    "license": "GPL-3.0; README also states non-commercial academic use; source loaded from local verified Git without redistribution"
+  },
+  "kmgmamba": {
+    "url": "https://github.com/dmhdmhdmh/KMG-Mamba",
+    "commit": "4b5075bb2d3eddf46f9bc4f46175d250b134e27c",
+    "license": "not_declared_in_pinned_repository",
+    "license_path": null
+  },
+  "lrmil": {
+    "url": "https://github.com/hvcl/LRMIL",
+    "commit": "66ea1c5a447ed2a830bb1af6739ab9261e61000d",
+    "license": "Apache-2.0",
+    "scope": "Full patch encoder KD plus HRteacher and LRstudent MIL; integration in progress, not admitted"
+  },
+  "sammil": {
+    "url": "https://github.com/FangHeng/SAM-MIL",
+    "commit": "ccff640825321a12658daa0a85c03390bc9d367b",
+    "status": "commit_locked_not_reproduced"
+  },
+  "c2c": {
+    "url": "https://github.com/YashSharma/C2C",
+    "commit": "d53b6350372117bf3e5251044a856e0251d810b2",
+    "status": "commit_locked_not_reproduced"
+  },
+  "sparseconvmil": {
+    "url": "https://github.com/MarvinLer/SparseConvMIL.git",
+    "commit": "d7dd705bc3dd4ebfb6a36f0589698400c9fa4c15",
+    "files": [
+      "model.py",
+      "dataset.py",
+      "training.py",
+      "README.md",
+      "LICENSE"
+    ],
+    "license": "AGPL-3.0",
+    "verification": "author_source_and_complete_public_training_read"
+  },
+  "sparseconvnet": {
+    "url": "https://github.com/facebookresearch/SparseConvNet.git",
+    "commit": "cf251d058959a9dbaccb25fc919dc4f4548be232",
+    "files": [
+      "setup.py",
+      "sparseconvnet",
+      "LICENSE"
+    ],
+    "license": "BSD-3-Clause",
+    "verification": "actual_unmodified_CPU_CppExtension_compiled_and_forward_backward_executed"
+  },
+  "conmil": {
+    "url": "https://github.com/anxuanhan/ConMIL.git",
+    "commit": "aabb5386d15a6002a3a39437ea46c0d99d29a2f3",
+    "license": "MIT",
+    "files": [
+      "text_guided_mil_kan.py",
+      "train_text_guided_mil_kan.py",
+      "encode_text_queries.py",
+      "cut_norm_feature.py",
+      "retrieve_patches.py",
+      "README.md",
+      "LICENSE"
+    ],
+    "verification": "Full original native attention/KAN/source trainer/Adam/cosine read and three-route source mechanism probe executed; complete adapter still in development"
+  },
+  "miladapter": {
+    "url": "https://github.com/cvblab/MIL-Adapter",
+    "commit": "ade11bb19c3f09a35da9e8255a87a079217aef48",
+    "license": "No license file present at fixed commit; privately loaded, not vendored"
+  },
+  "center_embeddings": {
+    "url": "https://github.com/PhilipChicco/MICCAI2020mil",
+    "commit": "871b1ecad3f0480c526536b11fafe4d759273a25",
+    "license": "GPL-3.0; external original source privately fetched, not vendored"
+  },
+  "convl": {
+    "url": "https://github.com/junjianli106/ConVL.git",
+    "commit": "f1017a7ea0f51ff8d436b1334f937b85aa86c46b",
+    "license": "not_declared_at_fixed_commit; privately imported author source, not vendored",
+    "files": [
+      "models/ConVL/ConVL.py",
+      "models/model_interface.py",
+      "datasets/ProgData.py",
+      "optimizers/radam.py",
+      "optimizers/lookahead.py",
+      "optimizers/optim_factory.py",
+      "models/text_prompt/concepts_patch.json",
+      "external/conch/open_clip_custom/coca_model.py",
+      "external/conch/open_clip_custom/transformer.py",
+      "external/conch/open_clip_custom/custom_tokenizer.py",
+      "external/conch/open_clip_custom/model_configs/conch_ViT-B-16.json",
+      "configs/prog/BLCA/ConVL/ConVL.yaml",
+      "requirements.txt",
+      "train.py",
+      "utils/utils.py",
+      "datasets/data_interface.py"
+    ],
+    "verification": "Complete original model/trainer/data/optimizer/YAML and pinned Lightning2.3.0 accumulation/AMP semantics reviewed. Full native12layer model,37original optimizer updates/four resume cuts, complete original two-epoch training and actual >1GiB checkpoint restore/CLI double reload prechecks passed. Registered FP16 requires actual CUDA; full native/whole/final-wheel gates remain pending, no paper metrics.",
+    "deterministic_cuda_compatibility": "Torch2.5.1 original cumprod backward invokes unsupported strict-deterministic CUDA cumsum. Version0.83 retains exact original native forward bytes and unchanged CPU autograd, while evaluating the same full four-bin CUDA derivatives in a fixed order with exact-zero handling. All32dtype/zero-pattern realCUDA derivative checks and CPU analytic Jacobian/gradcheck passed. No strict-determinism/model/loss/budget gate was disabled; full native validation must be repeated for this new source hash."
+  },
+  "m4": {
+    "url": "https://github.com/Bigyehahaha/M4.git",
+    "commit": "2b0f92ef872fcd9997f1ae6b4ba6565fc53eb332",
+    "license": "MIT; original copyright2024yezhang; private source loading currently, license retained separately",
+    "files": [
+      "models/M4.py",
+      "main.py",
+      "train_val_multi.py",
+      "Dataset.py",
+      "scripts/M4-main.sh",
+      "LICENSE"
+    ],
+    "verification": "Complete original multi-proxy/multigate model and full source32epoch/10task recipe integrated with immutable endpoint/feature identity, exact original TRAIN+VAL loaders, summed BCE, Adam/cosine and strictVALmeanAUROC. Full native2048/512/5expert/10task source twoepoch weight/Adam/scheduler/RNG equality, actual disk checkpoint recovery and unified2048/1024FM CLI double reload prechecks passed. Native/whole/final-wheel gates remain pending; no realWSI/paper metrics."
+  },
+  "dyko": {
+    "url": "https://github.com/junjianli106/DyKo.git",
+    "commit": "a8b43645840cf283c334b07c42cf4ddf230f644a",
+    "license": "No LICENSE file in pinned tree; author definitions loaded privately; redistribution permission not inferred",
+    "files": [
+      "models/DyKo.py",
+      "models/model_interface.py",
+      "datasets/ClsVlmData.py",
+      "datasets/data_interface.py",
+      "MyOptimizer/optim_factory.py",
+      "Cls/CAMELYON16/DyKo/DyKo.yaml",
+      "process_quilt1m.py",
+      "train.py",
+      "utils/utils.py"
+    ],
+    "verification": "Complete source and released bank/shot audit underway; actual native TITAN pretrained text is required. No executable profile admitted, no substitute tower, no real WSI or paper reproduction."
+  },
+  "libramil": {
+    "url": "https://github.com/zfy07/Libra-MIL.git",
+    "commit": "f29921970bfa22d364e08ea1768b984b47e07a8d",
+    "license": "No LICENSE file in pinned author tree; private source loading only",
+    "files": [
+      "models/mil_ot.py",
+      "models/text_encoder.py",
+      "main.py",
+      "datasets/dataset.py",
+      "utils/general.py",
+      "text_prompt/TCGA_RCC_instance_prompt.json",
+      "text_prompt/TCGA_RCC_two_scale_text_prompt.csv"
+    ],
+    "verification": "Complete architecture and original pretrained CONCH text/source trainer audit underway; native/CLI/source equality gates required before admission."
+  },
+  "muse": {
+    "url": "https://github.com/JiahaoXu-god/CVPR2026_MUSE.git",
+    "commit": "0bd0e1abb402e772ed71cf208cfbd4b870175a00",
+    "license": "No LICENSE file in pinned tree; private source loading only",
+    "files": [
+      "models/model_text_retrevial.py",
+      "utils/core_utils.py",
+      "utils/utils.py",
+      "main.py",
+      "datasets/dataset_generic.py"
+    ],
+    "verification": "Full released architecture and three600-description class banks audited; complete20-view source training and private-diagnostic RNG replay under construction. No executable profile admitted."
+  },
+  "gmmamba": {
+    "url": "https://github.com/titizheng/GMMamba",
+    "commit": "70576f1aaeef0d7041d6860799ade1ac905b85aa",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "verification": "full_architecture_and_complete_source_training_recipe_reviewed; explicit pinned MambaMIL BiMamba dependency port because original dependency directory is absent",
+    "paper": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zheng_GMMamba_Group_Masking_Mamba_for_Whole_Slide_Image_Classification_ICCV_2025_paper.pdf",
+    "dependency_port": {
+      "source": "mambamil",
+      "commit": "9aea39efc13fdcd3703b5b54c28a64887b4acbd7",
+      "file": "mamba/mamba_ssm/modules/bimamba.py"
+    }
+  },
+  "taxomil": {
+    "url": "https://github.com/QuIIL/TaxoMIL",
+    "commit": "5e095f0c212b3a30c3f6c6c81b3ca1a18e0c676e"
+  },
+  "nciemil": {
+    "url": "https://github.com/polyethylene16/NcIEMIL",
+    "commit": "780d8b4c04ef6266e552bfd4c47b76470f7510fd"
+  },
+  "attention2majority": {
+    "url": "https://github.com/JoeSu666/Attention2majority.git",
+    "commit": "17c9614e2192ddf899a7a449081256bc9542b5d0",
+    "license": "AGPL-3.0",
+    "files": [
+      "milmodels.py",
+      "discriminator.py",
+      "intelsampling.py",
+      "data.py",
+      "MIL.py",
+      "camelyon_util.py",
+      "kidney_util.py",
+      "LICENSE"
+    ],
+    "verification": "source_review_and_full_stage_implementation_in_progress; original syntax failure preserved"
+  },
+  "icmil_context": {
+    "url": "https://github.com/injurise/ICMIL.git",
+    "commit": "23bb7203777891987ec3c18a1233ffe238b032b3",
+    "files": [
+      "icmil/models/architecture.py",
+      "icmil/model.py",
+      "icmil/benchmarks/tcga.py",
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md"
+    ],
+    "verification": "actual_clean_author_git_and_checkpoint_sha256_verified"
+  },
+  "icmil_coupled": {
+    "url": "https://github.com/Dootmaan/ICMIL.git",
+    "commit": "c2fd2faa4e85cf85527e228573b434a8cc461cba",
+    "branch": "main_MICCAI2023_distinct_from_confidence_based_extension",
+    "verification": "actual_clean_author_checkout_and_all_bytes_staged_owned_GPFS2",
+    "files": [
+      "model/network.py",
+      "model/Attention.py",
+      "model/feature_extraction.py",
+      "step0_patches2feature.py",
+      "step1_train_classifier_abmil.py",
+      "step1_train_classifier_maxpool.py",
+      "step1_train_classifier_dtfdmil.py",
+      "step2_teacher_student_abmil_distillation.py",
+      "step2_teacher_student_maxpool_distillation.py",
+      "step2_teacher_student_dtfdmil_distillation.py",
+      "dataset/RandomPatchDistillationDataset.py",
+      "dataset/EmbededFeatsDataset.py",
+      "LICENSE"
+    ]
+  },
+  "pmil_prototypical": {
+    "url": "https://github.com/zihou98/PMIL",
+    "commit": "f9b241a30ef90235da2c57814408da5eedb368e0",
+    "license": "GPLv3;README also states noncommercial academic use; author code fetched separately, not redistributed",
+    "status": "source_components_only_full_pipeline_pending"
+  },
+  "comel": {
+    "url": "https://github.com/Hyun1A/CoMEL",
+    "commit": "9fd667994eb57e3960e36970a9509a8217d84a22",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "status": "full_continual_pipeline_under_development"
+  },
+  "akdpmp": {
+    "url": "https://github.com/lxr2/akd-pmp",
+    "commit": "a1c83d2efe31bd713b0f7999715297700bfdbb80",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "status": "complete_pipeline_under_development"
+  },
+  "qpmilvl": {
+    "url": "https://github.com/can-can-ya/QPMIL-VL.git",
+    "commit": "3a7a7698582dec866d43eb748f8c3599f7be4391",
+    "license": "CC-BY-NC-ND-4.0; private source loading only",
+    "verification": "Pinned original full-text prompt and native16bag update component work; full continual recipe not admitted"
+  },
+  "kmpmil": {
+    "url": "https://github.com/Lingling-Yuan/KMP-MIL.git",
+    "commit": "77137ac84a9a27b16a2c07aca414c534f7cf5226",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "verification": "Full original PFC/TC/semantic KMP/rehearsal-free banks and literal source epoch/update component work; complete trainer not admitted"
+  },
+  "conch_kmp": {
+    "url": "https://github.com/mahmoodlab/CONCH.git",
+    "commit": "141cc09c7d4ff33d8eda562bd75169b457f71a62",
+    "license": "CC-BY-NC-4.0; private user-provided weights; no redistribution",
+    "files": [
+      "conch/open_clip_custom/transformer.py",
+      "conch/open_clip_custom/coca_model.py",
+      "conch/open_clip_custom/custom_tokenizer.py",
+      "conch/open_clip_custom/model_configs/conch_ViT-B-16.json",
+      "conch/open_clip_custom/tokenizers/conch_byte_level_bpe_uncased.json",
+      "LICENSE",
+      "pyproject.toml"
+    ],
+    "verification": "Explicitly reviewed original official CONCH for KMP; authors do not pin the omitted dependency commit. New portable full source, no weights redistribution."
+  },
+  "protomil": {
+    "url": "https://github.com/ss-sun/ProtoMIL.git",
+    "commit": "3e3745d7e4fecccb24aa486bd2af8b0dc6493711",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "verification": "Original SAE/concept/probe/linear gated-MIL complete source review; no runnable profile admitted"
+  },
+  "protomil_dtn": {
+    "url": "https://github.com/neuroexplicit-saar/Discover-then-Name.git",
+    "commit": "03484baef77747596712cf971e402f77b9da5a9a",
+    "license": "sparse_autoencoder_subdirectory_MIT",
+    "verification": "Explicitly reviewed original dependency referenced by ProtoMIL; author does not pin dependency commit. Complete actual SAE/AdamWithReset/resampler/loss/metrics, unused NLP/sweep root imports isolated only."
+  },
+  "macnet": {
+    "url": "https://github.com/Prince-Lee-PathAI/MacNet.git",
+    "commit": "7610d7a534cd833ba0b139136ed9af9b41f59f48",
+    "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+    "verification": "Complete raw/trainer/guidance/state reconstruction in progress, not admitted"
+  },
+  "dspamil": {
+    "url": "https://github.com/AlexNmSED/DSPA-MIL.git",
+    "commit": "75d95d410374771a3eba4bd84fdfadc06acf0eed",
+    "license": "MIT",
+    "verification": "Released full SAT component and training-contract audit; complete DSPA/DSPA-U mechanisms pending"
+  },
+  "feather": {
+    "url": "https://github.com/mahmoodlab/MIL-Lab.git",
+    "commit": "dfc3c17ca6876a8f9bd33a9162c40f2c22631d9d",
+    "license": "CC-BY-NC-ND-4.0_private_source_loading_no_redistribution",
+    "verification": "Original public source pinned; original pretrained24K files still require approved personal access; no complete method admission"
+  },
+  "mggmmil": {
+    "url": "https://github.com/JiuyangDong/MGGMMIL.git",
+    "commit": "dfbe91120e0c7c822abdbbba758c307ddabd2826",
+    "files": [
+      "models/mggm_mil.py",
+      "models/mamba/mamba_ssm/modules/srmamba.py",
+      "models/mamba/mamba_ssm/ops/selective_scan_interface.py",
+      "train_mil.py",
+      "baseline.py",
+      "train_and_test.py",
+      "README.md"
+    ]
+  },
+  "hybrid_supervision": {
+    "url": "https://github.com/JarveeLee/HybridSupervisionLearning_Pathology.git",
+    "commit": "1f54478812cd057ad3ddc70543bed503ba39f800",
+    "files": [
+      "dla_bn.py",
+      "dla_up_bn.py",
+      "dataset.py",
+      "sync_batchnorm/batchnorm.py",
+      "sync_batchnorm/comm.py",
+      "sync_batchnorm/replicate.py",
+      "sync_batchnorm/__init__.py",
+      "dataloaders.py",
+      "data_transforms.py",
+      "Stage1_M_step_retrain.py",
+      "Stage1_E_step_generate_pseudo_label.py",
+      "Stage2_classifier.py",
+      "Stage2_classification_generate_heatmap.py",
+      "README.md",
+      "LICENSE"
+    ]
+  },
+  "lnplmil": {
+    "url": "https://github.com/szc19990412/LNPL-MIL.git",
+    "commit": "1dc4e703a2b86dd0950e0b75aa7d45337d2127cb",
+    "files": [
+      "README.md",
+      "models/TODMIL.py",
+      "models/model_interface.py",
+      "knn_feature.py",
+      "Camelyon/TODMIL_995.yaml",
+      "MyOptimizer/radam.py",
+      "MyOptimizer/lookahead.py",
+      "MyOptimizer/optim_factory.py"
+    ],
+    "license": "not_present_in_checkout_private_loading_only",
+    "verification": "private_locked_original_components; full weak classifier and complete pipeline pending; no profile admission",
+    "checked_on": "2026-10-26"
+  },
+  "promptmil": {
+    "url": "https://github.com/cvlab-stonybrook/PromptMIL.git",
+    "commit": "b7c088e983eb4e369b9fe346873e941da01ed2e6",
+    "license": "No repository-wide LICENSE; private pinned loading only; upstream DINO header Apache2.0 retained",
+    "verification": "Original full RGB prompt/DINO/DSMIL and three-pass trainer; all3author cohort teacher checkpoints hashes/all149keys/RGB224 verified; complete adapter development"
+  },
+  "lpgmil": {
+    "url": "https://github.com/FPXMU/LPGMIL.git",
+    "commit": "6b14bb01dff042a09bd34ebe956d696e665a7cd0",
+    "license": "No LICENSE in pinned tree; private verified Git definitions only",
+    "verification": "Complete graph and trainer audited; explicit query-width/contract/device repairs and TRAIN-only prototype reference; validation pending"
+  },
+  "lpgmil_mamba111": {
+    "url": "https://github.com/state-spaces/mamba.git",
+    "commit": "fb7b5310fa865dbd62aa059b1e26f2b431363e2a",
+    "license": "Apache-2.0",
+    "verification": "Official v1.1.1 matching released LPGMIL environment; full original graph, explicit complete recurrence backend, no automatic fallback"
+  },
+  "rmdl": {
+    "url": "https://github.com/emma-sjwang/RMDL.git",
+    "commit": "8f13238285b92e772e04d2abe25cc24bb8099829",
+    "license": "not_found_in_pinned_tree",
+    "verification": "Private pinned author localization and aggregation graphs; no redistribution of author source or unreleased private weights"
+  },
+  "keras_contrib_legacy": {
+    "url": "https://github.com/keras-team/keras-contrib.git",
+    "commit": "3fc5ef709e061416f4bc8a92ca3750c824b5d2b0",
+    "license": "MIT",
+    "verification": "Pinned full actual InstanceNormalization source for native RMDL Keras graph; no generic LayerNorm replacement"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "icmil_context",
+  "name": "ICMIL In-context",
+  "group": "J_pretrained_slide",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/injurise/ICMIL",
+  "source_commit": "23bb7203777891987ec3c18a1233ffe238b032b3",
+  "source_status": "git_commit_locked",
+  "license": "MIT_with_third_party_notices",
+  "profiles": [
+    "icmil_context_c5trd795_source",
+    "icmil_context_ggwsqibd_source",
+    "icmil_context_k337zhz1_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_released_ICMIL_8000epoch_checkpoint",
+    "binary_slide_labels",
+    "fixed_length_patch_features_at_most25D",
+    "patient_grouped_split"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "blocker": null,
+  "requirements_review": "Actual original three released checkpoints, full pretrained source graph and author TCGA50split reference inference; new complete unified fixed-context fit/evaluation, exact input binding and explicit projection preparation. Software/native/independent-wheel/full-library acceptance remains separate. No new WSI cohort or paper-score reproduction claimed.",
+  "execution_profiles": [
+    {
+      "id": "icmil_context_c5trd795_source",
+      "family": "icmil_context",
+      "recipe": "Complete released8,257,552-parameter PFN/Perceiver pretrained8000epoch seed c5trd795; all labelled TRAIN bags as context, original TRAIN-only F64 normalization, all unlabelled queries, binary logits; zero downstream gradient updates and no validation-selected weights; explicit fixed-bag/native<=25D or named TRAIN-only PCA25 reference preparation",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "fixed_length_patch_features_at_most25D",
+        "binary_slide_labels",
+        "patient_grouped_split",
+        "actual_released_ICMIL_8000epoch_checkpoint"
+      ],
+      "class_count": 2,
+      "external_source": "icmil_context",
+      "status": "implemented_unvalidated",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "backend": "icmil_context_original_pretrained"
+    },
+    {
+      "id": "icmil_context_ggwsqibd_source",
+      "family": "icmil_context",
+      "recipe": "Complete released8,257,552-parameter PFN/Perceiver pretrained8000epoch seed ggwsqibd; all labelled TRAIN bags as context, original TRAIN-only F64 normalization, all unlabelled queries, binary logits; zero downstream gradient updates and no validation-selected weights; explicit fixed-bag/native<=25D or named TRAIN-only PCA25 reference preparation",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "fixed_length_patch_features_at_most25D",
+        "binary_slide_labels",
+        "patient_grouped_split",
+        "actual_released_ICMIL_8000epoch_checkpoint"
+      ],
+      "class_count": 2,
+      "external_source": "icmil_context",
+      "status": "implemented_unvalidated",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "backend": "icmil_context_original_pretrained"
+    },
+    {
+      "id": "icmil_context_k337zhz1_source",
+      "family": "icmil_context",
+      "recipe": "Complete released8,257,552-parameter PFN/Perceiver pretrained8000epoch seed k337zhz1; all labelled TRAIN bags as context, original TRAIN-only F64 normalization, all unlabelled queries, binary logits; zero downstream gradient updates and no validation-selected weights; explicit fixed-bag/native<=25D or named TRAIN-only PCA25 reference preparation",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "fixed_length_patch_features_at_most25D",
+        "binary_slide_labels",
+        "patient_grouped_split",
+        "actual_released_ICMIL_8000epoch_checkpoint"
+      ],
+      "class_count": 2,
+      "external_source": "icmil_context",
+      "status": "implemented_unvalidated",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "backend": "icmil_context_original_pretrained"
+    }
+  ]
+}

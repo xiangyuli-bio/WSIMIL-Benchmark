@@ -1,0 +1,73 @@
+{
+  "id": "hipt",
+  "name": "HIPT",
+  "group": "J_pretrained_slide",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mahmoodlab/HIPT",
+  "source_status": "git_commit_locked",
+  "source_commit": "780fafaed2e5b112bc1ed6e78852af1fe6714342",
+  "license": "Apache-2.0 with Commons Clause; external author source and weights, not redistributed",
+  "profiles": [
+    "hipt_lgp_frozen_source",
+    "hipt_lgp_finetune_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "hipt_pyramid",
+    "native_patch_embedding_space",
+    "patch_features",
+    "per_slide_coords",
+    "pretrained_region_teacher",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_pretrained_classification_model_and_source_recipe; actual_teacher_and_native_patch_space_bound_to_physical_pyramids; original_survival_Python_unreleased_not_substituted",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "hipt_lgp_finetune_source",
+      "family": "hipt",
+      "recipe": "complete original pretrained HIPT classifier with local ViT finetuning, native physical pyramids and balanced source CE/32-per-bag Adam",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "hipt_pyramid",
+        "per_slide_coords",
+        "single_slide_bag",
+        "native_patch_embedding_space",
+        "pretrained_region_teacher"
+      ],
+      "class_count": null,
+      "external_source": "hipt",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "hipt_lgp_frozen_source",
+      "family": "hipt",
+      "recipe": "complete original local-global pretrained HIPT classifier, actual frozen teacher, balanced sampler and source CE/32-per-bag Adam; default final epoch",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "hipt_pyramid",
+        "per_slide_coords",
+        "single_slide_bag",
+        "native_patch_embedding_space",
+        "pretrained_region_teacher"
+      ],
+      "class_count": null,
+      "external_source": "hipt",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

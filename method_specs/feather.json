@@ -1,0 +1,250 @@
+{
+  "id": "feather",
+  "name": "FEATHER / MIL-Lab models",
+  "group": "J_pretrained_slide",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mahmoodlab/MIL-Lab",
+  "source_status": "full_original_pretrained_adapter_code_integrated_under_verification",
+  "source_commit": "dfc3c17ca6876a8f9bd33a9162c40f2c22631d9d",
+  "license": "CC-BY-NC-ND-4.0_private_source_loading_no_redistribution",
+  "profiles": [
+    "feather_conch_v15_finetune_val20_reference",
+    "feather_conch_v15_finetune_no_val10_reference",
+    "feather_conch_v15_frozen_knn20_reference",
+    "feather_uni_finetune_val20_reference",
+    "feather_uni_finetune_no_val10_reference",
+    "feather_uni_frozen_knn20_reference",
+    "feather_uni_v2_finetune_val20_reference",
+    "feather_uni_v2_finetune_no_val10_reference",
+    "feather_uni_v2_frozen_knn20_reference"
+  ],
+  "status": "adapted_under_verification",
+  "default_execution_profile": "feather_uni_finetune_val20_reference",
+  "required_inputs": [
+    "native_CONCHv15_UNI_or_UNIv2_features",
+    "authorized_original_FEATHER24K_weights",
+    "patient_disjoint_splits"
+  ],
+  "formal_admission": false,
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Full original512/384 model, checked local pretrained loading, native feature/patient binding, isolated20epoch-with-VAL and10epoch-without-VAL finetuning, frozen512D KNN20, recovery and evaluation are publicly integrated. Family execution uses the prepared encoder with finetune_val20. Unpublished trainer/selection/AMP/sampling/KNN details remain explicit references. No random architecture is presented as pretrained FEATHER.",
+  "prerequisites": [
+    "Run setup and prepare-feather-assets with the authorized original24K checkpoint.",
+    "Bind its matching native visual features and patients using prepare-feather.",
+    "Use the separate feather runtime dependencies; frozen KNN requires at least20 TRAIN slides."
+  ],
+  "validation_blockers": [
+    "Actual original-pretrained loading and complete source/wheel/native-budget validation remain pending."
+  ],
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "feather_conch_v15_finetune_val20_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, conch_v15, finetune_val20; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "conch_v15",
+      "mode": "finetune_val20",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "feather_conch_v15_finetune_no_val10_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, conch_v15, finetune_no_val10; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "conch_v15",
+      "mode": "finetune_no_val10",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "feather_conch_v15_frozen_knn20_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, conch_v15, frozen_knn20; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "conch_v15",
+      "mode": "frozen_knn20",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "feather_uni_finetune_val20_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, uni, finetune_val20; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "uni",
+      "mode": "finetune_val20",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "feather_uni_finetune_no_val10_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, uni, finetune_no_val10; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "uni",
+      "mode": "finetune_no_val10",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "feather_uni_frozen_knn20_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, uni, frozen_knn20; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "uni",
+      "mode": "frozen_knn20",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "feather_uni_v2_finetune_val20_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, uni_v2, finetune_val20; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "uni_v2",
+      "mode": "finetune_val20",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "feather_uni_v2_finetune_no_val10_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, uni_v2, finetune_no_val10; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "uni_v2",
+      "mode": "finetune_no_val10",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "feather_uni_v2_frozen_knn20_reference",
+      "family": "feather",
+      "recipe": "Original FEATHER24K512/384 backbone, uni_v2, frozen_knn20; explicit downstream training/selection/KNN reference choices",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "native_CONCHv15_UNI_or_UNIv2_features",
+        "authorized_original_FEATHER24K_weights",
+        "patient_disjoint_splits"
+      ],
+      "class_count": null,
+      "external_source": "feather",
+      "encoder": "uni_v2",
+      "mode": "frozen_knn20",
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

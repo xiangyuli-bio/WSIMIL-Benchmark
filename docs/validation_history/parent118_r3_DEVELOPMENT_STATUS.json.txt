@@ -1,0 +1,80 @@
+{
+  "observed_utc": "2026-10-29T03:36:30.226530+00:00",
+  "state": "candidate_runtime118_test_revision_r3_not_accepted",
+  "version": "0.118.0",
+  "planned_methods": 164,
+  "written_methods": 161,
+  "profiles": 352,
+  "catalog_status_counts": {
+    "adapted": 146,
+    "adapted_under_verification": 15,
+    "pending_adapter": 3
+  },
+  "pending_adapter_ids": [
+    "dyko",
+    "dspamil",
+    "feather"
+  ],
+  "new_method_admissions_this_revision": 0,
+  "source_sha256": "0d6c6ef3721a83e89bfccb6dee39dd823cb91f18432e980c3952aadfbe3646d2",
+  "runtime_wheel_sha256": "b92c2e63e660788695b6a9abd093f4376bfea70ab90cf726edbae29db46b92be",
+  "all479_runtime_package_files_unchanged": true,
+  "test_inputs": 265,
+  "actual_collected_cases": 4017,
+  "reviewed_changed_test_files": [
+    "test_lnplmil_components.py",
+    "test_zoommil_cli.py"
+  ],
+  "original_assertions_retained": true,
+  "original_failed_test_fulltexts_preserved": true,
+  "current_named_source_cases_with_positive_evidence": 4017,
+  "extra_wheel_named_cases_with_positive_evidence": 57,
+  "required_extra_wheel_cases": 65,
+  "original_nonpassing_source_results_preserved": 35,
+  "source_positive_coverage_is_not_full_software_acceptance": true,
+  "full_software_acceptance": false,
+  "whole_library_passed": false,
+  "formal_all164_admission": false,
+  "software_stage_verified_methods": null,
+  "software_stage_verified_profiles": null,
+  "unresolved_numeric_failure": "SparseConvMIL original CPU source-oracle comparison in independent wheel; root cause unverified",
+  "passing_diagnostics_not_counted_as_a_fix": true,
+  "QPMIL_software_protocol_source_and_wheel_passed": [
+    30,
+    30
+  ],
+  "QPMIL_full_native_conditions_passed": 4,
+  "QPMIL_full_native_source_wheel_exact": true,
+  "MacNet_declared_CUDA_software_source_and_wheel_passed": [
+    6,
+    6
+  ],
+  "RMDL_declared_CPU_source_and_wheel_passed": [
+    7,
+    7
+  ],
+  "TaxoMIL_declared_CPU_source_and_wheel_passed": [
+    2,
+    2
+  ],
+  "ProtoMIL_declared_CPU_source_and_wheel_passed": [
+    42,
+    5
+  ],
+  "catalog_source_and_wheel_passed": [
+    3,
+    3
+  ],
+  "RMDL_native_full_budget_validation": "existing original worker continues; full all4 aggregate not complete",
+  "CPU_designated_tests_moved_to_GPU": 0,
+  "new_GPU_allocations": 0,
+  "default_development_changed": false,
+  "default_development_methods": 151,
+  "default_development_profiles": 321,
+  "default_stable_methods": 117,
+  "default_stable_profiles": 219,
+  "real_WSI_experiments": false,
+  "paper_score_reproduction": false,
+  "evidence": "validation_evidence/actual4017_named_positive_reconciliation.json",
+  "validation_notes": "docs/validation_history/20261029_CPU_contexts_and_unresolved_sparse.md"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "advmil",
+  "name": "AdvMIL",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/liupei101/AdvMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "6853786624bbab36c2a08b35dcf20c7bdff1a105",
+  "license": "MIT",
+  "profiles": [
+    "advmil_esat",
+    "advmil_abmil",
+    "advmil_esat_source",
+    "advmil_abmil_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "regions4x4"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "advmil_abmil",
+      "family": "advmil",
+      "recipe": "pinned author continuous ABMIL + RLIP discriminator; two Adam optimizers, censored reconstruction, noise inference and explicit label masking; corrected discriminator BCE",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "regions4x4",
+        "per_slide_coords"
+      ],
+      "class_count": null,
+      "external_source": "advmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "advmil_abmil_source",
+      "family": "advmil",
+      "recipe": "pinned author continuous ABMIL + RLIP discriminator; two Adam optimizers, censored reconstruction, noise inference and explicit label masking; literal released discriminator BCE",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "regions4x4",
+        "per_slide_coords"
+      ],
+      "class_count": null,
+      "external_source": "advmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "advmil_esat",
+      "family": "advmil",
+      "recipe": "pinned author continuous ESAT + RLIP discriminator; two Adam optimizers, censored reconstruction, noise inference and explicit label masking; corrected discriminator BCE",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "regions4x4",
+        "per_slide_coords"
+      ],
+      "class_count": null,
+      "external_source": "advmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "advmil_esat_source",
+      "family": "advmil",
+      "recipe": "pinned author continuous ESAT + RLIP discriminator; two Adam optimizers, censored reconstruction, noise inference and explicit label masking; literal released discriminator BCE",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "regions4x4",
+        "per_slide_coords"
+      ],
+      "class_count": null,
+      "external_source": "advmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

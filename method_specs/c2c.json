@@ -1,0 +1,88 @@
+{
+  "id": "c2c",
+  "name": "Cluster-to-Conquer",
+  "group": "E_encoder_training",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/YashSharma/C2C",
+  "source_status": "git_commit_locked",
+  "source_commit": "d53b6350372117bf3e5251044a856e0251d810b2",
+  "license": "MIT",
+  "profiles": [
+    "c2c_cluster_source",
+    "c2c_cluster_default_bn_source",
+    "c2c_cluster_multiclass_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_original_resnet18_weights",
+    "c2c_historical_assets",
+    "original_rgb_patch_bags",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_source_reclustering_sampling_and_three_losses_with_historical_BN_compatibility",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "c2c_cluster_default_bn_source",
+      "family": "c2c",
+      "recipe": "Full end-to-end original pretrained ResNet18/256/64/32attention; each-epoch actual FAISS8group and up-to8patch/group sampling; CE+.01patchCE+.01uniform-KL, all-patch128streaming/source25epoch Adam and latest VAL-accuracy tie; explicit original constructor-default BN condition",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "original_rgb_patch_bags",
+        "actual_original_resnet18_weights",
+        "single_slide_bag",
+        "c2c_historical_assets"
+      ],
+      "class_count": 2,
+      "external_source": "c2c",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "c2c_cluster_multiclass_repaired",
+      "family": "c2c",
+      "recipe": "Full end-to-end original pretrained ResNet18/256/64/32attention; each-epoch actual FAISS8group and up-to8patch/group sampling; CE+.01patchCE+.01uniform-KL, all-patch128streaming/source25epoch Adam and latest VAL-accuracy tie; original Notebook BN with exact Torch1.5 semantics; explicit C-way weak patch label repair",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "original_rgb_patch_bags",
+        "actual_original_resnet18_weights",
+        "single_slide_bag",
+        "c2c_historical_assets"
+      ],
+      "class_count": null,
+      "external_source": "c2c",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "c2c_cluster_source",
+      "family": "c2c",
+      "recipe": "Full end-to-end original pretrained ResNet18/256/64/32attention; each-epoch actual FAISS8group and up-to8patch/group sampling; CE+.01patchCE+.01uniform-KL, all-patch128streaming/source25epoch Adam and latest VAL-accuracy tie; original Notebook BN with exact Torch1.5 semantics",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "original_rgb_patch_bags",
+        "actual_original_resnet18_weights",
+        "single_slide_bag",
+        "c2c_historical_assets"
+      ],
+      "class_count": 2,
+      "external_source": "c2c",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

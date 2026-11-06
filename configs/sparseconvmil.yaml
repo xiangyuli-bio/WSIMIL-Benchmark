@@ -1,0 +1,12 @@
+# Complete public-source recipe, distinct from the paper TCGA experiment.
+epochs: 200
+lr: 0.002
+weight_decay: 0.000001
+grad_clip: null
+selection_metric: sparseconvmil_completed_epoch
+threads: 2
+model:
+  tiles_per_slide: 5
+  batch_size: 2
+  downsample: 10
+  evaluation_seed: 1979

@@ -1,0 +1,14 @@
+# Original TTIS whole-bag training; inference uses prepared TEST-only assets.
+epochs: 50
+lr: 0.0001
+weight_decay: 0.001
+grad_clip: null
+selection_metric: ttis_val_loss
+patience: 10
+max_instances: null
+model:
+  hidden: 512
+  attention_dim: 384
+  sampling_ratio: 0.3
+  scheduler_epochs: 50
+  eta_min: 0.0000001

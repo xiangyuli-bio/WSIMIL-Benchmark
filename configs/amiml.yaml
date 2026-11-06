@@ -1,0 +1,15 @@
+# Complete paper-reference reconstruction; see docs/AMIML.md for source defects.
+epochs: 300
+lr: 0.01
+weight_decay: 0.0
+patience: 30
+grad_clip: null
+max_instances: null
+selection_metric: amiml_validation_generation
+threads: 1
+model:
+  R: 100
+  alpha: 0.1
+  batch_size: 64
+  cluster_seed: 2026
+  max_cluster_bytes: 8589934592

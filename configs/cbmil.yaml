@@ -1,0 +1,19 @@
+epochs: 50
+lr: 0.0001
+weight_decay: 0.0001
+patience: 10
+threads: 4
+selection_metric: macro_auc
+max_instances: null
+model:
+  clusters: 10
+  selected_instances: 1024
+  batch_size: 16
+  contrastive_dim: 128
+  temperature: 1.0
+  cl_weight: 0.1
+  mixup_alpha: 0.8
+  clustering: kmeans
+  clustering_seed: 2026
+  clustering_iterations: 100
+  view_instances: null

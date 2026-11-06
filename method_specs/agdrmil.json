@@ -1,0 +1,61 @@
+{
+  "id": "agdrmil",
+  "name": "AGDR-MIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/shuiguoc/AGDR-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "8e830683c0a695e1e1983f01d35dc85471bf327c",
+  "license": "not_found_in_pinned_tree; external_source_only",
+  "profiles": [
+    "agdrmil_yaml_source",
+    "agdrmil_tcga_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_native512_dual_branch_model_and_source_recipe; explicit_yaml_vs_TCGA_presets; original_hard_grader_gradient_boundary_and_Sigmoid_CE_retained; source_validation_RNG_and_degenerate_input_contract",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "agdrmil_tcga_source",
+      "family": "agdrmil",
+      "recipe": "complete source model/trainer with explicit README TCGA thresholds/mask/dual-loss coefficient; hard-gradient and stochastic-eval source behavior retained",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "agdrmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "agdrmil_yaml_source",
+      "family": "agdrmil",
+      "recipe": "complete released YAML hard grading/cosine/low-mask/high+full Sigmoid-CE recipe, native Adam and source shuffle/validation RNG; no invented grader gradient",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "agdrmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

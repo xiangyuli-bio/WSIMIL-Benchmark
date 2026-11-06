@@ -1,0 +1,45 @@
+{
+  "id": "csmil",
+  "name": "CS-MIL",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/hrlblab/CS-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "d51b97f411caeff092e397427003021d1b23f00f",
+  "license": "MIT",
+  "profiles": [
+    "csmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "aligned_centers",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "csmil",
+      "family": "csmil",
+      "recipe": "author raw cross-scale scoring, masked bag attention, per-slide fine-scale KMeans and cluster sampling; binary NLL with summed accumulation",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "aligned_centers"
+      ],
+      "class_count": 2,
+      "external_source": "csmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

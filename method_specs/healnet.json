@@ -1,0 +1,42 @@
+{
+  "id": "healnet",
+  "name": "HEALNet",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/konst-int-i/healnet",
+  "source_status": "git_commit_locked",
+  "source_commit": "90459b65a3d4a4ef9fd405671c457b5a1163cc7d",
+  "license": "Apache-2.0",
+  "profiles": [
+    "healnet"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "omics",
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "healnet",
+      "family": "healnet",
+      "recipe": "author shared latent multimodal fusion, weighted censored NLL, L1 and per-batch Adam/OneCycle; patient inputs and train-only preprocessing",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "omics"
+      ],
+      "class_count": null,
+      "external_source": "healnet",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

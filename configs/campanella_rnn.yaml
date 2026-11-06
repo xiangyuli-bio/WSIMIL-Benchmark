@@ -1,0 +1,17 @@
+epochs: 200
+lr: 0.0001
+weight_decay: 0.0001
+grad_clip: null
+selection_metric: campanella_balanced_accuracy
+model:
+  cnn_epochs: 100
+  rnn_epochs: 100
+  cnn_batch_size: 512
+  rnn_batch_size: 128
+  test_every: 10
+  cnn_k: 1
+  steps: 10
+  ndims: 128
+  positive_weight: 0.5
+  shuffle_sequence: false
+  rnn_lr: 0.1

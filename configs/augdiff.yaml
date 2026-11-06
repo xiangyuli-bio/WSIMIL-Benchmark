@@ -1,0 +1,13 @@
+epochs: 200
+patience: 10
+lr: 0.0002
+weight_decay: 0.00001
+grad_clip: null
+max_instances: null
+selection_metric: augdiff_source_ce
+threads: 2
+model:
+  steps: 20
+  nu: 0.4
+  precision: auto
+  max_dense_bytes: 34359738368

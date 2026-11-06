@@ -1,0 +1,61 @@
+{
+  "id": "msattention",
+  "name": "Multi-scale Attention MIL Wibawa",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mdsatria/MultiAttentionMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "fae5840f801c0485eb22f2e7119d392f2fa975f3",
+  "license": "not_yet_verified_no_license_in_pinned_tree",
+  "profiles": [
+    "msattention_source",
+    "msattention_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "full_supplementary_training_and_original_three_depth_attention_explicit_frozen_wsi_transfer; private_tumour_pipeline_not_claimed",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "msattention_repaired",
+      "family": "msattention",
+      "recipe": "complete original residual attention/CE/Adam recipe with named mode-aware eval dropout repair and independent validation selection",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "msattention",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "msattention_source",
+      "family": "msattention",
+      "recipe": "original three-depth residual attention, full CE/Adam supplementary recipe; explicit frozen-WSI transfer with controlled stochastic eval dropout",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "msattention",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

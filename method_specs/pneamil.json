@@ -1,0 +1,116 @@
+{
+  "id": "pneamil",
+  "name": "PNEA-MIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Chen-Jxiang/PNEA-MIL",
+  "source_status": "complete_original_author_recipe_candidate_under_verification",
+  "source_commit": "ef204ff5179ce7ea4bb7d04744f1553bee2f039c",
+  "license": "GPL-3.0 root license at the fixed author commit",
+  "profiles": [
+    "pneamil",
+    "pneamil_author_train_selector_snapshot_repaired",
+    "pneamil_author_val_selector_repaired"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Existing controlled MIL_BASELINE port retained. Two complete author-definition recipes now preserve64axes/batch8/1024replacement patches/Adam1e-4/max1000epochs/relative0.0005/patience10. Literal TRAIN-selector and full-VAL repair are separately named; selected-checkpoint snapshot isolation is repaired. Complete source/wheel/native-budget and release validation remain pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "pneamil",
+      "family": "pneamil",
+      "recipe": "class-specific nonnegative evidence, max aggregation and active L1 sparsity",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pneamil_author_train_selector_snapshot_repaired",
+      "family": "pneamil",
+      "recipe": "actual author PNEA model and CE+5meanReLU(W), grouped Adam, batch8/1024replacement patches/max1000epochs, literal TRAIN-loader relative-loss selector; explicitly repaired checkpoint snapshot",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "pneamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "adapted_under_verification",
+      "paper_reproduction": "not_run",
+      "native_recipe": {
+        "max_epochs": 1000,
+        "batch_size": 8,
+        "train_patches": 1024,
+        "evidence_axes": 64,
+        "lambda_l1": 5.0,
+        "lr": 0.0001,
+        "weight_decay": 0.0,
+        "patience": 10,
+        "relative_improvement": 0.0005,
+        "optimizer": "author_Adam_grouped_bias_no_decay",
+        "gradient_clipping": null,
+        "scheduler": null
+      },
+      "selection_population": "train",
+      "repairs": [
+        "immutable selected checkpoint",
+        "patient-disjoint externally fixed task split"
+      ]
+    },
+    {
+      "id": "pneamil_author_val_selector_repaired",
+      "family": "pneamil",
+      "recipe": "actual author PNEA model and complete original1000/batch8/1024/Adam recipe with separately named full-VAL relative-loss selector and immutable selected checkpoint repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "pneamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "adapted_under_verification",
+      "paper_reproduction": "not_run",
+      "native_recipe": {
+        "max_epochs": 1000,
+        "batch_size": 8,
+        "train_patches": 1024,
+        "evidence_axes": 64,
+        "lambda_l1": 5.0,
+        "lr": 0.0001,
+        "weight_decay": 0.0,
+        "patience": 10,
+        "relative_improvement": 0.0005,
+        "optimizer": "author_Adam_grouped_bias_no_decay",
+        "gradient_clipping": null,
+        "scheduler": null
+      },
+      "selection_population": "val",
+      "repairs": [
+        "immutable selected checkpoint",
+        "patient-disjoint externally fixed task split",
+        "use full validation population instead of source train_loader"
+      ]
+    }
+  ]
+}

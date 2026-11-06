@@ -1,0 +1,13 @@
+# Fixed author YAML recipe. Use agdrmil_tcga_source for README TCGA parameters.
+epochs: 200
+lr: 0.0002
+weight_decay: 0.00001
+patience: 20
+grad_clip: null
+max_instances: null
+selection_metric: agdr_val_loss
+threads: 2
+model:
+  dropout: 0.25
+  high_pool: max
+  stop_epoch: 20

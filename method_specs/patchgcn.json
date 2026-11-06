@@ -1,0 +1,42 @@
+{
+  "id": "patchgcn",
+  "name": "Patch-GCN",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mahmoodlab/Patch-GCN",
+  "source_status": "git_commit_locked",
+  "source_commit": "823addaee5b8f4cc2bec3ea8e5e0077b2a5115a4",
+  "license": "not_yet_verified",
+  "profiles": [
+    "patchgcn"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "spatial_graph"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "patchgcn",
+      "family": "patchgcn",
+      "recipe": "pinned author residual GENConv and concatenated depths; exact physical kNN within slides; patient disjoint union; discrete NLL",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "spatial_graph"
+      ],
+      "class_count": null,
+      "external_source": "patchgcn",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

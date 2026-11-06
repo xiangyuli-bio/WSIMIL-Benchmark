@@ -1,0 +1,124 @@
+{
+  "version": "0.129.0",
+  "observed_utc": "2026-10-29T23:01:58.908764+00:00",
+  "state": "config_repair_focused_complete_current5012_regression_started",
+  "source": "/root/MIL/development/cli_json_config_v129/source_r1",
+  "planned_methods": 164,
+  "written_entries": 161,
+  "profiles": 394,
+  "catalog_status_counts": {
+    "adapted": 139,
+    "adapted_under_verification": 22,
+    "pending_adapter": 3
+  },
+  "pending_adapter_ids": [
+    "dyko",
+    "dspamil",
+    "feather"
+  ],
+  "source_affected_passed": 49,
+  "independent_wheel_affected_passed": 49,
+  "actual_collected_cases": 5012,
+  "all_parent4993_cases_preserved": true,
+  "all_parent292_test_files_preserved": true,
+  "all164_method_records_and394_profiles_byte_preserved": true,
+  "full5012_regression_executed": false,
+  "full_source_JSON_YAML_resume_and_matrix_benchmark_methods": [
+    "linmil",
+    "retmil"
+  ],
+  "full_benchmark_epochs_per_method_per_condition": 100,
+  "full_benchmark_is_synthetic_and_explicit_choice": true,
+  "source_benchmark_receipt": "/root/MIL/development/cli_json_config_v129/public_config_benchmark100_receipt_r1.json",
+  "source_benchmark_receipt_sha256": "163f54c7f157525aeee60a5d15b66c1b27d31fd6ca89451d36ae526916152d74",
+  "wheel_benchmark_complete": true,
+  "actual_wheel_controller": {
+    "pid": 605789,
+    "expected_starttime": "22576251",
+    "actual_identity_live": false
+  },
+  "wheel_controller_state": "complete129_wheel49_and_two_full_budget_public_config_benchmarks",
+  "wheel_benchmark_receipt": "/root/MIL/development/cli_json_config_v129/wheel_public_config_benchmark100_receipt_r1.json",
+  "historical128_FC_certificate": "/root/MIL/development/fcmil_original_v128/fcmil_complete_mechanism_benchmark_certificate_r1.json",
+  "historical128_FC_certificate_sha256": "b20230adf9362a813de08cefd4cb173262059867ada310ff80e51dbb7c65e218",
+  "historical128_FC_cases": {
+    "source": 785,
+    "independent_wheel": 785
+  },
+  "historical128_Lin_Ret_model_benchmark_certificate": "/root/MIL/development/model_only_sources_review_r98/complete_source_wheel_benchmark100_certificate_r1.json",
+  "historical128_Lin_Ret_model_benchmark_certificate_sha256": "6dac0378c6aad11317b0d07966f437b8eeb49b518099dfd74b116d094699e330",
+  "historical_results_claimed_as129": false,
+  "original_model_only_sources_have_no_author_trainer": true,
+  "RetMIL_original_LICENSE_absent_private_review_only": true,
+  "MR_actual_process_observation": {
+    "source": {
+      "pid": 441563,
+      "expected_starttime": "21331023",
+      "actual_starttime": "21331023",
+      "state": "S",
+      "CPU_ticks": 1921804,
+      "actual_identity_live": true
+    },
+    "independent_wheel": {
+      "pid": 445689,
+      "expected_starttime": "21440162",
+      "actual_starttime": "21440162",
+      "state": "R",
+      "CPU_ticks": 1747054,
+      "actual_identity_live": true
+    },
+    "controller": {
+      "pid": 449903,
+      "expected_starttime": "21475647",
+      "actual_starttime": "21475647",
+      "state": "S",
+      "CPU_ticks": 192,
+      "actual_identity_live": true
+    }
+  },
+  "original_RMDL_observation": "/root/MIL/development/cli_json_config_v129/native_RMDL_actual_observation_r1.json",
+  "original_RMDL_version": "0.109",
+  "original_RMDL_restarted": false,
+  "runtime_parent_version": "0.128.0",
+  "runtime_parent_frozen_at_copy": false,
+  "latest_frozen_ancestor_version": "0.125.0",
+  "whole_library_passed": false,
+  "all164_formal_admission": false,
+  "real_WSI_experiments": false,
+  "paper_score_reproduction": false,
+  "frozen_or_promoted": false,
+  "default_development_promoted": false,
+  "stable_promoted": false,
+  "new_GPU_allocations": 0,
+  "subagents_spawned": 0,
+  "remaining_original_port_reviews": [
+    "additive_mil",
+    "linmil",
+    "fouriermil",
+    "retmil",
+    "mrblock",
+    "fcmil"
+  ],
+  "completed_benchmark_gates_do_not_prove_unavailable_author_recipe": true,
+  "three_no_profile_entries_are_not_the_entire_remaining_review": true,
+  "config_repair_complete_certificate": "/root/MIL/development/cli_json_config_v129/config_source_wheel_complete_certificate_r100.json",
+  "config_repair_complete_certificate_sha256": "4bb89ac7c51e447b94001fdae53c223b70aa799a554cad1e1868d41389b953a2",
+  "full5012_regression_started": true,
+  "full5012_regression_completed": false,
+  "current_full5012_runtime_plan": "/root/MIL/development/full5012_current129_r1/full5012_runtime_plan_r1.json",
+  "current_full5012_actual_observation": "/root/MIL/development/full5012_current129_r1/actual_live_observation_r1.json",
+  "current_full5012_actual_launch": "/root/MIL/development/full5012_current129_r1/full5012_actual_launch_r1.json",
+  "current_full5012_completion_watch_binding": "/root/MIL/development/full5012_current129_r1/completion_watch_process_r1.json",
+  "original_RMDL_latest_actual_observation": {
+    "state": "running_installed_wheel_sum",
+    "actual_controller": {
+      "pid": 742,
+      "expected_starttime": "760253748",
+      "actual_starttime": "760253748",
+      "state": "S",
+      "CPU_ticks": 2,
+      "actual_identity_live": true
+    },
+    "completed_conditions": 2
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "model_id": "MahmoodLab/TITAN",
+  "revision": "dac6773d9961cfc75503440676ff157a2c6e8d2e",
+  "gated": "auto",
+  "metadata_source": "https://huggingface.co/api/models/MahmoodLab/TITAN?blobs=true",
+  "tree_source": "https://huggingface.co/api/models/MahmoodLab/TITAN/tree/main?recursive=true&expand=false",
+  "files": {
+    "config.json": {
+      "bytes": 6372,
+      "git_blob_sha1": "0f51826b76d9ba6300e47028c79a8b5be33b013c"
+    },
+    "configuration_titan.py": {
+      "bytes": 4149,
+      "git_blob_sha1": "8361bb8e03a136df161f345de97b5e2639042287"
+    },
+    "modeling_titan.py": {
+      "bytes": 3711,
+      "git_blob_sha1": "0d0e8fc92781bc50c0add030806dbb590da3d57b"
+    },
+    "text_transformer.py": {
+      "bytes": 19005,
+      "git_blob_sha1": "617bd23557072f38eddc6eb876c2f4f183b70b7e"
+    },
+    "vision_transformer.py": {
+      "bytes": 25134,
+      "git_blob_sha1": "5c420e4f23a19f87b902ed1194a38d2b978fd12b"
+    },
+    "conch_v1_5.py": {
+      "bytes": 26073,
+      "git_blob_sha1": "a87c52a6ecad05c85137fd761012ad296506de87"
+    },
+    "conch_tokenizer.py": {
+      "bytes": 1647,
+      "git_blob_sha1": "2ea7bae7297f25c6f8ce98dddf4c1d33973a6c2f"
+    },
+    "tokenizer.json": {
+      "bytes": 1644583,
+      "git_blob_sha1": "6e6d762be9add3af25dc1d638dea2f4f0312dc40"
+    },
+    "tokenizer_config.json": {
+      "bytes": 1476,
+      "git_blob_sha1": "4cfaea635671bbb44e4aaa5656520de6a6c0a24b"
+    },
+    "special_tokens_map.json": {
+      "bytes": 93,
+      "git_blob_sha1": "ee16a3c6b24a99994fc90b7b4f13bb5b851afb64"
+    },
+    "model.safetensors": {
+      "bytes": 635494504,
+      "sha256": "4e92128317dca5c9e47d8173467105c21e4095f88d3bde9077e7f1e784b195fe"
+    }
+  },
+  "use": "Full actual local AutoModel and trainable text tower; no substitute or random initialization",
+  "original_DyKo_code_does_not_pin_TITAN_revision": true
+}

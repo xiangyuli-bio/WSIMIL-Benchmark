@@ -1,0 +1,73 @@
+{
+  "id": "convl",
+  "name": "ConVL",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/junjianli106/ConVL",
+  "source_status": "git_commit_locked",
+  "source_commit": "f1017a7ea0f51ff8d436b1334f937b85aa86c46b",
+  "license": "not_declared_at_fixed_commit; privately fetched original source, not vendored",
+  "profiles": [
+    "convl_yaml_fp16_source_repaired",
+    "convl_yaml_fp32_reference"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_pretrained_conch_text",
+    "complete_patient_bags",
+    "native_conch512_space",
+    "original_convl_concepts",
+    "patch_features",
+    "patient_survival_bins"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Complete actual pretrained full text/dynamicprompt/CGA/source objectives and original patient200epoch/AMP16/gradacc2/LookaheadRAdam/NLL-only VAL selection, separate explicit FP32 reference; actual original external bin labels supported; named patient-index, modern optimizer state/import/device ports, TRAIN-only quartile extension separately declared",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "convl_yaml_fp16_source_repaired",
+      "family": "convl",
+      "recipe": "Full original nativeCONCH512/768hidden12layer contextual text and16dynamic prompts, shared256projection/fourheadCGA/visual+concept heads; source NLL+.1sigmoidKL-.5instanceClustering-.3conceptClustering, complete patient bags, Lookahead/RAdam200max/gradacc2 including odd-tail divisor2, NLL-only VAL stopping8, full optimizer/scaler/RNG recovery; original CUDAFP16 mixed precision",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_conch512_space",
+        "actual_pretrained_conch_text",
+        "original_convl_concepts",
+        "patient_survival_bins",
+        "complete_patient_bags"
+      ],
+      "class_count": null,
+      "external_source": "convl",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "convl_yaml_fp32_reference",
+      "family": "convl",
+      "recipe": "Full original nativeCONCH512/768hidden12layer contextual text and16dynamic prompts, shared256projection/fourheadCGA/visual+concept heads; source NLL+.1sigmoidKL-.5instanceClustering-.3conceptClustering, complete patient bags, Lookahead/RAdam200max/gradacc2 including odd-tail divisor2, NLL-only VAL stopping8, full optimizer/scaler/RNG recovery; explicit full-native FP32 precision reference",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "native_conch512_space",
+        "actual_pretrained_conch_text",
+        "original_convl_concepts",
+        "patient_survival_bins",
+        "complete_patient_bags"
+      ],
+      "class_count": null,
+      "external_source": "convl",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    }
+  ]
+}

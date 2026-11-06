@@ -1,0 +1,17 @@
+# Source200epoch ceiling, complete actual low/high/text-mask objective.
+# Physical map and ordered text input contract: docs/CODMIL.md.
+epochs: 200
+lr: 0.0001
+weight_decay: 0.00001
+patience: 20
+selection_metric: codmil_val_loss
+grad_clip: null
+max_instances: null
+threads: 1
+model:
+  hidden: 192
+  optimizer: adam
+  weighted_sampling: false
+  early_stopping: true
+  stop_epoch: 50
+  max_dense_bytes: 34359738368

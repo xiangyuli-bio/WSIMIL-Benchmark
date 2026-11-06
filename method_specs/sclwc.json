@@ -1,0 +1,66 @@
+{
+  "id": "sclwc",
+  "name": "SCL-WC",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Xiyue-Wang/SCL-WC",
+  "source_status": "git_commit_locked",
+  "source_commit": "d8d0ff44e887cadeeaff199cd771af9ee23e5855",
+  "license": "README states GPLv3 and academic use; no root LICENSE found",
+  "profiles": [
+    "sclwc_paper_reference",
+    "sclwc_literal_source_control"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "explicit_pnm_reference_class_and_role",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_named_paper_CDA_PNM_live_anchor_WSCL_reconstruction_and_separate_literal_incomplete_source_control; explicit_PNM_reference_class_and_role_TRAIN_only_typed_banks_full_balanced_Adam_cosine_selection_exact_resume; all_undisclosed_choices_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "sclwc_literal_source_control",
+      "family": "sclwc",
+      "recipe": "literal pinned source model and actual original train_loop, full-D input port; preserves missing PNM and disabled WSCL as an explicitly named incomplete-source control; complete author balanced Adam/cosine/selection loop",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "explicit_pnm_reference_class_and_role"
+      ],
+      "class_count": 2,
+      "external_source": "sclwc",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run",
+      "complete_paper_objectives": false
+    },
+    {
+      "id": "sclwc_paper_reference",
+      "family": "sclwc",
+      "recipe": "complete explicitly reconstructed paper CDA/PNM/WSCL; native512/256 class-specific attention, active live-anchor cross-slide objective and real TRAIN-only typed banks; full balanced one-bag Adam/cosine/validation stopping and exact resume",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "explicit_pnm_reference_class_and_role"
+      ],
+      "class_count": null,
+      "external_source": "sclwc",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run",
+      "complete_paper_objectives": true
+    }
+  ]
+}

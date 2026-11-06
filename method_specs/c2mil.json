@@ -1,0 +1,48 @@
+{
+  "id": "c2mil",
+  "name": "C2MIL",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mimic0127/C2MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "fd4d54fc115466e43019c77015cdef01d90c85c3",
+  "license": "MIT",
+  "profiles": [
+    "c2mil_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "c2mil_assets",
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_adaptive_bias_removal_causal_graph_five_losses_and_source_batch_merge_Adam_schedule_VAL_last_tie_recipe; actual_whole_slide_thumbnails_TRAIN_only1500patch_reference_physical_graphs_full_FM_channels_and_dynamic_cache_resume",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "c2mil_source",
+      "family": "c2mil",
+      "recipe": "full original adaptive TRAIN-reference bias removal, causal graph three-view network, five losses and native batch/Adam/VAL-selection recipe; complete dynamic cache and exact epoch resume",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "c2mil_assets",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "c2mil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

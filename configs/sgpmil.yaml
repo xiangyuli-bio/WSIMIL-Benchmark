@@ -1,0 +1,17 @@
+epochs: 50
+lr: 0.0006
+weight_decay: 0.0001
+patience: 10
+threads: 4
+selection_metric: macro_auc
+model:
+  hidden: 768
+  hidden1: 384
+  hidden2: 256
+  attention_dim: 64
+  inducing_points: 80
+  mc_samples: 30
+  sampling: var
+  kl_factor: 1.0
+  post_activation: sigmoid
+  evaluation_seed: 2026

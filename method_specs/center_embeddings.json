@@ -1,0 +1,67 @@
+{
+  "id": "center_embeddings",
+  "name": "MIL with Center Embeddings",
+  "group": "E_encoder_training",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/PhilipChicco/MICCAI2020mil",
+  "source_status": "git_commit_locked",
+  "source_commit": "871b1ecad3f0480c526536b11fafe4d759273a25",
+  "license": "GPL-3.0; privately fetched original source, not vendored",
+  "profiles": [
+    "center_embeddings_bag_classifier_repaired",
+    "center_embeddings_soft_assignment_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_level0_tile_centers",
+    "historical_imagenet_resnet34",
+    "original_raw256_rgb_patch_bags",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_end_to_end_raw_R34_FPN_bagCNN_three_loss_dual_Adam_source_exhaustive_positive_top32_and_original0.7augmentations; source_undefined_bag_feat_repair; fullstate_and_original_default_vs_center_soft_assignment_inference; exact_frozen_tile_extraction_provenance_and_worker0_recovery_port",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "center_embeddings_bag_classifier_repaired",
+      "family": "center_embeddings",
+      "recipe": "Full source original ResNet34/FPN/32x256RGB bagCNN/shared512embedding, actual original ImageNet weights and torchvision0.7 preprocessing; exhaustive per-epoch source TRAIN and VAL candidate scores/top32/ordered bags, complete instance CE + bag CE + center loss, separate two-group Adam and center Adam, literal source staircase and20epoch last-tie VAL balanced-ACC recipe. Explicit undefined bag_feat -> actual normalized bag_embed repair; bag_classifier inference.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "original_raw256_rgb_patch_bags",
+        "actual_level0_tile_centers",
+        "historical_imagenet_resnet34",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "center_embeddings",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    },
+    {
+      "id": "center_embeddings_soft_assignment_repaired",
+      "family": "center_embeddings",
+      "recipe": "Full source original ResNet34/FPN/32x256RGB bagCNN/shared512embedding, actual original ImageNet weights and torchvision0.7 preprocessing; exhaustive per-epoch source TRAIN and VAL candidate scores/top32/ordered bags, complete instance CE + bag CE + center loss, separate two-group Adam and center Adam, literal source staircase and20epoch last-tie VAL balanced-ACC recipe. Explicit undefined bag_feat -> actual normalized bag_embed repair; soft_assignment inference.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "original_raw256_rgb_patch_bags",
+        "actual_level0_tile_centers",
+        "historical_imagenet_resnet34",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "center_embeddings",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "status": "implemented_unvalidated"
+    }
+  ]
+}

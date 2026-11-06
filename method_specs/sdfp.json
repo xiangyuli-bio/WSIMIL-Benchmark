@@ -1,0 +1,103 @@
+{
+  "id": "sdfp",
+  "name": "S-DFP",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/thomascong121/S-DFP",
+  "source_status": "git_commit_locked",
+  "source_commit": "22ef367ee3c99ca2dbd1ed70d13130c1c354623e",
+  "license": "No root license found; review pending",
+  "profiles": [
+    "sdfp_abmil",
+    "sdfp_gated",
+    "sdfp_dsmil",
+    "sdfp_transmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "sdfp_abmil",
+      "family": "sdfp",
+      "recipe": "author S-DFP with raw-feature attention; shared prompt then slide-aware joint training, CE and step cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "sdfp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "sdfp_dsmil",
+      "family": "sdfp",
+      "recipe": "author S-DFP/DSMIL; two-stage prompts plus all-instance CE and bag CE, joint Adam and step cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "sdfp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "sdfp_gated",
+      "family": "sdfp",
+      "recipe": "author S-DFP with raw-feature gated attention; shared prompt then slide-aware joint training, CE and step cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "sdfp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "sdfp_transmil",
+      "family": "sdfp",
+      "recipe": "author S-DFP/Nystrom TransMIL; two-stage joint prompting, CE and step cosine",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "sdfp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "mfemil",
+  "name": "MFE-MIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/AtlasAnalyticsLab/MFE-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "813c8e8abf46c05afc2402c06a6c7ac77284fff2",
+  "license": "CC BY-NC-SA 4.0",
+  "profiles": [
+    "mfemil_mean",
+    "mfemil_max",
+    "mfemil_abmil",
+    "mfemil_clam_sb",
+    "mfemil_clam_mb",
+    "mfemil_transmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "survival_coords"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mfemil_abmil",
+      "family": "mfemil",
+      "recipe": "author shared adapter, MFE decoder and DAttention; joint CE/NLL and Adam",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "survival_coords"
+      ],
+      "class_count": null,
+      "external_source": "mfemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mfemil_clam_mb",
+      "family": "mfemil",
+      "recipe": "released MFE-CLAM-MB bag-only head with shared adapter and reconstruction; instance loss not used by source MFE recipe",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "survival_coords"
+      ],
+      "class_count": null,
+      "external_source": "mfemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mfemil_clam_sb",
+      "family": "mfemil",
+      "recipe": "released MFE-CLAM-SB bag-only head with shared adapter and reconstruction; instance loss not used by source MFE recipe",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "survival_coords"
+      ],
+      "class_count": null,
+      "external_source": "mfemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mfemil_max",
+      "family": "mfemil",
+      "recipe": "author shared adapter, MFE decoder and MaxMIL; joint CE/NLL and Adam",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "survival_coords"
+      ],
+      "class_count": null,
+      "external_source": "mfemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mfemil_mean",
+      "family": "mfemil",
+      "recipe": "author shared adapter, window-masked normalized-feature reconstruction and MeanMIL; joint CE/NLL and Adam",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "survival_coords"
+      ],
+      "class_count": null,
+      "external_source": "mfemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mfemil_transmil",
+      "family": "mfemil",
+      "recipe": "released survival MFE-TransMIL, shared adapter and reconstruction, censored NLL, train-only intervals and Adam",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "survival_coords"
+      ],
+      "class_count": null,
+      "external_source": "mfemil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "attrimil",
+  "name": "AttriMIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/MedCAI/AttriMIL",
+  "source_status": "complete_original_author_recipe_repaired_candidate_under_verification",
+  "source_commit": "e5736b9b4b5d3d4a64340b6ff5fa7fd470a338a9",
+  "license": "Apache-2.0 at fixed original author commit",
+  "profiles": [
+    "attrimil",
+    "attrimil_author_200_main_repaired",
+    "attrimil_author_200_function_earlystop_repaired"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "coords",
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Existing controlled port retained. Complete original AttriMIL architecture, SGD2e-4/momentum.9/wd1e-5, spatial1/rank5, real9-neighbor geometry, class-balanced replacement sampling and epoch-local4-entry queues. Two max200epoch original main/function early-stop conditions; strict VAL CE selection, complete SGD/queue/RNG/sampler recovery. Spatial-axis, undefined logging, device allocation and broken original summary repairs disclosed. Full source/wheel/native/release gates remain pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "attrimil",
+      "family": "attrimil",
+      "recipe": "frozen-feature variant: attribution pooling + physical-neighbour spatial constraint + checkpointed cross-slide ranking queues",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "attrimil_author_200_main_repaired",
+      "family": "attrimil",
+      "recipe": "original AttriMIL class-specific architecture, SGD2e-4/momentum.9/wd1e-5, spatial1/rank5, actual3x3 neighbors, epoch-local queues4, class-balanced replacement sampling, complete200epoch maximum, VAL CE selector; original main no early stopping; disclosed spatial-axis/logging/device/prediction repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "attrimil",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "lr": 0.0002,
+        "momentum": 0.9,
+        "weight_decay": 1e-05,
+        "spatial_weight": 1.0,
+        "rank_weight": 5.0,
+        "kernel_size": 3,
+        "queue_size": 4,
+        "queue_reset": "every epoch",
+        "train_sampling": "class-balanced WeightedRandomSampler with replacement",
+        "scheduler": null,
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "initial_best_loss": 10000.0,
+        "patience": 20,
+        "early_stop_condition": "retain >20 and zero-based epoch >50",
+        "early_stopping": false
+      },
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "adapted_under_verification",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "spatial_constraint score=A[0,c] instead of A[:,c] for original [1,C,N] attributes",
+        "remove unused undefined loss_ins logging reference; original objective unchanged",
+        "allocate original A_raw on feature device; CPU semantics unchanged",
+        "evaluate original5-output AttriMIL probabilities instead of broken DSMIL-style summary",
+        "fixed patient-disjoint task manifest and explicit seed",
+        "immutable best snapshots and complete SGD/queues/RNG/weighted-sampler recovery"
+      ]
+    },
+    {
+      "id": "attrimil_author_200_function_earlystop_repaired",
+      "family": "attrimil",
+      "recipe": "original AttriMIL class-specific architecture, SGD2e-4/momentum.9/wd1e-5, spatial1/rank5, actual3x3 neighbors, epoch-local queues4, class-balanced replacement sampling, complete200epoch maximum, VAL CE selector; original function-default early stopping; disclosed spatial-axis/logging/device/prediction repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "attrimil",
+      "native_recipe": {
+        "epochs": 200,
+        "batch_size": 1,
+        "lr": 0.0002,
+        "momentum": 0.9,
+        "weight_decay": 1e-05,
+        "spatial_weight": 1.0,
+        "rank_weight": 5.0,
+        "kernel_size": 3,
+        "queue_size": 4,
+        "queue_reset": "every epoch",
+        "train_sampling": "class-balanced WeightedRandomSampler with replacement",
+        "scheduler": null,
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "initial_best_loss": 10000.0,
+        "patience": 20,
+        "early_stop_condition": "retain >20 and zero-based epoch >50",
+        "early_stopping": true
+      },
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "adapted_under_verification",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "spatial_constraint score=A[0,c] instead of A[:,c] for original [1,C,N] attributes",
+        "remove unused undefined loss_ins logging reference; original objective unchanged",
+        "allocate original A_raw on feature device; CPU semantics unchanged",
+        "evaluate original5-output AttriMIL probabilities instead of broken DSMIL-style summary",
+        "fixed patient-disjoint task manifest and explicit seed",
+        "immutable best snapshots and complete SGD/queues/RNG/weighted-sampler recovery"
+      ]
+    }
+  ]
+}

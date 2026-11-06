@@ -1,0 +1,42 @@
+{
+  "id": "c2aug",
+  "name": "C2Aug",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/weiaicunzai/mixup",
+  "source_status": "git_commit_locked",
+  "source_commit": "14cb53bc71f5161105b0dbef45351243d7330561",
+  "license": "not_found_in_pinned_tree; external_source_only",
+  "profiles": [
+    "c2aug_transmil_paper_reference"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_named_paper_reference; native_source_TransMIL_and_paper_Eq2_to9; official_supplement_defaults; all_augmentations_active_bag_FIFO_all_group_forward_KL_learnable_prototypes_EMA_and_exact_resume; source_deficits_and_undisclosed_choices_explicit",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "c2aug_transmil_paper_reference",
+      "family": "c2aug",
+      "recipe": "complete named paper-reference recipe: all three TRAIN-only cross-bag augmentations, original TransMIL, EMA teacher, active bag FIFO InfoNCE, learned prototypes and all-group forward KL; explicit paper/source differences",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "c2aug",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

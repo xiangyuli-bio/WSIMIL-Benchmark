@@ -1,0 +1,13 @@
+epochs: 50
+lr: 0.0002
+weight_decay: 0.00001
+model:
+  hidden: 768
+  layers: 2
+  bidirectional: true
+  dropout: 0.1
+  selected_patches: 64
+  selection: aps
+  l2_weight: 0.0001
+  min_lr: 0.000005
+  max_similarity_bytes: 536870912

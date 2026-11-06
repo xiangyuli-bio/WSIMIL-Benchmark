@@ -1,0 +1,43 @@
+{
+  "id": "cbmil",
+  "name": "CBMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/wwu98934/CBMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "980252ac796e4f68ad97d7b0b0de4aef4bb00157",
+  "license": "not_yet_verified",
+  "profiles": [
+    "cbmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "cbmil",
+      "family": "cbmil",
+      "recipe": "author adaptive cluster selection, patch/phenotype fusion, CLAM instance loss, two-view NT-Xent and asymmetric feature mixing; explicit FM-to-512 adapter",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "cbmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

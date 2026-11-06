@@ -1,0 +1,46 @@
+{
+  "id": "mgtrans",
+  "name": "MG-Trans",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Jiangbo-Shi/MG-Trans",
+  "source_status": "git_commit_locked",
+  "source_commit": "a18d886b89ff0eddf5ae0b4ae16058623fe34dbc",
+  "license": "not_declared_in_pinned_repository",
+  "profiles": [
+    "mgtrans_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "mgtrans_dual_scale_alignment",
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_released_two_scale_PAM_shared_Transformer_three_layer_GCN_semantic_negativeCE_and_32slide_Renyi_MI_window; explicit_physical_alignment_fullstate_resume_native200max_Adam_latest_VALerror_tie; source_graph_detach_and_unused12layer_config_disclosed",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mgtrans_source_repaired",
+      "family": "mgtrans",
+      "recipe": "Complete released192width/3heads/512anchor two-scale graph Transformer, actual3layer GENConv, negativeCE semantic consistency and32slide RenyiMI window; original Adam/200maxepochs/VALerror latest-tie selection; explicit device/API/latent-query repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "mgtrans_dual_scale_alignment",
+        "per_slide_coords"
+      ],
+      "class_count": null,
+      "external_source": "mgtrans",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

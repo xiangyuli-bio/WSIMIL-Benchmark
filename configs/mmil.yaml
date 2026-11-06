@@ -1,0 +1,14 @@
+epochs: 50
+lr: 0.0002
+weight_decay: 0.00001
+patience: 10
+threads: 4
+selection_metric: macro_auc
+model:
+  hidden: 512
+  groups: 4
+  message_tokens: 1
+  layers: 2
+  mask_ratio: 0.6
+  max_group_size: 4300
+  evaluation_seed: 2026

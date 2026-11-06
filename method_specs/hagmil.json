@@ -1,0 +1,45 @@
+{
+  "id": "hagmil",
+  "name": "HAG-MIL",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/BearCleverProud/HAG-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "9fec1ca4390346b958212801d2d5a14c7ce36d6f",
+  "license": "not_yet_verified",
+  "profiles": [
+    "hagmil_ce"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "quadtree",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "hagmil_ce",
+      "family": "hagmil",
+      "recipe": "author three-stage four-layer IAM models, detached hierarchical selection, CE instance clustering and per-level optimizer updates; explicit CE profile",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "quadtree"
+      ],
+      "class_count": null,
+      "external_source": "hagmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

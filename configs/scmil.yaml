@@ -1,0 +1,12 @@
+epochs: 20
+lr: 0.0002
+weight_decay: 0.0001
+model:
+  hidden: 256
+  components: 100
+  cluster_size: 64
+  feature_weight: 0.8
+  dropout: 0.25
+  clustering_backend: sklearn
+  curve_points: 64
+  accumulation_steps: 1

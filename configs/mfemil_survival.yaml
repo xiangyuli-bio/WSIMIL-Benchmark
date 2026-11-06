@@ -1,0 +1,20 @@
+epochs: 20
+lr: 0.0002
+weight_decay: 0.00001
+patience: 5
+selection_metric: c_index
+grad_clip: null
+model:
+  alpha: 0.3
+  mask_ratio: 0.75
+  shared_layers: 2
+  sub_batch: 8
+  decoder_dim: 512
+  decoder_depth: 4
+  decoder_heads: 16
+  attention_backend: sdpa
+  precision: fp32
+  bins: 4
+  survival_alpha: 0.0
+  accumulation_steps: 32
+  weighted_sampling: false

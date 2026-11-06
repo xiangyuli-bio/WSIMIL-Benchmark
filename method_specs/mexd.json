@@ -1,0 +1,210 @@
+{
+  "id": "mexd",
+  "name": "MExD",
+  "group": "L_composite",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/JWZhao-uestc/MExD",
+  "source_commit": "1d4d438e2b19d0fee9cb55328faa84b6ca37fe0b",
+  "source_status": "complete_original_adapters_denoiser_and_diffusion_with_declared_full_paper_reference_MoE_trainer",
+  "license": "no_LICENSE_in_pinned_tree_private_source_loading_only",
+  "profiles": [
+    "mexd_camelyon16_paper_reference",
+    "mexd_tcga_nsclc_paper_reference",
+    "mexd_bracs_paper_reference",
+    "mexd_class_port_reference"
+  ],
+  "status": "adapted_under_verification",
+  "formal_admission": false,
+  "required_inputs": [
+    "actual_ordered_frozen_features",
+    "patient_disjoint_splits",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "blocker": null,
+  "requirements_review": "Both complete512D/two-layer8head256landmark TransMIL/PPEG adapters, 2/3/4expert routes, negative and bag-matched expert supervision, confidence-weighted condition, full original conditional denoiser and shifted500step diffusion preserved. Complete two-stage 100epoch RAdam plus200epoch Adam/cosine training, frozen stage2 auxiliary,100posterior paths and paired uncertainty are implemented. Incompatible released pretrain/inference graphs and missing hardcoded checkpoints are not silently substituted: unified paperEq2/3/9, initialization, empty-expert and selection choices are declared reference reconstructions. Full software/native/ source/wheel and final gates remain independent; model-only checks are insufficient.",
+  "execution_profiles": [
+    {
+      "id": "mexd_bracs_paper_reference",
+      "family": "mexd",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "mexd",
+      "class_count": 3,
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "reference_reconstruction": true,
+      "native_recipe": {
+        "feature_dimensions": [
+          384,
+          768
+        ],
+        "adapter_width": 512,
+        "adapters": 2,
+        "layers_each": 2,
+        "heads": 8,
+        "landmarks": 256,
+        "experts": 4,
+        "observed_background_class": null,
+        "moe_epochs": 100,
+        "diffusion_epochs": 200,
+        "diffusion_steps": 500,
+        "posterior_samples": 100,
+        "moe_lr": 0.0002,
+        "diffusion_lr": 0.001,
+        "moe_weight_decay": 1e-05,
+        "diffusion_weight_decay": 0.0,
+        "diffusion_clip_norm": 1.0,
+        "batch_size": 1,
+        "selection": "fixed_final_epoch"
+      },
+      "recipe": "Complete mexd reference [mexd_bracs_paper_reference]; native_recipe={\"adapter_width\":512,\"adapters\":2,\"batch_size\":1,\"diffusion_clip_norm\":1.0,\"diffusion_epochs\":200,\"diffusion_lr\":0.001,\"diffusion_steps\":500,\"diffusion_weight_decay\":0.0,\"experts\":4,\"feature_dimensions\":[384,768],\"heads\":8,\"landmarks\":256,\"layers_each\":2,\"moe_epochs\":100,\"moe_lr\":0.0002,\"moe_weight_decay\":1e-05,\"observed_background_class\":null,\"posterior_samples\":100,\"selection\":\"fixed_final_epoch\"}"
+    },
+    {
+      "id": "mexd_camelyon16_paper_reference",
+      "family": "mexd",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "mexd",
+      "class_count": 2,
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "reference_reconstruction": true,
+      "native_recipe": {
+        "feature_dimensions": [
+          384,
+          768
+        ],
+        "adapter_width": 512,
+        "adapters": 2,
+        "layers_each": 2,
+        "heads": 8,
+        "landmarks": 256,
+        "experts": 2,
+        "observed_background_class": 0,
+        "moe_epochs": 100,
+        "diffusion_epochs": 200,
+        "diffusion_steps": 500,
+        "posterior_samples": 100,
+        "moe_lr": 0.0002,
+        "diffusion_lr": 0.001,
+        "moe_weight_decay": 1e-05,
+        "diffusion_weight_decay": 0.0,
+        "diffusion_clip_norm": 1.0,
+        "batch_size": 1,
+        "selection": "fixed_final_epoch"
+      },
+      "recipe": "Complete mexd reference [mexd_camelyon16_paper_reference]; native_recipe={\"adapter_width\":512,\"adapters\":2,\"batch_size\":1,\"diffusion_clip_norm\":1.0,\"diffusion_epochs\":200,\"diffusion_lr\":0.001,\"diffusion_steps\":500,\"diffusion_weight_decay\":0.0,\"experts\":2,\"feature_dimensions\":[384,768],\"heads\":8,\"landmarks\":256,\"layers_each\":2,\"moe_epochs\":100,\"moe_lr\":0.0002,\"moe_weight_decay\":1e-05,\"observed_background_class\":0,\"posterior_samples\":100,\"selection\":\"fixed_final_epoch\"}"
+    },
+    {
+      "id": "mexd_class_port_reference",
+      "family": "mexd",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "mexd",
+      "class_count": null,
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "reference_reconstruction": true,
+      "native_recipe": {
+        "feature_dimensions": [
+          384,
+          768
+        ],
+        "adapter_width": 512,
+        "adapters": 2,
+        "layers_each": 2,
+        "heads": 8,
+        "landmarks": 256,
+        "experts": "C_if_observed_class0background_else_Cplus1",
+        "observed_background_class": "explicit_optional_task.class_roles.background",
+        "moe_epochs": 100,
+        "diffusion_epochs": 200,
+        "diffusion_steps": 500,
+        "posterior_samples": 100,
+        "moe_lr": 0.0002,
+        "diffusion_lr": 0.001,
+        "moe_weight_decay": 1e-05,
+        "diffusion_weight_decay": 0.0,
+        "diffusion_clip_norm": 1.0,
+        "batch_size": 1,
+        "selection": "fixed_final_epoch",
+        "output_class_port": true
+      },
+      "recipe": "Complete mexd reference [mexd_class_port_reference]; native_recipe={\"adapter_width\":512,\"adapters\":2,\"batch_size\":1,\"diffusion_clip_norm\":1.0,\"diffusion_epochs\":200,\"diffusion_lr\":0.001,\"diffusion_steps\":500,\"diffusion_weight_decay\":0.0,\"experts\":\"C_if_observed_class0background_else_Cplus1\",\"feature_dimensions\":[384,768],\"heads\":8,\"landmarks\":256,\"layers_each\":2,\"moe_epochs\":100,\"moe_lr\":0.0002,\"moe_weight_decay\":1e-05,\"observed_background_class\":\"explicit_optional_task.class_roles.background\",\"output_class_port\":true,\"posterior_samples\":100,\"selection\":\"fixed_final_epoch\"}"
+    },
+    {
+      "id": "mexd_tcga_nsclc_paper_reference",
+      "family": "mexd",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "mexd",
+      "class_count": 2,
+      "status": "adapted_under_verification",
+      "formal_admission": false,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "reference_reconstruction": true,
+      "native_recipe": {
+        "feature_dimensions": [
+          384,
+          768
+        ],
+        "adapter_width": 512,
+        "adapters": 2,
+        "layers_each": 2,
+        "heads": 8,
+        "landmarks": 256,
+        "experts": 3,
+        "observed_background_class": null,
+        "moe_epochs": 100,
+        "diffusion_epochs": 200,
+        "diffusion_steps": 500,
+        "posterior_samples": 100,
+        "moe_lr": 0.0002,
+        "diffusion_lr": 0.001,
+        "moe_weight_decay": 1e-05,
+        "diffusion_weight_decay": 0.0,
+        "diffusion_clip_norm": 1.0,
+        "batch_size": 1,
+        "selection": "fixed_final_epoch"
+      },
+      "recipe": "Complete mexd reference [mexd_tcga_nsclc_paper_reference]; native_recipe={\"adapter_width\":512,\"adapters\":2,\"batch_size\":1,\"diffusion_clip_norm\":1.0,\"diffusion_epochs\":200,\"diffusion_lr\":0.001,\"diffusion_steps\":500,\"diffusion_weight_decay\":0.0,\"experts\":3,\"feature_dimensions\":[384,768],\"heads\":8,\"landmarks\":256,\"layers_each\":2,\"moe_epochs\":100,\"moe_lr\":0.0002,\"moe_weight_decay\":1e-05,\"observed_background_class\":null,\"posterior_samples\":100,\"selection\":\"fixed_final_epoch\"}"
+    }
+  ]
+}

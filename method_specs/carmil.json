@@ -1,0 +1,473 @@
+{
+  "id": "carmil",
+  "name": "CAR-MIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/ImaneCR/CAR-MIL",
+  "source_status": "complete_original_author_recipe_repaired_candidate_under_verification",
+  "source_commit": "26fdee4dc05e6b358395e28fb2073da3b29b6cc3",
+  "license": "not_yet_verified",
+  "profiles": [
+    "carmil",
+    "carmil_author_100_attmil_l1_locked_test_repaired",
+    "carmil_author_100_attmil_cos_locked_test_repaired",
+    "carmil_author_100_gattmil_l1_locked_test_repaired",
+    "carmil_author_100_gattmil_cos_locked_test_repaired",
+    "carmil_author_100_transmil_l1_locked_test_repaired",
+    "carmil_author_100_transmil_cos_locked_test_repaired",
+    "carmil_author_100_dsmil_l1_locked_test_repaired",
+    "carmil_author_100_dsmil_cos_locked_test_repaired"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Controlled MIL_BASELINE port retained. All four original CAR backbones and L1/COS loss definitions; original100epoch Adam/cosine recipe and pre-TRAIN VAL AUC selector, including untrained epoch0 and no post-final selector. Native DSMIL instance loss and original TransMIL flattened attention retained explicitly. Private shuffle-generator/RNG/Adam/scheduler/minibatch recovery, optional original checkpoint binding; NumPy2/CPU timing/patient/locked-TEST adaptations disclosed. Full reference/source/wheel/release gates remain pending.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "carmil",
+      "family": "carmil",
+      "recipe": "factual CE + counterfactual effect CE + attention regularization",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "carmil_author_100_attmil_l1_locked_test_repaired",
+      "family": "carmil",
+      "recipe": "original attmil factual/CF network and L1 objective; full100epochs Adam2e-4/wd1e-5/cosine100; original pre-TRAIN VAL AUC selector and private shuffle generator; locked TEST, disclosed NumPy2/CPU timing repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "carmil",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "act": "relu",
+        "alpha_effect": 0.2,
+        "alpha_att": 0.2,
+        "loss": "ce",
+        "scheduler": "CosineAnnealingLR(T_max=100, eta_min=0), after each full TRAIN epoch",
+        "fixed_loader_seed": 7784414403328510413,
+        "selection": "VAL AUC before TRAIN, strict improvement over initial0",
+        "early_stopping": {
+          "patience": 30,
+          "stop_epoch": 130,
+          "save_best_model_stage": 0.0
+        },
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "amp": false,
+        "backbone": "attmil",
+        "reg_dist": "L1",
+        "cls_alpha": 1.0,
+        "aux_alpha": 1.0
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "original EarlyStopping np.Inf becomes np.inf for NumPy2",
+        "CPU timing instrumentation omitted; native forward/backward/scheduler unchanged",
+        "fixed patient-disjoint TRAIN/VAL and locked TEST replace original default TEST-as-VAL",
+        "num_workers0 replaces original2 for exact recorded/recoverable loading",
+        "immutable selected state and Adam/scheduler/RNG/private-generator/minibatch recovery"
+      ],
+      "native_attention_shape": "literal original two-row factual/CF attention"
+    },
+    {
+      "id": "carmil_author_100_attmil_cos_locked_test_repaired",
+      "family": "carmil",
+      "recipe": "original attmil factual/CF network and COS objective; full100epochs Adam2e-4/wd1e-5/cosine100; original pre-TRAIN VAL AUC selector and private shuffle generator; locked TEST, disclosed NumPy2/CPU timing repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "carmil",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "act": "relu",
+        "alpha_effect": 0.2,
+        "alpha_att": 0.2,
+        "loss": "ce",
+        "scheduler": "CosineAnnealingLR(T_max=100, eta_min=0), after each full TRAIN epoch",
+        "fixed_loader_seed": 7784414403328510413,
+        "selection": "VAL AUC before TRAIN, strict improvement over initial0",
+        "early_stopping": {
+          "patience": 30,
+          "stop_epoch": 130,
+          "save_best_model_stage": 0.0
+        },
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "amp": false,
+        "backbone": "attmil",
+        "reg_dist": "COS",
+        "cls_alpha": 1.0,
+        "aux_alpha": 1.0
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "original EarlyStopping np.Inf becomes np.inf for NumPy2",
+        "CPU timing instrumentation omitted; native forward/backward/scheduler unchanged",
+        "fixed patient-disjoint TRAIN/VAL and locked TEST replace original default TEST-as-VAL",
+        "num_workers0 replaces original2 for exact recorded/recoverable loading",
+        "immutable selected state and Adam/scheduler/RNG/private-generator/minibatch recovery"
+      ],
+      "native_attention_shape": "literal original two-row factual/CF attention"
+    },
+    {
+      "id": "carmil_author_100_gattmil_l1_locked_test_repaired",
+      "family": "carmil",
+      "recipe": "original gattmil factual/CF network and L1 objective; full100epochs Adam2e-4/wd1e-5/cosine100; original pre-TRAIN VAL AUC selector and private shuffle generator; locked TEST, disclosed NumPy2/CPU timing repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "carmil",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "act": "relu",
+        "alpha_effect": 0.2,
+        "alpha_att": 0.2,
+        "loss": "ce",
+        "scheduler": "CosineAnnealingLR(T_max=100, eta_min=0), after each full TRAIN epoch",
+        "fixed_loader_seed": 7784414403328510413,
+        "selection": "VAL AUC before TRAIN, strict improvement over initial0",
+        "early_stopping": {
+          "patience": 30,
+          "stop_epoch": 130,
+          "save_best_model_stage": 0.0
+        },
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "amp": false,
+        "backbone": "gattmil",
+        "reg_dist": "L1",
+        "cls_alpha": 1.0,
+        "aux_alpha": 1.0
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "original EarlyStopping np.Inf becomes np.inf for NumPy2",
+        "CPU timing instrumentation omitted; native forward/backward/scheduler unchanged",
+        "fixed patient-disjoint TRAIN/VAL and locked TEST replace original default TEST-as-VAL",
+        "num_workers0 replaces original2 for exact recorded/recoverable loading",
+        "immutable selected state and Adam/scheduler/RNG/private-generator/minibatch recovery"
+      ],
+      "native_attention_shape": "literal original two-row factual/CF attention"
+    },
+    {
+      "id": "carmil_author_100_gattmil_cos_locked_test_repaired",
+      "family": "carmil",
+      "recipe": "original gattmil factual/CF network and COS objective; full100epochs Adam2e-4/wd1e-5/cosine100; original pre-TRAIN VAL AUC selector and private shuffle generator; locked TEST, disclosed NumPy2/CPU timing repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "carmil",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "act": "relu",
+        "alpha_effect": 0.2,
+        "alpha_att": 0.2,
+        "loss": "ce",
+        "scheduler": "CosineAnnealingLR(T_max=100, eta_min=0), after each full TRAIN epoch",
+        "fixed_loader_seed": 7784414403328510413,
+        "selection": "VAL AUC before TRAIN, strict improvement over initial0",
+        "early_stopping": {
+          "patience": 30,
+          "stop_epoch": 130,
+          "save_best_model_stage": 0.0
+        },
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "amp": false,
+        "backbone": "gattmil",
+        "reg_dist": "COS",
+        "cls_alpha": 1.0,
+        "aux_alpha": 1.0
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "original EarlyStopping np.Inf becomes np.inf for NumPy2",
+        "CPU timing instrumentation omitted; native forward/backward/scheduler unchanged",
+        "fixed patient-disjoint TRAIN/VAL and locked TEST replace original default TEST-as-VAL",
+        "num_workers0 replaces original2 for exact recorded/recoverable loading",
+        "immutable selected state and Adam/scheduler/RNG/private-generator/minibatch recovery"
+      ],
+      "native_attention_shape": "literal original two-row factual/CF attention"
+    },
+    {
+      "id": "carmil_author_100_transmil_l1_locked_test_repaired",
+      "family": "carmil",
+      "recipe": "original transmil factual/CF network and L1 objective; full100epochs Adam2e-4/wd1e-5/cosine100; original pre-TRAIN VAL AUC selector and private shuffle generator; locked TEST, disclosed NumPy2/CPU timing repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "carmil",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "act": "relu",
+        "alpha_effect": 0.2,
+        "alpha_att": 0.2,
+        "loss": "ce",
+        "scheduler": "CosineAnnealingLR(T_max=100, eta_min=0), after each full TRAIN epoch",
+        "fixed_loader_seed": 7784414403328510413,
+        "selection": "VAL AUC before TRAIN, strict improvement over initial0",
+        "early_stopping": {
+          "patience": 30,
+          "stop_epoch": 130,
+          "save_best_model_stage": 0.0
+        },
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "amp": false,
+        "backbone": "transmil",
+        "reg_dist": "L1",
+        "cls_alpha": 1.0,
+        "aux_alpha": 1.0
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "original EarlyStopping np.Inf becomes np.inf for NumPy2",
+        "CPU timing instrumentation omitted; native forward/backward/scheduler unchanged",
+        "fixed patient-disjoint TRAIN/VAL and locked TEST replace original default TEST-as-VAL",
+        "num_workers0 replaces original2 for exact recorded/recoverable loading",
+        "immutable selected state and Adam/scheduler/RNG/private-generator/minibatch recovery"
+      ],
+      "native_attention_shape": "literal original flattened2N TransMIL CF attention; trainer indexes scalar entries; no stack repair"
+    },
+    {
+      "id": "carmil_author_100_transmil_cos_locked_test_repaired",
+      "family": "carmil",
+      "recipe": "original transmil factual/CF network and COS objective; full100epochs Adam2e-4/wd1e-5/cosine100; original pre-TRAIN VAL AUC selector and private shuffle generator; locked TEST, disclosed NumPy2/CPU timing repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "carmil",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "act": "relu",
+        "alpha_effect": 0.2,
+        "alpha_att": 0.2,
+        "loss": "ce",
+        "scheduler": "CosineAnnealingLR(T_max=100, eta_min=0), after each full TRAIN epoch",
+        "fixed_loader_seed": 7784414403328510413,
+        "selection": "VAL AUC before TRAIN, strict improvement over initial0",
+        "early_stopping": {
+          "patience": 30,
+          "stop_epoch": 130,
+          "save_best_model_stage": 0.0
+        },
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "amp": false,
+        "backbone": "transmil",
+        "reg_dist": "COS",
+        "cls_alpha": 1.0,
+        "aux_alpha": 1.0
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "original EarlyStopping np.Inf becomes np.inf for NumPy2",
+        "CPU timing instrumentation omitted; native forward/backward/scheduler unchanged",
+        "fixed patient-disjoint TRAIN/VAL and locked TEST replace original default TEST-as-VAL",
+        "num_workers0 replaces original2 for exact recorded/recoverable loading",
+        "immutable selected state and Adam/scheduler/RNG/private-generator/minibatch recovery"
+      ],
+      "native_attention_shape": "literal original flattened2N TransMIL CF attention; trainer indexes scalar entries; no stack repair"
+    },
+    {
+      "id": "carmil_author_100_dsmil_l1_locked_test_repaired",
+      "family": "carmil",
+      "recipe": "original dsmil factual/CF network and L1 objective; full100epochs Adam2e-4/wd1e-5/cosine100; original pre-TRAIN VAL AUC selector and private shuffle generator; locked TEST, disclosed NumPy2/CPU timing repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "carmil",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "act": "relu",
+        "alpha_effect": 0.2,
+        "alpha_att": 0.2,
+        "loss": "ce",
+        "scheduler": "CosineAnnealingLR(T_max=100, eta_min=0), after each full TRAIN epoch",
+        "fixed_loader_seed": 7784414403328510413,
+        "selection": "VAL AUC before TRAIN, strict improvement over initial0",
+        "early_stopping": {
+          "patience": 30,
+          "stop_epoch": 130,
+          "save_best_model_stage": 0.0
+        },
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "amp": false,
+        "backbone": "dsmil",
+        "reg_dist": "L1",
+        "cls_alpha": 0.5,
+        "aux_alpha": 0.5
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "original EarlyStopping np.Inf becomes np.inf for NumPy2",
+        "CPU timing instrumentation omitted; native forward/backward/scheduler unchanged",
+        "fixed patient-disjoint TRAIN/VAL and locked TEST replace original default TEST-as-VAL",
+        "num_workers0 replaces original2 for exact recorded/recoverable loading",
+        "immutable selected state and Adam/scheduler/RNG/private-generator/minibatch recovery"
+      ],
+      "native_attention_shape": "literal original two-row factual/CF attention"
+    },
+    {
+      "id": "carmil_author_100_dsmil_cos_locked_test_repaired",
+      "family": "carmil",
+      "recipe": "original dsmil factual/CF network and COS objective; full100epochs Adam2e-4/wd1e-5/cosine100; original pre-TRAIN VAL AUC selector and private shuffle generator; locked TEST, disclosed NumPy2/CPU timing repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "carmil",
+      "native_recipe": {
+        "epochs": 100,
+        "batch_size": 1,
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "dropout": 0.25,
+        "act": "relu",
+        "alpha_effect": 0.2,
+        "alpha_att": 0.2,
+        "loss": "ce",
+        "scheduler": "CosineAnnealingLR(T_max=100, eta_min=0), after each full TRAIN epoch",
+        "fixed_loader_seed": 7784414403328510413,
+        "selection": "VAL AUC before TRAIN, strict improvement over initial0",
+        "early_stopping": {
+          "patience": 30,
+          "stop_epoch": 130,
+          "save_best_model_stage": 0.0
+        },
+        "gradient_clipping": null,
+        "patch_cap": null,
+        "amp": false,
+        "backbone": "dsmil",
+        "reg_dist": "COS",
+        "cls_alpha": 0.5,
+        "aux_alpha": 0.5
+      },
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "repairs": [
+        "original EarlyStopping np.Inf becomes np.inf for NumPy2",
+        "CPU timing instrumentation omitted; native forward/backward/scheduler unchanged",
+        "fixed patient-disjoint TRAIN/VAL and locked TEST replace original default TEST-as-VAL",
+        "num_workers0 replaces original2 for exact recorded/recoverable loading",
+        "immutable selected state and Adam/scheduler/RNG/private-generator/minibatch recovery"
+      ],
+      "native_attention_shape": "literal original two-row factual/CF attention"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "dsmil",
+  "name": "DSMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/binli123/dsmil-wsi",
+  "source_status": "git_commit_locked",
+  "source_commit": "80465ed534ac49b5e550833da56c27936f0b9440",
+  "license": "not_yet_verified",
+  "profiles": [
+    "dsmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "dsmil",
+      "family": "dsmil",
+      "recipe": "dual-stream BCE; sigmoid stream ensemble normalized for exclusive classes",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

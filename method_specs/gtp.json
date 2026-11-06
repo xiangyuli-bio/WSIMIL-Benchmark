@@ -1,0 +1,64 @@
+{
+  "id": "gtp",
+  "name": "GTP",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/vkola-lab/tmi2022",
+  "source_status": "git_commit_locked",
+  "source_commit": "0d395a160a969578fa5ce66a8a7f0fd0817712b4",
+  "license": "not_yet_verified",
+  "profiles": [
+    "gtp_source",
+    "gtp_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "gtp_repaired",
+      "family": "gtp",
+      "recipe": "full author GTP recipe and true gradient/LRP GraphCAM; explicit zero-edge/singleton-BN/constant-map repairs with otherwise identical source path",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "gtp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "gtp_source",
+      "family": "gtp",
+      "recipe": "author GCN/BN, mincut/orthogonality and 3-blockViT, full Adam/MultiStepLR and batch8/drop_last; source graph/BN conditions retained, explicit frozen-FM input",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "gtp",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

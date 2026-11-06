@@ -1,0 +1,14 @@
+# Full-bag variant. Use motcat_micro.yaml with the motcat_micro profile for micro-batches.
+epochs: 50
+lr: 0.0002
+weight_decay: 0.00001
+patience: 10
+selection_metric: c_index
+model:
+  bins: 4
+  alpha: 0.0
+  accumulation_steps: 32
+  fusion: concat
+  ot_impl: pot-uot-l2
+  ot_reg: 0.1
+  ot_tau: 0.5

@@ -1,0 +1,24 @@
+epochs: 50
+lr: 0.0001
+weight_decay: 0.00001
+grad_clip: null
+patience: 50
+selection_metric: survival_loss
+max_instances: null
+model:
+  hidden: 256
+  prototypes: 16
+  batch_size: 64
+  loss: cox_source
+  append_embed: random
+  histo_agg: mean
+  net_indiv: true
+  prototype_patches: 100000
+  cluster_iterations: 50
+  cluster_restarts: 5
+  em_iterations: 1
+  tau: 1.0
+  eps: 1.0
+  ot_log_domain: true
+  ot_iterations: 100
+  cache_patients: 128

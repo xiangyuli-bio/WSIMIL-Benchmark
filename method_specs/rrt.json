@@ -1,0 +1,41 @@
+{
+  "id": "rrt",
+  "name": "R2T-MIL / RRT-MIL",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/DearCaat/RRT-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "3320b6616b2c3d96ddc5bcd1aecea865a064987f",
+  "license": "not_yet_verified",
+  "profiles": [
+    "rrt"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "rrt",
+      "family": "rrt",
+      "recipe": "pinned author RRT-MIL: regional MSA, cross-region MSA and EPEG; CE; current refactored source",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "rrt",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

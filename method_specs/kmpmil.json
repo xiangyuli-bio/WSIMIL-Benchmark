@@ -1,0 +1,115 @@
+{
+  "id": "kmpmil",
+  "name": "KMP-MIL",
+  "group": "I_continual",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Lingling-Yuan/KMP-MIL",
+  "source_commit": "77137ac84a9a27b16a2c07aca414c534f7cf5226",
+  "source_status": "full_protocol_under_verification",
+  "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+  "status": "adapted_under_verification",
+  "profiles": [
+    "kmpmil_conch_max_query_patient_reference",
+    "kmpmil_conch_mean_query_patient_reference"
+  ],
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag",
+    "ordered_patch_ids",
+    "patient_disjoint_ordered_tasks",
+    "actual_CONCH512_projection_features",
+    "original_full_CONCH_weights",
+    "clinical_class_descriptions_and_templates",
+    "task_semantic_descriptors"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "blocker": null,
+  "requirements_review": "Full original CoCa and actual110M CONCH text tower; task semantic key initialization; original24token/5matches,16bag source epochs including incomplete tails; PFC visual and current-task TC text calibration; routing losses; original Adam/plateau/early stop, best-VAL reload and rehearsal-free immutable banks. Exact fullstate interruption/recovery; separate class-CL and per-task bank inference. All software/wheel/native/global gates required.",
+  "execution_profiles": [
+    {
+      "id": "kmpmil_conch_max_query_patient_reference",
+      "family": "kmpmil",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ordered_patch_ids",
+        "patient_disjoint_ordered_tasks",
+        "actual_CONCH512_projection_features",
+        "original_full_CONCH_weights",
+        "clinical_class_descriptions_and_templates",
+        "task_semantic_descriptors"
+      ],
+      "class_count": null,
+      "external_source": "kmpmil",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "recipe": {
+        "pooling": "max"
+      },
+      "core_mechanisms": [
+        "differentiable_full110M_CONCH_text_tower",
+        "original_semantically_initialized_task_specific10key24token5matched_pool",
+        "per_bag_retrieval_and_past_key_routing",
+        "current_task_only_TC_residuals_and_PFC_affine_calibration",
+        "CE_matching_routing_class_similarity_PFC_objectives",
+        "original16bag_update_clip_zero_gradient_Adam",
+        "native_plateau_and_early_stop_best_VAL_model_and_growing_frozen_bank"
+      ],
+      "reference_repairs": [
+        "patient_disjoint_VAL",
+        "single_process_feature_IO",
+        "no_external_telemetry",
+        "explicit_heldout_evaluation",
+        "strict_used_pretrained_checkpoint_keys"
+      ]
+    },
+    {
+      "id": "kmpmil_conch_mean_query_patient_reference",
+      "family": "kmpmil",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ordered_patch_ids",
+        "patient_disjoint_ordered_tasks",
+        "actual_CONCH512_projection_features",
+        "original_full_CONCH_weights",
+        "clinical_class_descriptions_and_templates",
+        "task_semantic_descriptors"
+      ],
+      "class_count": null,
+      "external_source": "kmpmil",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "recipe": {
+        "pooling": "mean"
+      },
+      "core_mechanisms": [
+        "differentiable_full110M_CONCH_text_tower",
+        "original_semantically_initialized_task_specific10key24token5matched_pool",
+        "per_bag_retrieval_and_past_key_routing",
+        "current_task_only_TC_residuals_and_PFC_affine_calibration",
+        "CE_matching_routing_class_similarity_PFC_objectives",
+        "original16bag_update_clip_zero_gradient_Adam",
+        "native_plateau_and_early_stop_best_VAL_model_and_growing_frozen_bank"
+      ],
+      "reference_repairs": [
+        "patient_disjoint_VAL",
+        "single_process_feature_IO",
+        "no_external_telemetry",
+        "explicit_heldout_evaluation",
+        "strict_used_pretrained_checkpoint_keys"
+      ]
+    }
+  ]
+}

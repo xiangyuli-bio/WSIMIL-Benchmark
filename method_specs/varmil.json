@@ -1,0 +1,41 @@
+{
+  "id": "varmil",
+  "name": "VarMIL / DeepSMILE",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/NKI-AI/dlup-lightning-mil",
+  "source_status": "git_commit_locked",
+  "source_commit": "f33d6c0eb504d73bd822909f29e548bc186e5306",
+  "license": "Apache-2.0",
+  "profiles": [
+    "varmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "varmil",
+      "family": "varmil",
+      "recipe": "author raw-feature attention-weighted mean/variance concatenation and CE; frozen-feature VarMIL, not SimCLR pretraining",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "varmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

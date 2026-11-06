@@ -1,0 +1,175 @@
+{
+  "id": "longmil",
+  "name": "LongMIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/invoker-LL/Long-MIL",
+  "source_commit": "457b1cf6e33a05b3c8359e1fe98114cd8241f772",
+  "source_status": "original_v1_and_complete_paper_v2_reference_under_verification",
+  "license": "no_LICENSE_in_pinned_tree_private_source_loading_no_redistribution",
+  "profiles": [
+    "longmil_v1_source_classification_reference",
+    "longmil_v1_eval_repaired_classification_reference",
+    "longmil_v2_paper_classification_reference",
+    "longmil_v2_paper_survival_reference"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "patch_features",
+    "longmil_physical_xy",
+    "patient_disjoint_splits"
+  ],
+  "formal_admission": false,
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "blocker": null,
+  "requirements_review": "Public v1 full90000x90000int8 asset/4heads/384width/source joint-minimum mask and source eval-dropout retained; separate eval repair. NeurIPS-v2 original trainer/kernels remain unpublished. Explicit full paper reference implements two exact2D radius10 sparse/chunked local blocks, actual2x2 observed-tissue pooling, global ALiBi2D block, native1head/384width/FF1536/dropout0 and classification/full-cohort patient-survival trainers. All unspecified pooling/optimizer/training choices disclosed. Actual CUDA xFormers is mandatory; no silent dense/identity fallback. Full native budgets, source/wheel and global acceptance remain separate gates.",
+  "execution_profiles": [
+    {
+      "id": "longmil_v1_eval_repaired_classification_reference",
+      "family": "longmil",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "longmil_physical_xy",
+        "patient_disjoint_splits",
+        "full_original_ALiBi_asset"
+      ],
+      "external_source": "longmil",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "formal_admission": false,
+      "reference_reconstruction": true,
+      "version_condition": "v1",
+      "native_recipe": {
+        "hidden": 384,
+        "local_blocks": 2,
+        "global_blocks": 1,
+        "heads": 4,
+        "FFN": 1536,
+        "max_epochs": 200,
+        "patience": 20,
+        "lr": 0.0001,
+        "weight_decay": 0.01,
+        "optimizer": "Adam_reference",
+        "complete_bags": true,
+        "local_radius": "source_global_minimum_mask"
+      },
+      "class_count": null,
+      "recipe": "Complete longmil reference [longmil_v1_eval_repaired_classification_reference]; native_recipe={\"FFN\":1536,\"complete_bags\":true,\"global_blocks\":1,\"heads\":4,\"hidden\":384,\"local_blocks\":2,\"local_radius\":\"source_global_minimum_mask\",\"lr\":0.0001,\"max_epochs\":200,\"optimizer\":\"Adam_reference\",\"patience\":20,\"weight_decay\":0.01}"
+    },
+    {
+      "id": "longmil_v1_source_classification_reference",
+      "family": "longmil",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "longmil_physical_xy",
+        "patient_disjoint_splits",
+        "full_original_ALiBi_asset"
+      ],
+      "external_source": "longmil",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "formal_admission": false,
+      "reference_reconstruction": true,
+      "version_condition": "v1",
+      "native_recipe": {
+        "hidden": 384,
+        "local_blocks": 2,
+        "global_blocks": 1,
+        "heads": 4,
+        "FFN": 1536,
+        "max_epochs": 200,
+        "patience": 20,
+        "lr": 0.0001,
+        "weight_decay": 0.01,
+        "optimizer": "Adam_reference",
+        "complete_bags": true,
+        "local_radius": "source_global_minimum_mask"
+      },
+      "class_count": null,
+      "recipe": "Complete longmil reference [longmil_v1_source_classification_reference]; native_recipe={\"FFN\":1536,\"complete_bags\":true,\"global_blocks\":1,\"heads\":4,\"hidden\":384,\"local_blocks\":2,\"local_radius\":\"source_global_minimum_mask\",\"lr\":0.0001,\"max_epochs\":200,\"optimizer\":\"Adam_reference\",\"patience\":20,\"weight_decay\":0.01}"
+    },
+    {
+      "id": "longmil_v2_paper_classification_reference",
+      "family": "longmil",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "longmil_physical_xy",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "longmil",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "formal_admission": false,
+      "reference_reconstruction": true,
+      "version_condition": "paper_v2",
+      "native_recipe": {
+        "hidden": 384,
+        "local_blocks": 2,
+        "global_blocks": 1,
+        "heads": 1,
+        "FFN": 1536,
+        "max_epochs": 200,
+        "patience": 20,
+        "lr": 0.0001,
+        "weight_decay": 0.01,
+        "optimizer": "Adam_reference",
+        "complete_bags": true,
+        "local_radius": 10
+      },
+      "class_count": null,
+      "recipe": "Complete longmil reference [longmil_v2_paper_classification_reference]; native_recipe={\"FFN\":1536,\"complete_bags\":true,\"global_blocks\":1,\"heads\":1,\"hidden\":384,\"local_blocks\":2,\"local_radius\":10,\"lr\":0.0001,\"max_epochs\":200,\"optimizer\":\"Adam_reference\",\"patience\":20,\"weight_decay\":0.01}"
+    },
+    {
+      "id": "longmil_v2_paper_survival_reference",
+      "family": "longmil",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "longmil_physical_xy",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "longmil",
+      "status": "adapted_under_verification",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "formal_admission": false,
+      "reference_reconstruction": true,
+      "version_condition": "paper_v2",
+      "native_recipe": {
+        "hidden": 384,
+        "local_blocks": 2,
+        "global_blocks": 1,
+        "heads": 1,
+        "FFN": 1536,
+        "max_epochs": 200,
+        "patience": 20,
+        "lr": 0.0001,
+        "weight_decay": 0.01,
+        "optimizer": "Adam_reference",
+        "complete_bags": true,
+        "local_radius": 10
+      },
+      "class_count": null,
+      "recipe": "Complete longmil reference [longmil_v2_paper_survival_reference]; native_recipe={\"FFN\":1536,\"complete_bags\":true,\"global_blocks\":1,\"heads\":1,\"hidden\":384,\"local_blocks\":2,\"local_radius\":10,\"lr\":0.0001,\"max_epochs\":200,\"optimizer\":\"Adam_reference\",\"patience\":20,\"weight_decay\":0.01}"
+    }
+  ]
+}

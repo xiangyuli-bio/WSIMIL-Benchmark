@@ -1,0 +1,12 @@
+epochs: 200
+lr: 0.001
+weight_decay: 1.0e-05
+model:
+  hidden: 512
+  batch_size: 32
+  bins: 4
+  pack_length: 3200
+  min_sequence: 256
+  downsample_ratio: 3
+  token_dropout: 0.5
+  auxiliary_weight: 0.5

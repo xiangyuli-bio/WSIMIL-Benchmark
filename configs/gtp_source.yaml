@@ -1,0 +1,12 @@
+epochs: 120
+lr: 0.001
+weight_decay: 0.0005
+grad_clip: null
+selection_metric: gtp_bag_accuracy
+model:
+  hidden: 64
+  clusters: 100
+  depth: 3
+  heads: 8
+  batch_size: 8
+  drop_last: true

@@ -1,0 +1,41 @@
+{
+  "id": "h2t",
+  "name": "H2T",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/vqdang/H2T",
+  "source_status": "git_commit_locked",
+  "source_commit": "4218a585c6d1e303dbf57e4fb4212b181c2c4a3d",
+  "license": "not_yet_verified",
+  "profiles": [
+    "h2t"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "h2t",
+      "family": "h2t",
+      "recipe": "train-only prototype mining, normalized per-cluster means, linear classifier (PANTHER authors H2T comparator)",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

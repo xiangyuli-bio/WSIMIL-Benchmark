@@ -1,0 +1,12 @@
+epochs: 200
+lr: 0.003
+weight_decay: 0
+grad_clip: null
+selection_metric: loss_attention_error
+model:
+  hidden: 512
+  dropout: 0.5
+  instance_weight: 1.0
+  ema: 0.6
+  consistency_weight: 400.0
+  max_bank_bytes: 536870912

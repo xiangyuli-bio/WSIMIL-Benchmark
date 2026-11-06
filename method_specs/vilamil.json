@@ -1,0 +1,66 @@
+{
+  "id": "vilamil",
+  "name": "ViLa-MIL",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Jiangbo-Shi/ViLa-MIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "68a11cf0d5cf092dd980f0da1cb38ccac8747a82",
+  "license": "No root license found; review pending",
+  "profiles": [
+    "vilamil",
+    "vilamil_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "learned_dual_scale_prompts",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "vilamil",
+      "family": "vilamil",
+      "recipe": "author dual-scale prototype/context decoders and learned CLIP prompts; corrected EOT position, frozen text encoder per paper, CE",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "learned_dual_scale_prompts",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "vilamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "vilamil_source",
+      "family": "vilamil",
+      "recipe": "literal public ViLa prompt EOT and trainable text encoder; dual-scale decoders and CE; separately named source behavior",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "learned_dual_scale_prompts",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "vilamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

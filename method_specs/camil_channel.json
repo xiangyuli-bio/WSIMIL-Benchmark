@@ -1,0 +1,43 @@
+{
+  "id": "camil_channel",
+  "name": "CAMIL channel attention",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/maojy0914/CAMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "5481d32a59b0146d9a96f1129bb12ad493acb81a",
+  "license": "No root license found; review pending",
+  "profiles": [
+    "camil_channel"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "camil_channel",
+      "family": "camil_channel",
+      "recipe": "author four Nystrom/MCAB blocks and gated pooling; CE, author RAdam/Lookahead and two-bag gradient accumulation",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "camil_channel",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "transmil",
+  "name": "TransMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/szc19990412/TransMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "9d6aee57c7c72375fb9132dc58cd8c9b0f0a949c",
+  "license": "not_yet_verified",
+  "profiles": [
+    "transmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "transmil",
+      "family": "transmil",
+      "recipe": "MIL_BASELINE Nystrom + PPEG adaptation; CE",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

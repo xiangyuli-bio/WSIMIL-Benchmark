@@ -1,0 +1,13 @@
+# Public source path, not the uncalled variational training branch.
+# main.py overrides its --lr default to 0.01; preserve that actual value.
+epochs: 50
+lr: 0.01
+weight_decay: 0.005
+grad_clip: null
+model:
+  clusters: 10
+  concentration: 0.1
+  classifier_concentration: 10.0
+  cluster_iterations: 30
+  cache_bags: 128
+  inference_seed: 2026

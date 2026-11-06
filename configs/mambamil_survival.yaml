@@ -1,0 +1,17 @@
+epochs: 200
+patience: 20
+lr: 0.0002
+weight_decay: 0.00001
+grad_clip: null
+selection_metric: c_index
+model:
+  hidden: 512
+  layers: 2
+  rate: 5
+  dropout: 0.25
+  backend: torch
+  scan_chunk: 64
+  bins: 4
+  alpha: 0.0
+  weighted_sampling: true
+  accumulation_steps: 32

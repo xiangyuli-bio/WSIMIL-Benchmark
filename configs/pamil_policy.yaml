@@ -1,0 +1,28 @@
+# Complete explicitly reconstructed paper training; author train loop absent.
+# 300epoch/batch1/AdaMax published, schedule endpoints/selection declared here.
+epochs: 300
+lr: 0.0001
+weight_decay: 0.00001
+patience: 300
+selection_metric: macro_auc
+max_instances: null
+grad_clip: null
+threads: 1
+model:
+  bag_size: 512
+  scheme: liis
+  input_projection: auto_full_dimension
+  policy_lr: 0.00001
+  policy_gamma: 0.1
+  policy_epochs: 3
+  action_std: 0.5
+  eps_clip: 0.2
+  layers: 2
+  reward: 1.0
+  sia_initial: 0.5
+  sia_final: 0.0
+  stl_initial: 0.0
+  stl_final: 0.1
+  threshold_final: 0.9
+  threshold_schedule: train_bag_iteration
+  max_dense_bytes: 34359738368

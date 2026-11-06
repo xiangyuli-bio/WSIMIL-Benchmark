@@ -1,0 +1,8 @@
+epochs: 200
+lr: 0.0001
+weight_decay: 0.00001
+selection_metric: log_loss
+patience: 20
+model:
+  hidden: 192
+  prototypes: 16

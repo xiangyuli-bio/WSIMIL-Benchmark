@@ -1,0 +1,41 @@
+{
+  "id": "aem",
+  "name": "AEM",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/dazhangyu123/AEM",
+  "source_status": "git_commit_locked",
+  "source_commit": "b0027cfccd07a1c9b5e3c79b43008a8b8a3b2b80",
+  "license": "not_yet_verified",
+  "profiles": [
+    "aem_abmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "aem_abmil",
+      "family": "aem",
+      "recipe": "ABMIL + full-bag negative attention entropy regularization",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

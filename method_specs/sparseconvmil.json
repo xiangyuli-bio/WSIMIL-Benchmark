@@ -1,0 +1,67 @@
+{
+  "id": "sparseconvmil",
+  "name": "SparseConvMIL",
+  "group": "E_encoder_training",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/MarvinLer/SparseConvMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "d7dd705bc3dd4ebfb6a36f0589698400c9fa4c15",
+  "license": "AGPL-3.0; external code fetched separately, not vendored",
+  "profiles": [
+    "sparseconvmil_raw_source_c32",
+    "sparseconvmil_raw_source_c128"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_raw_tile_coordinates",
+    "compiled_sparseconvnet",
+    "original_rgb_patch_bags",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_public_source_recipe_and_paper_differences_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "sparseconvmil_raw_source_c128",
+      "family": "sparseconvmil",
+      "recipe": "Full original end-to-end ResNet18, two3x3 c128 original compiled submanifold sparse convolutions, active-only mean/32classifier,200epoch Adam/with-replacement tile sampling; source spatial transforms and final weights; explicit seeded evaluation extension",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "original_rgb_patch_bags",
+        "actual_raw_tile_coordinates",
+        "compiled_sparseconvnet",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "sparseconvmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "sparseconvmil_raw_source_c32",
+      "family": "sparseconvmil",
+      "recipe": "Full original end-to-end ResNet18, two3x3 c32 original compiled submanifold sparse convolutions, active-only mean/32classifier,200epoch Adam/with-replacement tile sampling; source spatial transforms and final weights; explicit seeded evaluation extension",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "original_rgb_patch_bags",
+        "actual_raw_tile_coordinates",
+        "compiled_sparseconvnet",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "sparseconvmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

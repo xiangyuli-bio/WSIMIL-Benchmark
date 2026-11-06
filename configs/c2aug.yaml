@@ -1,0 +1,23 @@
+# Complete paper-reference implementation; explicit choices in docs/C2AUG.md.
+epochs: 200
+lr: 0.0001
+weight_decay: 0.0
+patience: 200
+grad_clip: null
+max_instances: null
+selection_metric: c2aug_val_macro_accuracy
+threads: 1
+model:
+  max_views: 8
+  reduced: 256
+  compression_max: 16
+  prototypes: 8
+  projection: 128
+  queue_size: 256
+  alpha: 1.0
+  beta: 1.0
+  temperature: 0.07
+  student_temperature: 0.1
+  teacher_temperature: 0.04
+  momentum: 0.9999
+  center_momentum: 0.9

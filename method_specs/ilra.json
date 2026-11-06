@@ -1,0 +1,41 @@
+{
+  "id": "ilra",
+  "name": "ILRA-MIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/jinxixiang/low_rank_wsi",
+  "source_status": "git_commit_locked",
+  "source_commit": "bb45b9ba9d4a7096d473f9ee171a6252eb736570",
+  "license": "not_yet_verified",
+  "profiles": [
+    "ilra"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "ilra",
+      "family": "ilra",
+      "recipe": "low-rank compression/expansion, nonlocal pooling; CE; one pooling seed",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

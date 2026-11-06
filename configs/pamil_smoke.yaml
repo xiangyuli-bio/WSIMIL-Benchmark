@@ -1,0 +1,9 @@
+epochs: 3
+threads: 1
+model:
+  hidden: 32
+  attention_dim: 16
+  prototypes: 6
+  warmup_epochs: 1
+  push_epochs: [2]
+  last_epochs: 1

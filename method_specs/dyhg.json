@@ -1,0 +1,41 @@
+{
+  "id": "dyhg",
+  "name": "DyHG",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Yuxuan-Chen7/DyHG",
+  "source_status": "git_commit_locked",
+  "source_commit": "dd41a86d76d41c69ae010f97c653877058b0619c",
+  "license": "No root license found; review pending",
+  "profiles": [
+    "dyhg"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "dyhg",
+      "family": "dyhg",
+      "recipe": "author Gumbel soft hypergraph incidence, node-edge-node messages and gated pooling; CE, Adam and isolated stochastic inference",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "dyhg",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "mico",
+  "name": "MiCo",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/junjianli106/MiCo",
+  "source_status": "git_commit_locked",
+  "source_commit": "d679f352567ec9eb15a3bd7ac2026e448f4ced79",
+  "license": "No root license found; review pending",
+  "profiles": [
+    "mico",
+    "mico_survival"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mico",
+      "family": "mico",
+      "recipe": "author cluster routes/reducers; train-only FAISS initialization; CE; author Adam decay grouping",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "mico",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mico_survival",
+      "family": "mico",
+      "recipe": "author per-slide context and patient joint pooling; train-only FAISS centers and event bins; discrete NLL",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mico",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

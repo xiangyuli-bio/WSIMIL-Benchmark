@@ -1,0 +1,84 @@
+{
+  "id": "pamil_prototype",
+  "name": "PAMIL prototype attention",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Jiashuai-Liu/PAMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "7fe90096f64697bd6b68d4d7209e31f437a6b08f",
+  "license": "No root license found; review pending",
+  "profiles": [
+    "pamil_prototype_source",
+    "pamil_prototype_repaired",
+    "pamil_prototype_multilabel"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag",
+    "training_instance_labels"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "full_staged_recipe_extra_instance_supervision_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "pamil_prototype_multilabel",
+      "family": "pamil_prototype",
+      "recipe": "author independent sigmoid/BCE route, two-level KMeans and complete warm/joint/annotation-filtered push/last; explicit instance-index/device repairs",
+      "tasks": [
+        "multilabel"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "training_instance_labels",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pamil_prototype",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pamil_prototype_repaired",
+      "family": "pamil_prototype",
+      "recipe": "author full staged recipe with explicit CE-on-logits, local KMeans and class-specific instance mining repairs; train-only extra instance supervision",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "training_instance_labels",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pamil_prototype",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "pamil_prototype_source",
+      "family": "pamil_prototype",
+      "recipe": "author dual branches, source CE-on-softmax and one-center collate clustering, warm/joint/push/last; train instance annotations; explicit bounded atomic push repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "training_instance_labels",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "pamil_prototype",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

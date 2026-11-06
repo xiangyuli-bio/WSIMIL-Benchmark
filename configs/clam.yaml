@@ -1,0 +1,9 @@
+epochs: 50
+lr: 0.0002
+weight_decay: 0.00001
+patience: 10
+bag_weight: 0.7
+model:
+  k_sample: 8
+  dropout: 0.25
+  subtyping: true

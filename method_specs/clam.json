@@ -1,0 +1,60 @@
+{
+  "id": "clam",
+  "name": "CLAM",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/mahmoodlab/CLAM",
+  "source_status": "git_commit_locked",
+  "source_commit": "53e2409d4a8189c682c173382964a85f114f923c",
+  "license": "not_yet_verified",
+  "profiles": [
+    "clam_sb",
+    "clam_mb"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "clam_mb",
+      "family": "clam",
+      "recipe": "vendored official multibranch model, instance clustering + bag loss",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "clam_sb",
+      "family": "clam",
+      "recipe": "vendored official model, CE instance clustering + bag loss",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

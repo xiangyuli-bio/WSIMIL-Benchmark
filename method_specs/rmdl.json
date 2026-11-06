@@ -1,0 +1,131 @@
+{
+  "id": "rmdl",
+  "name": "RMDL",
+  "group": "E_encoder_training",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/emma-sjwang/RMDL",
+  "source_status": "pinned_original_full_graphs_with_explicit_missing_trainer_reconstruction",
+  "source_commit": "8f13238285b92e772e04d2abe25cc24bb8099829",
+  "license": "no_LICENSE_in_pinned_tree_private_loading_only",
+  "profiles": [
+    "rmdl_source_sum_full_reference",
+    "rmdl_paper_mean_full_reference"
+  ],
+  "status": "adapted_under_verification",
+  "required_inputs": [
+    "original_scale_WSI",
+    "TRAIN_only_actual_pixel_masks",
+    "original_ImageNet_initialization",
+    "native_three_grade_task"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Complete original55.9M localizer and147464parameter aggregation graphs; all4 full-shape source/wheel software conditions passed, with strict state/graph recovery. Full native budgets and release gates remain pending; no real-WSI or paper-score claim.",
+  "blocker": "Full native-budget and overall-release gates remain; no real-WSI or paper-score claim",
+  "execution_profiles": [
+    {
+      "id": "rmdl_source_sum_full_reference",
+      "family": "rmdl",
+      "tasks": [
+        "classification"
+      ],
+      "class_count": 3,
+      "required_inputs": [
+        "actual_original_scale_WSI",
+        "TRAIN_only_pixel_annotations",
+        "full_Keras_ImageNet_InceptionResNetV2_initialization",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "rmdl",
+      "backend": "rmdl_complete_native_tensorflow",
+      "status": "adapted_under_verification",
+      "reference_reconstruction": true,
+      "formal_admission": false,
+      "gpu_validation": "components_passed_full_pipeline_gates_pending",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "native_recipe": {
+        "localizer_parameters": 55913699,
+        "FConv_dimension": 1024,
+        "working_mpp": 0.5034,
+        "train_rgb_before_augmentation": 470,
+        "patch_rgb": 299,
+        "FCN_block": 1899,
+        "FCN_output": [
+          51,
+          51,
+          3
+        ],
+        "block_stride": 1632,
+        "NMS_area_overlap": 0.68,
+        "actual_selected_instances": 300,
+        "localizer_batch": 80,
+        "MIL_batch": 256,
+        "MIL_iterations": 7000,
+        "localizer_iterations_reference": 10000,
+        "localizer_total_not_published": true,
+        "hard_negative_after_reference": 5000,
+        "pooling": "sum",
+        "legacy_Adam": "literal_non_fused_Keras2.2.1",
+        "MIL_lr": 0.001,
+        "MIL_lr_multiplier": 0.8,
+        "MIL_lr_period": 140,
+        "selection": "fixed_final_iteration",
+        "single_device_reference_not_claimed_original_4GPU_BN_semantics": true
+      },
+      "recipe": "Complete rmdl reference [rmdl_source_sum_full_reference]; native_recipe={\"FCN_block\":1899,\"FCN_output\":[51,51,3],\"FConv_dimension\":1024,\"MIL_batch\":256,\"MIL_iterations\":7000,\"MIL_lr\":0.001,\"MIL_lr_multiplier\":0.8,\"MIL_lr_period\":140,\"NMS_area_overlap\":0.68,\"actual_selected_instances\":300,\"block_stride\":1632,\"hard_negative_after_reference\":5000,\"legacy_Adam\":\"literal_non_fused_Keras2.2.1\",\"localizer_batch\":80,\"localizer_iterations_reference\":10000,\"localizer_parameters\":55913699,\"localizer_total_not_published\":true,\"patch_rgb\":299,\"pooling\":\"sum\",\"selection\":\"fixed_final_iteration\",\"single_device_reference_not_claimed_original_4GPU_BN_semantics\":true,\"train_rgb_before_augmentation\":470,\"working_mpp\":0.5034}"
+    },
+    {
+      "id": "rmdl_paper_mean_full_reference",
+      "family": "rmdl",
+      "tasks": [
+        "classification"
+      ],
+      "class_count": 3,
+      "required_inputs": [
+        "actual_original_scale_WSI",
+        "TRAIN_only_pixel_annotations",
+        "full_Keras_ImageNet_InceptionResNetV2_initialization",
+        "patient_disjoint_splits"
+      ],
+      "external_source": "rmdl",
+      "backend": "rmdl_complete_native_tensorflow",
+      "status": "adapted_under_verification",
+      "reference_reconstruction": true,
+      "formal_admission": false,
+      "gpu_validation": "components_passed_full_pipeline_gates_pending",
+      "real_wsi_validation": "not_run",
+      "paper_reproduction": "not_run",
+      "native_recipe": {
+        "localizer_parameters": 55913699,
+        "FConv_dimension": 1024,
+        "working_mpp": 0.5034,
+        "train_rgb_before_augmentation": 470,
+        "patch_rgb": 299,
+        "FCN_block": 1899,
+        "FCN_output": [
+          51,
+          51,
+          3
+        ],
+        "block_stride": 1632,
+        "NMS_area_overlap": 0.68,
+        "actual_selected_instances": 300,
+        "localizer_batch": 80,
+        "MIL_batch": 256,
+        "MIL_iterations": 7000,
+        "localizer_iterations_reference": 10000,
+        "localizer_total_not_published": true,
+        "hard_negative_after_reference": 5000,
+        "pooling": "mean",
+        "legacy_Adam": "literal_non_fused_Keras2.2.1",
+        "MIL_lr": 0.001,
+        "MIL_lr_multiplier": 0.8,
+        "MIL_lr_period": 140,
+        "selection": "fixed_final_iteration",
+        "single_device_reference_not_claimed_original_4GPU_BN_semantics": true
+      },
+      "recipe": "Complete rmdl reference [rmdl_paper_mean_full_reference]; native_recipe={\"FCN_block\":1899,\"FCN_output\":[51,51,3],\"FConv_dimension\":1024,\"MIL_batch\":256,\"MIL_iterations\":7000,\"MIL_lr\":0.001,\"MIL_lr_multiplier\":0.8,\"MIL_lr_period\":140,\"NMS_area_overlap\":0.68,\"actual_selected_instances\":300,\"block_stride\":1632,\"hard_negative_after_reference\":5000,\"legacy_Adam\":\"literal_non_fused_Keras2.2.1\",\"localizer_batch\":80,\"localizer_iterations_reference\":10000,\"localizer_parameters\":55913699,\"localizer_total_not_published\":true,\"patch_rgb\":299,\"pooling\":\"mean\",\"selection\":\"fixed_final_iteration\",\"single_device_reference_not_claimed_original_4GPU_BN_semantics\":true,\"train_rgb_before_augmentation\":470,\"working_mpp\":0.5034}"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "gmmamba",
+  "name": "GMMamba",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/titizheng/GMMamba",
+  "source_status": "complete_source_adapter_under_verification",
+  "source_commit": "70576f1aaeef0d7041d6860799ade1ac905b85aa",
+  "license": "no_LICENSE_in_pinned_tree_private_source_loading",
+  "profiles": [
+    "gmmamba_mambamil_bimamba_source",
+    "gmmamba_fm_projection_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "spatial_metadata",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Ten full native512D/257patch/10group original component checks passed. Complete original training/selection/recovery adapter written, execution validation in progress. Missing original BiMamba dependency explicitly bound to pinned MambaMIL implementation; source hard-mask non-gradient, unused FC1, native512 and optional FM-projection repair disclosed.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "gmmamba_fm_projection_repaired",
+      "family": "gmmamba",
+      "recipe": "Complete original512D two-BiMamba16state hard-mask IMM, coordinateKMeans10 and8head CSS/class-token graph; source AdamW100max/VAL AUC+F1/epoch>50, original2readers and exact state; explicit pinned MambaMIL BiMamba dependency port; explicit source FC1/GELU/dropout input-projection repair for multiple FM widths",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "gmmamba",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "gmmamba_mambamil_bimamba_source",
+      "family": "gmmamba",
+      "recipe": "Complete original512D two-BiMamba16state hard-mask IMM, coordinateKMeans10 and8head CSS/class-token graph; source AdamW100max/VAL AUC+F1/epoch>50, original2readers and exact state; explicit pinned MambaMIL BiMamba dependency port; source-native512D bypassed FC1 retained",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "gmmamba",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

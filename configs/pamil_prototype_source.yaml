@@ -1,0 +1,14 @@
+epochs: 350
+lr: 0.0001
+weight_decay: 0.00001
+grad_clip: null
+selection_metric: pamil_loss
+patience: 350
+model:
+  hidden: 512
+  attention_dim: 256
+  prototypes: 10
+  warmup_epochs: 80
+  push_epochs: [330]
+  last_epochs: 30
+  validation_selection: false

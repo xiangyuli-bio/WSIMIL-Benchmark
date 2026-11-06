@@ -1,0 +1,67 @@
+{
+  "id": "kmgmamba",
+  "name": "KMG-Mamba",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/dmhdmhdmh/KMG-Mamba",
+  "source_status": "git_commit_locked",
+  "source_commit": "4b5075bb2d3eddf46f9bc4f46175d250b134e27c",
+  "license": "not_declared_in_pinned_repository; private verified-source loading without redistribution",
+  "profiles": [
+    "kmgmamba_source",
+    "kmgmamba_multiclass_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "kmgmamba_measured_dual_scale",
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Complete source architecture,three losses,original100max/AUC tie stopping and full optimizer/RNG recovery implemented; numerical and training validation pending",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "kmgmamba_multiclass_repaired",
+      "family": "kmgmamba",
+      "recipe": "Full original96width/9neighbor/top-degree prototype graph, cross-scale4state selective scan,128attention,three weighted CE/SVM losses,Adam100max/VALAUC latest ties; explicit C-class attention/prototype head repair",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "kmgmamba_measured_dual_scale",
+        "per_slide_coords"
+      ],
+      "class_count": null,
+      "external_source": "kmgmamba",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "kmgmamba_source",
+      "family": "kmgmamba",
+      "recipe": "Full original96width/9neighbor/top-degree prototype graph, cross-scale4state selective scan,128attention,three weighted CE/SVM losses,Adam100max/VALAUC latest ties; original binary heads",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "kmgmamba_measured_dual_scale",
+        "per_slide_coords"
+      ],
+      "class_count": 2,
+      "external_source": "kmgmamba",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

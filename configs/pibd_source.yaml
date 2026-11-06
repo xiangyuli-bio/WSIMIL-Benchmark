@@ -1,0 +1,21 @@
+epochs: 30
+lr: 0.0005
+weight_decay: 0.0
+patience: 30
+grad_clip: null
+max_instances: null
+selection_metric: c_index
+model:
+  hidden: 256
+  bins: 4
+  batch_size: 32
+  num_patches: 4096
+  micro_bag_size: 512
+  sample_num: 50
+  ratio_wsi: 0.5
+  ratio_omics: 0.8
+  proxy_nll_weight: 0.1
+  proxy_kl_weight: 0.01
+  proxy_contrast_weight: 1.0
+  disentangle_weight: 0.1
+  weighted_sampling: true

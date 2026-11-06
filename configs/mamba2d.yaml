@@ -1,0 +1,17 @@
+# Original 2DMambaMIL defaults. Alias 2DMambaMIL selects the explicitly repaired equation route.
+epochs: 20
+lr: 0.0001
+weight_decay: 0.00001
+patience: 20
+grad_clip: null
+max_instances: null
+# Selection is task-specific: source slide AUROC / patient survival C-index.
+model:
+  hidden: 128
+  state_size: 16
+  layers: 1
+  dropout: 0.25
+  pad_token: trainable
+  inner_layernorms: false
+  backend: torch
+  workspace_budget_bytes: 2147483648

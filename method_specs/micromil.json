@@ -1,0 +1,40 @@
+{
+  "id": "micromil",
+  "name": "MicroMIL",
+  "group": "K_other_modalities",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/kimjongwoo-cell/MicroMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "66e637a891b7358198896c338b0e37828f3fc1f1",
+  "license": "not_yet_verified",
+  "profiles": [
+    "micromil_frozen"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "full_recipe_explicit_frozen_fm_transfer_with_source_repairs",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "micromil_frozen",
+      "family": "micromil",
+      "recipe": "explicit frozen-FM WSI transfer; author DCE, hard-Gumbel representatives and cosine graph, original single-head GAT, full source BCE/Adam and validation F1",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": 2,
+      "external_source": "micromil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

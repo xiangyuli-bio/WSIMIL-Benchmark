@@ -1,0 +1,79 @@
+{
+  "id": "mambamil",
+  "name": "MambaMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/isyangshu/MambaMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "9aea39efc13fdcd3703b5b54c28a64887b4acbd7",
+  "license": "README non-commercial academic purposes; bundled mamba Apache-2.0",
+  "profiles": [
+    "mambamil_srmamba",
+    "mambamil_bimamba",
+    "mambamil_unidirectional"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mambamil_bimamba",
+      "family": "mambamil",
+      "recipe": "author Bi-Mamba forward/backward scan; explicit backend, full bag CE or discrete NLL with patient accumulation",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mambamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mambamil_srmamba",
+      "family": "mambamil",
+      "recipe": "author SR-Mamba transpose-padded two-branch scan; explicit torch/CUDA backend, full bag CE or discrete NLL with training-only bins",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mambamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mambamil_unidirectional",
+      "family": "mambamil",
+      "recipe": "author unidirectional Mamba ablation; explicit backend, full bag CE or discrete NLL with patient accumulation",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mambamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

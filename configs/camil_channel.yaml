@@ -1,0 +1,11 @@
+epochs: 200
+lr: 0.0002
+weight_decay: 0.00001
+patience: 10
+model:
+  hidden: 512
+  layers: 4
+  temperature: 1.2
+  dropout: 0.15
+  gated: true
+  accumulation: 2

@@ -1,0 +1,20 @@
+# Full paper-reference downstream aggregation; details and choices: docs/SCLWC.md.
+epochs: 100
+lr: 0.001
+weight_decay: 0.00001
+patience: 20
+selection_metric: macro_auc
+grad_clip: null
+max_instances: null
+threads: 1
+model:
+  k: 8
+  temperature: 0.07
+  warmup_epochs: 5
+  positive_capacity: 2048
+  negative_capacity: 16384
+  hard_negative_capacity: 2048
+  cosine_t_max: 50
+  cosine_eta_min: 0.000001
+  stop_epoch: 30
+  dropout: true

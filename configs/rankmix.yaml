@@ -1,0 +1,13 @@
+# Two supervised stages. This is a starting recipe, not a tuned BRCA/COAD result.
+epochs: 400
+patience: 400
+lr: 0.0002
+weight_decay: 0.005
+grad_clip: null
+model:
+  warmup_epochs: 200
+  alpha: 0.1
+  rank_direction: rank
+  keep_percent: 100
+  heads: 8
+  margin: 10.17

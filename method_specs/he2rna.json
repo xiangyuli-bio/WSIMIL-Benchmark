@@ -1,0 +1,44 @@
+{
+  "id": "he2rna",
+  "name": "HE2RNA",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/owkin/HE2RNA_code",
+  "source_status": "git_commit_locked",
+  "source_commit": "d47f481fbcaab41a49635e4a35e810bf30eae0e0",
+  "license": "GPL-3.0-or-later",
+  "profiles": [
+    "he2rna"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords_for_supertiles",
+    "patch_features",
+    "regression_targets"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "he2rna",
+      "family": "he2rna",
+      "recipe": "author tile Conv1D network; spatial supertiles, shared random top-k, train-mean bias, MSE regression and project/gene Pearson selection",
+      "tasks": [
+        "regression"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "regression_targets",
+        "coords_for_supertiles"
+      ],
+      "class_count": null,
+      "external_source": "he2rna",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

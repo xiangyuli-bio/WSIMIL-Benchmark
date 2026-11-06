@@ -1,0 +1,17 @@
+epochs: 300
+lr: 0.00008
+weight_decay: 0.0005
+grad_clip: null
+patience: 30
+selection_metric: survival_loss
+max_instances: null
+model:
+  hidden: 384
+  discriminator_dim: 128
+  batch_size: 16
+  generator_updates: 1
+  gan_weight: 0.004
+  l1_weight: 0.00001
+  selection_warmup: 5
+  validation_samples: 1
+  test_samples: 30

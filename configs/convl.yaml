@@ -1,0 +1,9 @@
+epochs: 200
+lr: 0.0002
+weight_decay: 0.00001
+patience: 8
+grad_clip: null
+max_instances: null
+selection_metric: convl_val_nll
+threads: 2
+model: {}

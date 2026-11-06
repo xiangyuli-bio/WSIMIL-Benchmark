@@ -1,0 +1,67 @@
+{
+  "id": "setmil",
+  "name": "SETMIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Louis-YuZhao/SETMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "4243f633adb9e8a84cea11f92abf3d3b0ede126e",
+  "license": "unverified: no root LICENSE at pinned commit; external source only",
+  "profiles": [
+    "setmil_source",
+    "setmil_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "patch_features",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "setmil_repaired",
+      "family": "setmil",
+      "recipe": "complete SETMIL recipe, explicit corrected center crop and TRAIN-only cached views; coherent checkpoints and sealed test evaluation",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "setmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "setmil_source",
+      "family": "setmil",
+      "recipe": "full author physical PPE/TPMF/iRPE, CE/AdamW/StepLR and spatial augmentation; original stale-height crop and all-subset cached views retained",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "setmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "lrmil",
+  "name": "LRMIL",
+  "group": "D_multiscale",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/hvcl/LRMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "66ea1c5a447ed2a830bb1af6739ab9261e61000d",
+  "license": "Apache-2.0; native CONCH dependency retains its own terms",
+  "profiles": [
+    "lrmil_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "actual_pretrained_CONCH_weights",
+    "measured_RGB256_5x",
+    "native_CONCH768_hr_intermediates",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "Complete3phase source trainer and actual native pretrained encoder/input/CLI written; training validation in progress, no formal admission.",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "lrmil_source_repaired",
+      "family": "lrmil",
+      "recipe": "Complete native CONCH768/12-layer patch KD, actual VAL-selected HRteacher and LRstudent source CE/bagKL/softKL/hardCE; independent source phase resets, selected-encoder features and all3Adam states. Explicit layout/teacher-tuple ports and declared200/200/200 reference caps.",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "native_CONCH768_hr_intermediates",
+        "measured_RGB256_5x",
+        "actual_pretrained_CONCH_weights",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "lrmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

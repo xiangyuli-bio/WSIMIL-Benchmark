@@ -1,0 +1,70 @@
+{
+  "id": "protosurv",
+  "name": "ProtoSurv heterogeneous graph",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/wjx-error/ProtoSurv",
+  "source_status": "git_commit_locked",
+  "source_commit": "551eaa3c0a2844e2c3557ef412d8a1fd2fec6e20",
+  "license": "not_found",
+  "profiles": [
+    "protosurv_source",
+    "protosurv_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "protosurv_assets",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "complete_original_graph_tissue_prototype_fusion_and_three_objectives; actual_FM_and_physical_graph_assets; full_source_sampling_augmentation_gc_Adam_cosine_selection_and_exact_resume; source_and_named_repairs_explicit",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "protosurv_repaired",
+      "family": "protosurv",
+      "recipe": "complete ProtoSurv recipe with named full-vocabulary compatibility, local pad RNG, tied-time Breslow and partial-tail corrections; actual graph/category/prototype provenance",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "protosurv_assets",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "protosurv",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "protosurv_source",
+      "family": "protosurv",
+      "recipe": "complete original dual-view graph/prototype network, three objectives and full source survival sampler/augmentation/gc/Adam/cosine/selection; original supported category/time domain",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "protosurv_assets",
+        "per_slide_coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "protosurv",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

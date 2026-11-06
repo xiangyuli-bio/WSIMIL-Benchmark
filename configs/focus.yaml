@@ -1,0 +1,19 @@
+# Complete original 200max/p20/epoch_index>40/first strict best VAL error.
+# Actual native full pretrained CONCH text tower remains trainable.
+epochs: 200
+lr: 0.0001
+weight_decay: 0.00001
+patience: 20
+selection_metric: focus_val_error
+grad_clip: null
+max_instances: null
+threads: 1
+model:
+  optimizer: adam
+  weighted_sampling: false
+  window_size: 8
+  sim_threshold: 0.8
+  max_context_length: 8192
+  early_stopping: true
+  stop_epoch: 40
+  max_dense_bytes: 34359738368

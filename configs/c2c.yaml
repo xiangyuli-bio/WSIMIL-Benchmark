@@ -1,0 +1,9 @@
+epochs: 25
+lr: 0.0001
+weight_decay: 0.0
+patience: 25
+grad_clip: null
+max_instances: null
+selection_metric: c2c_val_accuracy
+threads: 2
+model: {}

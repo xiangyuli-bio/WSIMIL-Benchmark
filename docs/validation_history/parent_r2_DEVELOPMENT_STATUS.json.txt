@@ -1,0 +1,48 @@
+{
+  "observed_utc": "2026-10-28T16:39:18.718927+00:00",
+  "state": "test_contract_and_declared_runtime_correction_candidate_not_published",
+  "version": "0.118.0",
+  "test_revision": "native103_historical_domain_plus_current352_exact_contract",
+  "planned_methods": 164,
+  "written_methods": 161,
+  "profiles": 352,
+  "catalog_status_counts": {
+    "adapted": 146,
+    "adapted_under_verification": 15,
+    "pending_adapter": 3
+  },
+  "pending_adapter_ids": [
+    "dyko",
+    "dspamil",
+    "feather"
+  ],
+  "new_method_admissions": 0,
+  "all479_runtime_package_files_byte_identical_to_frozen118": true,
+  "source_sha256": "0d6c6ef3721a83e89bfccb6dee39dd823cb91f18432e980c3952aadfbe3646d2",
+  "runtime_wheel_sha256": "b92c2e63e660788695b6a9abd093f4376bfea70ab90cf726edbae29db46b92be",
+  "original118_test_failure_preserved": true,
+  "changed_test_files": [
+    "test_lnplmil_components.py"
+  ],
+  "original_historical_count_assertions_preserved": true,
+  "new_current_catalog_case": true,
+  "expected_current_collected_cases": 4017,
+  "source_complete_QPMIL_protocol": "30passed_independently_audited",
+  "independent_wheel_validation": "in_progress",
+  "whole_library_passed": false,
+  "formal_all164_admission": false,
+  "software_stage_verified_methods": null,
+  "real_WSI_experiments": false,
+  "paper_score_reproduction": false,
+  "default_development_changed": false,
+  "QPMIL_full_native_conditions_passed": 4,
+  "QPMIL_full_native_source_wheel_exact": true,
+  "QPMIL_full_native_audit": "/root/MIL/development/qpmilvl_cpu_determinism_v118/actual_all4_native_artifacts_audit_r2.json",
+  "independent_wheel_software_validation": "in_progress",
+  "current_catalog_contract_source_cases_passed": 2,
+  "current_catalog_contract_extra_wheel_cases_passed": 2,
+  "original_MacNet_CUDA_cases": "6original_source_and6extra_wheel_cases_running_in_original_CUDA_runtime",
+  "CPU_designated_tests_moved_to_GPU": 0,
+  "original_wrong_runtime_failures_retained": true,
+  "current_runtime_plan": "/root/MIL/development/qpmilvl_cpu_determinism_v118/test_revision4017_corrected_runtime_plan_r1.json"
+}

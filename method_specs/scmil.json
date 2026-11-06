@@ -1,0 +1,44 @@
+{
+  "id": "scmil",
+  "name": "SCMIL Sparse Context",
+  "group": "F_survival_omics",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/yang-ze-kang/SCMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "ec6759a11ab19e68d5ee4d45df22ab31e470b7dc",
+  "license": "MIT",
+  "profiles": [
+    "scmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "scmil",
+      "family": "scmil",
+      "recipe": "author SoftFilter and sparse context attention; continuous mixture censor likelihood; explicit CPU clustering and patient slide-mixture adaptation",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "spatial_metadata"
+      ],
+      "class_count": null,
+      "external_source": "scmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

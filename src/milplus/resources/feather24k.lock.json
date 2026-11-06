@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "original_source_commit": "dfc3c17ca6876a8f9bd33a9162c40f2c22631d9d",
+  "pretraining_task": "PC-108",
+  "original_pretraining_reproduction": false,
+  "checkpoints": {
+    "conch_v15": {
+      "model_id": "MahmoodLab/abmil.base.conch_v15.pc108-24k",
+      "revision": "423c894c738294e8b0ac38938108180a2c21dd43",
+      "native_dim": 768,
+      "gated": "auto",
+      "files": {
+        "model.safetensors": {
+          "bytes": 3153372,
+          "sha256": "08a40daa9e00cca62c65d26f00f7765f5c1b2fe58532806aeda521cb1bc8a708"
+        },
+        "pytorch_model.bin": {
+          "bytes": 3160972,
+          "sha256": "4fc4a9b4fad8595ea3d1151a5afa3600fcba005d025d3a4cd45c0a069bd0c178"
+        }
+      }
+    },
+    "uni": {
+      "model_id": "MahmoodLab/abmil.base.uni.pc108-24k",
+      "revision": "9290d7720a2260501cf9cbbbc1f6b7134b251637",
+      "native_dim": 1024,
+      "gated": "auto",
+      "files": {
+        "model.safetensors": {
+          "bytes": 3677668,
+          "sha256": "19b7edb4582ea534f63c74b8b83735c0529388d1b8f26945786cce9d0b4aea19"
+        },
+        "pytorch_model.bin": {
+          "bytes": 3680993,
+          "sha256": "c576ce81f708aec04e683a5080879758a51ef1e2fe01cede0155fa3cd006b885"
+        }
+      }
+    },
+    "uni_v2": {
+      "model_id": "MahmoodLab/abmil.base.uni_v2.pc108-24k",
+      "revision": "7c0a057001e369ff6b55833188775bdb21f9b8c8",
+      "native_dim": 1536,
+      "gated": "auto",
+      "files": {
+        "model.safetensors": {
+          "bytes": 4726244,
+          "sha256": "d9c2612d55615999043539f6abc4fe44902ed1680fdbfb3bc81f6b2915ba451d"
+        },
+        "pytorch_model.bin": {
+          "bytes": 4730021,
+          "sha256": "5dc50eab8a2f039682a099f466625a93d04a7944b927b0f035f267670e497d0e"
+        }
+      }
+    }
+  },
+  "native_encoders": {
+    "uni": {
+      "model_id": "MahmoodLab/UNI",
+      "revision": "b55a5ec6cade1a39edfe6534189a9b8ca7a022f0",
+      "files": {
+        "pytorch_model.bin": {
+          "bytes": 1213527781,
+          "sha256": "56ef09b44a25dc5c7eedc55551b3d47bcd17659a7a33837cf9abc9ec4e2ffb40"
+        }
+      },
+      "revision_is_explicit_reference_not_inferred_historical_run": true
+    },
+    "uni_v2": {
+      "model_id": "MahmoodLab/UNI2-h",
+      "revision": "d517a8dd47902dd7c308b3c36f63bce47e7b9a43",
+      "files": {
+        "pytorch_model.bin": {
+          "bytes": 2725669217,
+          "sha256": "6e077eda234bebc595868d918d3458d9dd32a050199b0ff04443b2f46a0a3b1e"
+        }
+      },
+      "revision_is_explicit_reference_not_inferred_historical_run": true
+    },
+    "conch_v15": {
+      "model_id": "MahmoodLab/conchv1_5",
+      "revision": "3e5766a5d1500d53c73c03005e24c30c1f27be13",
+      "files": {
+        "pytorch_model_vision.bin": {
+          "bytes": 1226956806,
+          "sha256": "0c2588cef394daab46cbd5b64a556bf1d5d032262492d81d0e0d19c3118a5520"
+        }
+      },
+      "revision_is_explicit_reference_not_inferred_historical_run": true
+    }
+  },
+  "metadata_only_no_restricted_files_downloaded": true,
+  "other_CONCHv15_file_identity_not_proven_feature_equivalent": {
+    "repository": "MahmoodLab/TITAN",
+    "filename": "conch_v1_5_pytorch_model.bin",
+    "sha256": "09daf1912a016512e084636f9c76eee7c42f5c1f09b0461bb76082a3e0fecfa5",
+    "same_dim_does_not_establish_interchangeability": true
+  },
+  "pretraining_release_scale_label": "24K",
+  "historical_manuscript_scale_label": "approximately3K as stated by release README",
+  "exact_pretraining_cohort_size_verified": false
+}

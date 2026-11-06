@@ -1,0 +1,41 @@
+{
+  "id": "acmil",
+  "name": "ACMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/dazhangyu123/ACMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "e53d19c81f3892256d41962ffc4352cc91a4f834",
+  "license": "not_yet_verified",
+  "profiles": [
+    "acmil_ga"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "acmil_ga",
+      "family": "acmil",
+      "recipe": "official GA equations: multi-branch supervision, stochastic top-k masking and diversity",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": null,
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

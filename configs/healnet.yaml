@@ -1,0 +1,18 @@
+epochs: 50
+lr: 0.008
+weight_decay: 0.0
+patience: 5
+selection_metric: survival_loss
+model:
+  bins: 4
+  alpha: 0.4
+  bin_weighting: inverse
+  batch_size: 4
+  loss_divisor: 16.0
+  l1_weight: 0.0001
+  omics_layout: vector
+  depth: 2
+  num_latents: 4
+  latent_dim: 16
+  self_per_cross_attn: 0
+  eval_missing: null

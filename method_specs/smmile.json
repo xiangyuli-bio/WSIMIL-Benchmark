@@ -1,0 +1,88 @@
+{
+  "id": "smmile",
+  "name": "SMMILe",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/ZeyuGaoAi/SMMILe",
+  "source_status": "git_commit_locked",
+  "source_commit": "4c4c79e364e77c16207f211775ef04dda40ff20a",
+  "license": "GPL-3.0 root LICENSE; README adds academic/noncommercial wording; external code only",
+  "profiles": [
+    "smmile",
+    "smmile_binary",
+    "smmile_multilabel"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag",
+    "smmile_assets"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "full_recipe_adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "smmile",
+      "family": "smmile",
+      "recipe": "author spatial conv/detection, SP sampling and score dropout, validation-best two-stage refinement/MRF with reset Adam and source validation objective; explicit numerical repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "smmile_assets",
+        "per_slide_coords",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "smmile",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "smmile_binary",
+      "family": "smmile",
+      "recipe": "author one-positive-class binary branch, native basic-plus-augmentation BCE, optional negative-bag consistency, two-stage pseudo-label refinement and label-free instance outputs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "smmile_assets",
+        "per_slide_coords",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "smmile",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "smmile_multilabel",
+      "family": "smmile",
+      "recipe": "author independent multilabel sigmoid route, original bi-tempered augmentation, combination-balanced sampling, two-stage refinement/MRF and source validation objective",
+      "tasks": [
+        "multilabel"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "smmile_assets",
+        "per_slide_coords",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "smmile",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+epochs: 200
+threads: 2
+model:
+  iterations: 1
+  distill_epochs: 200

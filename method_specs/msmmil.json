@@ -1,0 +1,42 @@
+{
+  "id": "msmmil",
+  "name": "MSMMIL",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/cool-breeze-and-rain/MSMMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "80382115f5e548bc39248fd726bae3db2ead8b7f",
+  "license": "No root license found; bundled mamba Apache-2.0 and optimizer attribution retained in external source",
+  "profiles": [
+    "msmmil"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "msmmil",
+      "family": "msmmil",
+      "recipe": "author AFWMamba three scan branches with shared BiAttn; CE, source RAdam/Lookahead, two-bag accumulation and validation-loss selection",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "msmmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

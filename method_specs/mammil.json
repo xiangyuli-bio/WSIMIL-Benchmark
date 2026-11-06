@@ -1,0 +1,85 @@
+{
+  "id": "mammil",
+  "name": "MamMIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Vison307/MamMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "64736e1a06a23e6814dfee664ff02b27c72dfedb",
+  "license": "GPL-3.0; bundled Mamba components Apache-2.0 and original attributions",
+  "profiles": [
+    "mammil",
+    "mammil_source",
+    "mammil_patient_union"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "per_slide_coords",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mammil",
+      "family": "mammil",
+      "recipe": "author Mamba2 topology scans and GENConv, explicit full-layer-loop repair, frozen HNSW/MST/DFS/BFS graphs, source RAdam and CE/NLL",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "mammil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammil_patient_union",
+      "family": "mammil",
+      "recipe": "explicit corrected-loop patient survival extension using disjoint physical slide graphs and concatenated traversals; source NLL/RAdam",
+      "tasks": [
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords"
+      ],
+      "class_count": 2,
+      "external_source": "mammil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mammil_source",
+      "family": "mammil",
+      "recipe": "literal published zip(layers,ppeg) execution; original single-slide graph and RAdam CE/NLL, inactive final scan explicitly retained",
+      "tasks": [
+        "classification",
+        "survival"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "per_slide_coords",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "mammil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

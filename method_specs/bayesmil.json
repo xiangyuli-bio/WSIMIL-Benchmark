@@ -1,0 +1,87 @@
+{
+  "id": "bayesmil",
+  "name": "Bayes-MIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/ralphc1212/bayes-mil",
+  "source_status": "git_commit_locked",
+  "source_commit": "43bf913e8f6ddda53e3c21de07cb46bce7564d62",
+  "license": "GPL-3.0; README also specifies non-commercial academic use",
+  "profiles": [
+    "bayesmil_vis",
+    "bayesmil_sdpr",
+    "bayesmil_apcrf"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "patch_features",
+    "single_slide_bag",
+    "slide_canvas",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "bayesmil_apcrf",
+      "family": "bayesmil",
+      "recipe": "full spatial APCRF plus SDPR, real canvas and corrected raster stride; author regularizer and MC probability average",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag",
+        "slide_canvas"
+      ],
+      "class_count": 2,
+      "external_source": "bayesmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "bayesmil_sdpr",
+      "family": "bayesmil",
+      "recipe": "Bayes-MIL with literal author class-dependent patch regularizer, checkpointed plateau schedule and MC inference",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": 2,
+      "external_source": "bayesmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "bayesmil_vis",
+      "family": "bayesmil",
+      "recipe": "author variational weights and logistic-normal attention; CE + weight regularizer; MC mean probability prediction",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": 2,
+      "external_source": "bayesmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "probsamil",
+  "name": "ProbSA-MIL",
+  "group": "B_spatial_graph",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/Franblueee/torchmil",
+  "source_status": "git_commit_locked",
+  "source_commit": "2472b8bee84b906eac9351f1ec49d430c577bbcd",
+  "license": "not_yet_verified",
+  "profiles": [
+    "probsa_abmil_source",
+    "probsa_abmil_probmean",
+    "probsa_transformer_source",
+    "probsa_transformer_probmean"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "single_slide_bag",
+    "spatial_metadata"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "probsa_abmil_probmean",
+      "family": "probsamil",
+      "recipe": "author-library full ABMIL ProbSA recipe; paper Eq19 mean-probability inference, sparse/padding KL repairs and fixed query random stream",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "probsamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "probsa_abmil_source",
+      "family": "probsamil",
+      "recipe": "author-library Gaussian attention MC-BCE plus graph KL, cyclical coefficient and Adam/LinearLR; source mean-logit inference; padded sparse KL repaired",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "probsamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "probsa_transformer_probmean",
+      "family": "probsamil",
+      "recipe": "full global-transformer ProbSA author-library recipe; paper Eq19 predictive mixture and explicit sparse/padding/SDPA repairs",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "probsamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "probsa_transformer_source",
+      "family": "probsamil",
+      "recipe": "author-library two-layer global transformer plus sampled Gaussian attention/graph KL, cyclical Adam recipe; source mean-logit inference",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "coords",
+        "spatial_metadata",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "probsamil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Explicit released-source recipe, with scalar classifier restored from older author code.
+# Requires hierarchy in task.yaml; see docs/HIERARCHICAL_MIL.md.
+epochs: 200
+lr: 0.0001
+weight_decay: 0.0
+grad_clip: null
+patience: 200
+selection_metric: macro_auc
+model:
+  batch_size: 64
+  dropout: false
+  # hidden defaults to FM dimension // 4; attention_dim to hidden // 4.

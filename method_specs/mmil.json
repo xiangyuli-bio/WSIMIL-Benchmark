@@ -1,0 +1,62 @@
+{
+  "id": "mmil",
+  "name": "MMIL-Transformer",
+  "group": "A_frozen",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/hustvl/MMIL-Transformer",
+  "source_status": "git_commit_locked",
+  "source_commit": "d363f43bf0949e3fc172e8d94f99deb335bbe171",
+  "license": "MIT",
+  "profiles": [
+    "mmil",
+    "mmil_coords"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "coords",
+    "patch_features"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "mmil",
+      "family": "mmil",
+      "recipe": "author multi-level group attention and message-token communication; random group masking; CE; fixed-seed unmasked inference",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features"
+      ],
+      "class_count": null,
+      "external_source": "mmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "mmil_coords",
+      "family": "mmil",
+      "recipe": "author physical-coordinate KMeans grouping, group masking and message-token communication; CE",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "coords"
+      ],
+      "class_count": null,
+      "external_source": "mmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

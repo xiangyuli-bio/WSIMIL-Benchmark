@@ -1,0 +1,13 @@
+epochs: 50
+lr: 0.00003
+weight_decay: 0.0
+grad_clip: null
+selection_metric: qwk
+model:
+  batch_size: 4
+  tile_size: 256
+  tile_count: 44
+  eval_chunk: 44
+  trans_blocks: 4
+  trans_dropout: 0.0
+  amp: false

@@ -1,0 +1,180 @@
+{
+  "id": "ttis",
+  "name": "TTIS",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/QuIIL/TTIS",
+  "source_status": "git_commit_locked",
+  "source_commit": "ceb08d3bd8bc795845358850e314132b6231a921",
+  "license": "root_license_not_found; embedded_MUSK_CC-BY-NC-ND-4.0; source_not_redistributed",
+  "profiles": [
+    "ttis_abmil_source",
+    "ttis_clam_source",
+    "ttis_rrt_source",
+    "ttis_s4_source",
+    "ttis_transmil_source",
+    "ttis_wikg_source",
+    "ttis_clam_full_loss"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "frozen_semantic_vectors",
+    "patch_features",
+    "single_slide_bag",
+    "test_physical_coords",
+    "ttis_assets"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "all_six_native_heads_complete_optimizer_and_test_only_selection; explicit_spatial_semantic_assets_source_space_policy_and_CLAM_full_loss_variant",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "ttis_abmil_source",
+      "family": "ttis",
+      "recipe": "original TTIS six-head source CE/LookaheadAdamW/cosine recipe, complete TEST-only physical/semantic FPS and feature-level fusion",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ttis_assets",
+        "test_physical_coords",
+        "frozen_semantic_vectors"
+      ],
+      "class_count": null,
+      "external_source": "ttis",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ttis_clam_full_loss",
+      "family": "ttis",
+      "recipe": "complete original CLAM combined bag/instance objective as explicitly named training repair, followed by original TTIS selection/fusion",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ttis_assets",
+        "test_physical_coords",
+        "frozen_semantic_vectors"
+      ],
+      "class_count": null,
+      "external_source": "ttis",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ttis_clam_source",
+      "family": "ttis",
+      "recipe": "original TTIS six-head source CE/LookaheadAdamW/cosine recipe, complete TEST-only physical/semantic FPS and feature-level fusion",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ttis_assets",
+        "test_physical_coords",
+        "frozen_semantic_vectors"
+      ],
+      "class_count": null,
+      "external_source": "ttis",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ttis_rrt_source",
+      "family": "ttis",
+      "recipe": "original TTIS six-head source CE/LookaheadAdamW/cosine recipe, complete TEST-only physical/semantic FPS and feature-level fusion",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ttis_assets",
+        "test_physical_coords",
+        "frozen_semantic_vectors"
+      ],
+      "class_count": null,
+      "external_source": "ttis",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ttis_s4_source",
+      "family": "ttis",
+      "recipe": "original TTIS six-head source CE/LookaheadAdamW/cosine recipe, complete TEST-only physical/semantic FPS and feature-level fusion",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ttis_assets",
+        "test_physical_coords",
+        "frozen_semantic_vectors"
+      ],
+      "class_count": null,
+      "external_source": "ttis",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ttis_transmil_source",
+      "family": "ttis",
+      "recipe": "original TTIS six-head source CE/LookaheadAdamW/cosine recipe, complete TEST-only physical/semantic FPS and feature-level fusion",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ttis_assets",
+        "test_physical_coords",
+        "frozen_semantic_vectors"
+      ],
+      "class_count": null,
+      "external_source": "ttis",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "ttis_wikg_source",
+      "family": "ttis",
+      "recipe": "original TTIS six-head source CE/LookaheadAdamW/cosine recipe, complete TEST-only physical/semantic FPS and feature-level fusion",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "ttis_assets",
+        "test_physical_coords",
+        "frozen_semantic_vectors"
+      ],
+      "class_count": null,
+      "external_source": "ttis",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

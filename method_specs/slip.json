@@ -1,0 +1,64 @@
+{
+  "id": "slip",
+  "name": "SLIP",
+  "group": "G_vision_language",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/LTS5/SLIP",
+  "source_status": "git_commit_locked",
+  "source_commit": "9351c4480ec8d7a8216316a1861025b4f086ac78",
+  "license": "No standalone repository license at fixed commit; author source is imported privately, not redistributed",
+  "profiles": [
+    "slip_clip_vit_b16_source_repaired",
+    "slip_clip_rn50_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag",
+    "slip_native_clip_prompts"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "slip_clip_rn50_source_repaired",
+      "family": "slip",
+      "recipe": "Complete original SLIP actual native1024 CLIP-RN50 text/context/tissue attention and C*C contrastive objective, source prompt-only SGD10/final-epoch with explicit unified-loader and precision/device ports",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "slip_native_clip_prompts"
+      ],
+      "class_count": null,
+      "external_source": "slip",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "slip_clip_vit_b16_source_repaired",
+      "family": "slip",
+      "recipe": "Complete original SLIP actual native512 CLIP-ViT-B16 text/context/tissue attention and C*C contrastive objective, source prompt-only SGD10/final-epoch with explicit unified-loader and precision/device ports",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag",
+        "slip_native_clip_prompts"
+      ],
+      "class_count": null,
+      "external_source": "slip",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

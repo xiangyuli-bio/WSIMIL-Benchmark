@@ -1,0 +1,103 @@
+{
+  "id": "rankmix",
+  "name": "RankMix",
+  "group": "C_recipe_plugin",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/willpower057/RankMix",
+  "source_status": "git_commit_locked",
+  "source_commit": "a6d51301ec878540f4dd185544c265fad5ef1dd2",
+  "license": "MIT",
+  "profiles": [
+    "rankmix_dsmil",
+    "rankmix_dsmil_source",
+    "rankmix_frmil",
+    "rankmix_frmil_source"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "rankmix_dsmil",
+      "family": "rankmix",
+      "recipe": "author binary DSMIL, supervised initialization, natural/balanced sampling and dual BCE; repaired ranked patch IDs",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "rankmix",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "rankmix_dsmil_source",
+      "family": "rankmix",
+      "recipe": "binary DSMIL RankMix preserving literal author argsort-position selection; explicit source-behavior comparator",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "rankmix",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "rankmix_frmil",
+      "family": "rankmix",
+      "recipe": "author binary FRMIL, paired supervised initialization, mixed-bag BCE plus original-pair magnitude; repaired IDs and padded selection",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "rankmix",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "rankmix_frmil_source",
+      "family": "rankmix",
+      "recipe": "binary FRMIL RankMix preserving literal author argsort-position/padding behavior; explicit source comparator",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": 2,
+      "external_source": "rankmix",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

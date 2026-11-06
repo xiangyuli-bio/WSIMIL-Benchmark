@@ -1,0 +1,179 @@
+"""Original full TOD/optimizer/SP-LNPL checks; no weak-classifier admission."""
+import copy
+from collections import defaultdict
+from types import SimpleNamespace
+
+import numpy as np
+import pytest
+import torch
+from torch import nn
+
+from milplus.engine import seed_everything
+from milplus.lnplmil_source import model, definitions, objective, select_top200, filter_superpatches, COMMIT
+from milplus.lnplmil_optim import create_optimizer, original_classes
+from milplus.upstream import load_definitions, verified_source
+from test_pmil_prototypical_components import equal
+
+def fixture(n=200):
+    g = torch.Generator().manual_seed(103)
+    x = torch.randn(n,515,generator=g)
+    x[:,0] = torch.linspace(.001,.999,n)
+    x[:,1] = (torch.arange(n)%100)*1200
+    x[:,2] = (torch.arange(n)//100)*1200
+    return x
+
+def normalized_optimizer(opt):
+    params = [p for group in opt.param_groups for p in group['params']]
+    ids = {id(p):i for i,p in enumerate(params)}
+    return {'fast':opt.base_optimizer.state_dict(),
+            'slow':{ids[id(p)]:copy.deepcopy(v) for p,v in opt.state.items()},
+            'rectification_buffer':copy.deepcopy(opt.base_optimizer.buffer)}
+
+def test_literal_released_full_TOD_training_step_all_gradients_and_seventh_Lookahead_update():
+    torch.set_num_threads(2);seed_everything(103)
+    actual = model();original = copy.deepcopy(actual)
+    assert len(actual.C_Trans.layers)==4 and actual._fc1[0].in_features==512
+    assert actual._fc1[0].out_features==256 and actual._fc3.out_features==4
+    assert actual.position_layer.pe.shape==(256,200,200)
+    assert actual.IOAMLP[0].fn[0].in_channels==200
+    opt = create_optimizer(actual)
+    RAdam,Original = original_classes()
+    class RuntimeCompatibleOriginal(Original):
+        def __init__(self,base_optimizer):
+            torch.optim.Optimizer.__init__(self,base_optimizer.param_groups,base_optimizer.defaults)
+            Original.__init__(self,base_optimizer)
+    factory = load_definitions('lnplmil','MyOptimizer/optim_factory.py',
+        ['add_weight_decay','create_optimizer'],
+        {'torch':torch,'optim':torch.optim,'has_apex':False,'RAdam':RAdam,'Lookahead':RuntimeCompatibleOriginal})
+    config = SimpleNamespace(opt='lookahead_radam',lr=.0002,weight_decay=.00001,opt_eps=None,opt_betas=None,momentum=None)
+    source_opt = factory.create_optimizer(config,original)
+    source = load_definitions('lnplmil','models/model_interface.py',['ModelInterface'],
+        {'torch':torch,'nn':nn,'np':np,'pl':SimpleNamespace(LightningModule=nn.Module)},
+        replacements=[('.cuda()', '.to(data.device)')])
+    x = fixture();target = torch.tensor([1])
+    owner = SimpleNamespace(model=original,loss=nn.CrossEntropyLoss(),topk=200,ratio=.001,
+                            data=[{'count':0,'correct':0} for _ in range(2)])
+    for _ in range(7):
+        opt.zero_grad();source_opt.zero_grad()
+        left = objective(actual,x,target,variant='released_overwritten_ce')
+        right = source.ModelInterface.training_step(owner,(x.unsqueeze(0),target),0)
+        equal(left['loss'],right['loss'])
+        left['loss'].backward();right['loss'].backward()
+        for a,b in zip(actual.parameters(),original.parameters()):
+            if a.grad is None:assert b.grad is None
+            else:equal(a.grad,b.grad)
+        opt.step();source_opt.step()
+        equal(actual.state_dict(),original.state_dict())
+        equal(opt.state_dict(),normalized_optimizer(source_opt))
+    assert actual._fc3.weight.grad is None and len(opt.state)>0
+    assert all(group['lookahead_step']==7 for group in opt.param_groups)
+    assert verified_source('lnplmil')[1]==COMMIT
+
+def test_paper_auxiliary_distribution_loss_trains_actual_head_that_released_code_discards():
+    torch.set_num_threads(2);seed_everything(103)
+    net=model();x=fixture();target=torch.tensor([1])
+    values=objective(net,x,target,variant='paper_auxiliary')
+    expected=nn.functional.cross_entropy(values['logits'],target)+.001*nn.functional.cross_entropy(values['logits_ratio'],values['ratio_label'])
+    equal(values['loss'],expected)
+    values['loss'].backward()
+    assert net._fc3.weight.grad is not None and net._fc3.weight.grad.abs().sum()>0
+    assert len(net.C_Trans.layers)==4 and values['logits_ratio'].shape==(1,4)
+
+@pytest.mark.parametrize('count,interval',[(0,0),(49,0),(50,1),(99,1),(100,2),(149,2),(150,3),(200,3)])
+def test_paper_four_actual_distribution_intervals_preserve_boundary(count,interval):
+    torch.set_num_threads(2);seed_everything(103)
+    net=model();x=fixture();x[:,0]=.5;x[:count,0]=.5001
+    values=objective(net,x,torch.tensor([0]))
+    assert values['ratio_label'].item()==interval
+
+@pytest.mark.parametrize('cut',[5,7])
+def test_portable_original_RAdam_Lookahead_before_and_after_sync_exact_all_state(cut):
+    torch.set_num_threads(2);seed_everything(103)
+    a=model();b=copy.deepcopy(a);ao=create_optimizer(a);bo=create_optimizer(b)
+    x=fixture();y=torch.tensor([1])
+    for _ in range(8):
+        ao.zero_grad();objective(a,x,y)['loss'].backward();ao.step()
+    for _ in range(cut):
+        bo.zero_grad();objective(b,x,y)['loss'].backward();bo.step()
+    snapshot=copy.deepcopy(bo.state_dict());learned=copy.deepcopy(b.state_dict())
+    c=model();c.load_state_dict(learned);co=create_optimizer(c);co.load_state_dict(snapshot)
+    for _ in range(cut,8):
+        co.zero_grad();objective(c,x,y)['loss'].backward();co.step()
+    equal(a.state_dict(),c.state_dict());equal(ao.state_dict(),co.state_dict())
+    for left,right in zip(a.parameters(),c.parameters()):
+        if left.grad is None:assert right.grad is None
+        else:equal(left.grad,right.grad)
+
+def test_actual_native_HNSW_superpatch_filter_and_original_minimum_return_rule():
+    torch.set_num_threads(2);x=fixture(401)
+    x[:201,3:]+=100;x[201:,3:]-=100
+    x[:201,0]=.9;x[201:,0]=.1
+    before=x.clone();result=filter_superpatches(x)
+    equal(x,before)
+    assert result.shape[1]==515 and len(result)>=200
+    # Source reflection may duplicate existing patches, but cannot fabricate rows.
+    original={row.numpy().tobytes() for row in x}
+    assert all(row.numpy().tobytes() in original for row in result)
+    fallback=filter_superpatches(x,radius=50,ratio=0,min_size=1000)
+    equal(fallback,x)
+
+def test_native_top200_preserves_source_score_order_and_rejects_missing_inputs():
+    x=fixture(211);selected,indices=select_top200(x)
+    expected=torch.topk(x[:,0],200).indices
+    equal(indices,expected);equal(selected,x[expected])
+    for bad in [x[:199],x[:,3:],x.double(),x.clone().requires_grad_()]:
+        with pytest.raises(ValueError):select_top200(bad)
+    for column,value in [(0,1.1),(1,-1),(2,240000)]:
+        bad=x.clone();bad[0,column]=value
+        with pytest.raises(ValueError):select_top200(bad)
+
+def test_component_only_LNPL_does_not_increment_complete_family_or_profile_counts():
+    # Keep the historical node ID: only the full public pipeline may now
+    # create profiles. Component wrappers still never create a runnable alias.
+    from milplus.registry import profiles,methods
+    p=profiles()
+    original=[v for v in p if v['family']!='lnplmil']
+    added=[v for v in p if v['family']=='lnplmil']
+    assert len(original)==329 and len({v['family'] for v in original})==154
+    assert len(p)==331 and len(added)==2 and len(methods())==164
+    assert all('actual_RGB224' in v['required_inputs'] and 'observed_TRAIN_patch_labels' in v['required_inputs']
+               and v['formal_admission'] is False for v in added)
+
+def test_paper_residual_convolution_condition_preserves_full_source_layers_and_literal_Eq2():
+    from milplus.lnplmil_source import paper_model
+    torch.set_num_threads(2);seed_everything(103)
+    net=paper_model();released=model();released.load_state_dict(net.state_dict(),strict=True)
+    assert set(net.state_dict())==set(released.state_dict())
+    x=fixture()
+    for group in net.C_Trans.layers:
+        nn.init.zeros_(group[0].weight);nn.init.zeros_(group[0].bias)
+    released.load_state_dict(net.state_dict(),strict=True)
+    actual=net(data=x.unsqueeze(0))
+    value=net.position_layer(net._fc1(x[:,3:].unsqueeze(0)),x[:,1:3].unsqueeze(0))
+    for conv,attention,ff in net.C_Trans.layers:
+        value=conv(value.transpose(1,2)).transpose(1,2)+value
+        value=attention(value)+value;value=ff(value)+value
+    value=net.IOAMLP(value)
+    context,_,_=net.BGAttn(value.squeeze(0),net._fc2.weight,net._fc2.bias,1)
+    expected=net._fc2(context.mean(0,keepdim=True))
+    equal(actual['logits'],expected)
+    assert not torch.equal(actual['logits'],released(data=x.unsqueeze(0))['logits'])
+    objective(net,x,torch.tensor([1]))['loss'].backward()
+    assert net._fc3.weight.grad is not None and torch.isfinite(net._fc3.weight.grad).all()
+
+def test_paper_disjoint_native_HNSW_retains_whole_clusters_and_no_unknown_fallback():
+    from milplus.lnplmil_source import paper_disjoint_superpatches
+    torch.set_num_threads(2);x=fixture(401)
+    x[:201,3:]+=100;x[201:,3:]-=100
+    x[:201,0]=torch.linspace(.6,.99,201);x[201:,0]=torch.linspace(.01,.4,200)
+    output,receipt=paper_disjoint_superpatches(x)
+    members=[i for group in receipt['clusters'] for i in group['padded_indices']]
+    assert len(members)==len(set(members))==receipt['padded_patch_count']==450
+    assert all(len(v['padded_indices'])==50 for v in receipt['clusters'])
+    assert len(output)==sum(50 for v in receipt['clusters'] if v['retained']) and len(output)>=200
+    originals={v.numpy().tobytes() for v in x}
+    assert all(v.numpy().tobytes() in originals for v in output)
+    assert receipt['minimum_fallback']=='none_fail_explicitly'
+    constant=x.clone();constant[:,0]=.5
+    with pytest.raises(ValueError,match='fewer than200'):
+        paper_disjoint_superpatches(constant)

@@ -1,0 +1,45 @@
+{
+  "id": "hmil",
+  "name": "HMIL",
+  "group": "H_extra_supervision",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/ChengJin-git/HMIL",
+  "source_status": "git_commit_locked",
+  "source_commit": "d4f5ad18d0258a8e1bebe2c5a37e909cc349a946",
+  "license": "GPL-3.0",
+  "profiles": [
+    "hmil_source_repaired"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "hierarchical_labels",
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "adapter_contract_recorded",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "hmil_source_repaired",
+      "family": "hmil",
+      "recipe": "author hierarchical coarse/fine attention, SupCon, source curriculum and bag alignment; explicit scalar-head repair from prior author commit",
+      "tasks": [
+        "classification",
+        "ordinal"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "hierarchical_labels",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "hmil",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

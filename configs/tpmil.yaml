@@ -1,0 +1,13 @@
+# Public TPMIL single-branch recipe; validation CE selects checkpoints.
+epochs: 200
+lr: 0.0002
+weight_decay: 0.00001
+patience: 20
+selection_metric: log_loss
+grad_clip: null
+model:
+  hidden: 512
+  attention_dim: 256
+  gate: true
+  dropout: true
+  weighted_sampling: true

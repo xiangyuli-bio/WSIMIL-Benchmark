@@ -1,0 +1,80 @@
+{
+  "id": "loss_attention",
+  "name": "Loss-based Attention",
+  "group": "K_other_modalities",
+  "scope_origin": "user_164_admission_list",
+  "source_url": "https://github.com/xsshi2015/Loss-Attention",
+  "source_status": "git_commit_locked",
+  "source_commit": "71926177d84fc1859b70d135090b163ea6bd58bf",
+  "license": "No root license found; external verified Git definitions only",
+  "profiles": [
+    "loss_attention_classical",
+    "loss_attention_mil_source",
+    "loss_attention_temporal"
+  ],
+  "status": "adapted",
+  "required_inputs": [
+    "patch_features",
+    "single_slide_bag"
+  ],
+  "paper_reproduction": "not_run",
+  "real_wsi_validation": "not_run",
+  "requirements_review": "source_and_paper_full_recipes_explicit_wsi_feature_adaptation",
+  "blocker": null,
+  "execution_profiles": [
+    {
+      "id": "loss_attention_classical",
+      "family": "loss_attention",
+      "recipe": "paper A2/A4 classical feature MLP, author shared class/attention head, bag CE plus .1 weighted-instance CE sum, full Adam; explicit WSI feature adaptation and validation-only error/CE selection",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "loss_attention",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "loss_attention_mil_source",
+      "family": "loss_attention",
+      "recipe": "MNIST source-head WSI adaptation, shared classifier and bag CE plus 2 weighted-instance CE mean, complete source Adam recipe; validation replaces source test-based selection",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "loss_attention",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    },
+    {
+      "id": "loss_attention_temporal",
+      "family": "loss_attention",
+      "recipe": "image-temporal recipe explicitly adapted to WSI bags: shared head, weighted-instance CE mean, aligned TRAIN EMA consistency, original schedules and legacy-Adam state reset every epoch",
+      "tasks": [
+        "classification"
+      ],
+      "required_inputs": [
+        "patch_features",
+        "single_slide_bag"
+      ],
+      "class_count": null,
+      "external_source": "loss_attention",
+      "gpu_validation": "not_run",
+      "real_wsi_validation": "not_run",
+      "status": "implemented_unvalidated",
+      "paper_reproduction": "not_run"
+    }
+  ]
+}

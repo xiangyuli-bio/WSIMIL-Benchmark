@@ -1,0 +1,22 @@
+epochs: 20
+lr: 0.0001
+weight_decay: 0.00001
+patience: 5
+grad_clip: null
+selection_metric: log_loss
+max_instances: null
+model:
+  hidden: 512
+  experts: 30
+  slots: 10
+  heads: 16
+  slot_dim: 256
+  auto_rank: true
+  share_weights: true
+  keep_slots: true
+  feature_dropout: 0.1
+  expert_dropout: 0.1
+  dropout: 0.25
+  minimum_epochs: 10
+  max_dense_bytes: 16000000000
+  precision: fp32
